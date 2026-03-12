@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Project specific (optional)
+data/raw_input/
+data/raw/
+data/curated/
+data/features/
+models/*.pkl
+*.db
