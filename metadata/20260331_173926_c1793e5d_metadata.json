@@ -1,0 +1,27 @@
+{
+    "original_filename": "Uncleaned_DS_jobs.csv",
+    "stored_filename": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "stored_path": "data\\raw\\20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "version_id": "c1793e5d",
+    "timestamp": "20260331_173926",
+    "file_type": ".csv",
+    "rows": 672,
+    "columns_count": 15,
+    "columns": [
+        "index",
+        "Job Title",
+        "Salary Estimate",
+        "Job Description",
+        "Rating",
+        "Company Name",
+        "Location",
+        "Headquarters",
+        "Size",
+        "Founded",
+        "Type of ownership",
+        "Industry",
+        "Sector",
+        "Revenue",
+        "Competitors"
+    ]
+}
