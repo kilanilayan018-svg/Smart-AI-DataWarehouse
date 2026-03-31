@@ -1,0 +1,24 @@
+{
+    "original_filename": "messy_IMDB_dataset.csv",
+    "stored_filename": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "stored_path": "data\\raw\\20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "version_id": "6b380abd",
+    "timestamp": "20260331_173926",
+    "file_type": ".csv",
+    "rows": 101,
+    "columns_count": 12,
+    "columns": [
+        "IMBD title ID",
+        "Original titl\u00ca",
+        "Release year",
+        "Genr\u00eb\u00a8",
+        "Duration",
+        "Country",
+        "Content Rating",
+        "Director",
+        "Unnamed: 8",
+        "Income",
+        " Votes ",
+        "Score"
+    ]
+}
