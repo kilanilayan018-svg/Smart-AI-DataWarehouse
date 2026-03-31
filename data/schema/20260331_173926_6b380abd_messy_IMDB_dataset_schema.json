@@ -1,0 +1,9 @@
+{
+  "IMBD title ID;Original titl\u00ca;Release year;Genr\u00eb\u00a8;Duration;Country;Content Rating;Director;;Income; Votes ;Score": {
+    "name": "IMBD title ID;Original titl\u00ca;Release year;Genr\u00eb\u00a8;Duration;Country;Content Rating;Director;;Income; Votes ;Score",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 13
+  }
+}

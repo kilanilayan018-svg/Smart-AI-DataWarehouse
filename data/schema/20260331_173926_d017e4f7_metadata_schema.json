@@ -1,0 +1,50 @@
+{
+  "filename": {
+    "name": "filename",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 11
+  },
+  "source": {
+    "name": "source",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 3
+  },
+  "rows": {
+    "name": "rows",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 11,
+    "min": 20.0,
+    "max": 70000.0,
+    "mean": 10738.818181818182
+  },
+  "cols": {
+    "name": "cols",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 10,
+    "min": 6.0,
+    "max": 35.0,
+    "mean": 15.454545454545455
+  },
+  "target": {
+    "name": "target",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 11
+  },
+  "task_type": {
+    "name": "task_type",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "price": {
+    "name": "price",
+    "dtype": "float64",
+    "missing_count": 4,
+    "missing_percentage": 1.95,
+    "unique_count": 186,
+    "min": 5118.0,
+    "max": 45400.0,
+    "mean": 13207.129353233831
+  },
+  "highway-mpg": {
+    "name": "highway-mpg",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 30,
+    "min": 16.0,
+    "max": 54.0,
+    "mean": 30.75121951219512
+  },
+  "city-mpg": {
+    "name": "city-mpg",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 29,
+    "min": 13.0,
+    "max": 49.0,
+    "mean": 25.21951219512195
+  },
+  "peak-rpm": {
+    "name": "peak-rpm",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.98,
+    "unique_count": 23,
+    "min": 4150.0,
+    "max": 6600.0,
+    "mean": 5125.369458128079
+  },
+  "horsepower": {
+    "name": "horsepower",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.98,
+    "unique_count": 59,
+    "min": 48.0,
+    "max": 288.0,
+    "mean": 104.25615763546799
+  },
+  "compression-ratio": {
+    "name": "compression-ratio",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 32,
+    "min": 7.0,
+    "max": 23.0,
+    "mean": 10.142536585365855
+  },
+  "stroke": {
+    "name": "stroke",
+    "dtype": "float64",
+    "missing_count": 4,
+    "missing_percentage": 1.95,
+    "unique_count": 36,
+    "min": 2.07,
+    "max": 4.17,
+    "mean": 3.255422885572139
+  },
+  "bore": {
+    "name": "bore",
+    "dtype": "float64",
+    "missing_count": 4,
+    "missing_percentage": 1.95,
+    "unique_count": 38,
+    "min": 2.54,
+    "max": 3.94,
+    "mean": 3.3297512437810943
+  },
+  "fuel-system": {
+    "name": "fuel-system",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 8
+  },
+  "engine-size": {
+    "name": "engine-size",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 44,
+    "min": 61.0,
+    "max": 326.0,
+    "mean": 126.90731707317073
+  },
+  "num-of-cylinders": {
+    "name": "num-of-cylinders",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 7,
+    "min": 2.0,
+    "max": 12.0,
+    "mean": 4.380487804878049
+  },
+  "engine-type": {
+    "name": "engine-type",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 7
+  },
+  "curb-weight": {
+    "name": "curb-weight",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 171,
+    "min": 1488.0,
+    "max": 4066.0,
+    "mean": 2555.5658536585365
+  },
+  "height": {
+    "name": "height",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 49,
+    "min": 47.8,
+    "max": 59.8,
+    "mean": 53.72487804878049
+  },
+  "width": {
+    "name": "width",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 44,
+    "min": 60.3,
+    "max": 72.3,
+    "mean": 65.90780487804878
+  },
+  "length": {
+    "name": "length",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 75,
+    "min": 141.1,
+    "max": 208.1,
+    "mean": 174.04926829268288
+  },
+  "wheel-base": {
+    "name": "wheel-base",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 53,
+    "min": 86.6,
+    "max": 120.9,
+    "mean": 98.75658536585367
+  },
+  "engine-location": {
+    "name": "engine-location",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  },
+  "drive-wheels": {
+    "name": "drive-wheels",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 3
+  },
+  "body-style": {
+    "name": "body-style",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 5
+  },
+  "num-of-doors": {
+    "name": "num-of-doors",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.98,
+    "unique_count": 2,
+    "min": 2.0,
+    "max": 4.0,
+    "mean": 3.123152709359606
+  },
+  "aspiration": {
+    "name": "aspiration",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  },
+  "fuel-type": {
+    "name": "fuel-type",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  },
+  "make": {
+    "name": "make",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 22
+  },
+  "normalized-losses": {
+    "name": "normalized-losses",
+    "dtype": "float64",
+    "missing_count": 41,
+    "missing_percentage": 20.0,
+    "unique_count": 51,
+    "min": 65.0,
+    "max": 256.0,
+    "mean": 122.0
+  },
+  "symboling": {
+    "name": "symboling",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 6,
+    "min": -2.0,
+    "max": 3.0,
+    "mean": 0.8341463414634146
+  }
+}
