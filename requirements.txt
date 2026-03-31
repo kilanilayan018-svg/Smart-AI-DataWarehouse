@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+openpyxl
+pyyaml
+sqlalchemy
+fastapi
+uvicorn
+pydantic
+matplotlib
+pytest
+transformers
+datasets
+torch
+accelerate
+python-multipart
