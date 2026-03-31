@@ -1,0 +1,125 @@
+{
+  "39": {
+    "name": "39",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 73,
+    "min": 17.0,
+    "max": 90.0,
+    "mean": 38.581633906633904
+  },
+  " State-gov": {
+    "name": " State-gov",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 9
+  },
+  " 77516": {
+    "name": " 77516",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 21647,
+    "min": 12285.0,
+    "max": 1484705.0,
+    "mean": 189781.81437346438
+  },
+  " Bachelors": {
+    "name": " Bachelors",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 16
+  },
+  " 13": {
+    "name": " 13",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 16,
+    "min": 1.0,
+    "max": 16.0,
+    "mean": 10.08058968058968
+  },
+  " Never-married": {
+    "name": " Never-married",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 7
+  },
+  " Adm-clerical": {
+    "name": " Adm-clerical",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 15
+  },
+  " Not-in-family": {
+    "name": " Not-in-family",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 6
+  },
+  " White": {
+    "name": " White",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 5
+  },
+  " Male": {
+    "name": " Male",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  },
+  " 2174": {
+    "name": " 2174",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 119,
+    "min": 0.0,
+    "max": 99999.0,
+    "mean": 1077.615171990172
+  },
+  " 0": {
+    "name": " 0",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 92,
+    "min": 0.0,
+    "max": 4356.0,
+    "mean": 87.30651105651106
+  },
+  " 40": {
+    "name": " 40",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 94,
+    "min": 1.0,
+    "max": 99.0,
+    "mean": 40.437469287469284
+  },
+  " United-States": {
+    "name": " United-States",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 42
+  },
+  " <=50K": {
+    "name": " <=50K",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2
+  }
+}

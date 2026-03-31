@@ -1,0 +1,116 @@
+{
+  "index": {
+    "name": "index",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 672,
+    "min": 0.0,
+    "max": 671.0,
+    "mean": 335.5
+  },
+  "Job Title": {
+    "name": "Job Title",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 172
+  },
+  "Salary Estimate": {
+    "name": "Salary Estimate",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 30
+  },
+  "Job Description": {
+    "name": "Job Description",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 489
+  },
+  "Rating": {
+    "name": "Rating",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 32,
+    "min": -1.0,
+    "max": 5.0,
+    "mean": 3.5186011904761907
+  },
+  "Company Name": {
+    "name": "Company Name",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 432
+  },
+  "Location": {
+    "name": "Location",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 207
+  },
+  "Headquarters": {
+    "name": "Headquarters",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 229
+  },
+  "Size": {
+    "name": "Size",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 9
+  },
+  "Founded": {
+    "name": "Founded",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 103,
+    "min": -1.0,
+    "max": 2019.0,
+    "mean": 1635.529761904762
+  },
+  "Type of ownership": {
+    "name": "Type of ownership",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 13
+  },
+  "Industry": {
+    "name": "Industry",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 58
+  },
+  "Sector": {
+    "name": "Sector",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 23
+  },
+  "Revenue": {
+    "name": "Revenue",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 14
+  },
+  "Competitors": {
+    "name": "Competitors",
+    "dtype": "str",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 108
+  }
+}
