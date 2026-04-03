@@ -1,0 +1,11 @@
+{
+    "is_valid": false,
+    "errors": [
+        "Failed to read or validate dataset: Error tokenizing data. C error: Expected 1 fields in line 3, saw 2\n"
+    ],
+    "name": "messy_IMDB_dataset",
+    "version": "6b380abd",
+    "raw_file_path": "data/raw/20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "schema_path": "data/schema/20260331_173926_6b380abd_messy_IMDB_dataset_schema.json",
+    "validation_status": "invalid"
+}
