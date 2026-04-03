@@ -1,0 +1,24 @@
+{
+  "name": "Iris 1 ",
+  "version": "0a43131b",
+  "raw_file_path": "data/raw\\20260331_173926_0a43131b_Iris 1 .csv",
+  "steps": [
+    "Loaded dataset: 150 rows, 6 cols",
+    "Removed 0 duplicate rows",
+    "Type cast attempted on: []",
+    "Imputed missing values in 0 columns"
+  ],
+  "original_shape": [
+    150,
+    6
+  ],
+  "duplicates_removed": 0,
+  "columns_type_cast": [],
+  "imputed_columns": {},
+  "curated_path": "data/curated/Iris 1 _v0a43131b_cleaned.csv",
+  "final_shape": [
+    150,
+    6
+  ],
+  "timestamp": "2026-04-03T20:56:46.065863"
+}
