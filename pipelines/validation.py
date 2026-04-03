@@ -1,3 +1,5 @@
+import json
+import os
 import pandas as pd
 
 
@@ -63,3 +65,20 @@ class DataValidationModule:
             "is_valid": len(self.errors) == 0,
             "errors": self.errors
         }
+
+    def save_result(self, dataset_name, version, raw_file_path, schema_path, output_dir="logs/validation"):
+        os.makedirs(output_dir, exist_ok=True)
+
+        result = self.validate()
+        result["name"] = dataset_name
+        result["version"] = version
+        result["raw_file_path"] = raw_file_path.replace("\\", "/")
+        result["schema_path"] = schema_path.replace("\\", "/")
+        result["validation_status"] = "valid" if result["is_valid"] else "invalid"
+
+        output_path = os.path.join(output_dir, f"{dataset_name}_v{version}_validation.json")
+
+        with open(output_path, "w") as f:
+            json.dump(result, f, indent=4)
+
+        return output_path

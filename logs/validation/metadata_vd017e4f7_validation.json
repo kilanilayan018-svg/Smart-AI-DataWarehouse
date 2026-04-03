@@ -1,0 +1,9 @@
+{
+    "is_valid": true,
+    "errors": [],
+    "name": "metadata",
+    "version": "d017e4f7",
+    "raw_file_path": "data/raw/20260331_173926_d017e4f7_metadata.csv",
+    "schema_path": "data/schema/20260331_173926_d017e4f7_metadata_schema.json",
+    "validation_status": "valid"
+}
