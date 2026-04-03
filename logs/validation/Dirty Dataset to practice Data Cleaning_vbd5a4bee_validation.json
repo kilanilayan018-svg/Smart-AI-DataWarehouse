@@ -1,0 +1,12 @@
+{
+    "is_valid": false,
+    "errors": [
+        "Missing columns: {'Actual\u00ac\u2020gross', 'Adjusted\u00ac\u2020gross (in 2022 dollars)'}",
+        "Extra columns: {'Actual\\xa0gross', 'Adjusted\\xa0gross (in 2022 dollars)'}"
+    ],
+    "name": "Dirty Dataset to practice Data Cleaning",
+    "version": "bd5a4bee",
+    "raw_file_path": "data/raw/20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "schema_path": "data/schema/20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_schema.json",
+    "validation_status": "invalid"
+}
