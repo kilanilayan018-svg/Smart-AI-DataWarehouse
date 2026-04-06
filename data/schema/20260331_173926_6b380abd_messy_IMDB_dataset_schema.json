@@ -1,9 +1,86 @@
 {
-  "IMBD title ID;Original titl\u00ca;Release year;Genr\u00eb\u00a8;Duration;Country;Content Rating;Director;;Income; Votes ;Score": {
-    "name": "IMBD title ID;Original titl\u00ca;Release year;Genr\u00eb\u00a8;Duration;Country;Content Rating;Director;;Income; Votes ;Score",
+  "IMBD title ID": {
+    "name": "IMBD title ID",
     "dtype": "str",
-    "missing_count": 0,
-    "missing_percentage": 0.0,
-    "unique_count": 13
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 100
+  },
+  "Original titl\u00ca": {
+    "name": "Original titl\u00ca",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 100
+  },
+  "Release year": {
+    "name": "Release year",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 99
+  },
+  "Genr\u00eb\u00a8": {
+    "name": "Genr\u00eb\u00a8",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 59
+  },
+  "Duration": {
+    "name": "Duration",
+    "dtype": "str",
+    "missing_count": 2,
+    "missing_percentage": 1.98,
+    "unique_count": 71
+  },
+  "Country": {
+    "name": "Country",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 18
+  },
+  "Content Rating": {
+    "name": "Content Rating",
+    "dtype": "str",
+    "missing_count": 24,
+    "missing_percentage": 23.76,
+    "unique_count": 7
+  },
+  "Director": {
+    "name": "Director",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 64
+  },
+  "Unnamed: 8": {
+    "name": "Unnamed: 8",
+    "dtype": "float64",
+    "missing_count": 101,
+    "missing_percentage": 100.0,
+    "unique_count": 0
+  },
+  "Income": {
+    "name": "Income",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 100
+  },
+  " Votes ": {
+    "name": " Votes ",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 100
+  },
+  "Score": {
+    "name": "Score",
+    "dtype": "str",
+    "missing_count": 1,
+    "missing_percentage": 0.99,
+    "unique_count": 28
   }
 }
