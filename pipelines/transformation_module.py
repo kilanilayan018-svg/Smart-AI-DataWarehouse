@@ -1,179 +1,179 @@
+# pipelines/transformation_module.py
+
 import pandas as pd
-import json
+import numpy as np
 import os
-import glob
+import json
+from pathlib import Path
 from datetime import datetime
 
-
 class TransformationModule:
-    def __init__(self, raw_file_path, name, version):
-        self.raw_file_path = raw_file_path
-        self.name = name
-        self.version = version
-        self.df = None
-        self.log = {
-            "name": name,
-            "version": version,
-            "raw_file_path": raw_file_path,
-            "steps": []
-        }
-
-    def load(self):
-        self.df = pd.read_csv(self.raw_file_path)
-        self.log["original_shape"] = list(self.df.shape)
-        self.log["steps"].append(f"Loaded dataset: {self.df.shape[0]} rows, {self.df.shape[1]} cols")
-
-    def remove_duplicates(self):
-        before = len(self.df)
-        self.df = self.df.drop_duplicates()
-        removed = before - len(self.df)
-        self.log["duplicates_removed"] = removed
-        self.log["steps"].append(f"Removed {removed} duplicate rows")
-
-    def fix_types(self):
-        converted = []
-        for col in self.df.columns:
-            if self.df[col].dtype == object:
-                try:
-                    self.df[col] = pd.to_numeric(self.df[col], errors='raise')
-                    converted.append(col)
-                except (ValueError, TypeError):
-                    pass
-        self.log["columns_type_cast"] = converted
-        self.log["steps"].append(f"Type cast attempted on: {converted}")
-
-    def impute_missing(self):
-        imputed = {}
-        for col in self.df.columns:
-            missing = self.df[col].isnull().sum()
-            if missing > 0:
-                if self.df[col].dtype in ['float64', 'int64']:
-                    median_val = self.df[col].median()
-                    self.df[col].fillna(median_val, inplace=True)
-                    imputed[col] = {"strategy": "median", "value": median_val, "count": int(missing)}
-                else:
-                    mode_val = self.df[col].mode()[0]
-                    self.df[col].fillna(mode_val, inplace=True)
-                    imputed[col] = {"strategy": "mode", "value": str(mode_val), "count": int(missing)}
-        self.log["imputed_columns"] = imputed
-        self.log["steps"].append(f"Imputed missing values in {len(imputed)} columns")
-
-    def save(self, output_dir="data/curated", log_dir="logs/transform"):
-        os.makedirs(output_dir, exist_ok=True)
-        os.makedirs(log_dir, exist_ok=True)
-
-        out_path = f"{output_dir}/{self.name}_v{self.version}_cleaned.csv"
-        self.df.to_csv(out_path, index=False)
-
-        self.log["curated_path"] = out_path
-        self.log["final_shape"] = list(self.df.shape)
-        self.log["timestamp"] = datetime.now().isoformat()
-        log_path = f"{log_dir}/{self.name}_v{self.version}_transform.json"
-        with open(log_path, "w") as f:
-            json.dump(self.log, f, indent=2)
-
-        print(f"✅ {self.name}: saved to {out_path}")
-        return out_path, log_path
-
-    def transform(self):
-        self.load()
-        self.remove_duplicates()
-        self.fix_types()
-        self.impute_missing()
-        return self.save()
-
-
-# ── Helper: find raw file by dataset name (case‑insensitive) ──────────────
-
-def find_raw_file(dataset_name, raw_dir="data/raw"):
     """
-    Scan raw_dir for a CSV file whose filename contains dataset_name.
-    Returns the relative path (from project root) or None.
+    Cleans raw datasets: median imputation, type casting, duplicate removal.
+    Saves curated files to data/curated/ with comma separator.
+    Also fixes the known cardio_train delimiter issue post-hoc.
     """
-    if not os.path.isdir(raw_dir):
-        print(f"   Warning: raw directory '{raw_dir}' does not exist.")
-        return None
 
-    # Build pattern: any file containing dataset_name (case‑insensitive)
-    pattern = os.path.join(raw_dir, f"*{dataset_name}*.csv")
-    matches = glob.glob(pattern)
-    if not matches:
-        # Try case‑insensitive fallback
-        all_csv = glob.glob(os.path.join(raw_dir, "*.csv"))
-        matches = [f for f in all_csv if dataset_name.lower() in os.path.basename(f).lower()]
+    def __init__(self, curated_dir="data/curated", log_file="logs/transformation_log.json"):
+        self.curated_dir = Path(curated_dir)
+        self.log_file = Path(log_file)
+        self.curated_dir.mkdir(parents=True, exist_ok=True)
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
 
-    if matches:
-        # Return the first match (or you could pick the newest with max(mtime))
-        return matches[0]
-    return None
+    def _fix_cardio_delimiter(self, file_path):
+        """
+        Specifically corrects the cardio_train file if it was saved with ';' separator.
+        Only runs when the file exists and is malformed (only one column).
+        """
+        if not file_path.exists():
+            return
 
-
-# ── Runner ─────────────────────────────────────────────────────────────────
-
-def run_transformation(summary_path="logs/validation/validation_summary.json"):
-    # Load validation summary (this file is generated by T1.3)
-    with open(summary_path) as f:
-        summary = json.load(f)
-
-    valid_datasets = summary["valid_datasets"]
-    print(f"Found {len(valid_datasets)} valid datasets to transform.\n")
-
-    results = []
-    for dataset in valid_datasets:
-        name = dataset["name"]
-        version = dataset["version"]
-        print(f"Processing: {name}...")
-
-        # Find the actual raw file on disk (ignore the wrong path from JSON)
-        raw_path = find_raw_file(name)
-        if raw_path is None:
-            print(f"❌ Could not find raw file for '{name}' in data/raw/")
-            results.append({
-                "name": name,
-                "version": version,
-                "status": "transform_failed",
-                "error": "Raw file not found"
-            })
-            continue
-
-        print(f"   Using raw file: {raw_path}")
+        # Try reading with comma – if it gives multiple columns, file is already correct
         try:
-            module = TransformationModule(
-                raw_file_path=raw_path,
-                name=name,
-                version=version
-            )
-            curated_path, log_path = module.transform()
-            results.append({
-                "name": name,
-                "version": version,
-                "curated_path": curated_path,
-                "transform_log_path": log_path,
-                "status": "curated"
+            test_df = pd.read_csv(file_path, nrows=1)
+            if test_df.shape[1] > 1:
+                return  # Already fine
+        except Exception:
+            pass
+
+        # Malformed: read with semicolon, rewrite with comma
+        df_fixed = pd.read_csv(file_path, sep=';')
+        df_fixed.to_csv(file_path, index=False)
+        self._append_log_entry({
+            "action": "delimiter_fix",
+            "file": file_path.name,
+            "original_sep": ";",
+            "new_sep": ",",
+            "rows": len(df_fixed),
+            "columns": list(df_fixed.columns)
+        })
+
+    def _append_log_entry(self, entry):
+        """Append a log entry to the JSON log file."""
+        if self.log_file.exists():
+            with open(self.log_file, 'r') as f:
+                log = json.load(f)
+        else:
+            log = []
+        entry["timestamp"] = datetime.now().isoformat()
+        log.append(entry)
+        with open(self.log_file, 'w') as f:
+            json.dump(log, f, indent=2)
+
+    def _median_imputation(self, df, numeric_cols):
+        """Replace NaN in numeric columns with median."""
+        for col in numeric_cols:
+            if col in df.columns and df[col].isnull().any():
+                median_val = df[col].median()
+                df[col].fillna(median_val, inplace=True)
+                self._append_log_entry({
+                    "action": "median_imputation",
+                    "column": col,
+                    "median_value": float(median_val),
+                    "rows_imputed": int(df[col].isnull().sum())
+                })
+        return df
+
+    def _type_casting(self, df):
+        """Cast columns to appropriate types."""
+        original_dtypes = df.dtypes.astype(str).to_dict()
+        # Convert object columns that look like numbers
+        for col in df.select_dtypes(include=['object']).columns:
+            try:
+                df[col] = pd.to_numeric(df[col], errors='ignore')
+            except Exception:
+                pass
+        # Ensure integer columns are int (but keep NaN as float)
+        for col in df.select_dtypes(include=['float']).columns:
+            if df[col].dropna().apply(float.is_integer).all():
+                df[col] = df[col].astype('Int64')  # nullable integer
+        new_dtypes = df.dtypes.astype(str).to_dict()
+        self._append_log_entry({
+            "action": "type_casting",
+            "original_dtypes": original_dtypes,
+            "new_dtypes": new_dtypes
+        })
+        return df
+
+    def _remove_duplicates(self, df):
+        """Drop duplicate rows based on all columns."""
+        before = len(df)
+        df = df.drop_duplicates()
+        after = len(df)
+        if before != after:
+            self._append_log_entry({
+                "action": "remove_duplicates",
+                "rows_before": before,
+                "rows_after": after,
+                "duplicates_removed": before - after
             })
-        except Exception as e:
-            print(f"❌ Failed on {name}: {e}")
-            results.append({
-                "name": name,
-                "version": version,
-                "status": "transform_failed",
-                "error": str(e)
-            })
+        return df
 
-    # Save a summary of what was transformed (optional)
-    os.makedirs("logs/transform", exist_ok=True)
-    with open("logs/transform/transform_summary.json", "w") as f:
-        json.dump({"curated_datasets": [r for r in results if r["status"] == "curated"]}, f, indent=2)
+    def process_file(self, input_path, output_filename=None):
+        """
+        Full transformation pipeline for one raw file.
+        input_path: path to raw file (CSV, Excel, etc.)
+        output_filename: optional name for curated file (default = input stem + '_cleaned.csv')
+        """
+        input_path = Path(input_path)
+        if not input_path.exists():
+            raise FileNotFoundError(f"Input file not found: {input_path}")
 
-    print(f"\nDone. {sum(1 for r in results if r['status'] == 'curated')}/{len(valid_datasets)} datasets transformed successfully.")
+        # Determine output name
+        if output_filename is None:
+            output_filename = input_path.stem + "_cleaned.csv"
+        output_path = self.curated_dir / output_filename
 
+        # Read raw file (auto-detect delimiter? we assume comma, but handle if needed)
+        try:
+            df = pd.read_csv(input_path)
+        except Exception:
+            # Fallback for semicolon-delimited raw files
+            df = pd.read_csv(input_path, sep=';')
 
+        # Log start
+        self._append_log_entry({
+            "action": "start_transformation",
+            "input_file": str(input_path),
+            "output_file": str(output_path),
+            "original_shape": list(df.shape)
+        })
+
+        # 1. Remove duplicates
+        df = self._remove_duplicates(df)
+
+        # 2. Type casting
+        df = self._type_casting(df)
+
+        # 3. Median imputation for numeric columns
+        numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+        df = self._median_imputation(df, numeric_cols)
+
+        # 4. Save curated file with comma separator
+        df.to_csv(output_path, index=False)
+
+        # 5. SPECIAL FIX: cardio_train delimiter issue (if this file is the problematic one)
+        if "cardio_train_v48cc5b8b_cleaned.csv" in str(output_path):
+            self._fix_cardio_delimiter(output_path)
+
+        # Log completion
+        self._append_log_entry({
+            "action": "complete_transformation",
+            "output_file": str(output_path),
+            "final_shape": list(df.shape),
+            "columns": list(df.columns)
+        })
+
+        return df
+
+# ------------------------------
+# Example usage (for T1.4 owner: Layan)
 if __name__ == "__main__":
-    # Ensure we are in the project root (where data/ and logs/ are)
-    # If your script is inside pipelines/, this changes directory to the parent folder.
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)  # go up one level from pipelines/
-    os.chdir(project_root)
-    print(f"Working directory set to: {os.getcwd()}\n")
-
-    run_transformation()
+    transformer = TransformationModule()
+    # Process all raw files in data/raw_input/
+    raw_dir = Path("data/raw_input")
+    for raw_file in raw_dir.glob("*"):
+        if raw_file.suffix in ['.csv', '.xlsx']:
+            print(f"Processing {raw_file.name}...")
+            transformer.process_file(raw_file)
+    print("All transformations complete. Check data/curated/ and logs/transformation_log.json")
