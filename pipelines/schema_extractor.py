@@ -1,7 +1,9 @@
 """
 Schema Extractor - T1.2
 Author: Maha Qaddoumi
-Description: Analyzes CSV files in data/raw/ and generates schema JSON files in data/schema/
+Reads from: data/raw/
+Outputs to: data/schema/
+Auto-detects comma OR semicolon delimiters
 """
 
 import pandas as pd
@@ -9,48 +11,51 @@ import json
 import os
 from pathlib import Path
 
+import os
+import pandas as pd
+import json
+from pathlib import Path
+
+# ========== FORCE CORRECT WORKING DIRECTORY ==========
+project_root = "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse1"
+if os.getcwd() != project_root:
+    print(f"Changing directory from {os.getcwd()} to {project_root}")
+    os.chdir(project_root)
+print(f"Working directory: {os.getcwd()}")
+# =====================================================
+
+# ... rest of your code
+def read_csv_auto_delimiter(file_path):
+    """
+    Auto-detect comma or semicolon delimiter when reading from RAW.
+    Returns dataframe with correct columns.
+    """
+    # Try comma first
+    df = pd.read_csv(file_path)
+
+    # If only 1 column and contains semicolon, use semicolon delimiter
+    if df.shape[1] == 1 and ';' in str(df.columns[0]):
+        print(f"   🔧 Detected semicolon delimiter - converting...")
+        df = pd.read_csv(file_path, sep=';')
+
+    return df
+
 
 def extract_schema(file_path):
     """
-    Analyze a CSV file and return a schema dictionary.
-
-    Args:
-        file_path (str): Path to the CSV file
-
-    Returns:
-        dict: Schema information for each column
+    Analyze CSV from RAW folder and return schema dictionary.
     """
 
-    # Try different encodings to handle various file formats
-    # Non-ISO extended-ASCII text usually works with 'mac_roman' or 'cp1252'
-    encodings = ['mac_roman', 'cp1252', 'latin-1', 'utf-8', 'iso-8859-1', 'utf-16']
-    df = None
-    used_encoding = None
+    # Auto-detect delimiter and read
+    df = read_csv_auto_delimiter(file_path)
 
-    for encoding in encodings:
-        try:
-            df = pd.read_csv(file_path, encoding=encoding)
-            used_encoding = encoding
-            break
-        except:
-            continue
-
-    # If all encodings fail, try with error handling
-    if df is None:
-        try:
-            df = pd.read_csv(file_path, encoding='latin-1', on_bad_lines='skip')
-            used_encoding = 'latin-1 (with bad lines skipped)'
-        except Exception as e:
-            raise Exception(f"Could not read file: {file_path} - {e}")
-
-    print(f"   📖 Encoding used: {used_encoding}")
+    print(f"   📊 {df.shape[0]} rows, {df.shape[1]} columns")
 
     schema = {}
 
     for column in df.columns:
         col_data = df[column]
 
-        # Basic column information
         col_info = {
             "name": column,
             "dtype": str(col_data.dtype),
@@ -59,7 +64,6 @@ def extract_schema(file_path):
             "unique_count": int(col_data.nunique())
         }
 
-        # Numeric column statistics
         if pd.api.types.is_numeric_dtype(col_data):
             clean = col_data.dropna()
             if len(clean) > 0:
@@ -67,7 +71,6 @@ def extract_schema(file_path):
                 col_info["max"] = float(clean.max())
                 col_info["mean"] = float(clean.mean())
 
-        # Text/Categorical column statistics
         elif pd.api.types.is_object_dtype(col_data):
             samples = col_data.dropna().unique()[:3]
             col_info["sample_values"] = samples.tolist()
@@ -76,27 +79,18 @@ def extract_schema(file_path):
 
     return schema
 
+
 def save_schema(schema, file_name, output_folder="data/schema/"):
     """
-    Save schema dictionary as JSON file.
-
-    Args:
-        schema (dict): Schema information
-        file_name (str): Original CSV file name
-        output_folder (str): Where to save the JSON
-
-    Returns:
-        str: Path to saved file
+    Save schema JSON to schema folder.
+    Overwrites existing files (no duplicates).
     """
 
-    # Create output folder if it doesn't exist
     Path(output_folder).mkdir(parents=True, exist_ok=True)
 
-    # Create JSON filename from CSV filename
     base_name = file_name.replace('.csv', '')
     output_path = os.path.join(output_folder, f"{base_name}_schema.json")
 
-    # Save to file
     with open(output_path, 'w') as f:
         json.dump(schema, f, indent=2)
 
@@ -105,26 +99,29 @@ def save_schema(schema, file_name, output_folder="data/schema/"):
 
 
 if __name__ == "__main__":
-    # Main execution
     print("\n" + "=" * 60)
     print("SCHEMA EXTRACTOR - T1.2")
-    print("Author: Maha Qaddoumi")
-    print("Processing all datasets in data/raw/")
+    print("Reading from: data/raw/")
+    print("Auto-detecting comma or semicolon delimiters")
     print("=" * 60 + "\n")
 
-    # Define folders
     raw_folder = "data/raw/"
     schema_folder = "data/schema/"
 
-    # Create schema folder if it doesn't exist
     Path(schema_folder).mkdir(parents=True, exist_ok=True)
 
-    # Get all CSV files from raw folder
+    if not os.path.exists(raw_folder):
+        print(f"❌ ERROR: {raw_folder} folder not found!")
+        exit(1)
+
     csv_files = [f for f in os.listdir(raw_folder) if f.endswith('.csv')]
 
-    print(f"📁 Found {len(csv_files)} CSV files to process:\n")
+    if not csv_files:
+        print(f"❌ No CSV files found in {raw_folder}")
+        exit(1)
 
-    # Process each CSV file
+    print(f"📁 Found {len(csv_files)} CSV files in raw folder:\n")
+
     for i, csv_file in enumerate(csv_files, 1):
         print(f"{i}. Processing: {csv_file}")
         file_path = os.path.join(raw_folder, csv_file)
@@ -132,11 +129,11 @@ if __name__ == "__main__":
         try:
             schema = extract_schema(file_path)
             save_schema(schema, csv_file)
-            print(f"   📊 Columns: {len(schema)}\n")
+            print(f"   📊 {len(schema)} columns\n")
         except Exception as e:
             print(f"   ❌ Error: {e}\n")
 
     print("=" * 60)
     print("✅ Schema extraction complete!")
-    print(f"📁 Check: {schema_folder}")
+    print(f"📁 Schemas saved to: {schema_folder}")
     print("=" * 60)

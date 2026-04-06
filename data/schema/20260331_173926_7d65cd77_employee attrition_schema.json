@@ -1,6 +1,6 @@
 {
-  "\u00d4\u00aa\u00f8Age": {
-    "name": "\u00d4\u00aa\u00f8Age",
+  "Age": {
+    "name": "Age",
     "dtype": "int64",
     "missing_count": 0,
     "missing_percentage": 0.0,

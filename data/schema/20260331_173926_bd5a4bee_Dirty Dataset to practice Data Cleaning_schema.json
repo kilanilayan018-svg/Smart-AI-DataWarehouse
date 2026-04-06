@@ -23,15 +23,15 @@
     "missing_percentage": 70.0,
     "unique_count": 6
   },
-  "Actual\u00ac\u2020gross": {
-    "name": "Actual\u00ac\u2020gross",
+  "Actual\u00a0gross": {
+    "name": "Actual\u00a0gross",
     "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 20
   },
-  "Adjusted\u00ac\u2020gross (in 2022 dollars)": {
-    "name": "Adjusted\u00ac\u2020gross (in 2022 dollars)",
+  "Adjusted\u00a0gross (in 2022 dollars)": {
+    "name": "Adjusted\u00a0gross (in 2022 dollars)",
     "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
