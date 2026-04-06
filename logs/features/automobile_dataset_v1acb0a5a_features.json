@@ -1,0 +1,83 @@
+{
+  "name": "automobile_dataset",
+  "version": "1acb0a5a",
+  "curated_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\automobile_dataset_v1acb0a5a_cleaned.csv",
+  "steps": [
+    "Loaded curated dataset: 205 rows, 26 cols",
+    "Dropped ID columns: []",
+    "Extracted datetime features from: []",
+    "One-hot encoded: ['fuel-system', 'engine-type', 'engine-location', 'drive-wheels', 'body-style', 'aspiration', 'fuel-type'] | Label encoded: ['make']",
+    "Log-transformed 6 skewed columns",
+    "StandardScaler applied to 18 numeric columns"
+  ],
+  "original_shape": [
+    205,
+    26
+  ],
+  "id_columns_dropped": [],
+  "datetime_extracted": [],
+  "one_hot_encoded": [
+    "fuel-system",
+    "engine-type",
+    "engine-location",
+    "drive-wheels",
+    "body-style",
+    "aspiration",
+    "fuel-type"
+  ],
+  "label_encoded": [
+    "make"
+  ],
+  "log_transformed": [
+    {
+      "column": "price",
+      "skewness_before": 1.8097
+    },
+    {
+      "column": "horsepower",
+      "skewness_before": 1.391
+    },
+    {
+      "column": "compression-ratio",
+      "skewness_before": 2.6109
+    },
+    {
+      "column": "engine-size",
+      "skewness_before": 1.9477
+    },
+    {
+      "column": "num-of-cylinders",
+      "skewness_before": 2.8175
+    },
+    {
+      "column": "wheel-base",
+      "skewness_before": 1.0502
+    }
+  ],
+  "scaled_columns": [
+    "price",
+    "highway-mpg",
+    "city-mpg",
+    "peak-rpm",
+    "horsepower",
+    "compression-ratio",
+    "stroke",
+    "bore",
+    "engine-size",
+    "num-of-cylinders",
+    "curb-weight",
+    "height",
+    "width",
+    "length",
+    "wheel-base",
+    "num-of-doors",
+    "normalized-losses",
+    "symboling"
+  ],
+  "feature_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features\\automobile_dataset_v1acb0a5a_features.csv",
+  "final_shape": [
+    205,
+    41
+  ],
+  "timestamp": "2026-04-06T14:25:25.809431"
+}

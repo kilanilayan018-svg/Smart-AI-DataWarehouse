@@ -1,0 +1,58 @@
+{
+  "name": "customer churn",
+  "version": "5fd469a5",
+  "curated_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\customer churn_v5fd469a5_cleaned.csv",
+  "steps": [
+    "Loaded curated dataset: 7043 rows, 21 cols",
+    "Dropped ID columns: []",
+    "Extracted datetime features from: []",
+    "One-hot encoded: ['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'Churn'] | Label encoded: ['customerID', 'TotalCharges']",
+    "Log-transformed 1 skewed columns",
+    "StandardScaler applied to 3 numeric columns"
+  ],
+  "original_shape": [
+    7043,
+    21
+  ],
+  "id_columns_dropped": [],
+  "datetime_extracted": [],
+  "one_hot_encoded": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "Churn"
+  ],
+  "label_encoded": [
+    "customerID",
+    "TotalCharges"
+  ],
+  "log_transformed": [
+    {
+      "column": "SeniorCitizen",
+      "skewness_before": 1.8336
+    }
+  ],
+  "scaled_columns": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges"
+  ],
+  "feature_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features\\customer churn_v5fd469a5_features.csv",
+  "final_shape": [
+    7043,
+    32
+  ],
+  "timestamp": "2026-04-06T14:25:26.545575"
+}
