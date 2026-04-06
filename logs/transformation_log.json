@@ -1,0 +1,968 @@
+[
+  {
+    "action": "start_transformation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "output_file": "20260331_173925_1acb0a5a_automobile_dataset_cleaned.csv",
+    "original_shape": [
+      205,
+      26
+    ],
+    "timestamp": "2026-04-06T18:08:25.385064"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "original_dtypes": {
+      "price": "float64",
+      "highway-mpg": "int64",
+      "city-mpg": "int64",
+      "peak-rpm": "float64",
+      "horsepower": "float64",
+      "compression-ratio": "float64",
+      "stroke": "float64",
+      "bore": "float64",
+      "fuel-system": "str",
+      "engine-size": "int64",
+      "num-of-cylinders": "int64",
+      "engine-type": "str",
+      "curb-weight": "int64",
+      "height": "float64",
+      "width": "float64",
+      "length": "float64",
+      "wheel-base": "float64",
+      "engine-location": "str",
+      "drive-wheels": "str",
+      "body-style": "str",
+      "num-of-doors": "float64",
+      "aspiration": "str",
+      "fuel-type": "str",
+      "make": "str",
+      "normalized-losses": "float64",
+      "symboling": "int64"
+    },
+    "new_dtypes": {
+      "price": "Int64",
+      "highway-mpg": "int64",
+      "city-mpg": "int64",
+      "peak-rpm": "Int64",
+      "horsepower": "Int64",
+      "compression-ratio": "float64",
+      "stroke": "float64",
+      "bore": "float64",
+      "fuel-system": "float64",
+      "engine-size": "int64",
+      "num-of-cylinders": "int64",
+      "engine-type": "float64",
+      "curb-weight": "int64",
+      "height": "float64",
+      "width": "float64",
+      "length": "float64",
+      "wheel-base": "float64",
+      "engine-location": "float64",
+      "drive-wheels": "float64",
+      "body-style": "float64",
+      "num-of-doors": "Int64",
+      "aspiration": "float64",
+      "fuel-type": "float64",
+      "make": "float64",
+      "normalized-losses": "Int64",
+      "symboling": "int64"
+    },
+    "timestamp": "2026-04-06T18:08:25.405443"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "price",
+    "median_value": 10295.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.413416"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "peak-rpm",
+    "median_value": 5200.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.420351"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "horsepower",
+    "median_value": 95.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.428518"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "stroke",
+    "median_value": 3.29,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.435505"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "bore",
+    "median_value": 3.31,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.442692"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "num-of-doors",
+    "median_value": 4.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.452133"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "column": "normalized-losses",
+    "median_value": 115.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:25.462212"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "output_file": "20260331_173925_1acb0a5a_automobile_dataset_cleaned.csv",
+    "final_shape": [
+      205,
+      26
+    ],
+    "columns": [
+      "price",
+      "highway-mpg",
+      "city-mpg",
+      "peak-rpm",
+      "horsepower",
+      "compression-ratio",
+      "stroke",
+      "bore",
+      "fuel-system",
+      "engine-size",
+      "num-of-cylinders",
+      "engine-type",
+      "curb-weight",
+      "height",
+      "width",
+      "length",
+      "wheel-base",
+      "engine-location",
+      "drive-wheels",
+      "body-style",
+      "num-of-doors",
+      "aspiration",
+      "fuel-type",
+      "make",
+      "normalized-losses",
+      "symboling"
+    ],
+    "timestamp": "2026-04-06T18:08:25.474814"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
+    "output_file": "20260331_173925_48cc5b8b_cardio_train_cleaned.csv",
+    "original_shape": [
+      70000,
+      13
+    ],
+    "timestamp": "2026-04-06T18:08:25.561660"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
+    "original_dtypes": {
+      "id": "int64",
+      "age": "int64",
+      "gender": "int64",
+      "height": "int64",
+      "weight": "float64",
+      "ap_hi": "int64",
+      "ap_lo": "int64",
+      "cholesterol": "int64",
+      "gluc": "int64",
+      "smoke": "int64",
+      "alco": "int64",
+      "active": "int64",
+      "cardio": "int64"
+    },
+    "new_dtypes": {
+      "id": "int64",
+      "age": "int64",
+      "gender": "int64",
+      "height": "int64",
+      "weight": "float64",
+      "ap_hi": "int64",
+      "ap_lo": "int64",
+      "cholesterol": "int64",
+      "gluc": "int64",
+      "smoke": "int64",
+      "alco": "int64",
+      "active": "int64",
+      "cardio": "int64"
+    },
+    "timestamp": "2026-04-06T18:08:25.585697"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
+    "output_file": "20260331_173925_48cc5b8b_cardio_train_cleaned.csv",
+    "final_shape": [
+      70000,
+      13
+    ],
+    "columns": [
+      "id",
+      "age",
+      "gender",
+      "height",
+      "weight",
+      "ap_hi",
+      "ap_lo",
+      "cholesterol",
+      "gluc",
+      "smoke",
+      "alco",
+      "active",
+      "cardio"
+    ],
+    "timestamp": "2026-04-06T18:08:25.764263"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_04fa9782_raw_data (2).csv",
+    "output_file": "20260331_173926_04fa9782_raw_data (2)_cleaned.csv",
+    "original_shape": [
+      32560,
+      15
+    ],
+    "timestamp": "2026-04-06T18:08:25.843980"
+  },
+  {
+    "action": "remove_duplicates",
+    "file": "20260331_173926_04fa9782_raw_data (2).csv",
+    "rows_before": 32560,
+    "rows_after": 32536,
+    "duplicates_removed": 24,
+    "timestamp": "2026-04-06T18:08:25.872214"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_04fa9782_raw_data (2).csv",
+    "original_dtypes": {
+      "39": "int64",
+      " State-gov": "str",
+      " 77516": "int64",
+      " Bachelors": "str",
+      " 13": "int64",
+      " Never-married": "str",
+      " Adm-clerical": "str",
+      " Not-in-family": "str",
+      " White": "str",
+      " Male": "str",
+      " 2174": "int64",
+      " 0": "int64",
+      " 40": "int64",
+      " United-States": "str",
+      " <=50K": "str"
+    },
+    "new_dtypes": {
+      "39": "int64",
+      " State-gov": "float64",
+      " 77516": "int64",
+      " Bachelors": "float64",
+      " 13": "int64",
+      " Never-married": "float64",
+      " Adm-clerical": "float64",
+      " Not-in-family": "float64",
+      " White": "float64",
+      " Male": "float64",
+      " 2174": "int64",
+      " 0": "int64",
+      " 40": "int64",
+      " United-States": "float64",
+      " <=50K": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.058938"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_04fa9782_raw_data (2).csv",
+    "output_file": "20260331_173926_04fa9782_raw_data (2)_cleaned.csv",
+    "final_shape": [
+      32536,
+      15
+    ],
+    "columns": [
+      "39",
+      " State-gov",
+      " 77516",
+      " Bachelors",
+      " 13",
+      " Never-married",
+      " Adm-clerical",
+      " Not-in-family",
+      " White",
+      " Male",
+      " 2174",
+      " 0",
+      " 40",
+      " United-States",
+      " <=50K"
+    ],
+    "timestamp": "2026-04-06T18:08:26.188425"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_0a43131b_Iris 1 .csv",
+    "output_file": "20260331_173926_0a43131b_Iris 1 _cleaned.csv",
+    "original_shape": [
+      150,
+      6
+    ],
+    "timestamp": "2026-04-06T18:08:26.198448"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_0a43131b_Iris 1 .csv",
+    "original_dtypes": {
+      "Id": "int64",
+      "SepalLengthCm": "float64",
+      "SepalWidthCm": "float64",
+      "PetalLengthCm": "float64",
+      "PetalWidthCm": "float64",
+      "Species": "str"
+    },
+    "new_dtypes": {
+      "Id": "int64",
+      "SepalLengthCm": "float64",
+      "SepalWidthCm": "float64",
+      "PetalLengthCm": "float64",
+      "PetalWidthCm": "float64",
+      "Species": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.210305"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_0a43131b_Iris 1 .csv",
+    "output_file": "20260331_173926_0a43131b_Iris 1 _cleaned.csv",
+    "final_shape": [
+      150,
+      6
+    ],
+    "columns": [
+      "Id",
+      "SepalLengthCm",
+      "SepalWidthCm",
+      "PetalLengthCm",
+      "PetalWidthCm",
+      "Species"
+    ],
+    "timestamp": "2026-04-06T18:08:26.220309"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_5fd469a5_customer churn.csv",
+    "output_file": "20260331_173926_5fd469a5_customer churn_cleaned.csv",
+    "original_shape": [
+      7043,
+      21
+    ],
+    "timestamp": "2026-04-06T18:08:26.256924"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_5fd469a5_customer churn.csv",
+    "original_dtypes": {
+      "customerID": "str",
+      "gender": "str",
+      "SeniorCitizen": "int64",
+      "Partner": "str",
+      "Dependents": "str",
+      "tenure": "int64",
+      "PhoneService": "str",
+      "MultipleLines": "str",
+      "InternetService": "str",
+      "OnlineSecurity": "str",
+      "OnlineBackup": "str",
+      "DeviceProtection": "str",
+      "TechSupport": "str",
+      "StreamingTV": "str",
+      "StreamingMovies": "str",
+      "Contract": "str",
+      "PaperlessBilling": "str",
+      "PaymentMethod": "str",
+      "MonthlyCharges": "float64",
+      "TotalCharges": "str",
+      "Churn": "str"
+    },
+    "new_dtypes": {
+      "customerID": "float64",
+      "gender": "float64",
+      "SeniorCitizen": "int64",
+      "Partner": "float64",
+      "Dependents": "float64",
+      "tenure": "int64",
+      "PhoneService": "float64",
+      "MultipleLines": "float64",
+      "InternetService": "float64",
+      "OnlineSecurity": "float64",
+      "OnlineBackup": "float64",
+      "DeviceProtection": "float64",
+      "TechSupport": "float64",
+      "StreamingTV": "float64",
+      "StreamingMovies": "float64",
+      "Contract": "float64",
+      "PaperlessBilling": "float64",
+      "PaymentMethod": "float64",
+      "MonthlyCharges": "float64",
+      "TotalCharges": "float64",
+      "Churn": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.354596"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_5fd469a5_customer churn.csv",
+    "column": "TotalCharges",
+    "median_value": 1397.475,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.369833"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_5fd469a5_customer churn.csv",
+    "output_file": "20260331_173926_5fd469a5_customer churn_cleaned.csv",
+    "final_shape": [
+      7043,
+      21
+    ],
+    "columns": [
+      "customerID",
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "tenure",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "MonthlyCharges",
+      "TotalCharges",
+      "Churn"
+    ],
+    "timestamp": "2026-04-06T18:08:26.423703"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "output_file": "20260331_173926_6b380abd_messy_IMDB_dataset_cleaned.csv",
+    "original_shape": [
+      101,
+      12
+    ],
+    "timestamp": "2026-04-06T18:08:26.435373"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "original_dtypes": {
+      "IMBD title ID": "str",
+      "Original titl\u00ca": "str",
+      "Release year": "str",
+      "Genr\u00eb\u00a8": "str",
+      "Duration": "str",
+      "Country": "str",
+      "Content Rating": "str",
+      "Director": "str",
+      "Unnamed: 8": "float64",
+      "Income": "str",
+      " Votes ": "str",
+      "Score": "str"
+    },
+    "new_dtypes": {
+      "IMBD title ID": "float64",
+      "Original titl\u00ca": "Int64",
+      "Release year": "float64",
+      "Genr\u00eb\u00a8": "float64",
+      "Duration": "float64",
+      "Country": "float64",
+      "Content Rating": "float64",
+      "Director": "float64",
+      "Unnamed: 8": "float64",
+      "Income": "float64",
+      " Votes ": "float64",
+      "Score": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.453099"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "column": "Original titl\u00ca",
+    "median_value": 1917.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.463945"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "column": "Duration",
+    "median_value": 129.5,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.474456"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "column": " Votes ",
+    "median_value": 605.648,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.485859"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "column": "Score",
+    "median_value": 8.2,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.496755"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
+    "output_file": "20260331_173926_6b380abd_messy_IMDB_dataset_cleaned.csv",
+    "final_shape": [
+      101,
+      12
+    ],
+    "columns": [
+      "IMBD title ID",
+      "Original titl\u00ca",
+      "Release year",
+      "Genr\u00eb\u00a8",
+      "Duration",
+      "Country",
+      "Content Rating",
+      "Director",
+      "Unnamed: 8",
+      "Income",
+      " Votes ",
+      "Score"
+    ],
+    "timestamp": "2026-04-06T18:08:26.507699"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_7d65cd77_employee attrition.csv",
+    "output_file": "20260331_173926_7d65cd77_employee attrition_cleaned.csv",
+    "original_shape": [
+      1470,
+      35
+    ],
+    "timestamp": "2026-04-06T18:08:26.527004"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_7d65cd77_employee attrition.csv",
+    "original_dtypes": {
+      "Age": "int64",
+      "Attrition": "str",
+      "BusinessTravel": "str",
+      "DailyRate": "int64",
+      "Department": "str",
+      "DistanceFromHome": "int64",
+      "Education": "int64",
+      "EducationField": "str",
+      "EmployeeCount": "int64",
+      "EmployeeNumber": "int64",
+      "EnvironmentSatisfaction": "int64",
+      "Gender": "str",
+      "HourlyRate": "int64",
+      "JobInvolvement": "int64",
+      "JobLevel": "int64",
+      "JobRole": "str",
+      "JobSatisfaction": "int64",
+      "MaritalStatus": "str",
+      "MonthlyIncome": "int64",
+      "MonthlyRate": "int64",
+      "NumCompaniesWorked": "int64",
+      "Over18": "str",
+      "OverTime": "str",
+      "PercentSalaryHike": "int64",
+      "PerformanceRating": "int64",
+      "RelationshipSatisfaction": "int64",
+      "StandardHours": "int64",
+      "StockOptionLevel": "int64",
+      "TotalWorkingYears": "int64",
+      "TrainingTimesLastYear": "int64",
+      "WorkLifeBalance": "int64",
+      "YearsAtCompany": "int64",
+      "YearsInCurrentRole": "int64",
+      "YearsSinceLastPromotion": "int64",
+      "YearsWithCurrManager": "int64"
+    },
+    "new_dtypes": {
+      "Age": "int64",
+      "Attrition": "float64",
+      "BusinessTravel": "float64",
+      "DailyRate": "int64",
+      "Department": "float64",
+      "DistanceFromHome": "int64",
+      "Education": "int64",
+      "EducationField": "float64",
+      "EmployeeCount": "int64",
+      "EmployeeNumber": "int64",
+      "EnvironmentSatisfaction": "int64",
+      "Gender": "float64",
+      "HourlyRate": "int64",
+      "JobInvolvement": "int64",
+      "JobLevel": "int64",
+      "JobRole": "float64",
+      "JobSatisfaction": "int64",
+      "MaritalStatus": "float64",
+      "MonthlyIncome": "int64",
+      "MonthlyRate": "int64",
+      "NumCompaniesWorked": "int64",
+      "Over18": "float64",
+      "OverTime": "float64",
+      "PercentSalaryHike": "int64",
+      "PerformanceRating": "int64",
+      "RelationshipSatisfaction": "int64",
+      "StandardHours": "int64",
+      "StockOptionLevel": "int64",
+      "TotalWorkingYears": "int64",
+      "TrainingTimesLastYear": "int64",
+      "WorkLifeBalance": "int64",
+      "YearsAtCompany": "int64",
+      "YearsInCurrentRole": "int64",
+      "YearsSinceLastPromotion": "int64",
+      "YearsWithCurrManager": "int64"
+    },
+    "timestamp": "2026-04-06T18:08:26.551058"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_7d65cd77_employee attrition.csv",
+    "output_file": "20260331_173926_7d65cd77_employee attrition_cleaned.csv",
+    "final_shape": [
+      1470,
+      35
+    ],
+    "columns": [
+      "Age",
+      "Attrition",
+      "BusinessTravel",
+      "DailyRate",
+      "Department",
+      "DistanceFromHome",
+      "Education",
+      "EducationField",
+      "EmployeeCount",
+      "EmployeeNumber",
+      "EnvironmentSatisfaction",
+      "Gender",
+      "HourlyRate",
+      "JobInvolvement",
+      "JobLevel",
+      "JobRole",
+      "JobSatisfaction",
+      "MaritalStatus",
+      "MonthlyIncome",
+      "MonthlyRate",
+      "NumCompaniesWorked",
+      "Over18",
+      "OverTime",
+      "PercentSalaryHike",
+      "PerformanceRating",
+      "RelationshipSatisfaction",
+      "StandardHours",
+      "StockOptionLevel",
+      "TotalWorkingYears",
+      "TrainingTimesLastYear",
+      "WorkLifeBalance",
+      "YearsAtCompany",
+      "YearsInCurrentRole",
+      "YearsSinceLastPromotion",
+      "YearsWithCurrManager"
+    ],
+    "timestamp": "2026-04-06T18:08:26.576414"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "output_file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "original_shape": [
+      20,
+      11
+    ],
+    "timestamp": "2026-04-06T18:08:26.586948"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "original_dtypes": {
+      "Rank": "int64",
+      "Peak": "str",
+      "All Time Peak": "str",
+      "Actual\u00a0gross": "str",
+      "Adjusted\u00a0gross (in 2022 dollars)": "str",
+      "Artist": "str",
+      "Tour title": "str",
+      "Year(s)": "str",
+      "Shows": "int64",
+      "Average gross": "str",
+      "Ref.": "str"
+    },
+    "new_dtypes": {
+      "Rank": "int64",
+      "Peak": "Int64",
+      "All Time Peak": "Int64",
+      "Actual\u00a0gross": "float64",
+      "Adjusted\u00a0gross (in 2022 dollars)": "float64",
+      "Artist": "float64",
+      "Tour title": "float64",
+      "Year(s)": "Int64",
+      "Shows": "int64",
+      "Average gross": "float64",
+      "Ref.": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.602757"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "column": "Peak",
+    "median_value": 1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.611881"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "column": "All Time Peak",
+    "median_value": 2.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.620333"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "output_file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "final_shape": [
+      20,
+      11
+    ],
+    "columns": [
+      "Rank",
+      "Peak",
+      "All Time Peak",
+      "Actual\u00a0gross",
+      "Adjusted\u00a0gross (in 2022 dollars)",
+      "Artist",
+      "Tour title",
+      "Year(s)",
+      "Shows",
+      "Average gross",
+      "Ref."
+    ],
+    "timestamp": "2026-04-06T18:08:26.632636"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "output_file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs_cleaned.csv",
+    "original_shape": [
+      672,
+      15
+    ],
+    "timestamp": "2026-04-06T18:08:26.668396"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "original_dtypes": {
+      "index": "int64",
+      "Job Title": "str",
+      "Salary Estimate": "str",
+      "Job Description": "str",
+      "Rating": "float64",
+      "Company Name": "str",
+      "Location": "str",
+      "Headquarters": "str",
+      "Size": "str",
+      "Founded": "int64",
+      "Type of ownership": "str",
+      "Industry": "str",
+      "Sector": "str",
+      "Revenue": "str",
+      "Competitors": "str"
+    },
+    "new_dtypes": {
+      "index": "int64",
+      "Job Title": "float64",
+      "Salary Estimate": "float64",
+      "Job Description": "float64",
+      "Rating": "float64",
+      "Company Name": "float64",
+      "Location": "float64",
+      "Headquarters": "Int64",
+      "Size": "Int64",
+      "Founded": "int64",
+      "Type of ownership": "Int64",
+      "Industry": "Int64",
+      "Sector": "Int64",
+      "Revenue": "Int64",
+      "Competitors": "Int64"
+    },
+    "timestamp": "2026-04-06T18:08:26.701681"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Headquarters",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.713134"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Size",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.722839"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Type of ownership",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.731879"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Industry",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.740954"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Sector",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.749686"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Revenue",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.758577"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "column": "Competitors",
+    "median_value": -1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-06T18:08:26.767452"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "output_file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs_cleaned.csv",
+    "final_shape": [
+      672,
+      15
+    ],
+    "columns": [
+      "index",
+      "Job Title",
+      "Salary Estimate",
+      "Job Description",
+      "Rating",
+      "Company Name",
+      "Location",
+      "Headquarters",
+      "Size",
+      "Founded",
+      "Type of ownership",
+      "Industry",
+      "Sector",
+      "Revenue",
+      "Competitors"
+    ],
+    "timestamp": "2026-04-06T18:08:26.780601"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260331_173926_d017e4f7_metadata.csv",
+    "output_file": "20260331_173926_d017e4f7_metadata_cleaned.csv",
+    "original_shape": [
+      11,
+      6
+    ],
+    "timestamp": "2026-04-06T18:08:26.791514"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260331_173926_d017e4f7_metadata.csv",
+    "original_dtypes": {
+      "filename": "str",
+      "source": "str",
+      "rows": "int64",
+      "cols": "int64",
+      "target": "str",
+      "task_type": "str"
+    },
+    "new_dtypes": {
+      "filename": "float64",
+      "source": "float64",
+      "rows": "int64",
+      "cols": "int64",
+      "target": "float64",
+      "task_type": "float64"
+    },
+    "timestamp": "2026-04-06T18:08:26.803561"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260331_173926_d017e4f7_metadata.csv",
+    "output_file": "20260331_173926_d017e4f7_metadata_cleaned.csv",
+    "final_shape": [
+      11,
+      6
+    ],
+    "columns": [
+      "filename",
+      "source",
+      "rows",
+      "cols",
+      "target",
+      "task_type"
+    ],
+    "timestamp": "2026-04-06T18:08:26.818948"
+  }
+]
