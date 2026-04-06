@@ -1,55 +1,78 @@
-"""
-Schema Extractor - T1.2
-Author: Maha Qaddoumi
-Reads from: data/raw/
-Outputs to: data/schema/
-Auto-detects comma OR semicolon delimiters
-"""
-
 import pandas as pd
 import json
 import os
 from pathlib import Path
 
-import os
-import pandas as pd
-import json
-from pathlib import Path
-
-# ========== FORCE CORRECT WORKING DIRECTORY ==========
+# Force correct working directory
 project_root = "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse1"
-if os.getcwd() != project_root:
-    print(f"Changing directory from {os.getcwd()} to {project_root}")
-    os.chdir(project_root)
+os.chdir(project_root)
 print(f"Working directory: {os.getcwd()}")
-# =====================================================
 
-# ... rest of your code
+
 def read_csv_auto_delimiter(file_path):
     """
-    Auto-detect comma or semicolon delimiter when reading from RAW.
-    Returns dataframe with correct columns.
+    Auto-detect comma or semicolon delimiter by analyzing first line.
+    Handles multiple encodings.
     """
-    # Try comma first
-    df = pd.read_csv(file_path)
 
-    # If only 1 column and contains semicolon, use semicolon delimiter
-    if df.shape[1] == 1 and ';' in str(df.columns[0]):
-        print(f"   🔧 Detected semicolon delimiter - converting...")
-        df = pd.read_csv(file_path, sep=';')
+    # Try different encodings in order
+    encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1', 'mac_roman']
+
+    first_line = None
+    used_encoding = None
+
+    # Find encoding that works for first line
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as f:
+                first_line = f.readline()
+                used_encoding = encoding
+                break
+        except:
+            continue
+
+    if first_line is None:
+        # Last resort - ignore errors
+        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+            first_line = f.readline()
+            used_encoding = 'utf-8 (with errors ignored)'
+
+    print(f"   📖 Encoding: {used_encoding}")
+
+    # Count delimiters
+    comma_count = first_line.count(',')
+    semicolon_count = first_line.count(';')
+
+    print(f"   📊 Delimiter analysis: {comma_count} commas, {semicolon_count} semicolons")
+
+    # Choose delimiter and read with the working encoding
+    if semicolon_count > comma_count:
+        print(f"   🔧 Using semicolon delimiter")
+        try:
+            df = pd.read_csv(file_path, sep=';', encoding=used_encoding)
+        except:
+            df = pd.read_csv(file_path, sep=';', encoding='latin-1')
+    else:
+        print(f"   🔧 Using comma delimiter")
+        try:
+            df = pd.read_csv(file_path, encoding=used_encoding)
+        except:
+            df = pd.read_csv(file_path, encoding='latin-1')
+
+    # Final check - if still 1 column, force semicolon
+    if df.shape[1] == 1:
+        print(f"   🔧 WARNING: Only 1 column, forcing semicolon...")
+        df = pd.read_csv(file_path, sep=';', encoding='latin-1')
 
     return df
 
 
 def extract_schema(file_path):
-    """
-    Analyze CSV from RAW folder and return schema dictionary.
-    """
+    """Extract schema from CSV file"""
 
-    # Auto-detect delimiter and read
     df = read_csv_auto_delimiter(file_path)
 
-    print(f"   📊 {df.shape[0]} rows, {df.shape[1]} columns")
+    print(f"   📊 Shape: {df.shape[0]} rows, {df.shape[1]} columns")
 
     schema = {}
 
@@ -81,10 +104,7 @@ def extract_schema(file_path):
 
 
 def save_schema(schema, file_name, output_folder="data/schema/"):
-    """
-    Save schema JSON to schema folder.
-    Overwrites existing files (no duplicates).
-    """
+    """Save schema as JSON"""
 
     Path(output_folder).mkdir(parents=True, exist_ok=True)
 
@@ -102,7 +122,7 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     print("SCHEMA EXTRACTOR - T1.2")
     print("Reading from: data/raw/")
-    print("Auto-detecting comma or semicolon delimiters")
+    print("Auto-detecting delimiters & encodings")
     print("=" * 60 + "\n")
 
     raw_folder = "data/raw/"
@@ -111,14 +131,10 @@ if __name__ == "__main__":
     Path(schema_folder).mkdir(parents=True, exist_ok=True)
 
     if not os.path.exists(raw_folder):
-        print(f"❌ ERROR: {raw_folder} folder not found!")
+        print(f"❌ ERROR: {raw_folder} not found!")
         exit(1)
 
     csv_files = [f for f in os.listdir(raw_folder) if f.endswith('.csv')]
-
-    if not csv_files:
-        print(f"❌ No CSV files found in {raw_folder}")
-        exit(1)
 
     print(f"📁 Found {len(csv_files)} CSV files in raw folder:\n")
 
