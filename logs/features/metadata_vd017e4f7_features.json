@@ -1,0 +1,47 @@
+{
+  "name": "metadata",
+  "version": "d017e4f7",
+  "curated_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\metadata_vd017e4f7_cleaned.csv",
+  "steps": [
+    "Loaded curated dataset: 11 rows, 6 cols",
+    "Dropped ID columns: []",
+    "Extracted datetime features from: []",
+    "One-hot encoded: ['source', 'task_type'] | Label encoded: ['filename', 'target']",
+    "Log-transformed 2 skewed columns",
+    "StandardScaler applied to 2 numeric columns"
+  ],
+  "original_shape": [
+    11,
+    6
+  ],
+  "id_columns_dropped": [],
+  "datetime_extracted": [],
+  "one_hot_encoded": [
+    "source",
+    "task_type"
+  ],
+  "label_encoded": [
+    "filename",
+    "target"
+  ],
+  "log_transformed": [
+    {
+      "column": "rows",
+      "skewness_before": 2.4779
+    },
+    {
+      "column": "cols",
+      "skewness_before": 1.2697
+    }
+  ],
+  "scaled_columns": [
+    "rows",
+    "cols"
+  ],
+  "feature_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features\\metadata_vd017e4f7_features.csv",
+  "final_shape": [
+    11,
+    7
+  ],
+  "timestamp": "2026-04-06T14:25:26.618971"
+}
