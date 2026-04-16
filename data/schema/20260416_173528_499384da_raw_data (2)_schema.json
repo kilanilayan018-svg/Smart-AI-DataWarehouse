@@ -1,0 +1,168 @@
+{
+  "39": {
+    "name": "39",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 73,
+    "min": 17.0,
+    "max": 90.0,
+    "mean": 38.581633906633904
+  },
+  " State-gov": {
+    "name": " State-gov",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 9,
+    "sample_values": [
+      " Self-emp-not-inc",
+      " Private",
+      " State-gov"
+    ]
+  },
+  " 77516": {
+    "name": " 77516",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 21647,
+    "min": 12285.0,
+    "max": 1484705.0,
+    "mean": 189781.81437346438
+  },
+  " Bachelors": {
+    "name": " Bachelors",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 16,
+    "sample_values": [
+      " Bachelors",
+      " HS-grad",
+      " 11th"
+    ]
+  },
+  " 13": {
+    "name": " 13",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 16,
+    "min": 1.0,
+    "max": 16.0,
+    "mean": 10.08058968058968
+  },
+  " Never-married": {
+    "name": " Never-married",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 7,
+    "sample_values": [
+      " Married-civ-spouse",
+      " Divorced",
+      " Married-spouse-absent"
+    ]
+  },
+  " Adm-clerical": {
+    "name": " Adm-clerical",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 15,
+    "sample_values": [
+      " Exec-managerial",
+      " Handlers-cleaners",
+      " Prof-specialty"
+    ]
+  },
+  " Not-in-family": {
+    "name": " Not-in-family",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 6,
+    "sample_values": [
+      " Husband",
+      " Not-in-family",
+      " Wife"
+    ]
+  },
+  " White": {
+    "name": " White",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 5,
+    "sample_values": [
+      " White",
+      " Black",
+      " Asian-Pac-Islander"
+    ]
+  },
+  " Male": {
+    "name": " Male",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2,
+    "sample_values": [
+      " Male",
+      " Female"
+    ]
+  },
+  " 2174": {
+    "name": " 2174",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 119,
+    "min": 0.0,
+    "max": 99999.0,
+    "mean": 1077.615171990172
+  },
+  " 0": {
+    "name": " 0",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 92,
+    "min": 0.0,
+    "max": 4356.0,
+    "mean": 87.30651105651106
+  },
+  " 40": {
+    "name": " 40",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 94,
+    "min": 1.0,
+    "max": 99.0,
+    "mean": 40.437469287469284
+  },
+  " United-States": {
+    "name": " United-States",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 42,
+    "sample_values": [
+      " United-States",
+      " Cuba",
+      " Jamaica"
+    ]
+  },
+  " <=50K": {
+    "name": " <=50K",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2,
+    "sample_values": [
+      " <=50K",
+      " >50K"
+    ]
+  }
+}

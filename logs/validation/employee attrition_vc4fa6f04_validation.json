@@ -1,0 +1,9 @@
+{
+    "is_valid": true,
+    "errors": [],
+    "name": "employee attrition",
+    "version": "c4fa6f04",
+    "raw_file_path": "data/raw/20260416_173528_c4fa6f04_employee attrition.csv",
+    "schema_path": "data/schema/20260416_173528_c4fa6f04_employee attrition_schema.json",
+    "validation_status": "valid"
+}

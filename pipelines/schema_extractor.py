@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 
 # Force correct working directory
-project_root = "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse1"
-os.chdir(project_root)
+#project_root = "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse1"
+#os.chdir(project_root)
 print(f"Working directory: {os.getcwd()}")
 
 

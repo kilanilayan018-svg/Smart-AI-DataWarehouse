@@ -1,17 +1,332 @@
 [
   {
     "action": "start_transformation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
-    "output_file": "20260331_173925_1acb0a5a_automobile_dataset_cleaned.csv",
+    "file": "20260416_173528_20aa9739_customer churn.csv",
+    "output_file": "20260416_173528_20aa9739_customer churn_cleaned.csv",
+    "original_shape": [
+      7043,
+      21
+    ],
+    "timestamp": "2026-04-16T19:54:29.679168"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_20aa9739_customer churn.csv",
+    "original_dtypes": {
+      "customerID": "object",
+      "gender": "object",
+      "SeniorCitizen": "int64",
+      "Partner": "object",
+      "Dependents": "object",
+      "tenure": "int64",
+      "PhoneService": "object",
+      "MultipleLines": "object",
+      "InternetService": "object",
+      "OnlineSecurity": "object",
+      "OnlineBackup": "object",
+      "DeviceProtection": "object",
+      "TechSupport": "object",
+      "StreamingTV": "object",
+      "StreamingMovies": "object",
+      "Contract": "object",
+      "PaperlessBilling": "object",
+      "PaymentMethod": "object",
+      "MonthlyCharges": "float64",
+      "TotalCharges": "object",
+      "Churn": "object"
+    },
+    "new_dtypes": {
+      "customerID": "float64",
+      "gender": "float64",
+      "SeniorCitizen": "int64",
+      "Partner": "float64",
+      "Dependents": "float64",
+      "tenure": "int64",
+      "PhoneService": "float64",
+      "MultipleLines": "float64",
+      "InternetService": "float64",
+      "OnlineSecurity": "float64",
+      "OnlineBackup": "float64",
+      "DeviceProtection": "float64",
+      "TechSupport": "float64",
+      "StreamingTV": "float64",
+      "StreamingMovies": "float64",
+      "Contract": "float64",
+      "PaperlessBilling": "float64",
+      "PaymentMethod": "float64",
+      "MonthlyCharges": "float64",
+      "TotalCharges": "float64",
+      "Churn": "float64"
+    },
+    "timestamp": "2026-04-16T19:54:29.799167"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_20aa9739_customer churn.csv",
+    "column": "TotalCharges",
+    "median_value": 1397.475,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:29.810932"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_20aa9739_customer churn.csv",
+    "output_file": "20260416_173528_20aa9739_customer churn_cleaned.csv",
+    "final_shape": [
+      7043,
+      21
+    ],
+    "columns": [
+      "customerID",
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "tenure",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "MonthlyCharges",
+      "TotalCharges",
+      "Churn"
+    ],
+    "timestamp": "2026-04-16T19:54:29.869449"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173528_499384da_raw_data (2).csv",
+    "output_file": "20260416_173528_499384da_raw_data (2)_cleaned.csv",
+    "original_shape": [
+      32560,
+      15
+    ],
+    "timestamp": "2026-04-16T19:54:29.930547"
+  },
+  {
+    "action": "remove_duplicates",
+    "file": "20260416_173528_499384da_raw_data (2).csv",
+    "rows_before": 32560,
+    "rows_after": 32536,
+    "duplicates_removed": 24,
+    "timestamp": "2026-04-16T19:54:29.961341"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_499384da_raw_data (2).csv",
+    "original_dtypes": {
+      "39": "int64",
+      " State-gov": "object",
+      " 77516": "int64",
+      " Bachelors": "object",
+      " 13": "int64",
+      " Never-married": "object",
+      " Adm-clerical": "object",
+      " Not-in-family": "object",
+      " White": "object",
+      " Male": "object",
+      " 2174": "int64",
+      " 0": "int64",
+      " 40": "int64",
+      " United-States": "object",
+      " <=50K": "object"
+    },
+    "new_dtypes": {
+      "39": "int64",
+      " State-gov": "float64",
+      " 77516": "int64",
+      " Bachelors": "float64",
+      " 13": "int64",
+      " Never-married": "float64",
+      " Adm-clerical": "float64",
+      " Not-in-family": "float64",
+      " White": "float64",
+      " Male": "float64",
+      " 2174": "int64",
+      " 0": "int64",
+      " 40": "int64",
+      " United-States": "float64",
+      " <=50K": "float64"
+    },
+    "timestamp": "2026-04-16T19:54:30.188380"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_499384da_raw_data (2).csv",
+    "output_file": "20260416_173528_499384da_raw_data (2)_cleaned.csv",
+    "final_shape": [
+      32536,
+      15
+    ],
+    "columns": [
+      "39",
+      " State-gov",
+      " 77516",
+      " Bachelors",
+      " 13",
+      " Never-married",
+      " Adm-clerical",
+      " Not-in-family",
+      " White",
+      " Male",
+      " 2174",
+      " 0",
+      " 40",
+      " United-States",
+      " <=50K"
+    ],
+    "timestamp": "2026-04-16T19:54:30.344026"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173528_74e6264d_Iris 1 .csv",
+    "output_file": "20260416_173528_74e6264d_Iris 1 _cleaned.csv",
+    "original_shape": [
+      150,
+      6
+    ],
+    "timestamp": "2026-04-16T19:54:30.349394"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_74e6264d_Iris 1 .csv",
+    "original_dtypes": {
+      "Id": "int64",
+      "SepalLengthCm": "float64",
+      "SepalWidthCm": "float64",
+      "PetalLengthCm": "float64",
+      "PetalWidthCm": "float64",
+      "Species": "object"
+    },
+    "new_dtypes": {
+      "Id": "int64",
+      "SepalLengthCm": "float64",
+      "SepalWidthCm": "float64",
+      "PetalLengthCm": "float64",
+      "PetalWidthCm": "float64",
+      "Species": "float64"
+    },
+    "timestamp": "2026-04-16T19:54:30.355334"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_74e6264d_Iris 1 .csv",
+    "output_file": "20260416_173528_74e6264d_Iris 1 _cleaned.csv",
+    "final_shape": [
+      150,
+      6
+    ],
+    "columns": [
+      "Id",
+      "SepalLengthCm",
+      "SepalWidthCm",
+      "PetalLengthCm",
+      "PetalWidthCm",
+      "Species"
+    ],
+    "timestamp": "2026-04-16T19:54:30.361541"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "output_file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "original_shape": [
+      20,
+      11
+    ],
+    "timestamp": "2026-04-16T19:54:30.368019"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "original_dtypes": {
+      "Rank": "int64",
+      "Peak": "object",
+      "All Time Peak": "object",
+      "Actual\u00a0gross": "object",
+      "Adjusted\u00a0gross (in 2022 dollars)": "object",
+      "Artist": "object",
+      "Tour title": "object",
+      "Year(s)": "object",
+      "Shows": "int64",
+      "Average gross": "object",
+      "Ref.": "object"
+    },
+    "new_dtypes": {
+      "Rank": "int64",
+      "Peak": "Int64",
+      "All Time Peak": "Int64",
+      "Actual\u00a0gross": "float64",
+      "Adjusted\u00a0gross (in 2022 dollars)": "float64",
+      "Artist": "float64",
+      "Tour title": "float64",
+      "Year(s)": "Int64",
+      "Shows": "int64",
+      "Average gross": "float64",
+      "Ref.": "float64"
+    },
+    "timestamp": "2026-04-16T19:54:30.376197"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "column": "Peak",
+    "median_value": 1.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:30.379023"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "column": "All Time Peak",
+    "median_value": 2.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:30.381581"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "output_file": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "final_shape": [
+      20,
+      11
+    ],
+    "columns": [
+      "Rank",
+      "Peak",
+      "All Time Peak",
+      "Actual\u00a0gross",
+      "Adjusted\u00a0gross (in 2022 dollars)",
+      "Artist",
+      "Tour title",
+      "Year(s)",
+      "Shows",
+      "Average gross",
+      "Ref."
+    ],
+    "timestamp": "2026-04-16T19:54:30.391840"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
+    "output_file": "20260416_173528_a730c6b1_automobile_dataset_cleaned.csv",
     "original_shape": [
       205,
       26
     ],
-    "timestamp": "2026-04-06T18:08:25.385064"
+    "timestamp": "2026-04-16T19:54:30.399459"
   },
   {
     "action": "type_casting",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "original_dtypes": {
       "price": "float64",
       "highway-mpg": "int64",
@@ -21,22 +336,22 @@
       "compression-ratio": "float64",
       "stroke": "float64",
       "bore": "float64",
-      "fuel-system": "str",
+      "fuel-system": "object",
       "engine-size": "int64",
       "num-of-cylinders": "int64",
-      "engine-type": "str",
+      "engine-type": "object",
       "curb-weight": "int64",
       "height": "float64",
       "width": "float64",
       "length": "float64",
       "wheel-base": "float64",
-      "engine-location": "str",
-      "drive-wheels": "str",
-      "body-style": "str",
+      "engine-location": "object",
+      "drive-wheels": "object",
+      "body-style": "object",
       "num-of-doors": "float64",
-      "aspiration": "str",
-      "fuel-type": "str",
-      "make": "str",
+      "aspiration": "object",
+      "fuel-type": "object",
+      "make": "object",
       "normalized-losses": "float64",
       "symboling": "int64"
     },
@@ -68,68 +383,68 @@
       "normalized-losses": "Int64",
       "symboling": "int64"
     },
-    "timestamp": "2026-04-06T18:08:25.405443"
+    "timestamp": "2026-04-16T19:54:30.417422"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "price",
     "median_value": 10295.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.413416"
+    "timestamp": "2026-04-16T19:54:30.420968"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "peak-rpm",
     "median_value": 5200.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.420351"
+    "timestamp": "2026-04-16T19:54:30.424951"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "horsepower",
     "median_value": 95.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.428518"
+    "timestamp": "2026-04-16T19:54:30.428110"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "stroke",
     "median_value": 3.29,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.435505"
+    "timestamp": "2026-04-16T19:54:30.431775"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "bore",
     "median_value": 3.31,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.442692"
+    "timestamp": "2026-04-16T19:54:30.436081"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "num-of-doors",
     "median_value": 4.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.452133"
+    "timestamp": "2026-04-16T19:54:30.444288"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
     "column": "normalized-losses",
     "median_value": 115.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:25.462212"
+    "timestamp": "2026-04-16T19:54:30.449143"
   },
   {
     "action": "complete_transformation",
-    "file": "20260331_173925_1acb0a5a_automobile_dataset.csv",
-    "output_file": "20260331_173925_1acb0a5a_automobile_dataset_cleaned.csv",
+    "file": "20260416_173528_a730c6b1_automobile_dataset.csv",
+    "output_file": "20260416_173528_a730c6b1_automobile_dataset_cleaned.csv",
     "final_shape": [
       205,
       26
@@ -162,449 +477,45 @@
       "normalized-losses",
       "symboling"
     ],
-    "timestamp": "2026-04-06T18:08:25.474814"
+    "timestamp": "2026-04-16T19:54:30.461368"
   },
   {
     "action": "start_transformation",
-    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
-    "output_file": "20260331_173925_48cc5b8b_cardio_train_cleaned.csv",
-    "original_shape": [
-      70000,
-      13
-    ],
-    "timestamp": "2026-04-06T18:08:25.561660"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
-    "original_dtypes": {
-      "id": "int64",
-      "age": "int64",
-      "gender": "int64",
-      "height": "int64",
-      "weight": "float64",
-      "ap_hi": "int64",
-      "ap_lo": "int64",
-      "cholesterol": "int64",
-      "gluc": "int64",
-      "smoke": "int64",
-      "alco": "int64",
-      "active": "int64",
-      "cardio": "int64"
-    },
-    "new_dtypes": {
-      "id": "int64",
-      "age": "int64",
-      "gender": "int64",
-      "height": "int64",
-      "weight": "float64",
-      "ap_hi": "int64",
-      "ap_lo": "int64",
-      "cholesterol": "int64",
-      "gluc": "int64",
-      "smoke": "int64",
-      "alco": "int64",
-      "active": "int64",
-      "cardio": "int64"
-    },
-    "timestamp": "2026-04-06T18:08:25.585697"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173925_48cc5b8b_cardio_train.csv",
-    "output_file": "20260331_173925_48cc5b8b_cardio_train_cleaned.csv",
-    "final_shape": [
-      70000,
-      13
-    ],
-    "columns": [
-      "id",
-      "age",
-      "gender",
-      "height",
-      "weight",
-      "ap_hi",
-      "ap_lo",
-      "cholesterol",
-      "gluc",
-      "smoke",
-      "alco",
-      "active",
-      "cardio"
-    ],
-    "timestamp": "2026-04-06T18:08:25.764263"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_04fa9782_raw_data (2).csv",
-    "output_file": "20260331_173926_04fa9782_raw_data (2)_cleaned.csv",
-    "original_shape": [
-      32560,
-      15
-    ],
-    "timestamp": "2026-04-06T18:08:25.843980"
-  },
-  {
-    "action": "remove_duplicates",
-    "file": "20260331_173926_04fa9782_raw_data (2).csv",
-    "rows_before": 32560,
-    "rows_after": 32536,
-    "duplicates_removed": 24,
-    "timestamp": "2026-04-06T18:08:25.872214"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173926_04fa9782_raw_data (2).csv",
-    "original_dtypes": {
-      "39": "int64",
-      " State-gov": "str",
-      " 77516": "int64",
-      " Bachelors": "str",
-      " 13": "int64",
-      " Never-married": "str",
-      " Adm-clerical": "str",
-      " Not-in-family": "str",
-      " White": "str",
-      " Male": "str",
-      " 2174": "int64",
-      " 0": "int64",
-      " 40": "int64",
-      " United-States": "str",
-      " <=50K": "str"
-    },
-    "new_dtypes": {
-      "39": "int64",
-      " State-gov": "float64",
-      " 77516": "int64",
-      " Bachelors": "float64",
-      " 13": "int64",
-      " Never-married": "float64",
-      " Adm-clerical": "float64",
-      " Not-in-family": "float64",
-      " White": "float64",
-      " Male": "float64",
-      " 2174": "int64",
-      " 0": "int64",
-      " 40": "int64",
-      " United-States": "float64",
-      " <=50K": "float64"
-    },
-    "timestamp": "2026-04-06T18:08:26.058938"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173926_04fa9782_raw_data (2).csv",
-    "output_file": "20260331_173926_04fa9782_raw_data (2)_cleaned.csv",
-    "final_shape": [
-      32536,
-      15
-    ],
-    "columns": [
-      "39",
-      " State-gov",
-      " 77516",
-      " Bachelors",
-      " 13",
-      " Never-married",
-      " Adm-clerical",
-      " Not-in-family",
-      " White",
-      " Male",
-      " 2174",
-      " 0",
-      " 40",
-      " United-States",
-      " <=50K"
-    ],
-    "timestamp": "2026-04-06T18:08:26.188425"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_0a43131b_Iris 1 .csv",
-    "output_file": "20260331_173926_0a43131b_Iris 1 _cleaned.csv",
-    "original_shape": [
-      150,
-      6
-    ],
-    "timestamp": "2026-04-06T18:08:26.198448"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173926_0a43131b_Iris 1 .csv",
-    "original_dtypes": {
-      "Id": "int64",
-      "SepalLengthCm": "float64",
-      "SepalWidthCm": "float64",
-      "PetalLengthCm": "float64",
-      "PetalWidthCm": "float64",
-      "Species": "str"
-    },
-    "new_dtypes": {
-      "Id": "int64",
-      "SepalLengthCm": "float64",
-      "SepalWidthCm": "float64",
-      "PetalLengthCm": "float64",
-      "PetalWidthCm": "float64",
-      "Species": "float64"
-    },
-    "timestamp": "2026-04-06T18:08:26.210305"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173926_0a43131b_Iris 1 .csv",
-    "output_file": "20260331_173926_0a43131b_Iris 1 _cleaned.csv",
-    "final_shape": [
-      150,
-      6
-    ],
-    "columns": [
-      "Id",
-      "SepalLengthCm",
-      "SepalWidthCm",
-      "PetalLengthCm",
-      "PetalWidthCm",
-      "Species"
-    ],
-    "timestamp": "2026-04-06T18:08:26.220309"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_5fd469a5_customer churn.csv",
-    "output_file": "20260331_173926_5fd469a5_customer churn_cleaned.csv",
-    "original_shape": [
-      7043,
-      21
-    ],
-    "timestamp": "2026-04-06T18:08:26.256924"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173926_5fd469a5_customer churn.csv",
-    "original_dtypes": {
-      "customerID": "str",
-      "gender": "str",
-      "SeniorCitizen": "int64",
-      "Partner": "str",
-      "Dependents": "str",
-      "tenure": "int64",
-      "PhoneService": "str",
-      "MultipleLines": "str",
-      "InternetService": "str",
-      "OnlineSecurity": "str",
-      "OnlineBackup": "str",
-      "DeviceProtection": "str",
-      "TechSupport": "str",
-      "StreamingTV": "str",
-      "StreamingMovies": "str",
-      "Contract": "str",
-      "PaperlessBilling": "str",
-      "PaymentMethod": "str",
-      "MonthlyCharges": "float64",
-      "TotalCharges": "str",
-      "Churn": "str"
-    },
-    "new_dtypes": {
-      "customerID": "float64",
-      "gender": "float64",
-      "SeniorCitizen": "int64",
-      "Partner": "float64",
-      "Dependents": "float64",
-      "tenure": "int64",
-      "PhoneService": "float64",
-      "MultipleLines": "float64",
-      "InternetService": "float64",
-      "OnlineSecurity": "float64",
-      "OnlineBackup": "float64",
-      "DeviceProtection": "float64",
-      "TechSupport": "float64",
-      "StreamingTV": "float64",
-      "StreamingMovies": "float64",
-      "Contract": "float64",
-      "PaperlessBilling": "float64",
-      "PaymentMethod": "float64",
-      "MonthlyCharges": "float64",
-      "TotalCharges": "float64",
-      "Churn": "float64"
-    },
-    "timestamp": "2026-04-06T18:08:26.354596"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_5fd469a5_customer churn.csv",
-    "column": "TotalCharges",
-    "median_value": 1397.475,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.369833"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173926_5fd469a5_customer churn.csv",
-    "output_file": "20260331_173926_5fd469a5_customer churn_cleaned.csv",
-    "final_shape": [
-      7043,
-      21
-    ],
-    "columns": [
-      "customerID",
-      "gender",
-      "SeniorCitizen",
-      "Partner",
-      "Dependents",
-      "tenure",
-      "PhoneService",
-      "MultipleLines",
-      "InternetService",
-      "OnlineSecurity",
-      "OnlineBackup",
-      "DeviceProtection",
-      "TechSupport",
-      "StreamingTV",
-      "StreamingMovies",
-      "Contract",
-      "PaperlessBilling",
-      "PaymentMethod",
-      "MonthlyCharges",
-      "TotalCharges",
-      "Churn"
-    ],
-    "timestamp": "2026-04-06T18:08:26.423703"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "output_file": "20260331_173926_6b380abd_messy_IMDB_dataset_cleaned.csv",
-    "original_shape": [
-      101,
-      12
-    ],
-    "timestamp": "2026-04-06T18:08:26.435373"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "original_dtypes": {
-      "IMBD title ID": "str",
-      "Original titl\u00ca": "str",
-      "Release year": "str",
-      "Genr\u00eb\u00a8": "str",
-      "Duration": "str",
-      "Country": "str",
-      "Content Rating": "str",
-      "Director": "str",
-      "Unnamed: 8": "float64",
-      "Income": "str",
-      " Votes ": "str",
-      "Score": "str"
-    },
-    "new_dtypes": {
-      "IMBD title ID": "float64",
-      "Original titl\u00ca": "Int64",
-      "Release year": "float64",
-      "Genr\u00eb\u00a8": "float64",
-      "Duration": "float64",
-      "Country": "float64",
-      "Content Rating": "float64",
-      "Director": "float64",
-      "Unnamed: 8": "float64",
-      "Income": "float64",
-      " Votes ": "float64",
-      "Score": "float64"
-    },
-    "timestamp": "2026-04-06T18:08:26.453099"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "column": "Original titl\u00ca",
-    "median_value": 1917.0,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.463945"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "column": "Duration",
-    "median_value": 129.5,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.474456"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "column": " Votes ",
-    "median_value": 605.648,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.485859"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "column": "Score",
-    "median_value": 8.2,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.496755"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-    "output_file": "20260331_173926_6b380abd_messy_IMDB_dataset_cleaned.csv",
-    "final_shape": [
-      101,
-      12
-    ],
-    "columns": [
-      "IMBD title ID",
-      "Original titl\u00ca",
-      "Release year",
-      "Genr\u00eb\u00a8",
-      "Duration",
-      "Country",
-      "Content Rating",
-      "Director",
-      "Unnamed: 8",
-      "Income",
-      " Votes ",
-      "Score"
-    ],
-    "timestamp": "2026-04-06T18:08:26.507699"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_7d65cd77_employee attrition.csv",
-    "output_file": "20260331_173926_7d65cd77_employee attrition_cleaned.csv",
+    "file": "20260416_173528_c4fa6f04_employee attrition.csv",
+    "output_file": "20260416_173528_c4fa6f04_employee attrition_cleaned.csv",
     "original_shape": [
       1470,
       35
     ],
-    "timestamp": "2026-04-06T18:08:26.527004"
+    "timestamp": "2026-04-16T19:54:30.488931"
   },
   {
     "action": "type_casting",
-    "file": "20260331_173926_7d65cd77_employee attrition.csv",
+    "file": "20260416_173528_c4fa6f04_employee attrition.csv",
     "original_dtypes": {
       "Age": "int64",
-      "Attrition": "str",
-      "BusinessTravel": "str",
+      "Attrition": "object",
+      "BusinessTravel": "object",
       "DailyRate": "int64",
-      "Department": "str",
+      "Department": "object",
       "DistanceFromHome": "int64",
       "Education": "int64",
-      "EducationField": "str",
+      "EducationField": "object",
       "EmployeeCount": "int64",
       "EmployeeNumber": "int64",
       "EnvironmentSatisfaction": "int64",
-      "Gender": "str",
+      "Gender": "object",
       "HourlyRate": "int64",
       "JobInvolvement": "int64",
       "JobLevel": "int64",
-      "JobRole": "str",
+      "JobRole": "object",
       "JobSatisfaction": "int64",
-      "MaritalStatus": "str",
+      "MaritalStatus": "object",
       "MonthlyIncome": "int64",
       "MonthlyRate": "int64",
       "NumCompaniesWorked": "int64",
-      "Over18": "str",
-      "OverTime": "str",
+      "Over18": "object",
+      "OverTime": "object",
       "PercentSalaryHike": "int64",
       "PerformanceRating": "int64",
       "RelationshipSatisfaction": "int64",
@@ -655,12 +566,12 @@
       "YearsSinceLastPromotion": "int64",
       "YearsWithCurrManager": "int64"
     },
-    "timestamp": "2026-04-06T18:08:26.551058"
+    "timestamp": "2026-04-16T19:54:30.520277"
   },
   {
     "action": "complete_transformation",
-    "file": "20260331_173926_7d65cd77_employee attrition.csv",
-    "output_file": "20260331_173926_7d65cd77_employee attrition_cleaned.csv",
+    "file": "20260416_173528_c4fa6f04_employee attrition.csv",
+    "output_file": "20260416_173528_c4fa6f04_employee attrition_cleaned.csv",
     "final_shape": [
       1470,
       35
@@ -702,117 +613,255 @@
       "YearsSinceLastPromotion",
       "YearsWithCurrManager"
     ],
-    "timestamp": "2026-04-06T18:08:26.576414"
+    "timestamp": "2026-04-16T19:54:30.623518"
   },
   {
     "action": "start_transformation",
-    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
-    "output_file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "file": "20260416_173528_d699a9ef_metadata.csv",
+    "output_file": "20260416_173528_d699a9ef_metadata_cleaned.csv",
     "original_shape": [
-      20,
-      11
+      11,
+      6
     ],
-    "timestamp": "2026-04-06T18:08:26.586948"
+    "timestamp": "2026-04-16T19:54:30.644028"
   },
   {
     "action": "type_casting",
-    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
+    "file": "20260416_173528_d699a9ef_metadata.csv",
     "original_dtypes": {
-      "Rank": "int64",
-      "Peak": "str",
-      "All Time Peak": "str",
-      "Actual\u00a0gross": "str",
-      "Adjusted\u00a0gross (in 2022 dollars)": "str",
-      "Artist": "str",
-      "Tour title": "str",
-      "Year(s)": "str",
-      "Shows": "int64",
-      "Average gross": "str",
-      "Ref.": "str"
+      "filename": "object",
+      "source": "object",
+      "rows": "int64",
+      "cols": "int64",
+      "target": "object",
+      "task_type": "object"
     },
     "new_dtypes": {
-      "Rank": "int64",
-      "Peak": "Int64",
-      "All Time Peak": "Int64",
-      "Actual\u00a0gross": "float64",
-      "Adjusted\u00a0gross (in 2022 dollars)": "float64",
-      "Artist": "float64",
-      "Tour title": "float64",
-      "Year(s)": "Int64",
-      "Shows": "int64",
-      "Average gross": "float64",
-      "Ref.": "float64"
+      "filename": "float64",
+      "source": "float64",
+      "rows": "int64",
+      "cols": "int64",
+      "target": "float64",
+      "task_type": "float64"
     },
-    "timestamp": "2026-04-06T18:08:26.602757"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
-    "column": "Peak",
-    "median_value": 1.0,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.611881"
-  },
-  {
-    "action": "median_imputation",
-    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
-    "column": "All Time Peak",
-    "median_value": 2.0,
-    "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.620333"
+    "timestamp": "2026-04-16T19:54:30.658760"
   },
   {
     "action": "complete_transformation",
-    "file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
-    "output_file": "20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+    "file": "20260416_173528_d699a9ef_metadata.csv",
+    "output_file": "20260416_173528_d699a9ef_metadata_cleaned.csv",
     "final_shape": [
-      20,
-      11
+      11,
+      6
     ],
     "columns": [
-      "Rank",
-      "Peak",
-      "All Time Peak",
-      "Actual\u00a0gross",
-      "Adjusted\u00a0gross (in 2022 dollars)",
-      "Artist",
-      "Tour title",
-      "Year(s)",
-      "Shows",
-      "Average gross",
-      "Ref."
+      "filename",
+      "source",
+      "rows",
+      "cols",
+      "target",
+      "task_type"
     ],
-    "timestamp": "2026-04-06T18:08:26.632636"
+    "timestamp": "2026-04-16T19:54:30.696196"
   },
   {
     "action": "start_transformation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
-    "output_file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs_cleaned.csv",
+    "file": "20260416_173528_f16109cc_cardio_train.csv",
+    "output_file": "20260416_173528_f16109cc_cardio_train_cleaned.csv",
+    "original_shape": [
+      70000,
+      13
+    ],
+    "timestamp": "2026-04-16T19:54:30.781464"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_f16109cc_cardio_train.csv",
+    "original_dtypes": {
+      "id": "int64",
+      "age": "int64",
+      "gender": "int64",
+      "height": "int64",
+      "weight": "float64",
+      "ap_hi": "int64",
+      "ap_lo": "int64",
+      "cholesterol": "int64",
+      "gluc": "int64",
+      "smoke": "int64",
+      "alco": "int64",
+      "active": "int64",
+      "cardio": "int64"
+    },
+    "new_dtypes": {
+      "id": "int64",
+      "age": "int64",
+      "gender": "int64",
+      "height": "int64",
+      "weight": "float64",
+      "ap_hi": "int64",
+      "ap_lo": "int64",
+      "cholesterol": "int64",
+      "gluc": "int64",
+      "smoke": "int64",
+      "alco": "int64",
+      "active": "int64",
+      "cardio": "int64"
+    },
+    "timestamp": "2026-04-16T19:54:30.820223"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_f16109cc_cardio_train.csv",
+    "output_file": "20260416_173528_f16109cc_cardio_train_cleaned.csv",
+    "final_shape": [
+      70000,
+      13
+    ],
+    "columns": [
+      "id",
+      "age",
+      "gender",
+      "height",
+      "weight",
+      "ap_hi",
+      "ap_lo",
+      "cholesterol",
+      "gluc",
+      "smoke",
+      "alco",
+      "active",
+      "cardio"
+    ],
+    "timestamp": "2026-04-16T19:54:31.025031"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "output_file": "20260416_173528_f2b7dc55_messy_IMDB_dataset_cleaned.csv",
+    "original_shape": [
+      101,
+      12
+    ],
+    "timestamp": "2026-04-16T19:54:31.033426"
+  },
+  {
+    "action": "type_casting",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "original_dtypes": {
+      "IMBD title ID": "object",
+      "Original titl\u00ca": "object",
+      "Release year": "object",
+      "Genr\u00eb\u00a8": "object",
+      "Duration": "object",
+      "Country": "object",
+      "Content Rating": "object",
+      "Director": "object",
+      "Unnamed: 8": "float64",
+      "Income": "object",
+      " Votes ": "object",
+      "Score": "object"
+    },
+    "new_dtypes": {
+      "IMBD title ID": "float64",
+      "Original titl\u00ca": "Int64",
+      "Release year": "float64",
+      "Genr\u00eb\u00a8": "float64",
+      "Duration": "float64",
+      "Country": "float64",
+      "Content Rating": "float64",
+      "Director": "float64",
+      "Unnamed: 8": "float64",
+      "Income": "float64",
+      " Votes ": "float64",
+      "Score": "float64"
+    },
+    "timestamp": "2026-04-16T19:54:31.043977"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "column": "Original titl\u00ca",
+    "median_value": 1917.0,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:31.048948"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "column": "Duration",
+    "median_value": 129.5,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:31.054430"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "column": " Votes ",
+    "median_value": 605.648,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:31.060773"
+  },
+  {
+    "action": "median_imputation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "column": "Score",
+    "median_value": 8.2,
+    "rows_imputed": 0,
+    "timestamp": "2026-04-16T19:54:31.063899"
+  },
+  {
+    "action": "complete_transformation",
+    "file": "20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+    "output_file": "20260416_173528_f2b7dc55_messy_IMDB_dataset_cleaned.csv",
+    "final_shape": [
+      101,
+      12
+    ],
+    "columns": [
+      "IMBD title ID",
+      "Original titl\u00ca",
+      "Release year",
+      "Genr\u00eb\u00a8",
+      "Duration",
+      "Country",
+      "Content Rating",
+      "Director",
+      "Unnamed: 8",
+      "Income",
+      " Votes ",
+      "Score"
+    ],
+    "timestamp": "2026-04-16T19:54:31.069506"
+  },
+  {
+    "action": "start_transformation",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
+    "output_file": "20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
     "original_shape": [
       672,
       15
     ],
-    "timestamp": "2026-04-06T18:08:26.668396"
+    "timestamp": "2026-04-16T19:54:31.101029"
   },
   {
     "action": "type_casting",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "original_dtypes": {
       "index": "int64",
-      "Job Title": "str",
-      "Salary Estimate": "str",
-      "Job Description": "str",
+      "Job Title": "object",
+      "Salary Estimate": "object",
+      "Job Description": "object",
       "Rating": "float64",
-      "Company Name": "str",
-      "Location": "str",
-      "Headquarters": "str",
-      "Size": "str",
+      "Company Name": "object",
+      "Location": "object",
+      "Headquarters": "object",
+      "Size": "object",
       "Founded": "int64",
-      "Type of ownership": "str",
-      "Industry": "str",
-      "Sector": "str",
-      "Revenue": "str",
-      "Competitors": "str"
+      "Type of ownership": "object",
+      "Industry": "object",
+      "Sector": "object",
+      "Revenue": "object",
+      "Competitors": "object"
     },
     "new_dtypes": {
       "index": "int64",
@@ -831,68 +880,68 @@
       "Revenue": "Int64",
       "Competitors": "Int64"
     },
-    "timestamp": "2026-04-06T18:08:26.701681"
+    "timestamp": "2026-04-16T19:54:31.136745"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Headquarters",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.713134"
+    "timestamp": "2026-04-16T19:54:31.154107"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Size",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.722839"
+    "timestamp": "2026-04-16T19:54:31.159447"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Type of ownership",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.731879"
+    "timestamp": "2026-04-16T19:54:31.163301"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Industry",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.740954"
+    "timestamp": "2026-04-16T19:54:31.167370"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Sector",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.749686"
+    "timestamp": "2026-04-16T19:54:31.171328"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Revenue",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.758577"
+    "timestamp": "2026-04-16T19:54:31.176860"
   },
   {
     "action": "median_imputation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
     "column": "Competitors",
     "median_value": -1.0,
     "rows_imputed": 0,
-    "timestamp": "2026-04-06T18:08:26.767452"
+    "timestamp": "2026-04-16T19:54:31.180956"
   },
   {
     "action": "complete_transformation",
-    "file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
-    "output_file": "20260331_173926_c1793e5d_Uncleaned_DS_jobs_cleaned.csv",
+    "file": "20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
+    "output_file": "20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
     "final_shape": [
       672,
       15
@@ -914,55 +963,6 @@
       "Revenue",
       "Competitors"
     ],
-    "timestamp": "2026-04-06T18:08:26.780601"
-  },
-  {
-    "action": "start_transformation",
-    "file": "20260331_173926_d017e4f7_metadata.csv",
-    "output_file": "20260331_173926_d017e4f7_metadata_cleaned.csv",
-    "original_shape": [
-      11,
-      6
-    ],
-    "timestamp": "2026-04-06T18:08:26.791514"
-  },
-  {
-    "action": "type_casting",
-    "file": "20260331_173926_d017e4f7_metadata.csv",
-    "original_dtypes": {
-      "filename": "str",
-      "source": "str",
-      "rows": "int64",
-      "cols": "int64",
-      "target": "str",
-      "task_type": "str"
-    },
-    "new_dtypes": {
-      "filename": "float64",
-      "source": "float64",
-      "rows": "int64",
-      "cols": "int64",
-      "target": "float64",
-      "task_type": "float64"
-    },
-    "timestamp": "2026-04-06T18:08:26.803561"
-  },
-  {
-    "action": "complete_transformation",
-    "file": "20260331_173926_d017e4f7_metadata.csv",
-    "output_file": "20260331_173926_d017e4f7_metadata_cleaned.csv",
-    "final_shape": [
-      11,
-      6
-    ],
-    "columns": [
-      "filename",
-      "source",
-      "rows",
-      "cols",
-      "target",
-      "task_type"
-    ],
-    "timestamp": "2026-04-06T18:08:26.818948"
+    "timestamp": "2026-04-16T19:54:31.191942"
   }
 ]

@@ -1,0 +1,18 @@
+{
+    "original_filename": "Iris 1 .csv",
+    "stored_filename": "20260416_173528_74e6264d_Iris 1 .csv",
+    "stored_path": "data\\raw\\20260416_173528_74e6264d_Iris 1 .csv",
+    "version_id": "74e6264d",
+    "timestamp": "20260416_173528",
+    "file_type": ".csv",
+    "rows": 150,
+    "columns_count": 6,
+    "columns": [
+        "Id",
+        "SepalLengthCm",
+        "SepalWidthCm",
+        "PetalLengthCm",
+        "PetalWidthCm",
+        "Species"
+    ]
+}

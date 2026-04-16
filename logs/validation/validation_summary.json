@@ -3,47 +3,77 @@
         {
             "is_valid": true,
             "errors": [],
-            "name": "automobile_dataset",
-            "version": "1acb0a5a",
-            "raw_file_path": "data/raw/20260331_173925_1acb0a5a_automobile_dataset.csv",
-            "schema_path": "data/schema/20260331_173925_1acb0a5a_automobile_dataset_schema.json",
-            "validation_status": "valid"
-        },
-        {
-            "is_valid": true,
-            "errors": [],
-            "name": "cardio_train",
-            "version": "48cc5b8b",
-            "raw_file_path": "data/raw/20260331_173925_48cc5b8b_cardio_train.csv",
-            "schema_path": "data/schema/20260331_173925_48cc5b8b_cardio_train_schema.json",
+            "name": "customer churn",
+            "version": "20aa9739",
+            "raw_file_path": "data/raw/20260416_173528_20aa9739_customer churn.csv",
+            "schema_path": "data/schema/20260416_173528_20aa9739_customer churn_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "raw_data (2)",
-            "version": "04fa9782",
-            "raw_file_path": "data/raw/20260331_173926_04fa9782_raw_data (2).csv",
-            "schema_path": "data/schema/20260331_173926_04fa9782_raw_data (2)_schema.json",
+            "version": "499384da",
+            "raw_file_path": "data/raw/20260416_173528_499384da_raw_data (2).csv",
+            "schema_path": "data/schema/20260416_173528_499384da_raw_data (2)_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "Iris 1 ",
-            "version": "0a43131b",
-            "raw_file_path": "data/raw/20260331_173926_0a43131b_Iris 1 .csv",
-            "schema_path": "data/schema/20260331_173926_0a43131b_Iris 1 _schema.json",
+            "version": "74e6264d",
+            "raw_file_path": "data/raw/20260416_173528_74e6264d_Iris 1 .csv",
+            "schema_path": "data/schema/20260416_173528_74e6264d_Iris 1 _schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
-            "name": "customer churn",
-            "version": "5fd469a5",
-            "raw_file_path": "data/raw/20260331_173926_5fd469a5_customer churn.csv",
-            "schema_path": "data/schema/20260331_173926_5fd469a5_customer churn_schema.json",
+            "name": "Dirty Dataset to practice Data Cleaning",
+            "version": "924f2eea",
+            "raw_file_path": "data/raw/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+            "schema_path": "data/schema/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_schema.json",
             "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "automobile_dataset",
+            "version": "a730c6b1",
+            "raw_file_path": "data/raw/20260416_173528_a730c6b1_automobile_dataset.csv",
+            "schema_path": "data/schema/20260416_173528_a730c6b1_automobile_dataset_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "employee attrition",
+            "version": "c4fa6f04",
+            "raw_file_path": "data/raw/20260416_173528_c4fa6f04_employee attrition.csv",
+            "schema_path": "data/schema/20260416_173528_c4fa6f04_employee attrition_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "metadata",
+            "version": "d699a9ef",
+            "raw_file_path": "data/raw/20260416_173528_d699a9ef_metadata.csv",
+            "schema_path": "data/schema/20260416_173528_d699a9ef_metadata_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'alco', 'weight', 'age', 'smoke', 'height', 'cardio', 'id', 'active', 'cholesterol', 'gluc', 'ap_lo', 'ap_hi', 'gender'}",
+                "Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}"
+            ],
+            "name": "cardio_train",
+            "version": "f16109cc",
+            "raw_file_path": "data/raw/20260416_173528_f16109cc_cardio_train.csv",
+            "schema_path": "data/schema/20260416_173528_f16109cc_cardio_train_schema.json",
+            "validation_status": "invalid"
         },
         {
             "is_valid": false,
@@ -51,51 +81,18 @@
                 "Failed to read or validate dataset: Error tokenizing data. C error: Expected 1 fields in line 3, saw 2\n"
             ],
             "name": "messy_IMDB_dataset",
-            "version": "6b380abd",
-            "raw_file_path": "data/raw/20260331_173926_6b380abd_messy_IMDB_dataset.csv",
-            "schema_path": "data/schema/20260331_173926_6b380abd_messy_IMDB_dataset_schema.json",
-            "validation_status": "invalid"
-        },
-        {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'\u00d4\u00aa\u00f8Age'}",
-                "Extra columns: {'Age'}"
-            ],
-            "name": "employee attrition",
-            "version": "7d65cd77",
-            "raw_file_path": "data/raw/20260331_173926_7d65cd77_employee attrition.csv",
-            "schema_path": "data/schema/20260331_173926_7d65cd77_employee attrition_schema.json",
-            "validation_status": "invalid"
-        },
-        {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'Actual\u00ac\u2020gross', 'Adjusted\u00ac\u2020gross (in 2022 dollars)'}",
-                "Extra columns: {'Actual\\xa0gross', 'Adjusted\\xa0gross (in 2022 dollars)'}"
-            ],
-            "name": "Dirty Dataset to practice Data Cleaning",
-            "version": "bd5a4bee",
-            "raw_file_path": "data/raw/20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning.csv",
-            "schema_path": "data/schema/20260331_173926_bd5a4bee_Dirty Dataset to practice Data Cleaning_schema.json",
+            "version": "f2b7dc55",
+            "raw_file_path": "data/raw/20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+            "schema_path": "data/schema/20260416_173528_f2b7dc55_messy_IMDB_dataset_schema.json",
             "validation_status": "invalid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "Uncleaned_DS_jobs",
-            "version": "c1793e5d",
-            "raw_file_path": "data/raw/20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
-            "schema_path": "data/schema/20260331_173926_c1793e5d_Uncleaned_DS_jobs_schema.json",
-            "validation_status": "valid"
-        },
-        {
-            "is_valid": true,
-            "errors": [],
-            "name": "metadata",
-            "version": "d017e4f7",
-            "raw_file_path": "data/raw/20260331_173926_d017e4f7_metadata.csv",
-            "schema_path": "data/schema/20260331_173926_d017e4f7_metadata_schema.json",
+            "version": "d4383efc",
+            "raw_file_path": "data/raw/20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
+            "schema_path": "data/schema/20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
             "validation_status": "valid"
         }
     ],
@@ -103,64 +100,73 @@
         {
             "is_valid": true,
             "errors": [],
-            "name": "automobile_dataset",
-            "version": "1acb0a5a",
-            "raw_file_path": "data/raw/20260331_173925_1acb0a5a_automobile_dataset.csv",
-            "schema_path": "data/schema/20260331_173925_1acb0a5a_automobile_dataset_schema.json",
-            "validation_status": "valid"
-        },
-        {
-            "is_valid": true,
-            "errors": [],
-            "name": "cardio_train",
-            "version": "48cc5b8b",
-            "raw_file_path": "data/raw/20260331_173925_48cc5b8b_cardio_train.csv",
-            "schema_path": "data/schema/20260331_173925_48cc5b8b_cardio_train_schema.json",
+            "name": "customer churn",
+            "version": "20aa9739",
+            "raw_file_path": "data/raw/20260416_173528_20aa9739_customer churn.csv",
+            "schema_path": "data/schema/20260416_173528_20aa9739_customer churn_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "raw_data (2)",
-            "version": "04fa9782",
-            "raw_file_path": "data/raw/20260331_173926_04fa9782_raw_data (2).csv",
-            "schema_path": "data/schema/20260331_173926_04fa9782_raw_data (2)_schema.json",
+            "version": "499384da",
+            "raw_file_path": "data/raw/20260416_173528_499384da_raw_data (2).csv",
+            "schema_path": "data/schema/20260416_173528_499384da_raw_data (2)_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "Iris 1 ",
-            "version": "0a43131b",
-            "raw_file_path": "data/raw/20260331_173926_0a43131b_Iris 1 .csv",
-            "schema_path": "data/schema/20260331_173926_0a43131b_Iris 1 _schema.json",
+            "version": "74e6264d",
+            "raw_file_path": "data/raw/20260416_173528_74e6264d_Iris 1 .csv",
+            "schema_path": "data/schema/20260416_173528_74e6264d_Iris 1 _schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
-            "name": "customer churn",
-            "version": "5fd469a5",
-            "raw_file_path": "data/raw/20260331_173926_5fd469a5_customer churn.csv",
-            "schema_path": "data/schema/20260331_173926_5fd469a5_customer churn_schema.json",
+            "name": "Dirty Dataset to practice Data Cleaning",
+            "version": "924f2eea",
+            "raw_file_path": "data/raw/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+            "schema_path": "data/schema/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
-            "name": "Uncleaned_DS_jobs",
-            "version": "c1793e5d",
-            "raw_file_path": "data/raw/20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
-            "schema_path": "data/schema/20260331_173926_c1793e5d_Uncleaned_DS_jobs_schema.json",
+            "name": "automobile_dataset",
+            "version": "a730c6b1",
+            "raw_file_path": "data/raw/20260416_173528_a730c6b1_automobile_dataset.csv",
+            "schema_path": "data/schema/20260416_173528_a730c6b1_automobile_dataset_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "employee attrition",
+            "version": "c4fa6f04",
+            "raw_file_path": "data/raw/20260416_173528_c4fa6f04_employee attrition.csv",
+            "schema_path": "data/schema/20260416_173528_c4fa6f04_employee attrition_schema.json",
             "validation_status": "valid"
         },
         {
             "is_valid": true,
             "errors": [],
             "name": "metadata",
-            "version": "d017e4f7",
-            "raw_file_path": "data/raw/20260331_173926_d017e4f7_metadata.csv",
-            "schema_path": "data/schema/20260331_173926_d017e4f7_metadata_schema.json",
+            "version": "d699a9ef",
+            "raw_file_path": "data/raw/20260416_173528_d699a9ef_metadata.csv",
+            "schema_path": "data/schema/20260416_173528_d699a9ef_metadata_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Uncleaned_DS_jobs",
+            "version": "d4383efc",
+            "raw_file_path": "data/raw/20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
+            "schema_path": "data/schema/20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
             "validation_status": "valid"
         }
     ]

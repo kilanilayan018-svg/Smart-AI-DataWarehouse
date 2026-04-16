@@ -1,0 +1,23 @@
+{
+    "original_filename": "Dirty Dataset to practice Data Cleaning.csv",
+    "stored_filename": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "stored_path": "data\\raw\\20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+    "version_id": "924f2eea",
+    "timestamp": "20260416_173528",
+    "file_type": ".csv",
+    "rows": 20,
+    "columns_count": 11,
+    "columns": [
+        "Rank",
+        "Peak",
+        "All Time Peak",
+        "Actual\u00a0gross",
+        "Adjusted\u00a0gross (in 2022 dollars)",
+        "Artist",
+        "Tour title",
+        "Year(s)",
+        "Shows",
+        "Average gross",
+        "Ref."
+    ]
+}
