@@ -1,0 +1,12 @@
+{
+    "is_valid": false,
+    "errors": [
+        "Missing columns: {'alco', 'weight', 'age', 'smoke', 'height', 'cardio', 'id', 'active', 'cholesterol', 'gluc', 'ap_lo', 'ap_hi', 'gender'}",
+        "Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}"
+    ],
+    "name": "cardio_train",
+    "version": "f16109cc",
+    "raw_file_path": "data/raw/20260416_173528_f16109cc_cardio_train.csv",
+    "schema_path": "data/schema/20260416_173528_f16109cc_cardio_train_schema.json",
+    "validation_status": "invalid"
+}

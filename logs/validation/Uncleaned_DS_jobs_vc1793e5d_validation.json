@@ -1,9 +1,0 @@
-{
-    "is_valid": true,
-    "errors": [],
-    "name": "Uncleaned_DS_jobs",
-    "version": "c1793e5d",
-    "raw_file_path": "data/raw/20260331_173926_c1793e5d_Uncleaned_DS_jobs.csv",
-    "schema_path": "data/schema/20260331_173926_c1793e5d_Uncleaned_DS_jobs_schema.json",
-    "validation_status": "valid"
-}

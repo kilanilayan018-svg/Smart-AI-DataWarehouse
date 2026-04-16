@@ -1,9 +1,0 @@
-{
-    "is_valid": true,
-    "errors": [],
-    "name": "automobile_dataset",
-    "version": "1acb0a5a",
-    "raw_file_path": "data/raw/20260331_173925_1acb0a5a_automobile_dataset.csv",
-    "schema_path": "data/schema/20260331_173925_1acb0a5a_automobile_dataset_schema.json",
-    "validation_status": "valid"
-}

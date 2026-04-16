@@ -1,0 +1,119 @@
+{
+  "dataset_name": "20260416_173528_f2b7dc55_messy_IMDB_dataset",
+  "target_column": "Score",
+  "task_type": "classification",
+  "pipeline_dependencies": {
+    "ingestion": {
+      "used": false,
+      "source_file": null,
+      "original_filename": null,
+      "stored_filename": null,
+      "version_id": null,
+      "rows": null,
+      "columns_count": null
+    },
+    "schema_extraction": {
+      "used": true,
+      "schema_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\schema\\20260416_173528_f2b7dc55_messy_IMDB_dataset_schema.json",
+      "columns_total": 12
+    },
+    "validation": {
+      "used": false,
+      "is_valid": null,
+      "errors": [],
+      "validation_log_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\logs\\validation\\20260416_173528_f2b7dc55_messy_IMDB_dataset_validation.json"
+    },
+    "transformation": {
+      "used": true,
+      "input_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
+      "output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_f2b7dc55_messy_IMDB_dataset_cleaned.csv",
+      "log_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\logs\\transformation_log.json"
+    },
+    "feature_engineering": {
+      "used": true,
+      "input_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_f2b7dc55_messy_IMDB_dataset_cleaned.csv",
+      "output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features\\20260416_173528_f2b7dc55_messy_IMDB_dataset_features.csv",
+      "sample_output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features_samples\\20260416_173528_f2b7dc55_messy_IMDB_dataset_sample_50_features.csv"
+    }
+  },
+  "input_summary": {
+    "numeric_columns": [
+      "Unnamed: 8"
+    ],
+    "categorical_columns": [
+      "Original titl\u00ca",
+      "Release year",
+      "Genr\u00eb\u00a8",
+      "Duration",
+      "Country",
+      "Content Rating",
+      "Director",
+      "Income",
+      " Votes "
+    ],
+    "columns_to_drop": [
+      "IMBD title ID"
+    ]
+  },
+  "preprocessing": {
+    "drop_columns": [
+      "IMBD title ID"
+    ],
+    "imputation": {
+      "numeric_strategy": "median",
+      "numeric_columns": [
+        "Unnamed: 8"
+      ],
+      "categorical_strategy": "most_frequent",
+      "categorical_columns": [
+        "Original titl\u00ca",
+        "Release year",
+        "Genr\u00eb\u00a8",
+        "Duration",
+        "Country",
+        "Content Rating",
+        "Director",
+        "Income",
+        " Votes "
+      ]
+    },
+    "encoding": {
+      "one_hot_columns": [
+        "Content Rating"
+      ],
+      "label_encoding_columns": [
+        "Original titl\u00ca",
+        "Release year",
+        "Genr\u00eb\u00a8",
+        "Duration",
+        "Country",
+        "Director",
+        "Income",
+        " Votes "
+      ]
+    },
+    "scaling": {
+      "strategy": "standard",
+      "columns": [
+        "Unnamed: 8"
+      ]
+    },
+    "log_transform": []
+  },
+  "split_strategy": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true
+  },
+  "smote": {
+    "enabled": false,
+    "reason": "Cannot infer class imbalance from schema only"
+  },
+  "export_paths": {
+    "source_schema": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\schema\\20260416_173528_f2b7dc55_messy_IMDB_dataset_schema.json",
+    "curated_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_f2b7dc55_messy_IMDB_dataset_cleaned.csv",
+    "features_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features\\20260416_173528_f2b7dc55_messy_IMDB_dataset_features.csv",
+    "features_sample_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features_samples\\20260416_173528_f2b7dc55_messy_IMDB_dataset_sample_50_features.csv",
+    "plan_json": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\metadata\\plans\\20260416_173528_f2b7dc55_messy_IMDB_dataset_plan.json"
+  }
+}

@@ -1,24 +1,36 @@
 # Python
 __pycache__/
-*.py[cod]
-*.so
-.Python
-env/
-venv/
-.env
-.venv
-*.egg-info/
-dist/
-build/
+*.pyc
 
-# IDE
-.vscode/
-.idea/
+# Node
+node_modules/
 
-# Project specific (optional)
-data/raw_input/
-data/raw/
-data/curated/
-data/features/
-models/*.pkl
+# Database
 *.db
+
+# Logs
+logs/transformation_log.json
+
+# Validation logs
+logs/validation/*
+!logs/validation/.gitkeep
+
+# Generated data
+data/schema/*
+!data/schema/.gitkeep
+
+data/curated/*
+!data/curated/.gitkeep
+
+data/features/*
+!data/features/.gitkeep
+
+data/features_samples/*
+!data/features_samples/.gitkeep
+
+# Plans
+metadata/plans/*
+!metadata/plans/.gitkeep
+
+node_modules/
+frontend/node_modules/

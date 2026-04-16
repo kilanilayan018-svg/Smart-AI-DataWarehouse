@@ -1,0 +1,130 @@
+{
+  "Rank": {
+    "name": "Rank",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 19,
+    "min": 1.0,
+    "max": 20.0,
+    "mean": 10.45
+  },
+  "Peak": {
+    "name": "Peak",
+    "dtype": "object",
+    "missing_count": 11,
+    "missing_percentage": 55.0,
+    "unique_count": 7,
+    "sample_values": [
+      "1",
+      "1[4]",
+      "2[7]"
+    ]
+  },
+  "All Time Peak": {
+    "name": "All Time Peak",
+    "dtype": "object",
+    "missing_count": 14,
+    "missing_percentage": 70.0,
+    "unique_count": 6,
+    "sample_values": [
+      "2",
+      "7[2]",
+      "2[5]"
+    ]
+  },
+  "Actual\u00a0gross": {
+    "name": "Actual\u00a0gross",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 20,
+    "sample_values": [
+      "$780,000,000",
+      "$579,800,000",
+      "$411,000,000"
+    ]
+  },
+  "Adjusted\u00a0gross (in 2022 dollars)": {
+    "name": "Adjusted\u00a0gross (in 2022 dollars)",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 20,
+    "sample_values": [
+      "$780,000,000",
+      "$579,800,000",
+      "$560,622,615"
+    ]
+  },
+  "Artist": {
+    "name": "Artist",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 9,
+    "sample_values": [
+      "Taylor Swift",
+      "Beyonc\u00e9",
+      "Madonna"
+    ]
+  },
+  "Tour title": {
+    "name": "Tour title",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 20,
+    "sample_values": [
+      "The Eras Tour \u2020",
+      "Renaissance World Tour",
+      "Sticky & Sweet Tour \u2021[4][a]"
+    ]
+  },
+  "Year(s)": {
+    "name": "Year(s)",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 16,
+    "sample_values": [
+      "2023\u20132024",
+      "2023",
+      "2008\u20132009"
+    ]
+  },
+  "Shows": {
+    "name": "Shows",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 18,
+    "min": 41.0,
+    "max": 325.0,
+    "mean": 110.0
+  },
+  "Average gross": {
+    "name": "Average gross",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 20,
+    "sample_values": [
+      "$13,928,571",
+      "$10,353,571",
+      "$4,835,294"
+    ]
+  },
+  "Ref.": {
+    "name": "Ref.",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 20,
+    "sample_values": [
+      "[1]",
+      "[3]",
+      "[6]"
+    ]
+  }
+}

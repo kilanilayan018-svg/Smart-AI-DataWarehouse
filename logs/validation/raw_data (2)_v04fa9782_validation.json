@@ -1,9 +1,0 @@
-{
-    "is_valid": true,
-    "errors": [],
-    "name": "raw_data (2)",
-    "version": "04fa9782",
-    "raw_file_path": "data/raw/20260331_173926_04fa9782_raw_data (2).csv",
-    "schema_path": "data/schema/20260331_173926_04fa9782_raw_data (2)_schema.json",
-    "validation_status": "valid"
-}

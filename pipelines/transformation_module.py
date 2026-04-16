@@ -9,7 +9,7 @@ from datetime import datetime
 # ============================================================
 # CONFIGURATION - EDIT THESE PATHS IF NEEDED
 # ============================================================
-PROJECT_ROOT = Path(r"C:\Users\TO_Shared_2\PycharmProjects\Grad100")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
 CURATED_DIR = PROJECT_ROOT / "data" / "curated"
 LOG_FILE = PROJECT_ROOT / "logs" / "transformation_log.json"

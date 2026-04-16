@@ -1,0 +1,124 @@
+import glob
+import json
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+RAW_DIR = PROJECT_ROOT / "data" / "raw"
+SCHEMA_DIR = PROJECT_ROOT / "data" / "schema"
+VALIDATION_DIR = PROJECT_ROOT / "logs" / "validation"
+
+
+def parse_versioned_filename(file_path: Path):
+    """
+    Expected:
+    20260331_173925_1acb0a5a_automobile_dataset.csv
+    -> version = 1acb0a5a
+    -> dataset_name = automobile_dataset
+    -> base_name = 20260331_173925_1acb0a5a_automobile_dataset
+    """
+    base_name = file_path.stem
+    parts = base_name.split("_", 3)
+
+    if len(parts) < 4:
+        return None, None, base_name
+
+    _, _, version, dataset_name = parts
+    return version, dataset_name, base_name
+
+
+def main():
+    raw_files = []
+    raw_files.extend(glob.glob(str(RAW_DIR / "*.csv")))
+    raw_files.extend(glob.glob(str(RAW_DIR / "*.xlsx")))
+    raw_files.extend(glob.glob(str(RAW_DIR / "*.xls")))
+    raw_files = sorted(Path(p) for p in raw_files)
+
+    validation_reports = set()
+    if VALIDATION_DIR.exists():
+        for report_file in VALIDATION_DIR.glob("*_validation.json"):
+            if report_file.name == "validation_summary.json":
+                continue
+            validation_reports.add(report_file.name)
+
+    print("=" * 70)
+    print("CHECKING UNVALIDATED DATASETS")
+    print("=" * 70)
+    print(f"📁 Raw files found: {len(raw_files)}")
+    print(f"📁 Validation reports found: {len(validation_reports)}")
+    print()
+
+    not_validated = []
+    missing_schema = []
+    bad_name_format = []
+
+    for raw_file in raw_files:
+        version, dataset_name, base_name = parse_versioned_filename(raw_file)
+
+        if version is None:
+            bad_name_format.append(raw_file.name)
+            continue
+
+        expected_report = f"{dataset_name}_v{version}_validation.json"
+        expected_schema = SCHEMA_DIR / f"{base_name}_schema.json"
+
+        if not expected_schema.exists():
+            missing_schema.append({
+                "raw_file": raw_file.name,
+                "expected_schema": expected_schema.name
+            })
+
+        if expected_report not in validation_reports:
+            not_validated.append({
+                "raw_file": raw_file.name,
+                "expected_report": expected_report
+            })
+
+    print("❌ FILES WITH BAD NAME FORMAT")
+    print("-" * 70)
+    if bad_name_format:
+        for f in bad_name_format:
+            print(f"  - {f}")
+    else:
+        print("  None")
+
+    print("\n❌ FILES MISSING SCHEMA")
+    print("-" * 70)
+    if missing_schema:
+        for item in missing_schema:
+            print(f"  - Raw file: {item['raw_file']}")
+            print(f"    Expected schema: {item['expected_schema']}")
+    else:
+        print("  None")
+
+    print("\n❌ FILES NOT VALIDATED YET")
+    print("-" * 70)
+    if not_validated:
+        for item in not_validated:
+            print(f"  - Raw file: {item['raw_file']}")
+            print(f"    Expected report: {item['expected_report']}")
+    else:
+        print("  None")
+
+    print("\n" + "=" * 70)
+    print(f"Bad name format count: {len(bad_name_format)}")
+    print(f"Missing schema count: {len(missing_schema)}")
+    print(f"Not validated count: {len(not_validated)}")
+    print("=" * 70)
+
+    summary = {
+        "bad_name_format": bad_name_format,
+        "missing_schema": missing_schema,
+        "not_validated": not_validated,
+    }
+
+    output_path = VALIDATION_DIR / "unvalidated_check.json"
+    VALIDATION_DIR.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, indent=4)
+
+    print(f"\n📦 Saved summary to: {output_path}")
+
+
+if __name__ == "__main__":
+    main()
