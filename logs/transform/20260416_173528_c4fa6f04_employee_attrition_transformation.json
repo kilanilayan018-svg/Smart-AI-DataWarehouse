@@ -1,0 +1,68 @@
+{
+  "name": "20260416_173528_c4fa6f04_employee attrition",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_c4fa6f04_employee attrition.csv",
+  "steps": [
+    "Loaded dataset: 1470 rows, 35 cols",
+    "No duplicate rows found",
+    "Dropped 3 constant columns: ['EmployeeCount', 'Over18', 'StandardHours']",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260416_173528_c4fa6f04_employee attrition_cleaned.csv"
+  ],
+  "original_shape": [
+    1470,
+    35
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [
+    "EmployeeCount",
+    "Over18",
+    "StandardHours"
+  ],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_c4fa6f04_employee attrition_cleaned.csv",
+  "final_shape": [
+    1470,
+    32
+  ],
+  "status": "success",
+  "timestamp": "2026-04-19T21:52:19.231329",
+  "columns": [
+    "Age",
+    "Attrition",
+    "BusinessTravel",
+    "DailyRate",
+    "Department",
+    "DistanceFromHome",
+    "Education",
+    "EducationField",
+    "EmployeeNumber",
+    "EnvironmentSatisfaction",
+    "Gender",
+    "HourlyRate",
+    "JobInvolvement",
+    "JobLevel",
+    "JobRole",
+    "JobSatisfaction",
+    "MaritalStatus",
+    "MonthlyIncome",
+    "MonthlyRate",
+    "NumCompaniesWorked",
+    "OverTime",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager"
+  ]
+}
