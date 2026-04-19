@@ -1,0 +1,65 @@
+{
+  "name": "20260416_173528_20aa9739_customer churn",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_20aa9739_customer churn.csv",
+  "steps": [
+    "Loaded dataset: 7043 rows, 21 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "Type cast 1 columns",
+    "Imputed 1 numeric columns with median",
+    "Saved to 20260416_173528_20aa9739_customer churn_cleaned.csv"
+  ],
+  "original_shape": [
+    7043,
+    21
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [
+    {
+      "column": "TotalCharges",
+      "original_type": "str",
+      "new_type": "numeric",
+      "conversion_rate": 0.9984381655544512
+    }
+  ],
+  "categorical_imputations": {},
+  "numeric_imputations": {
+    "TotalCharges": {
+      "nulls_imputed": 11,
+      "median_value": 1397.475
+    }
+  },
+  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_20aa9739_customer churn_cleaned.csv",
+  "final_shape": [
+    7043,
+    21
+  ],
+  "status": "success",
+  "timestamp": "2026-04-19T21:52:18.701360",
+  "columns": [
+    "customerID",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges",
+    "Churn"
+  ]
+}

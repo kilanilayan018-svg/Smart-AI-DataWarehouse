@@ -1,0 +1,38 @@
+{
+  "name": "20260416_173528_d699a9ef_metadata",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_d699a9ef_metadata.csv",
+  "steps": [
+    "Loaded dataset: 11 rows, 6 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260416_173528_d699a9ef_metadata_cleaned.csv"
+  ],
+  "original_shape": [
+    11,
+    6
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_d699a9ef_metadata_cleaned.csv",
+  "final_shape": [
+    11,
+    6
+  ],
+  "status": "success",
+  "timestamp": "2026-04-19T21:52:19.240521",
+  "columns": [
+    "filename",
+    "source",
+    "rows",
+    "cols",
+    "target",
+    "task_type"
+  ]
+}
