@@ -1,7 +1,7 @@
 {
   "name": "20260429_163446_ca1c65ff_automobile_dataset",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163446_ca1c65ff_automobile_dataset.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163446_ca1c65ff_automobile_dataset.csv",
   "steps": [
     "Loaded dataset: 205 rows, 26 cols",
     "No duplicate rows found",
@@ -75,13 +75,13 @@
       "median_value": 115.0
     }
   },
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv",
   "final_shape": [
     205,
     26
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:41.941455",
+  "timestamp": "2026-04-29T18:36:57.412201",
   "columns": [
     "price",
     "highway-mpg",

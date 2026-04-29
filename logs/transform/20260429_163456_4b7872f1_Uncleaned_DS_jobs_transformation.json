@@ -1,7 +1,7 @@
 {
   "name": "20260429_163456_4b7872f1_Uncleaned_DS_jobs",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv",
   "steps": [
     "Loaded dataset: 672 rows, 15 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv",
   "final_shape": [
     672,
     15
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:53.320799",
+  "timestamp": "2026-04-29T18:36:57.491727",
   "columns": [
     "index",
     "Job Title",

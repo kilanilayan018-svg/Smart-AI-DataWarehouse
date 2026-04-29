@@ -1,7 +1,7 @@
 {
   "name": "20260429_163455_4851bfef_messy_IMDB_dataset",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_4851bfef_messy_IMDB_dataset.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_4851bfef_messy_IMDB_dataset.csv",
   "steps": [
     "Loaded dataset: 101 rows, 12 cols",
     "No duplicate rows found",
@@ -22,13 +22,13 @@
   "columns_type_cast": [
     {
       "column": "Duration",
-      "original_type": "object",
+      "original_type": "str",
       "new_type": "numeric",
       "conversion_rate": 0.9504950495049505
     },
     {
       "column": "Score",
-      "original_type": "object",
+      "original_type": "str",
       "new_type": "numeric",
       "conversion_rate": 0.9207920792079208
     }
@@ -89,13 +89,13 @@
       "median_value": 8.2
     }
   },
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv",
   "final_shape": [
     101,
     11
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:52.428435",
+  "timestamp": "2026-04-29T18:36:57.423168",
   "columns": [
     "IMBD title ID",
     "Original titl\u00ca",

@@ -1,7 +1,7 @@
 {
   "name": "20260429_163455_f89ed7d6_insurance (1)",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_f89ed7d6_insurance (1).csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_f89ed7d6_insurance (1).csv",
   "steps": [
     "Loaded dataset: 1338 rows, 7 cols",
     "Removed 1 duplicate rows",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_f89ed7d6_insurance (1)_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_f89ed7d6_insurance (1)_cleaned.csv",
   "final_shape": [
     1337,
     7
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:53.092896",
+  "timestamp": "2026-04-29T18:36:57.416814",
   "columns": [
     "age",
     "sex",

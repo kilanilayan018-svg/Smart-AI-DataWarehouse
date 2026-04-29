@@ -1,7 +1,7 @@
 {
   "name": "20260429_163447_37de9aba_employees",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163447_37de9aba_employees.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163447_37de9aba_employees.csv",
   "steps": [
     "Loaded dataset: 84 rows, 4 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163447_37de9aba_employees_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_37de9aba_employees_cleaned.csv",
   "final_shape": [
     84,
     4
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:51.155880",
+  "timestamp": "2026-04-29T18:36:57.574227",
   "columns": [
     "Name ",
     "job_title",

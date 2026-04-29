@@ -1,7 +1,7 @@
 {
   "name": "20260429_163455_3a25e952_MMSAC_Dataset",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_3a25e952_MMSAC_Dataset.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_3a25e952_MMSAC_Dataset.csv",
   "steps": [
     "Loaded dataset: 10043 rows, 47 cols",
     "No duplicate rows found",
@@ -43,13 +43,13 @@
   ],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv",
   "final_shape": [
     10043,
     46
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:52.332639",
+  "timestamp": "2026-04-29T18:36:53.872359",
   "columns": [
     "15.0_m_29",
     "2",

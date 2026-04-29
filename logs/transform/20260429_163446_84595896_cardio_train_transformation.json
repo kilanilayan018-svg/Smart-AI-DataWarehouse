@@ -1,7 +1,7 @@
 {
   "name": "20260429_163446_84595896_cardio_train",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163446_84595896_cardio_train.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163446_84595896_cardio_train.csv",
   "steps": [
     "Loaded dataset: 70000 rows, 13 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163446_84595896_cardio_train_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_84595896_cardio_train_cleaned.csv",
   "final_shape": [
     70000,
     13
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:41.891730",
+  "timestamp": "2026-04-29T18:36:57.402584",
   "columns": [
     "id",
     "age",

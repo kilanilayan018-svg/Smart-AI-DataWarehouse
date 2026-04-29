@@ -1,7 +1,7 @@
 {
   "name": "20260429_163447_2096dca0_Flight_delay",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163447_2096dca0_Flight_delay.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163447_2096dca0_Flight_delay.csv",
   "steps": [
     "Loaded dataset: 484551 rows, 29 cols",
     "Removed 2 duplicate rows",
@@ -33,13 +33,13 @@
     }
   },
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163447_2096dca0_Flight_delay_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_2096dca0_Flight_delay_cleaned.csv",
   "final_shape": [
     484549,
     26
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:50.981389",
+  "timestamp": "2026-04-29T18:36:57.287063",
   "columns": [
     "DayOfWeek",
     "Date",

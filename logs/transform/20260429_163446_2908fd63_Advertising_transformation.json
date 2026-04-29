@@ -1,7 +1,7 @@
 {
   "name": "20260429_163446_2908fd63_Advertising",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163446_2908fd63_Advertising.csv",
+  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163446_2908fd63_Advertising.csv",
   "steps": [
     "Loaded dataset: 200 rows, 5 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163446_2908fd63_Advertising_cleaned.csv",
+  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2908fd63_Advertising_cleaned.csv",
   "final_shape": [
     200,
     5
   ],
   "status": "success",
-  "timestamp": "2026-04-29T16:54:41.414934",
+  "timestamp": "2026-04-29T18:36:57.448871",
   "columns": [
     "Unnamed: 0",
     "TV",
