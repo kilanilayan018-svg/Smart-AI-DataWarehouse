@@ -1,19 +1,29 @@
 {
   "filename": {
     "name": "filename",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 11,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "cardio_train.csv",
+      "customer churn.csv",
+      "Dirty Dataset to practice Data Cleaning.csv"
+    ]
   },
   "source": {
     "name": "source",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Kaggle/UCI",
+      "Kaggle",
+      "UCI"
+    ]
   },
   "rows": {
     "name": "rows",
@@ -39,19 +49,28 @@
   },
   "target": {
     "name": "target",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 11,
-    "is_target": true
+    "is_target": true,
+    "sample_values": [
+      "cardio",
+      "Churn",
+      "Actual gross"
+    ]
   },
   "task_type": {
     "name": "task_type",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Classification",
+      "Regression"
+    ]
   },
   "_meta": {
     "target_column": "target",

@@ -1,7 +1,7 @@
 {
   "name": "20260416_173528_74e6264d_Iris 1 ",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_74e6264d_Iris 1 .csv",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173528_74e6264d_Iris 1 .csv",
   "steps": [
     "Loaded dataset: 150 rows, 6 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_74e6264d_Iris 1 _cleaned.csv",
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_74e6264d_Iris 1 _cleaned.csv",
   "final_shape": [
     150,
     6
   ],
   "status": "success",
-  "timestamp": "2026-04-29T15:20:08.498740",
+  "timestamp": "2026-04-29T16:02:48.898103",
   "columns": [
     "Id",
     "SepalLengthCm",

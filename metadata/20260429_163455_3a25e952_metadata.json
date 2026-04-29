@@ -1,0 +1,14 @@
+{
+    "original_filename": "MMSAC_Dataset.csv",
+    "stored_filename": "20260429_163455_3a25e952_MMSAC_Dataset.csv",
+    "stored_path": "data\\raw\\20260429_163455_3a25e952_MMSAC_Dataset.csv",
+    "version_id": "3a25e952",
+    "timestamp": "20260429_163455",
+    "file_type": ".csv",
+    "rows": 9970,
+    "columns_count": 2,
+    "columns": [
+        "\ufeff",
+        "Unnamed: 1"
+    ]
+}

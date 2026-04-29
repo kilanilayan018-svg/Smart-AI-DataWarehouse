@@ -1,7 +1,7 @@
 {
   "name": "20260416_173528_d699a9ef_metadata",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_d699a9ef_metadata.csv",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173528_d699a9ef_metadata.csv",
   "steps": [
     "Loaded dataset: 11 rows, 6 cols",
     "No duplicate rows found",
@@ -20,13 +20,13 @@
   "columns_type_cast": [],
   "categorical_imputations": {},
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_d699a9ef_metadata_cleaned.csv",
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_d699a9ef_metadata_cleaned.csv",
   "final_shape": [
     11,
     6
   ],
   "status": "success",
-  "timestamp": "2026-04-29T15:20:08.606360",
+  "timestamp": "2026-04-29T16:02:49.072185",
   "columns": [
     "filename",
     "source",

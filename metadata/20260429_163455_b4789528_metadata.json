@@ -1,0 +1,18 @@
+{
+    "original_filename": "metadata.csv",
+    "stored_filename": "20260429_163455_b4789528_metadata.csv",
+    "stored_path": "data\\raw\\20260429_163455_b4789528_metadata.csv",
+    "version_id": "b4789528",
+    "timestamp": "20260429_163455",
+    "file_type": ".csv",
+    "rows": 11,
+    "columns_count": 6,
+    "columns": [
+        "filename",
+        "source",
+        "rows",
+        "cols",
+        "target",
+        "task_type"
+    ]
+}

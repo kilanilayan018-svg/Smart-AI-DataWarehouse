@@ -56,11 +56,16 @@
   },
   "Species": {
     "name": "Species",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": true
+    "is_target": true,
+    "sample_values": [
+      "Iris-setosa",
+      "Iris-versicolor",
+      "Iris-virginica"
+    ]
   },
   "_meta": {
     "target_column": "Species",
