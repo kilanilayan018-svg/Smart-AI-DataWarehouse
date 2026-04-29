@@ -1,0 +1,45 @@
+{
+  "name": "20260429_163456_e240b20f_titanic",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163456_e240b20f_titanic.csv",
+  "steps": [
+    "Loaded dataset: 891 rows, 12 cols",
+    "No duplicate rows found",
+    "Dropped 11 constant columns: ['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163456_e240b20f_titanic_cleaned.csv"
+  ],
+  "original_shape": [
+    891,
+    12
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [
+    "Survived",
+    "Pclass",
+    "Name",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Ticket",
+    "Fare",
+    "Cabin",
+    "Embarked"
+  ],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163456_e240b20f_titanic_cleaned.csv",
+  "final_shape": [
+    891,
+    1
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:53.365440",
+  "columns": [
+    "PassengerId"
+  ]
+}

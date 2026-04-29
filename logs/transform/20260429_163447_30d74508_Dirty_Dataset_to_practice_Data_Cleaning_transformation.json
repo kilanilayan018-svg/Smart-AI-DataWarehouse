@@ -1,0 +1,52 @@
+{
+  "name": "20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv",
+  "steps": [
+    "Loaded dataset: 20 rows, 11 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "Imputed 2 categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv"
+  ],
+  "original_shape": [
+    20,
+    11
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {
+    "Peak": {
+      "nulls_imputed": 11,
+      "mode_value": "1"
+    },
+    "All Time Peak": {
+      "nulls_imputed": 14,
+      "mode_value": "10[7]"
+    }
+  },
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+  "final_shape": [
+    20,
+    11
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:51.050391",
+  "columns": [
+    "Rank",
+    "Peak",
+    "All Time Peak",
+    "Actual\u00a0gross",
+    "Adjusted\u00a0gross (in 2022 dollars)",
+    "Artist",
+    "Tour title",
+    "Year(s)",
+    "Shows",
+    "Average gross",
+    "Ref."
+  ]
+}

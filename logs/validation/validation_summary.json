@@ -5,10 +5,10 @@
             "errors": [
                 "Missing columns: {'_meta'}"
             ],
-            "name": "customer churn",
-            "version": "20aa9739",
-            "raw_file_path": "data/raw/20260416_173528_20aa9739_customer churn.csv",
-            "schema_path": "data/schema/20260416_173528_20aa9739_customer churn_schema.json",
+            "name": "Advertising",
+            "version": "2908fd63",
+            "raw_file_path": "data/raw/20260429_163446_2908fd63_Advertising.csv",
+            "schema_path": "data/schema/20260429_163446_2908fd63_Advertising_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -16,10 +16,10 @@
             "errors": [
                 "Missing columns: {'_meta'}"
             ],
-            "name": "raw_data (2)",
-            "version": "499384da",
-            "raw_file_path": "data/raw/20260416_173528_499384da_raw_data (2).csv",
-            "schema_path": "data/schema/20260416_173528_499384da_raw_data (2)_schema.json",
+            "name": "Auto",
+            "version": "2cf00704",
+            "raw_file_path": "data/raw/20260429_163446_2cf00704_Auto.csv",
+            "schema_path": "data/schema/20260429_163446_2cf00704_Auto_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -27,21 +27,22 @@
             "errors": [
                 "Missing columns: {'_meta'}"
             ],
-            "name": "Iris 1 ",
-            "version": "74e6264d",
-            "raw_file_path": "data/raw/20260416_173528_74e6264d_Iris 1 .csv",
-            "schema_path": "data/schema/20260416_173528_74e6264d_Iris 1 _schema.json",
+            "name": "Admission",
+            "version": "599f83f5",
+            "raw_file_path": "data/raw/20260429_163446_599f83f5_Admission.csv",
+            "schema_path": "data/schema/20260429_163446_599f83f5_Admission_schema.json",
             "validation_status": "invalid"
         },
         {
             "is_valid": false,
             "errors": [
-                "Missing columns: {'_meta'}"
+                "Missing columns: {'gluc', 'age', 'active', 'id', 'ap_hi', 'smoke', 'alco', 'cardio', '_meta', 'gender', 'weight', 'cholesterol', 'height', 'ap_lo'}",
+                "Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}"
             ],
-            "name": "Dirty Dataset to practice Data Cleaning",
-            "version": "924f2eea",
-            "raw_file_path": "data/raw/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
-            "schema_path": "data/schema/20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_schema.json",
+            "name": "cardio_train",
+            "version": "84595896",
+            "raw_file_path": "data/raw/20260429_163446_84595896_cardio_train.csv",
+            "schema_path": "data/schema/20260429_163446_84595896_cardio_train_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -50,9 +51,53 @@
                 "Missing columns: {'_meta'}"
             ],
             "name": "automobile_dataset",
-            "version": "a730c6b1",
-            "raw_file_path": "data/raw/20260416_173528_a730c6b1_automobile_dataset.csv",
-            "schema_path": "data/schema/20260416_173528_a730c6b1_automobile_dataset_schema.json",
+            "version": "ca1c65ff",
+            "raw_file_path": "data/raw/20260429_163446_ca1c65ff_automobile_dataset.csv",
+            "schema_path": "data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "Flight_delay",
+            "version": "2096dca0",
+            "raw_file_path": "data/raw/20260429_163447_2096dca0_Flight_delay.csv",
+            "schema_path": "data/schema/20260429_163447_2096dca0_Flight_delay_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "Dirty Dataset to practice Data Cleaning",
+            "version": "30d74508",
+            "raw_file_path": "data/raw/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv",
+            "schema_path": "data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "employees",
+            "version": "37de9aba",
+            "raw_file_path": "data/raw/20260429_163447_37de9aba_employees.csv",
+            "schema_path": "data/schema/20260429_163447_37de9aba_employees_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "dirty_cafe_sales",
+            "version": "c4b8ac3c",
+            "raw_file_path": "data/raw/20260429_163447_c4b8ac3c_dirty_cafe_sales.csv",
+            "schema_path": "data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -61,9 +106,9 @@
                 "Missing columns: {'_meta'}"
             ],
             "name": "employee attrition",
-            "version": "c4fa6f04",
-            "raw_file_path": "data/raw/20260416_173528_c4fa6f04_employee attrition.csv",
-            "schema_path": "data/schema/20260416_173528_c4fa6f04_employee attrition_schema.json",
+            "version": "ee471683",
+            "raw_file_path": "data/raw/20260429_163447_ee471683_employee attrition.csv",
+            "schema_path": "data/schema/20260429_163447_ee471683_employee attrition_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -71,22 +116,32 @@
             "errors": [
                 "Missing columns: {'_meta'}"
             ],
-            "name": "metadata",
-            "version": "d699a9ef",
-            "raw_file_path": "data/raw/20260416_173528_d699a9ef_metadata.csv",
-            "schema_path": "data/schema/20260416_173528_d699a9ef_metadata_schema.json",
+            "name": "customer churn",
+            "version": "ffafe6c3",
+            "raw_file_path": "data/raw/20260429_163447_ffafe6c3_customer churn.csv",
+            "schema_path": "data/schema/20260429_163447_ffafe6c3_customer churn_schema.json",
             "validation_status": "invalid"
         },
         {
             "is_valid": false,
             "errors": [
-                "Missing columns: {'id', '_meta', 'ap_lo', 'age', 'ap_hi', 'gluc', 'weight', 'cardio', 'cholesterol', 'height', 'smoke', 'alco', 'gender', 'active'}",
-                "Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}"
+                "Missing columns: {'_meta'}"
             ],
-            "name": "cardio_train",
-            "version": "f16109cc",
-            "raw_file_path": "data/raw/20260416_173528_f16109cc_cardio_train.csv",
-            "schema_path": "data/schema/20260416_173528_f16109cc_cardio_train_schema.json",
+            "name": "Iris 1 ",
+            "version": "0b888d06",
+            "raw_file_path": "data/raw/20260429_163455_0b888d06_Iris 1 .csv",
+            "schema_path": "data/schema/20260429_163455_0b888d06_Iris 1 _schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "MMSAC_Dataset",
+            "version": "3a25e952",
+            "raw_file_path": "data/raw/20260429_163455_3a25e952_MMSAC_Dataset.csv",
+            "schema_path": "data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -95,9 +150,53 @@
                 "Failed to read or validate dataset: Error tokenizing data. C error: Expected 1 fields in line 3, saw 2\n"
             ],
             "name": "messy_IMDB_dataset",
-            "version": "f2b7dc55",
-            "raw_file_path": "data/raw/20260416_173528_f2b7dc55_messy_IMDB_dataset.csv",
-            "schema_path": "data/schema/20260416_173528_f2b7dc55_messy_IMDB_dataset_schema.json",
+            "version": "4851bfef",
+            "raw_file_path": "data/raw/20260429_163455_4851bfef_messy_IMDB_dataset.csv",
+            "schema_path": "data/schema/20260429_163455_4851bfef_messy_IMDB_dataset_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "raw_data (2)",
+            "version": "84f9b5eb",
+            "raw_file_path": "data/raw/20260429_163455_84f9b5eb_raw_data (2).csv",
+            "schema_path": "data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "metadata",
+            "version": "b4789528",
+            "raw_file_path": "data/raw/20260429_163455_b4789528_metadata.csv",
+            "schema_path": "data/schema/20260429_163455_b4789528_metadata_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "insurance (1)",
+            "version": "f89ed7d6",
+            "raw_file_path": "data/raw/20260429_163455_f89ed7d6_insurance (1).csv",
+            "schema_path": "data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "raw_data",
+            "version": "092bc7c7",
+            "raw_file_path": "data/raw/20260429_163456_092bc7c7_raw_data.csv",
+            "schema_path": "data/schema/20260429_163456_092bc7c7_raw_data_schema.json",
             "validation_status": "invalid"
         },
         {
@@ -106,9 +205,20 @@
                 "Missing columns: {'_meta'}"
             ],
             "name": "Uncleaned_DS_jobs",
-            "version": "d4383efc",
-            "raw_file_path": "data/raw/20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
-            "schema_path": "data/schema/20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
+            "version": "4b7872f1",
+            "raw_file_path": "data/raw/20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv",
+            "schema_path": "data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json",
+            "validation_status": "invalid"
+        },
+        {
+            "is_valid": false,
+            "errors": [
+                "Missing columns: {'_meta'}"
+            ],
+            "name": "titanic",
+            "version": "e240b20f",
+            "raw_file_path": "data/raw/20260429_163456_e240b20f_titanic.csv",
+            "schema_path": "data/schema/20260429_163456_e240b20f_titanic_schema.json",
             "validation_status": "invalid"
         }
     ],

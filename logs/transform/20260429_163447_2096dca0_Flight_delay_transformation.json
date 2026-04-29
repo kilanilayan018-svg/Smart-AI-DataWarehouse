@@ -1,0 +1,71 @@
+{
+  "name": "20260429_163447_2096dca0_Flight_delay",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163447_2096dca0_Flight_delay.csv",
+  "steps": [
+    "Loaded dataset: 484551 rows, 29 cols",
+    "Removed 2 duplicate rows",
+    "Dropped 3 constant columns: ['Cancelled', 'CancellationCode', 'Diverted']",
+    "Imputed 2 categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163447_2096dca0_Flight_delay_cleaned.csv"
+  ],
+  "original_shape": [
+    484551,
+    29
+  ],
+  "duplicates_removed": 2,
+  "constant_columns_dropped": [
+    "Cancelled",
+    "CancellationCode",
+    "Diverted"
+  ],
+  "columns_type_cast": [],
+  "categorical_imputations": {
+    "Org_Airport": {
+      "nulls_imputed": 1177,
+      "mode_value": "Chicago O'Hare International Airport"
+    },
+    "Dest_Airport": {
+      "nulls_imputed": 1479,
+      "mode_value": "Chicago O'Hare International Airport"
+    }
+  },
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163447_2096dca0_Flight_delay_cleaned.csv",
+  "final_shape": [
+    484549,
+    26
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:50.981389",
+  "columns": [
+    "DayOfWeek",
+    "Date",
+    "DepTime",
+    "ArrTime",
+    "CRSArrTime",
+    "UniqueCarrier",
+    "Airline",
+    "FlightNum",
+    "TailNum",
+    "ActualElapsedTime",
+    "CRSElapsedTime",
+    "AirTime",
+    "ArrDelay",
+    "DepDelay",
+    "Origin",
+    "Org_Airport",
+    "Dest",
+    "Dest_Airport",
+    "Distance",
+    "TaxiIn",
+    "TaxiOut",
+    "CarrierDelay",
+    "WeatherDelay",
+    "NASDelay",
+    "SecurityDelay",
+    "LateAircraftDelay"
+  ]
+}

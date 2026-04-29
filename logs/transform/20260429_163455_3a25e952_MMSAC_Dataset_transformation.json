@@ -1,0 +1,101 @@
+{
+  "name": "20260429_163455_3a25e952_MMSAC_Dataset",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_3a25e952_MMSAC_Dataset.csv",
+  "steps": [
+    "Loaded dataset: 10043 rows, 47 cols",
+    "No duplicate rows found",
+    "Dropped 1 constant columns: ['2026-04-14 19:24:26.5633333']",
+    "No missing values in categorical columns",
+    "Type cast 4 columns",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv"
+  ],
+  "original_shape": [
+    10043,
+    47
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [
+    "2026-04-14 19:24:26.5633333"
+  ],
+  "columns_type_cast": [
+    {
+      "column": "85.00",
+      "original_type": "float64",
+      "new_type": "Int64"
+    },
+    {
+      "column": "140.00",
+      "original_type": "float64",
+      "new_type": "Int64"
+    },
+    {
+      "column": "90.00",
+      "original_type": "float64",
+      "new_type": "Int64"
+    },
+    {
+      "column": "82.00",
+      "original_type": "float64",
+      "new_type": "Int64"
+    }
+  ],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv",
+  "final_shape": [
+    10043,
+    46
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:52.332639",
+  "columns": [
+    "15.0_m_29",
+    "2",
+    "1",
+    "29.7",
+    "Male",
+    "Teacher",
+    "15.00",
+    "124.70",
+    "27.30",
+    "85.00",
+    "140.00",
+    "90.00",
+    "82.00",
+    "3500",
+    "6.98",
+    "225.01",
+    "124.66",
+    "60.06",
+    "0",
+    "1.1",
+    "0.1",
+    "0.2",
+    "1.2",
+    "1.3",
+    "0.3",
+    "38.00",
+    "0.4",
+    "0.5",
+    "93.40",
+    "21.20",
+    "91.7000",
+    "REM",
+    "0.3100",
+    "0.3700",
+    "Prone",
+    "6.30",
+    "6",
+    "7",
+    "40",
+    "10.10",
+    "5",
+    "4.90",
+    "48.51",
+    "18-30",
+    "Normal",
+    "H_N_D"
+  ]
+}

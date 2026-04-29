@@ -1,0 +1,41 @@
+{
+  "name": "20260429_163446_599f83f5_Admission",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163446_599f83f5_Admission.csv",
+  "steps": [
+    "Loaded dataset: 400 rows, 9 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163446_599f83f5_Admission_cleaned.csv"
+  ],
+  "original_shape": [
+    400,
+    9
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163446_599f83f5_Admission_cleaned.csv",
+  "final_shape": [
+    400,
+    9
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:41.505300",
+  "columns": [
+    "Serial No.",
+    "GRE Score",
+    "TOEFL Score",
+    "University Rating",
+    "SOP",
+    "LOR ",
+    "CGPA",
+    "Research",
+    "Chance of Admit "
+  ]
+}

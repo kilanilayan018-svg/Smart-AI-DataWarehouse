@@ -1,0 +1,106 @@
+{
+  "name": "20260429_163447_c4b8ac3c_dirty_cafe_sales",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163447_c4b8ac3c_dirty_cafe_sales.csv",
+  "steps": [
+    "Loaded dataset: 10000 rows, 8 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "Imputed 7 categorical columns",
+    "Type cast 4 columns",
+    "Imputed 3 numeric columns with median",
+    "Saved to 20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv"
+  ],
+  "original_shape": [
+    10000,
+    8
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [
+    {
+      "column": "Quantity",
+      "original_type": "object",
+      "new_type": "numeric",
+      "conversion_rate": 0.9659
+    },
+    {
+      "column": "Price Per Unit",
+      "original_type": "object",
+      "new_type": "numeric",
+      "conversion_rate": 0.9646
+    },
+    {
+      "column": "Total Spent",
+      "original_type": "object",
+      "new_type": "numeric",
+      "conversion_rate": 0.9671
+    },
+    {
+      "column": "Quantity",
+      "original_type": "float64",
+      "new_type": "Int64"
+    }
+  ],
+  "categorical_imputations": {
+    "Item": {
+      "nulls_imputed": 333,
+      "mode_value": "Juice"
+    },
+    "Quantity": {
+      "nulls_imputed": 138,
+      "mode_value": "5"
+    },
+    "Price Per Unit": {
+      "nulls_imputed": 179,
+      "mode_value": "3.0"
+    },
+    "Total Spent": {
+      "nulls_imputed": 173,
+      "mode_value": "6.0"
+    },
+    "Payment Method": {
+      "nulls_imputed": 2579,
+      "mode_value": "Digital Wallet"
+    },
+    "Location": {
+      "nulls_imputed": 3265,
+      "mode_value": "Takeaway"
+    },
+    "Transaction Date": {
+      "nulls_imputed": 159,
+      "mode_value": "UNKNOWN"
+    }
+  },
+  "numeric_imputations": {
+    "Quantity": {
+      "nulls_imputed": 341,
+      "median_value": 3.0
+    },
+    "Price Per Unit": {
+      "nulls_imputed": 354,
+      "median_value": 3.0
+    },
+    "Total Spent": {
+      "nulls_imputed": 329,
+      "median_value": 7.5
+    }
+  },
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv",
+  "final_shape": [
+    10000,
+    8
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:51.422670",
+  "columns": [
+    "Transaction ID",
+    "Item",
+    "Quantity",
+    "Price Per Unit",
+    "Total Spent",
+    "Payment Method",
+    "Location",
+    "Transaction Date"
+  ]
+}
