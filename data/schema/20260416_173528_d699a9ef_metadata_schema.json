@@ -1,27 +1,19 @@
 {
   "filename": {
     "name": "filename",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 11,
-    "sample_values": [
-      "cardio_train.csv",
-      "customer churn.csv",
-      "Dirty Dataset to practice Data Cleaning.csv"
-    ]
+    "is_target": false
   },
   "source": {
     "name": "source",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Kaggle/UCI",
-      "Kaggle",
-      "UCI"
-    ]
+    "is_target": false
   },
   "rows": {
     "name": "rows",
@@ -29,6 +21,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 11,
+    "is_target": false,
     "min": 20.0,
     "max": 70000.0,
     "mean": 10738.818181818182
@@ -39,31 +32,31 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 10,
+    "is_target": false,
     "min": 6.0,
     "max": 35.0,
     "mean": 15.454545454545455
   },
   "target": {
     "name": "target",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 11,
-    "sample_values": [
-      "cardio",
-      "Churn",
-      "Actual gross"
-    ]
+    "is_target": true
   },
   "task_type": {
     "name": "task_type",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Classification",
-      "Regression"
-    ]
+    "is_target": false
+  },
+  "_meta": {
+    "target_column": "target",
+    "target_detection_method": "keyword_match",
+    "row_count": 11,
+    "column_count": 6
   }
 }

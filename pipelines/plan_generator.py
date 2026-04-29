@@ -10,6 +10,9 @@ Pipeline-aware plan generator that uses:
 - feature engineering output contract
 
 This module generates a final structured preprocessing plan JSON.
+
+FIX: _meta key in schema JSON is now explicitly excluded from all
+     column iteration, target detection, and encoding decisions.
 """
 
 import json
@@ -64,7 +67,8 @@ class PlanGenerator:
         drop_columns = []
 
         for col_name, col_info in schema.items():
-            if col_name == target_column:
+            # ── Skip reserved keys ──────────────────────────────────────
+            if col_name in ("_meta", target_column):
                 continue
 
             normalized_col = col_name.strip()
@@ -118,7 +122,7 @@ class PlanGenerator:
                 "schema_extraction": {
                     "used": True,
                     "schema_path": str(SCHEMA_DIR / f"{dataset_name}_schema.json"),
-                    "columns_total": len(schema),
+                    "columns_total": len([k for k in schema if k != "_meta"]),
                 },
                 "validation": {
                     "used": validation is not None,
@@ -193,20 +197,32 @@ class PlanGenerator:
         return str(output_path)
 
     def _resolve_target(self, schema: dict):
+        """
+        Detect the target column using priority-based heuristics.
+        _meta is always excluded — it is a metadata key, not a column.
+        """
         if self.target_column and self.target_column in schema:
             return self.target_column
 
+        # ── Always exclude _meta ─────────────────────────────────────────
+        schema_keys = [k for k in schema.keys() if k != "_meta"]
+
+        # Priority 1: Check _meta block for explicit target_column
+        meta_block = schema.get("_meta", {})
+        meta_target = meta_block.get("target_column")
+        if meta_target and meta_target in schema_keys:
+            return meta_target
+
+        # Priority 2: Strong keyword match
         strong_targets = [
             "target", "label", "class", "species", "price",
             "output", "y", "churn", "attrition", "cardio", "diagnosis"
         ]
-
-        schema_keys = list(schema.keys())
-
         for col_name in schema_keys:
             if col_name.strip().lower() in strong_targets:
                 return col_name
 
+        # Priority 3: Last non-ID column that is non-numeric or low cardinality
         non_id_columns = [col for col in schema_keys if not self._looks_like_id(col)]
 
         for col in reversed(non_id_columns):
@@ -219,6 +235,7 @@ class PlanGenerator:
             if unique_count <= 10:
                 return col
 
+        # Priority 4: Last non-ID column as fallback
         if non_id_columns:
             return non_id_columns[-1]
 

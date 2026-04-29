@@ -5,32 +5,26 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 43,
+    "is_target": false,
     "min": 18.0,
     "max": 60.0,
     "mean": 36.923809523809524
   },
   "Attrition": {
     "name": "Attrition",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Yes",
-      "No"
-    ]
+    "is_target": true
   },
   "BusinessTravel": {
     "name": "BusinessTravel",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Travel_Rarely",
-      "Travel_Frequently",
-      "Non-Travel"
-    ]
+    "is_target": false
   },
   "DailyRate": {
     "name": "DailyRate",
@@ -38,21 +32,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 886,
+    "is_target": false,
     "min": 102.0,
     "max": 1499.0,
     "mean": 802.4857142857143
   },
   "Department": {
     "name": "Department",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Sales",
-      "Research & Development",
-      "Human Resources"
-    ]
+    "is_target": false
   },
   "DistanceFromHome": {
     "name": "DistanceFromHome",
@@ -60,6 +51,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 29,
+    "is_target": false,
     "min": 1.0,
     "max": 29.0,
     "mean": 9.19251700680272
@@ -70,21 +62,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 5,
+    "is_target": false,
     "min": 1.0,
     "max": 5.0,
     "mean": 2.912925170068027
   },
   "EducationField": {
     "name": "EducationField",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 6,
-    "sample_values": [
-      "Life Sciences",
-      "Other",
-      "Medical"
-    ]
+    "is_target": false
   },
   "EmployeeCount": {
     "name": "EmployeeCount",
@@ -92,6 +81,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1,
+    "is_target": false,
     "min": 1.0,
     "max": 1.0,
     "mean": 1.0
@@ -102,6 +92,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1470,
+    "is_target": false,
     "min": 1.0,
     "max": 2068.0,
     "mean": 1024.865306122449
@@ -112,20 +103,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 1.0,
     "max": 4.0,
     "mean": 2.721768707482993
   },
   "Gender": {
     "name": "Gender",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Female",
-      "Male"
-    ]
+    "is_target": false
   },
   "HourlyRate": {
     "name": "HourlyRate",
@@ -133,6 +122,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 71,
+    "is_target": false,
     "min": 30.0,
     "max": 100.0,
     "mean": 65.89115646258503
@@ -143,6 +133,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 1.0,
     "max": 4.0,
     "mean": 2.7299319727891156
@@ -153,21 +144,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 5,
+    "is_target": false,
     "min": 1.0,
     "max": 5.0,
     "mean": 2.0639455782312925
   },
   "JobRole": {
     "name": "JobRole",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 9,
-    "sample_values": [
-      "Sales Executive",
-      "Research Scientist",
-      "Laboratory Technician"
-    ]
+    "is_target": false
   },
   "JobSatisfaction": {
     "name": "JobSatisfaction",
@@ -175,21 +163,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 1.0,
     "max": 4.0,
     "mean": 2.7285714285714286
   },
   "MaritalStatus": {
     "name": "MaritalStatus",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Single",
-      "Married",
-      "Divorced"
-    ]
+    "is_target": false
   },
   "MonthlyIncome": {
     "name": "MonthlyIncome",
@@ -197,6 +182,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1349,
+    "is_target": false,
     "min": 1009.0,
     "max": 19999.0,
     "mean": 6502.931292517007
@@ -207,6 +193,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1427,
+    "is_target": false,
     "min": 2094.0,
     "max": 26999.0,
     "mean": 14313.103401360544
@@ -217,30 +204,26 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 10,
+    "is_target": false,
     "min": 0.0,
     "max": 9.0,
     "mean": 2.6931972789115646
   },
   "Over18": {
     "name": "Over18",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1,
-    "sample_values": [
-      "Y"
-    ]
+    "is_target": false
   },
   "OverTime": {
     "name": "OverTime",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Yes",
-      "No"
-    ]
+    "is_target": false
   },
   "PercentSalaryHike": {
     "name": "PercentSalaryHike",
@@ -248,6 +231,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 15,
+    "is_target": false,
     "min": 11.0,
     "max": 25.0,
     "mean": 15.209523809523809
@@ -258,6 +242,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 3.0,
     "max": 4.0,
     "mean": 3.1537414965986397
@@ -268,6 +253,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 1.0,
     "max": 4.0,
     "mean": 2.7122448979591836
@@ -278,6 +264,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1,
+    "is_target": false,
     "min": 80.0,
     "max": 80.0,
     "mean": 80.0
@@ -288,6 +275,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 0.0,
     "max": 3.0,
     "mean": 0.7938775510204081
@@ -298,6 +286,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 40,
+    "is_target": false,
     "min": 0.0,
     "max": 40.0,
     "mean": 11.279591836734694
@@ -308,6 +297,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 7,
+    "is_target": false,
     "min": 0.0,
     "max": 6.0,
     "mean": 2.7993197278911564
@@ -318,6 +308,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
+    "is_target": false,
     "min": 1.0,
     "max": 4.0,
     "mean": 2.7612244897959184
@@ -328,6 +319,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 37,
+    "is_target": false,
     "min": 0.0,
     "max": 40.0,
     "mean": 7.0081632653061225
@@ -338,6 +330,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 19,
+    "is_target": false,
     "min": 0.0,
     "max": 18.0,
     "mean": 4.229251700680272
@@ -348,6 +341,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 16,
+    "is_target": false,
     "min": 0.0,
     "max": 15.0,
     "mean": 2.1877551020408164
@@ -358,8 +352,15 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 18,
+    "is_target": false,
     "min": 0.0,
     "max": 17.0,
     "mean": 4.12312925170068
+  },
+  "_meta": {
+    "target_column": "Attrition",
+    "target_detection_method": "keyword_match",
+    "row_count": 1470,
+    "column_count": 35
   }
 }

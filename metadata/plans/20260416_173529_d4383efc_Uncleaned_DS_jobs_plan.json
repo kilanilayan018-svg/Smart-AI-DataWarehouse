@@ -14,26 +14,26 @@
     },
     "schema_extraction": {
       "used": true,
-      "schema_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\schema\\20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
+      "schema_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\schema\\20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
       "columns_total": 15
     },
     "validation": {
       "used": false,
       "is_valid": null,
       "errors": [],
-      "validation_log_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\logs\\validation\\20260416_173529_d4383efc_Uncleaned_DS_jobs_validation.json"
+      "validation_log_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\logs\\validation\\20260416_173529_d4383efc_Uncleaned_DS_jobs_validation.json"
     },
     "transformation": {
       "used": true,
-      "input_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
-      "output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
-      "log_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\logs\\transformation_log.json"
+      "input_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173529_d4383efc_Uncleaned_DS_jobs.csv",
+      "output_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
+      "log_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\logs\\transformation_log.json"
     },
     "feature_engineering": {
       "used": true,
-      "input_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
-      "output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features\\20260416_173529_d4383efc_Uncleaned_DS_jobs_features.csv",
-      "sample_output_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features_samples\\20260416_173529_d4383efc_Uncleaned_DS_jobs_sample_50_features.csv"
+      "input_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
+      "output_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features\\20260416_173529_d4383efc_Uncleaned_DS_jobs_features.csv",
+      "sample_output_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features_samples\\20260416_173529_d4383efc_Uncleaned_DS_jobs_sample_50_features.csv"
     }
   },
   "input_summary": {
@@ -102,10 +102,10 @@
     "reason": "Cannot infer class imbalance from schema only"
   },
   "export_paths": {
-    "source_schema": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\schema\\20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
-    "curated_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
-    "features_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features\\20260416_173529_d4383efc_Uncleaned_DS_jobs_features.csv",
-    "features_sample_data": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\features_samples\\20260416_173529_d4383efc_Uncleaned_DS_jobs_sample_50_features.csv",
-    "plan_json": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\metadata\\plans\\20260416_173529_d4383efc_Uncleaned_DS_jobs_plan.json"
+    "source_schema": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\schema\\20260416_173529_d4383efc_Uncleaned_DS_jobs_schema.json",
+    "curated_data": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173529_d4383efc_Uncleaned_DS_jobs_cleaned.csv",
+    "features_data": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features\\20260416_173529_d4383efc_Uncleaned_DS_jobs_features.csv",
+    "features_sample_data": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\features_samples\\20260416_173529_d4383efc_Uncleaned_DS_jobs_sample_50_features.csv",
+    "plan_json": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\metadata\\plans\\20260416_173529_d4383efc_Uncleaned_DS_jobs_plan.json"
   }
 }

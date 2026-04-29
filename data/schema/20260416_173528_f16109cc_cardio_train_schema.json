@@ -5,6 +5,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 70000,
+    "is_target": false,
     "min": 0.0,
     "max": 99999.0,
     "mean": 49972.4199
@@ -15,6 +16,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 8076,
+    "is_target": false,
     "min": 10798.0,
     "max": 23713.0,
     "mean": 19468.865814285713
@@ -25,6 +27,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 1.0,
     "max": 2.0,
     "mean": 1.3495714285714286
@@ -35,6 +38,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 109,
+    "is_target": false,
     "min": 55.0,
     "max": 250.0,
     "mean": 164.35922857142856
@@ -45,6 +49,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 287,
+    "is_target": false,
     "min": 10.0,
     "max": 200.0,
     "mean": 74.20569
@@ -55,6 +60,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 153,
+    "is_target": false,
     "min": -150.0,
     "max": 16020.0,
     "mean": 128.8172857142857
@@ -65,6 +71,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 157,
+    "is_target": false,
     "min": -70.0,
     "max": 11000.0,
     "mean": 96.63041428571428
@@ -75,6 +82,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
+    "is_target": false,
     "min": 1.0,
     "max": 3.0,
     "mean": 1.3668714285714285
@@ -85,6 +93,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
+    "is_target": false,
     "min": 1.0,
     "max": 3.0,
     "mean": 1.226457142857143
@@ -95,6 +104,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 0.0,
     "max": 1.0,
     "mean": 0.08812857142857143
@@ -105,6 +115,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 0.0,
     "max": 1.0,
     "mean": 0.053771428571428574
@@ -115,6 +126,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 0.0,
     "max": 1.0,
     "mean": 0.8037285714285715
@@ -125,8 +137,15 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": true,
     "min": 0.0,
     "max": 1.0,
     "mean": 0.4997
+  },
+  "_meta": {
+    "target_column": "cardio",
+    "target_detection_method": "keyword_match",
+    "row_count": 70000,
+    "column_count": 13
   }
 }
