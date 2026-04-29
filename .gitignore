@@ -33,4 +33,4 @@ metadata/plans/*
 !metadata/plans/.gitkeep
 
 node_modules/
-frontend/node_modules/.env
+frontend/node_modules/
