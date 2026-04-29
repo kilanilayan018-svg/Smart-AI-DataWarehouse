@@ -1,9 +1,11 @@
 {
-    "is_valid": true,
-    "errors": [],
+    "is_valid": false,
+    "errors": [
+        "Missing columns: {'_meta'}"
+    ],
     "name": "customer churn",
     "version": "20aa9739",
     "raw_file_path": "data/raw/20260416_173528_20aa9739_customer churn.csv",
     "schema_path": "data/schema/20260416_173528_20aa9739_customer churn_schema.json",
-    "validation_status": "valid"
+    "validation_status": "invalid"
 }

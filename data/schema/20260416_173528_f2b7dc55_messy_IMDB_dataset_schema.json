@@ -1,141 +1,104 @@
 {
   "IMBD title ID": {
     "name": "IMBD title ID",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 100,
-    "sample_values": [
-      "tt0111161",
-      "tt0068646",
-      "tt0468569"
-    ]
+    "is_target": false
   },
   "Original titl\u00ca": {
     "name": "Original titl\u00ca",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 100,
-    "sample_values": [
-      "The Shawshank Redemption",
-      "The Godfather",
-      "The Dark Knight"
-    ]
+    "is_target": false
   },
   "Release year": {
     "name": "Release year",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 99,
-    "sample_values": [
-      "1995-02-10",
-      "09 21 1972",
-      " 23 -07-2008"
-    ]
+    "is_target": false
   },
   "Genr\u00eb\u00a8": {
     "name": "Genr\u00eb\u00a8",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 59,
-    "sample_values": [
-      "Drama",
-      "Crime, Drama",
-      "Action, Crime, Drama"
-    ]
+    "is_target": false
   },
   "Duration": {
     "name": "Duration",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 2,
     "missing_percentage": 1.98,
     "unique_count": 71,
-    "sample_values": [
-      "142",
-      "175",
-      "152"
-    ]
+    "is_target": false
   },
   "Country": {
     "name": "Country",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 18,
-    "sample_values": [
-      "USA",
-      "US",
-      "New Zealand"
-    ]
+    "is_target": false
   },
   "Content Rating": {
     "name": "Content Rating",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 24,
     "missing_percentage": 23.76,
     "unique_count": 7,
-    "sample_values": [
-      "R",
-      "PG-13",
-      "Not Rated"
-    ]
+    "is_target": false
   },
   "Director": {
     "name": "Director",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 64,
-    "sample_values": [
-      "Frank Darabont",
-      "Francis Ford Coppola",
-      "Christopher Nolan"
-    ]
+    "is_target": false
   },
   "Unnamed: 8": {
     "name": "Unnamed: 8",
     "dtype": "float64",
     "missing_count": 101,
     "missing_percentage": 100.0,
-    "unique_count": 0
+    "unique_count": 0,
+    "is_target": false
   },
   "Income": {
     "name": "Income",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 100,
-    "sample_values": [
-      "$ 28815245",
-      "$ 246120974",
-      "$ 1005455211"
-    ]
+    "is_target": false
   },
   " Votes ": {
     "name": " Votes ",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 100,
-    "sample_values": [
-      "2.278.845",
-      "1.572.674",
-      "2.241.615"
-    ]
+    "is_target": false
   },
   "Score": {
     "name": "Score",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 1,
     "missing_percentage": 0.99,
     "unique_count": 28,
-    "sample_values": [
-      "9.3",
-      "9.2",
-      "9."
-    ]
+    "is_target": true
+  },
+  "_meta": {
+    "target_column": "Score",
+    "target_detection_method": "non_numeric_dtype",
+    "row_count": 101,
+    "column_count": 12
   }
 }

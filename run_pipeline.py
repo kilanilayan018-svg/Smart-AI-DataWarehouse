@@ -13,6 +13,7 @@ CLEAN_TARGETS = [
     PROJECT_ROOT / "data" / "curated",
     PROJECT_ROOT / "data" / "features",
     PROJECT_ROOT / "data" / "features_samples",
+    PROJECT_ROOT / "data" / "finetuning",
     PROJECT_ROOT / "metadata" / "plans",
     PROJECT_ROOT / "logs" / "validation",
 ]
@@ -66,7 +67,7 @@ def clean_previous_outputs():
 
     for file_path in CLEAN_FILES:
         if file_path.exists():
-            print(f"🗑️ Removing file: {file_path}")
+            print(f"🗑️  Removing file: {file_path}")
             file_path.unlink()
 
     print("✅ Cleanup complete.\n")
@@ -114,16 +115,17 @@ def main():
     # Adjust these filenames only if your actual names differ
     # ---------------------------------------------------
     steps = [
-        ("Schema Extraction", PROJECT_ROOT / "pipelines" / "schema_extractor.py"),
-        ("Validation", PROJECT_ROOT / "pipelines" / "run_validation.py"),
-        ("Transformation", PROJECT_ROOT / "pipelines" / "transformation_module.py"),
-        ("Feature Engineering", PROJECT_ROOT / "pipelines" / "feature_engineering.py"),
-        ("Plan Generation", PROJECT_ROOT / "pipelines" / "plan_generator.py"),
+        ("Schema Extraction",        PROJECT_ROOT / "pipelines" / "schema_extractor.py"),
+        ("Validation",               PROJECT_ROOT / "pipelines" / "run_validation.py"),
+        ("Transformation",           PROJECT_ROOT / "pipelines" / "transformation_module.py"),
+        ("Feature Engineering",      PROJECT_ROOT / "pipelines" / "feature_engineering.py"),
+        ("Plan Generation",          PROJECT_ROOT / "pipelines" / "plan_generator.py"),
+        ("Finetuning Pair Generation", PROJECT_ROOT / "pipelines" / "Pair_generator.py"),
     ]
 
     for label, script in steps:
         run_step(script, label)
-    
+
     print("=" * 70)
     print("✅ FULL PIPELINE FINISHED SUCCESSFULLY")
     print("=" * 70)
@@ -134,6 +136,7 @@ def main():
     print(f"  • Features:          {PROJECT_ROOT / 'data' / 'features'}")
     print(f"  • Feature samples:   {PROJECT_ROOT / 'data' / 'features_samples'}")
     print(f"  • Plans:             {PROJECT_ROOT / 'metadata' / 'plans'}")
+    print(f"  • Finetuning pairs:  {PROJECT_ROOT / 'data' / 'finetuning'}")
     print("=" * 70)
 
 

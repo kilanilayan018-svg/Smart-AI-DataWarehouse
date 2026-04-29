@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-04-29T15:20:13.280166",
+  "total_pairs": 30,
+  "datasets_processed": 10,
+  "datasets_with_pairs": 10,
+  "pairs_per_variation": {
+    "full_structured": 10,
+    "stats_focused": 10,
+    "task_focused": 10
+  },
+  "coverage_report": [
+    {
+      "dataset": "customer churn",
+      "version_id": "20aa9739",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "raw_data (2)",
+      "version_id": "499384da",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Iris 1 ",
+      "version_id": "74e6264d",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Dirty Dataset to practice Data Cleaning",
+      "version_id": "924f2eea",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "automobile_dataset",
+      "version_id": "a730c6b1",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "employee attrition",
+      "version_id": "c4fa6f04",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "metadata",
+      "version_id": "d699a9ef",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "cardio_train",
+      "version_id": "f16109cc",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "messy_IMDB_dataset",
+      "version_id": "f2b7dc55",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Uncleaned_DS_jobs",
+      "version_id": "d4383efc",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    }
+  ]
+}

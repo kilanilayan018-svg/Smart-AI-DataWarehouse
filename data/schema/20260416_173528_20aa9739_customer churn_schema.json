@@ -1,26 +1,19 @@
 {
   "customerID": {
     "name": "customerID",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 7043,
-    "sample_values": [
-      "7590-VHVEG",
-      "5575-GNVDE",
-      "3668-QPYBK"
-    ]
+    "is_target": false
   },
   "gender": {
     "name": "gender",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Female",
-      "Male"
-    ]
+    "is_target": false
   },
   "SeniorCitizen": {
     "name": "SeniorCitizen",
@@ -28,31 +21,26 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
+    "is_target": false,
     "min": 0.0,
     "max": 1.0,
     "mean": 0.1621468124378816
   },
   "Partner": {
     "name": "Partner",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Yes",
-      "No"
-    ]
+    "is_target": false
   },
   "Dependents": {
     "name": "Dependents",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "No",
-      "Yes"
-    ]
+    "is_target": false
   },
   "tenure": {
     "name": "tenure",
@@ -60,151 +48,106 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 73,
+    "is_target": false,
     "min": 0.0,
     "max": 72.0,
     "mean": 32.37114865824223
   },
   "PhoneService": {
     "name": "PhoneService",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "No",
-      "Yes"
-    ]
+    "is_target": false
   },
   "MultipleLines": {
     "name": "MultipleLines",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No phone service",
-      "No",
-      "Yes"
-    ]
+    "is_target": false
   },
   "InternetService": {
     "name": "InternetService",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "DSL",
-      "Fiber optic",
-      "No"
-    ]
+    "is_target": false
   },
   "OnlineSecurity": {
     "name": "OnlineSecurity",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No",
-      "Yes",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "OnlineBackup": {
     "name": "OnlineBackup",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Yes",
-      "No",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "DeviceProtection": {
     "name": "DeviceProtection",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No",
-      "Yes",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "TechSupport": {
     "name": "TechSupport",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No",
-      "Yes",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "StreamingTV": {
     "name": "StreamingTV",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No",
-      "Yes",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "StreamingMovies": {
     "name": "StreamingMovies",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "No",
-      "Yes",
-      "No internet service"
-    ]
+    "is_target": false
   },
   "Contract": {
     "name": "Contract",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "sample_values": [
-      "Month-to-month",
-      "One year",
-      "Two year"
-    ]
+    "is_target": false
   },
   "PaperlessBilling": {
     "name": "PaperlessBilling",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "Yes",
-      "No"
-    ]
+    "is_target": false
   },
   "PaymentMethod": {
     "name": "PaymentMethod",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 4,
-    "sample_values": [
-      "Electronic check",
-      "Mailed check",
-      "Bank transfer (automatic)"
-    ]
+    "is_target": false
   },
   "MonthlyCharges": {
     "name": "MonthlyCharges",
@@ -212,31 +155,31 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1585,
+    "is_target": false,
     "min": 18.25,
     "max": 118.75,
     "mean": 64.76169246059918
   },
   "TotalCharges": {
     "name": "TotalCharges",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 6531,
-    "sample_values": [
-      "29.85",
-      "1889.5",
-      "108.15"
-    ]
+    "is_target": false
   },
   "Churn": {
     "name": "Churn",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      "No",
-      "Yes"
-    ]
+    "is_target": true
+  },
+  "_meta": {
+    "target_column": "Churn",
+    "target_detection_method": "keyword_match",
+    "row_count": 7043,
+    "column_count": 21
   }
 }

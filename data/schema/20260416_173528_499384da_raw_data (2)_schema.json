@@ -5,21 +5,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 73,
+    "is_target": false,
     "min": 17.0,
     "max": 90.0,
     "mean": 38.581633906633904
   },
   " State-gov": {
     "name": " State-gov",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 9,
-    "sample_values": [
-      " Self-emp-not-inc",
-      " Private",
-      " State-gov"
-    ]
+    "is_target": false
   },
   " 77516": {
     "name": " 77516",
@@ -27,21 +24,18 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 21647,
+    "is_target": false,
     "min": 12285.0,
     "max": 1484705.0,
     "mean": 189781.81437346438
   },
   " Bachelors": {
     "name": " Bachelors",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 16,
-    "sample_values": [
-      " Bachelors",
-      " HS-grad",
-      " 11th"
-    ]
+    "is_target": false
   },
   " 13": {
     "name": " 13",
@@ -49,68 +43,50 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 16,
+    "is_target": false,
     "min": 1.0,
     "max": 16.0,
     "mean": 10.08058968058968
   },
   " Never-married": {
     "name": " Never-married",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 7,
-    "sample_values": [
-      " Married-civ-spouse",
-      " Divorced",
-      " Married-spouse-absent"
-    ]
+    "is_target": false
   },
   " Adm-clerical": {
     "name": " Adm-clerical",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 15,
-    "sample_values": [
-      " Exec-managerial",
-      " Handlers-cleaners",
-      " Prof-specialty"
-    ]
+    "is_target": false
   },
   " Not-in-family": {
     "name": " Not-in-family",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 6,
-    "sample_values": [
-      " Husband",
-      " Not-in-family",
-      " Wife"
-    ]
+    "is_target": false
   },
   " White": {
     "name": " White",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 5,
-    "sample_values": [
-      " White",
-      " Black",
-      " Asian-Pac-Islander"
-    ]
+    "is_target": false
   },
   " Male": {
     "name": " Male",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      " Male",
-      " Female"
-    ]
+    "is_target": false
   },
   " 2174": {
     "name": " 2174",
@@ -118,6 +94,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 119,
+    "is_target": false,
     "min": 0.0,
     "max": 99999.0,
     "mean": 1077.615171990172
@@ -128,6 +105,7 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 92,
+    "is_target": false,
     "min": 0.0,
     "max": 4356.0,
     "mean": 87.30651105651106
@@ -138,31 +116,31 @@
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 94,
+    "is_target": false,
     "min": 1.0,
     "max": 99.0,
     "mean": 40.437469287469284
   },
   " United-States": {
     "name": " United-States",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 42,
-    "sample_values": [
-      " United-States",
-      " Cuba",
-      " Jamaica"
-    ]
+    "is_target": false
   },
   " <=50K": {
     "name": " <=50K",
-    "dtype": "object",
+    "dtype": "str",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "sample_values": [
-      " <=50K",
-      " >50K"
-    ]
+    "is_target": true
+  },
+  "_meta": {
+    "target_column": " <=50K",
+    "target_detection_method": "non_numeric_dtype",
+    "row_count": 32560,
+    "column_count": 15
   }
 }
