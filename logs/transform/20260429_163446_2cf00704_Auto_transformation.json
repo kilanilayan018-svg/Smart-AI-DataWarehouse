@@ -1,0 +1,41 @@
+{
+  "name": "20260429_163446_2cf00704_Auto",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163446_2cf00704_Auto.csv",
+  "steps": [
+    "Loaded dataset: 392 rows, 9 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163446_2cf00704_Auto_cleaned.csv"
+  ],
+  "original_shape": [
+    392,
+    9
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163446_2cf00704_Auto_cleaned.csv",
+  "final_shape": [
+    392,
+    9
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:41.462329",
+  "columns": [
+    "mpg",
+    "cylinders",
+    "displacement",
+    "horsepower",
+    "weight",
+    "acceleration",
+    "year",
+    "origin",
+    "name"
+  ]
+}

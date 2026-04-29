@@ -1,0 +1,39 @@
+{
+  "name": "20260429_163455_f89ed7d6_insurance (1)",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_f89ed7d6_insurance (1).csv",
+  "steps": [
+    "Loaded dataset: 1338 rows, 7 cols",
+    "Removed 1 duplicate rows",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163455_f89ed7d6_insurance (1)_cleaned.csv"
+  ],
+  "original_shape": [
+    1338,
+    7
+  ],
+  "duplicates_removed": 1,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_f89ed7d6_insurance (1)_cleaned.csv",
+  "final_shape": [
+    1337,
+    7
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:53.092896",
+  "columns": [
+    "age",
+    "sex",
+    "bmi",
+    "children",
+    "smoker",
+    "region",
+    "expenses"
+  ]
+}

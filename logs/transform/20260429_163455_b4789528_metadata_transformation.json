@@ -1,0 +1,38 @@
+{
+  "name": "20260429_163455_b4789528_metadata",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260429_163455_b4789528_metadata.csv",
+  "steps": [
+    "Loaded dataset: 11 rows, 6 cols",
+    "No duplicate rows found",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260429_163455_b4789528_metadata_cleaned.csv"
+  ],
+  "original_shape": [
+    11,
+    6
+  ],
+  "duplicates_removed": 0,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260429_163455_b4789528_metadata_cleaned.csv",
+  "final_shape": [
+    11,
+    6
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:54:53.059597",
+  "columns": [
+    "filename",
+    "source",
+    "rows",
+    "cols",
+    "target",
+    "task_type"
+  ]
+}
