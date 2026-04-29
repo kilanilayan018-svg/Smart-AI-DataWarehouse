@@ -22,3 +22,11 @@ data/curated/
 data/features/
 models/*.pkl
 *.db
+
+# Pipeline runtime logs
+logs/pipeline_events.jsonl
+
+# Temporary local test files
+test_logger.py
+check_logs.py
+check_ingestion_logs.py
