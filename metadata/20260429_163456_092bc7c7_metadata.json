@@ -1,0 +1,25 @@
+{
+    "original_filename": "raw_data.csv",
+    "stored_filename": "20260429_163456_092bc7c7_raw_data.csv",
+    "stored_path": "data\\raw\\20260429_163456_092bc7c7_raw_data.csv",
+    "version_id": "092bc7c7",
+    "timestamp": "20260429_163456",
+    "file_type": ".csv",
+    "rows": 517,
+    "columns_count": 13,
+    "columns": [
+        "X",
+        "Y",
+        "month",
+        "day",
+        "FFMC",
+        "DMC",
+        "DC",
+        "ISI",
+        "temp",
+        "RH",
+        "wind",
+        "rain",
+        "area"
+    ]
+}

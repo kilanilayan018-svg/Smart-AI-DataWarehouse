@@ -12,19 +12,28 @@
   },
   "Attrition": {
     "name": "Attrition",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": true
+    "is_target": true,
+    "sample_values": [
+      "Yes",
+      "No"
+    ]
   },
   "BusinessTravel": {
     "name": "BusinessTravel",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Travel_Rarely",
+      "Travel_Frequently",
+      "Non-Travel"
+    ]
   },
   "DailyRate": {
     "name": "DailyRate",
@@ -39,11 +48,16 @@
   },
   "Department": {
     "name": "Department",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Sales",
+      "Research & Development",
+      "Human Resources"
+    ]
   },
   "DistanceFromHome": {
     "name": "DistanceFromHome",
@@ -69,11 +83,16 @@
   },
   "EducationField": {
     "name": "EducationField",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 6,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Life Sciences",
+      "Other",
+      "Medical"
+    ]
   },
   "EmployeeCount": {
     "name": "EmployeeCount",
@@ -110,11 +129,15 @@
   },
   "Gender": {
     "name": "Gender",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Female",
+      "Male"
+    ]
   },
   "HourlyRate": {
     "name": "HourlyRate",
@@ -151,11 +174,16 @@
   },
   "JobRole": {
     "name": "JobRole",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 9,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Sales Executive",
+      "Research Scientist",
+      "Laboratory Technician"
+    ]
   },
   "JobSatisfaction": {
     "name": "JobSatisfaction",
@@ -170,11 +198,16 @@
   },
   "MaritalStatus": {
     "name": "MaritalStatus",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Single",
+      "Married",
+      "Divorced"
+    ]
   },
   "MonthlyIncome": {
     "name": "MonthlyIncome",
@@ -211,19 +244,26 @@
   },
   "Over18": {
     "name": "Over18",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 1,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Y"
+    ]
   },
   "OverTime": {
     "name": "OverTime",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "Yes",
+      "No"
+    ]
   },
   "PercentSalaryHike": {
     "name": "PercentSalaryHike",

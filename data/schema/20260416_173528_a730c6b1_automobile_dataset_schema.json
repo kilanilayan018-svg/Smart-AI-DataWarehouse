@@ -89,11 +89,16 @@
   },
   "fuel-system": {
     "name": "fuel-system",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 8,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "mpfi",
+      "2bbl",
+      "mfi"
+    ]
   },
   "engine-size": {
     "name": "engine-size",
@@ -119,11 +124,16 @@
   },
   "engine-type": {
     "name": "engine-type",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 7,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "dohc",
+      "ohcv",
+      "ohc"
+    ]
   },
   "curb-weight": {
     "name": "curb-weight",
@@ -182,27 +192,41 @@
   },
   "engine-location": {
     "name": "engine-location",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "front",
+      "rear"
+    ]
   },
   "drive-wheels": {
     "name": "drive-wheels",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 3,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "rwd",
+      "fwd",
+      "4wd"
+    ]
   },
   "body-style": {
     "name": "body-style",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 5,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "convertible",
+      "hatchback",
+      "sedan"
+    ]
   },
   "num-of-doors": {
     "name": "num-of-doors",
@@ -217,27 +241,40 @@
   },
   "aspiration": {
     "name": "aspiration",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "std",
+      "turbo"
+    ]
   },
   "fuel-type": {
     "name": "fuel-type",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 2,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "gas",
+      "diesel"
+    ]
   },
   "make": {
     "name": "make",
-    "dtype": "str",
+    "dtype": "object",
     "missing_count": 0,
     "missing_percentage": 0.0,
     "unique_count": 22,
-    "is_target": false
+    "is_target": false,
+    "sample_values": [
+      "alfa-romero",
+      "audi",
+      "bmw"
+    ]
   },
   "normalized-losses": {
     "name": "normalized-losses",

@@ -1,7 +1,7 @@
 {
   "name": "20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning",
   "version": "unknown",
-  "raw_file_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\raw\\20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning.csv",
   "steps": [
     "Loaded dataset: 20 rows, 11 cols",
     "No duplicate rows found",
@@ -29,13 +29,13 @@
     }
   },
   "numeric_imputations": {},
-  "curated_path": "C:\\Users\\TO_Shared_2\\PycharmProjects\\Grad100\\data\\curated\\20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_cleaned.csv",
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_924f2eea_Dirty Dataset to practice Data Cleaning_cleaned.csv",
   "final_shape": [
     20,
     11
   ],
   "status": "success",
-  "timestamp": "2026-04-29T15:20:08.511378",
+  "timestamp": "2026-04-29T16:02:48.927135",
   "columns": [
     "Rank",
     "Peak",
