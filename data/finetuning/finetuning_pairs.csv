@@ -2028,7 +2028,7 @@ Column details:
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'gluc', '_meta', 'smoke', 'cholesterol', 'active', 'weight', 'height', 'id', 'alco', 'age', 'cardio', 'ap_lo', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2305,7 +2305,7 @@ Columns with missing values: none","{
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'gluc', '_meta', 'smoke', 'cholesterol', 'active', 'weight', 'height', 'id', 'alco', 'age', 'cardio', 'ap_lo', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2583,7 +2583,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'gluc', '_meta', 'smoke', 'cholesterol', 'active', 'weight', 'height', 'id', 'alco', 'age', 'cardio', 'ap_lo', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""

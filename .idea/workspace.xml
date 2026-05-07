@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/fetch_plans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" afterDir="false" />
@@ -31,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/logs/transform/20260429_163456_4b7872f1_Uncleaned_DS_jobs_transformation.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/transform/20260429_163456_4b7872f1_Uncleaned_DS_jobs_transformation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/transform/20260429_163456_e240b20f_titanic_transformation.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/transform/20260429_163456_e240b20f_titanic_transformation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/validation/validation_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation/validation_summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/feature_engineering.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +63,12 @@
     &quot;assignee&quot;: &quot;kilanilayan018-svg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kilanilayan018-svg/Smart-AI-DataWarehouse&quot;,
-    &quot;accountId&quot;: &quot;87472f26-9641-491f-af5f-eb4b6f1111b7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kilanilayan018-svg/Smart-AI-DataWarehouse",
+    "accountId": "2964216b-8c5f-4868-8673-57866234e9f8"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -91,14 +90,19 @@
     "Python.diagnostic.executor": "Run",
     "Python.feature_engineering.executor": "Run",
     "Python.feature_engineering_module.executor": "Run",
+    "Python.fetch_plans.executor": "Run",
     "Python.run_pipeline.executor": "Run",
     "Python.schema_cleaner.executor": "Run",
     "Python.transformation_module.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "laith",
-    "settings.editor.selected.configurable": "database.data.views.appearance"
+    "junie.onboarding.icon.badge.shown": "true",
+    "settings.editor.selected.configurable": "database.data.views.appearance",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -134,7 +138,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+        <option value="bundled-python-sdk-1cd77e80b48f-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.32098.74" />
       </set>
     </attachedChunks>
   </component>
