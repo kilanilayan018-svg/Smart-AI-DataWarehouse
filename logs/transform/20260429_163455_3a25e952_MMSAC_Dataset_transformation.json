@@ -1,55 +1,14 @@
 {
   "name": "20260429_163455_3a25e952_MMSAC_Dataset",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_3a25e952_MMSAC_Dataset.csv",
-  "steps": [
-    "Loaded dataset: 10043 rows, 47 cols",
-    "No duplicate rows found",
-    "Dropped 1 constant columns: ['2026-04-14 19:24:26.5633333']",
-    "No missing values in categorical columns",
-    "Type cast 4 columns",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     10043,
     47
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [
-    "2026-04-14 19:24:26.5633333"
-  ],
-  "columns_type_cast": [
-    {
-      "column": "85.00",
-      "original_type": "float64",
-      "new_type": "Int64"
-    },
-    {
-      "column": "140.00",
-      "original_type": "float64",
-      "new_type": "Int64"
-    },
-    {
-      "column": "90.00",
-      "original_type": "float64",
-      "new_type": "Int64"
-    },
-    {
-      "column": "82.00",
-      "original_type": "float64",
-      "new_type": "Int64"
-    }
-  ],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv",
   "final_shape": [
     10043,
-    46
+    47
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:55.139058",
   "columns": [
     "15.0_m_29",
     "2",
@@ -96,6 +55,8 @@
     "48.51",
     "18-30",
     "Normal",
-    "H_N_D"
-  ]
+    "H_N_D",
+    "2026-04-14 19:24:26.5633333"
+  ],
+  "status": "success"
 }

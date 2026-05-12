@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fetch_plans.py" afterDir="false" />
+    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="pllaannnns">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" afterDir="false" />
@@ -31,6 +30,9 @@
       <change beforePath="$PROJECT_DIR$/logs/transform/20260429_163456_4b7872f1_Uncleaned_DS_jobs_transformation.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/transform/20260429_163456_4b7872f1_Uncleaned_DS_jobs_transformation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/transform/20260429_163456_e240b20f_titanic_transformation.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/transform/20260429_163456_e240b20f_titanic_transformation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/validation/validation_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation/validation_summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/feature_engineering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/transformation_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/transformation_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/supabase_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/registry/supabase_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +65,12 @@
     &quot;assignee&quot;: &quot;kilanilayan018-svg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kilanilayan018-svg/Smart-AI-DataWarehouse",
-    "accountId": "2964216b-8c5f-4868-8673-57866234e9f8"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kilanilayan018-svg/Smart-AI-DataWarehouse&quot;,
+    &quot;accountId&quot;: &quot;2964216b-8c5f-4868-8673-57866234e9f8&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -93,6 +95,7 @@
     "Python.fetch_plans.executor": "Run",
     "Python.run_pipeline.executor": "Run",
     "Python.schema_cleaner.executor": "Run",
+    "Python.supabase_client.executor": "Run",
     "Python.transformation_module.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -230,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775490006461</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="pllaannnns">
+      <option name="closed" value="true" />
+      <created>1778172228847</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778172228847</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -240,6 +251,7 @@
     <MESSAGE value="feat: add cleaned datasets from T1.4 transformation" />
     <MESSAGE value="fix: resolve file path errors in feature engineering module" />
     <MESSAGE value="fix: correct delimiter issue in cardio_train cleaned file (; -&gt; ,)&#10;&#10;Adds fallback read logic and targeted post-hoc fix to ensure 13 separate columns." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: correct delimiter issue in cardio_train cleaned file (; -&gt; ,)&#10;&#10;Adds fallback read logic and targeted post-hoc fix to ensure 13 separate columns." />
+    <MESSAGE value="pllaannnns" />
+    <option name="LAST_COMMIT_MESSAGE" value="pllaannnns" />
   </component>
 </project>

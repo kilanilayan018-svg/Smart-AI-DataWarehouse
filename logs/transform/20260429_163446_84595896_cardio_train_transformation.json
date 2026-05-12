@@ -1,45 +1,16 @@
 {
   "name": "20260429_163446_84595896_cardio_train",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163446_84595896_cardio_train.csv",
-  "steps": [
-    "Loaded dataset: 70000 rows, 13 cols",
-    "No duplicate rows found",
-    "No constant columns found",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163446_84595896_cardio_train_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     70000,
-    13
+    1
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_84595896_cardio_train_cleaned.csv",
   "final_shape": [
     70000,
-    13
+    1
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.582758",
   "columns": [
-    "id",
-    "age",
-    "gender",
-    "height",
-    "weight",
-    "ap_hi",
-    "ap_lo",
-    "cholesterol",
-    "gluc",
-    "smoke",
-    "alco",
-    "active",
-    "cardio"
-  ]
+    "id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio"
+  ],
+  "status": "success"
 }

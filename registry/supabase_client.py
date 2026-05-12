@@ -11,48 +11,47 @@ KEY = os.getenv("SUPABASE_KEY")
 supabase = create_client(URL, KEY)
 
 
-def upsert_dataset(dataset_id, rows, columns, task_type):
+def upsert_dataset(dataset_name, original_filename, rows, columns, task_type, target_column=None):
     """Insert or update dataset in Supabase"""
 
+    # Check if exists using dataset_name
+    existing = supabase.table("datasets").select("dataset_name").eq("dataset_name", dataset_name).execute()
+
     data = {
-        "dataset_id": dataset_id,
+        "dataset_name": dataset_name,
+        "original_filename": original_filename,
         "rows": rows,
         "columns": columns,
         "task_type": task_type,
-        "created_at": datetime.now().isoformat()
+        "updated_at": datetime.now().isoformat()
     }
 
-    # Check if exists
-    existing = supabase.table("datasets").select("dataset_id").eq("dataset_id", dataset_id).execute()
+    # Add target_column if provided
+    if target_column:
+        data["target_column"] = target_column
 
     if existing.data:
-        # Update existing
-        update_data = {
-            "rows": rows,
-            "columns": columns,
-            "task_type": task_type,
-            "created_at": datetime.now().isoformat()
-        }
-        supabase.table("datasets").update(update_data).eq("dataset_id", dataset_id).execute()
-        print(f"📊 Updated dataset: {dataset_id}")
+        # Update existing (don't update created_at)
+        supabase.table("datasets").update(data).eq("dataset_name", dataset_name).execute()
+        print(f"📊 Updated dataset: {dataset_name}")
     else:
         # Insert new
+        data["created_at"] = datetime.now().isoformat()
         supabase.table("datasets").insert(data).execute()
-        print(f"📊 Inserted dataset: {dataset_id}")
+        print(f"📊 Inserted dataset: {dataset_name}")
 
     return True
 
-
-def log_run(dataset_id, status):
+def log_run(dataset_name, status):
     """Log pipeline run - returns run_id"""
     data = {
-        "dataset_id": dataset_id,
+        "dataset_name": dataset_name,
         "status": status,
         "started_at": datetime.now().isoformat()
     }
     result = supabase.table("runs").insert(data).execute()
-    run_id = result.data[0]["id"]
-    print(f"🔄 Run started: {dataset_id} (ID: {run_id})")
+    run_id = result.data[0]["run_id"]
+    print(f"🔄 Run started: {dataset_name} (ID: {run_id})")
     return run_id
 
 
@@ -61,7 +60,7 @@ def update_run(run_id, status):
     supabase.table("runs").update({
         "status": status,
         "completed_at": datetime.now().isoformat()
-    }).eq("id", run_id).execute()
+    }).eq("run_id", run_id).execute()
     print(f"✅ Run {run_id}: {status}")
 
 
@@ -83,7 +82,7 @@ def get_all_datasets():
     return result.data
 
 
-def get_runs_for_dataset(dataset_id):
-    """Get runs for a specific dataset"""
-    result = supabase.table("runs").select("*").eq("dataset_id", dataset_id).execute()
+def get_all_runs():
+    """Get all runs"""
+    result = supabase.table("runs").select("*").execute()
     return result.data

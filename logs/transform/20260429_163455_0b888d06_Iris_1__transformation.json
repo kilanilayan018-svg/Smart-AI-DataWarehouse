@@ -1,32 +1,14 @@
 {
   "name": "20260429_163455_0b888d06_Iris 1 ",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_0b888d06_Iris 1 .csv",
-  "steps": [
-    "Loaded dataset: 150 rows, 6 cols",
-    "No duplicate rows found",
-    "No constant columns found",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163455_0b888d06_Iris 1 _cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     150,
     6
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_0b888d06_Iris 1 _cleaned.csv",
   "final_shape": [
     150,
     6
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.629901",
   "columns": [
     "Id",
     "SepalLengthCm",
@@ -34,5 +16,6 @@
     "PetalLengthCm",
     "PetalWidthCm",
     "Species"
-  ]
+  ],
+  "status": "success"
 }

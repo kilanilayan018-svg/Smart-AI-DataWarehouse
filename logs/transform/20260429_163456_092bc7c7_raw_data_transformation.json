@@ -1,32 +1,14 @@
 {
   "name": "20260429_163456_092bc7c7_raw_data",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163456_092bc7c7_raw_data.csv",
-  "steps": [
-    "Loaded dataset: 517 rows, 13 cols",
-    "Removed 4 duplicate rows",
-    "No constant columns found",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163456_092bc7c7_raw_data_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     517,
     13
   ],
-  "duplicates_removed": 4,
-  "constant_columns_dropped": [],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_092bc7c7_raw_data_cleaned.csv",
   "final_shape": [
-    513,
+    517,
     13
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:55.020438",
   "columns": [
     "X",
     "Y",
@@ -41,5 +23,6 @@
     "wind",
     "rain",
     "area"
-  ]
+  ],
+  "status": "success"
 }

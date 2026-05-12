@@ -100,15 +100,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 200 rows, 5 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2908fd63_Advertising_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       200,
       5
@@ -269,15 +261,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 200 rows, 5 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2908fd63_Advertising_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       200,
       5
@@ -439,15 +423,7 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 200 rows, 5 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2908fd63_Advertising_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       200,
       5
@@ -659,15 +635,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 392 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2cf00704_Auto_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       392,
       9
@@ -875,15 +843,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 392 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2cf00704_Auto_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       392,
       9
@@ -1092,15 +1052,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 392 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_2cf00704_Auto_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       392,
       9
@@ -1321,15 +1273,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 400 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_599f83f5_Admission_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       400,
       9
@@ -1540,15 +1484,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 400 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_599f83f5_Admission_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       400,
       9
@@ -1760,15 +1696,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 400 rows, 9 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_599f83f5_Admission_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       400,
       9
@@ -2028,7 +1956,7 @@ Column details:
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
+      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2038,22 +1966,14 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 70000 rows, 13 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_84595896_cardio_train_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       70000,
-      13
+      1
     ],
     ""final_shape"": [
       70000,
-      13
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -2305,7 +2225,7 @@ Columns with missing values: none","{
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
+      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2315,22 +2235,14 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 70000 rows, 13 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_84595896_cardio_train_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       70000,
-      13
+      1
     ],
     ""final_shape"": [
       70000,
-      13
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -2583,7 +2495,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'id', 'height', 'weight', 'age', 'ap_hi', 'smoke', 'gender', 'ap_lo', 'gluc', 'cardio', 'alco', 'active', '_meta'}"",
+      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2593,22 +2505,14 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 70000 rows, 13 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163446_84595896_cardio_train_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       70000,
-      13
+      1
     ],
     ""final_shape"": [
       70000,
-      13
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -3015,15 +2919,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 205 rows, 26 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 5 columns"",
-      ""Imputed 7 numeric columns with median"",
-      ""Saved to 20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       205,
       26
@@ -3441,15 +3337,7 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 205 rows, 26 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 5 columns"",
-      ""Imputed 7 numeric columns with median"",
-      ""Saved to 20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       205,
       26
@@ -3868,15 +3756,7 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 205 rows, 26 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 5 columns"",
-      ""Imputed 7 numeric columns with median"",
-      ""Saved to 20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       205,
       26
@@ -4352,28 +4232,16 @@ Column details:
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 2,
-    ""constant_columns_dropped"": [
-      ""Cancelled"",
-      ""CancellationCode"",
-      ""Diverted""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 484551 rows, 29 cols"",
-      ""Removed 2 duplicate rows"",
-      ""Dropped 3 constant columns: ['Cancelled', 'CancellationCode', 'Diverted']"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_2096dca0_Flight_delay_cleaned.csv""
-    ],
+    ""duplicates_removed"": 0,
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       484551,
       29
     ],
     ""final_shape"": [
-      484549,
-      26
+      484551,
+      29
     ]
   },
   ""preprocessing_plan"": {
@@ -4828,28 +4696,16 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 2,
-    ""constant_columns_dropped"": [
-      ""Cancelled"",
-      ""CancellationCode"",
-      ""Diverted""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 484551 rows, 29 cols"",
-      ""Removed 2 duplicate rows"",
-      ""Dropped 3 constant columns: ['Cancelled', 'CancellationCode', 'Diverted']"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_2096dca0_Flight_delay_cleaned.csv""
-    ],
+    ""duplicates_removed"": 0,
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       484551,
       29
     ],
     ""final_shape"": [
-      484549,
-      26
+      484551,
+      29
     ]
   },
   ""preprocessing_plan"": {
@@ -5305,28 +5161,16 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 2,
-    ""constant_columns_dropped"": [
-      ""Cancelled"",
-      ""CancellationCode"",
-      ""Diverted""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 484551 rows, 29 cols"",
-      ""Removed 2 duplicate rows"",
-      ""Dropped 3 constant columns: ['Cancelled', 'CancellationCode', 'Diverted']"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_2096dca0_Flight_delay_cleaned.csv""
-    ],
+    ""duplicates_removed"": 0,
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       484551,
       29
     ],
     ""final_shape"": [
-      484549,
-      26
+      484551,
+      29
     ]
   },
   ""preprocessing_plan"": {
@@ -5597,15 +5441,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 20 rows, 11 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       20,
       11
@@ -5821,15 +5657,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 20 rows, 11 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       20,
       11
@@ -6046,15 +5874,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 20 rows, 11 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 2 categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       20,
       11
@@ -6219,15 +6039,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 84 rows, 4 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_37de9aba_employees_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       84,
       4
@@ -6369,15 +6181,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 84 rows, 4 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_37de9aba_employees_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       84,
       4
@@ -6520,15 +6324,7 @@ All feature columns: Name , years_of_experience, salary","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 84 rows, 4 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_37de9aba_employees_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       84,
       4
@@ -6705,15 +6501,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 10000 rows, 8 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 7 categorical columns"",
-      ""Type cast 4 columns"",
-      ""Imputed 3 numeric columns with median"",
-      ""Saved to 20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       10000,
       8
@@ -6897,15 +6685,7 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 10000 rows, 8 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 7 categorical columns"",
-      ""Type cast 4 columns"",
-      ""Imputed 3 numeric columns with median"",
-      ""Saved to 20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       10000,
       8
@@ -7090,15 +6870,7 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 10000 rows, 8 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""Imputed 7 categorical columns"",
-      ""Type cast 4 columns"",
-      ""Imputed 3 numeric columns with median"",
-      ""Saved to 20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       10000,
       8
@@ -7611,27 +7383,15 @@ Column details:
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""EmployeeCount"",
-      ""Over18"",
-      ""StandardHours""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 1470 rows, 35 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 3 constant columns: ['EmployeeCount', 'Over18', 'StandardHours']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_ee471683_employee attrition_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       1470,
       35
     ],
     ""final_shape"": [
       1470,
-      32
+      35
     ]
   },
   ""preprocessing_plan"": {
@@ -8157,27 +7917,15 @@ Columns with missing values: none","{
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""EmployeeCount"",
-      ""Over18"",
-      ""StandardHours""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 1470 rows, 35 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 3 constant columns: ['EmployeeCount', 'Over18', 'StandardHours']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_ee471683_employee attrition_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       1470,
       35
     ],
     ""final_shape"": [
       1470,
-      32
+      35
     ]
   },
   ""preprocessing_plan"": {
@@ -8704,27 +8452,15 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""EmployeeCount"",
-      ""Over18"",
-      ""StandardHours""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 1470 rows, 35 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 3 constant columns: ['EmployeeCount', 'Over18', 'StandardHours']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163447_ee471683_employee attrition_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       1470,
       35
     ],
     ""final_shape"": [
       1470,
-      32
+      35
     ]
   },
   ""preprocessing_plan"": {
@@ -9092,15 +8828,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 7043 rows, 21 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 1 columns"",
-      ""Imputed 1 numeric columns with median"",
-      ""Saved to 20260429_163447_ffafe6c3_customer churn_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       7043,
       21
@@ -9420,15 +9148,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 7043 rows, 21 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 1 columns"",
-      ""Imputed 1 numeric columns with median"",
-      ""Saved to 20260429_163447_ffafe6c3_customer churn_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       7043,
       21
@@ -9749,15 +9469,7 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 7043 rows, 21 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""Type cast 1 columns"",
-      ""Imputed 1 numeric columns with median"",
-      ""Saved to 20260429_163447_ffafe6c3_customer churn_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       7043,
       21
@@ -9970,15 +9682,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 150 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_0b888d06_Iris 1 _cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       150,
       6
@@ -10149,15 +9853,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 150 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_0b888d06_Iris 1 _cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       150,
       6
@@ -10329,15 +10025,7 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 150 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_0b888d06_Iris 1 _cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       150,
       6
@@ -10937,25 +10625,15 @@ Column details:
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""2026-04-14 19:24:26.5633333""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 10043 rows, 47 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['2026-04-14 19:24:26.5633333']"",
-      ""No missing values in categorical columns"",
-      ""Type cast 4 columns"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       10043,
       47
     ],
     ""final_shape"": [
       10043,
-      46
+      47
     ]
   },
   ""preprocessing_plan"": {
@@ -11589,25 +11267,15 @@ Columns with missing values: none","{
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""2026-04-14 19:24:26.5633333""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 10043 rows, 47 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['2026-04-14 19:24:26.5633333']"",
-      ""No missing values in categorical columns"",
-      ""Type cast 4 columns"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       10043,
       47
     ],
     ""final_shape"": [
       10043,
-      46
+      47
     ]
   },
   ""preprocessing_plan"": {
@@ -12242,25 +11910,15 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""2026-04-14 19:24:26.5633333""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 10043 rows, 47 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['2026-04-14 19:24:26.5633333']"",
-      ""No missing values in categorical columns"",
-      ""Type cast 4 columns"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       10043,
       47
     ],
     ""final_shape"": [
       10043,
-      46
+      47
     ]
   },
   ""preprocessing_plan"": {
@@ -12558,25 +12216,15 @@ Column details:
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Unnamed: 8""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 101 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['Unnamed: 8']"",
-      ""Imputed 11 categorical columns"",
-      ""Type cast 2 columns"",
-      ""Imputed 2 numeric columns with median"",
-      ""Saved to 20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
-      101,
-      12
+      13,
+      1
     ],
     ""final_shape"": [
-      101,
-      11
+      13,
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -12799,25 +12447,15 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Unnamed: 8""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 101 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['Unnamed: 8']"",
-      ""Imputed 11 categorical columns"",
-      ""Type cast 2 columns"",
-      ""Imputed 2 numeric columns with median"",
-      ""Saved to 20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
-      101,
-      12
+      13,
+      1
     ],
     ""final_shape"": [
-      101,
-      11
+      13,
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -13041,25 +12679,15 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Unnamed: 8""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 101 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 1 constant columns: ['Unnamed: 8']"",
-      ""Imputed 11 categorical columns"",
-      ""Type cast 2 columns"",
-      ""Imputed 2 numeric columns with median"",
-      ""Saved to 20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
-      101,
-      12
+      13,
+      1
     ],
     ""final_shape"": [
-      101,
-      11
+      13,
+      1
     ]
   },
   ""preprocessing_plan"": {
@@ -13339,23 +12967,15 @@ Column details:
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 24,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 32560 rows, 15 cols"",
-      ""Removed 24 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       32560,
       15
     ],
     ""final_shape"": [
-      32536,
+      32560,
       15
     ]
   },
@@ -13616,23 +13236,15 @@ Columns with missing values: none","{
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 24,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 32560 rows, 15 cols"",
-      ""Removed 24 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       32560,
       15
     ],
     ""final_shape"": [
-      32536,
+      32560,
       15
     ]
   },
@@ -13894,23 +13506,15 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 24,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 32560 rows, 15 cols"",
-      ""Removed 24 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       32560,
       15
     ],
     ""final_shape"": [
-      32536,
+      32560,
       15
     ]
   },
@@ -14096,15 +13700,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 11 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_b4789528_metadata_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       11,
       6
@@ -14269,15 +13865,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 11 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_b4789528_metadata_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       11,
       6
@@ -14443,15 +14031,7 @@ All feature columns: filename, source, rows, cols, task_type","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 11 rows, 6 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_b4789528_metadata_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       11,
       6
@@ -14645,23 +14225,15 @@ Column details:
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 1,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 1338 rows, 7 cols"",
-      ""Removed 1 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_f89ed7d6_insurance (1)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       1338,
       7
     ],
     ""final_shape"": [
-      1337,
+      1338,
       7
     ]
   },
@@ -14841,23 +14413,15 @@ Columns with missing values: none","{
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 1,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 1338 rows, 7 cols"",
-      ""Removed 1 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_f89ed7d6_insurance (1)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       1338,
       7
     ],
     ""final_shape"": [
-      1337,
+      1338,
       7
     ]
   },
@@ -15038,23 +14602,15 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 1,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 1338 rows, 7 cols"",
-      ""Removed 1 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163455_f89ed7d6_insurance (1)_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       1338,
       7
     ],
     ""final_shape"": [
-      1337,
+      1338,
       7
     ]
   },
@@ -15308,23 +14864,15 @@ Column details:
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 4,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 517 rows, 13 cols"",
-      ""Removed 4 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_092bc7c7_raw_data_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       517,
       13
     ],
     ""final_shape"": [
-      513,
+      517,
       13
     ]
   },
@@ -15580,23 +15128,15 @@ Columns with missing values: none","{
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 4,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 517 rows, 13 cols"",
-      ""Removed 4 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_092bc7c7_raw_data_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       517,
       13
     ],
     ""final_shape"": [
-      513,
+      517,
       13
     ]
   },
@@ -15853,23 +15393,15 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
   ""transformation"": {
     ""performed"": true,
     ""status"": ""success"",
-    ""duplicates_removed"": 4,
+    ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 517 rows, 13 cols"",
-      ""Removed 4 duplicate rows"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_092bc7c7_raw_data_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       517,
       13
     ],
     ""final_shape"": [
-      513,
+      517,
       13
     ]
   },
@@ -16135,15 +15667,7 @@ Column details:
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 672 rows, 15 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       672,
       15
@@ -16399,15 +15923,7 @@ Columns with missing values: none","{
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 672 rows, 15 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       672,
       15
@@ -16664,15 +16180,7 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
     ""constant_columns_dropped"": [],
-    ""steps_applied"": [
-      ""Loaded dataset: 672 rows, 15 cols"",
-      ""No duplicate rows found"",
-      ""No constant columns found"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv""
-    ],
+    ""steps_applied"": [],
     ""original_shape"": [
       672,
       15
@@ -16907,35 +16415,15 @@ Column details:
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Survived"",
-      ""Pclass"",
-      ""Name"",
-      ""Sex"",
-      ""Age"",
-      ""SibSp"",
-      ""Parch"",
-      ""Ticket"",
-      ""Fare"",
-      ""Cabin"",
-      ""Embarked""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 891 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 11 constant columns: ['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_e240b20f_titanic_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       891,
       12
     ],
     ""final_shape"": [
       891,
-      1
+      12
     ]
   },
   ""preprocessing_plan"": {
@@ -17154,35 +16642,15 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Survived"",
-      ""Pclass"",
-      ""Name"",
-      ""Sex"",
-      ""Age"",
-      ""SibSp"",
-      ""Parch"",
-      ""Ticket"",
-      ""Fare"",
-      ""Cabin"",
-      ""Embarked""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 891 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 11 constant columns: ['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_e240b20f_titanic_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       891,
       12
     ],
     ""final_shape"": [
       891,
-      1
+      12
     ]
   },
   ""preprocessing_plan"": {
@@ -17402,35 +16870,15 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
     ""performed"": true,
     ""status"": ""success"",
     ""duplicates_removed"": 0,
-    ""constant_columns_dropped"": [
-      ""Survived"",
-      ""Pclass"",
-      ""Name"",
-      ""Sex"",
-      ""Age"",
-      ""SibSp"",
-      ""Parch"",
-      ""Ticket"",
-      ""Fare"",
-      ""Cabin"",
-      ""Embarked""
-    ],
-    ""steps_applied"": [
-      ""Loaded dataset: 891 rows, 12 cols"",
-      ""No duplicate rows found"",
-      ""Dropped 11 constant columns: ['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']"",
-      ""No missing values in categorical columns"",
-      ""No type casting performed"",
-      ""No missing values in numeric columns"",
-      ""Saved to 20260429_163456_e240b20f_titanic_cleaned.csv""
-    ],
+    ""constant_columns_dropped"": [],
+    ""steps_applied"": [],
     ""original_shape"": [
       891,
       12
     ],
     ""final_shape"": [
       891,
-      1
+      12
     ]
   },
   ""preprocessing_plan"": {

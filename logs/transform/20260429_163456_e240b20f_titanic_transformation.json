@@ -1,22 +1,16 @@
 {
   "name": "20260429_163456_e240b20f_titanic",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163456_e240b20f_titanic.csv",
-  "steps": [
-    "Loaded dataset: 891 rows, 12 cols",
-    "No duplicate rows found",
-    "Dropped 11 constant columns: ['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163456_e240b20f_titanic_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     891,
     12
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [
+  "final_shape": [
+    891,
+    12
+  ],
+  "columns": [
+    "PassengerId",
     "Survived",
     "Pclass",
     "Name",
@@ -29,17 +23,5 @@
     "Cabin",
     "Embarked"
   ],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_e240b20f_titanic_cleaned.csv",
-  "final_shape": [
-    891,
-    1
-  ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.626105",
-  "columns": [
-    "PassengerId"
-  ]
+  "status": "success"
 }

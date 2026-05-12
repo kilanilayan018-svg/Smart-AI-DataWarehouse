@@ -1,32 +1,14 @@
 {
   "name": "20260429_163455_84f9b5eb_raw_data (2)",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163455_84f9b5eb_raw_data (2).csv",
-  "steps": [
-    "Loaded dataset: 32560 rows, 15 cols",
-    "Removed 24 duplicate rows",
-    "No constant columns found",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     32560,
     15
   ],
-  "duplicates_removed": 24,
-  "constant_columns_dropped": [],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv",
   "final_shape": [
-    32536,
+    32560,
     15
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.930575",
   "columns": [
     "39",
     " State-gov",
@@ -43,5 +25,6 @@
     " 40",
     " United-States",
     " <=50K"
-  ]
+  ],
+  "status": "success"
 }

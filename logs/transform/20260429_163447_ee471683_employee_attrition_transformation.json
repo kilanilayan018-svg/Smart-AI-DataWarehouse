@@ -1,36 +1,14 @@
 {
   "name": "20260429_163447_ee471683_employee attrition",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163447_ee471683_employee attrition.csv",
-  "steps": [
-    "Loaded dataset: 1470 rows, 35 cols",
-    "No duplicate rows found",
-    "Dropped 3 constant columns: ['EmployeeCount', 'Over18', 'StandardHours']",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163447_ee471683_employee attrition_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     1470,
     35
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [
-    "EmployeeCount",
-    "Over18",
-    "StandardHours"
-  ],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ee471683_employee attrition_cleaned.csv",
   "final_shape": [
     1470,
-    32
+    35
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.622757",
   "columns": [
     "Age",
     "Attrition",
@@ -40,6 +18,7 @@
     "DistanceFromHome",
     "Education",
     "EducationField",
+    "EmployeeCount",
     "EmployeeNumber",
     "EnvironmentSatisfaction",
     "Gender",
@@ -52,10 +31,12 @@
     "MonthlyIncome",
     "MonthlyRate",
     "NumCompaniesWorked",
+    "Over18",
     "OverTime",
     "PercentSalaryHike",
     "PerformanceRating",
     "RelationshipSatisfaction",
+    "StandardHours",
     "StockOptionLevel",
     "TotalWorkingYears",
     "TrainingTimesLastYear",
@@ -64,5 +45,6 @@
     "YearsInCurrentRole",
     "YearsSinceLastPromotion",
     "YearsWithCurrManager"
-  ]
+  ],
+  "status": "success"
 }

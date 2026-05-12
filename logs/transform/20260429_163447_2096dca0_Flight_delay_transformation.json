@@ -1,45 +1,14 @@
 {
   "name": "20260429_163447_2096dca0_Flight_delay",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163447_2096dca0_Flight_delay.csv",
-  "steps": [
-    "Loaded dataset: 484551 rows, 29 cols",
-    "Removed 2 duplicate rows",
-    "Dropped 3 constant columns: ['Cancelled', 'CancellationCode', 'Diverted']",
-    "Imputed 2 categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163447_2096dca0_Flight_delay_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     484551,
     29
   ],
-  "duplicates_removed": 2,
-  "constant_columns_dropped": [
-    "Cancelled",
-    "CancellationCode",
-    "Diverted"
-  ],
-  "columns_type_cast": [],
-  "categorical_imputations": {
-    "Org_Airport": {
-      "nulls_imputed": 1177,
-      "mode_value": "Chicago O'Hare International Airport"
-    },
-    "Dest_Airport": {
-      "nulls_imputed": 1479,
-      "mode_value": "Chicago O'Hare International Airport"
-    }
-  },
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_2096dca0_Flight_delay_cleaned.csv",
   "final_shape": [
-    484549,
-    26
+    484551,
+    29
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.458838",
   "columns": [
     "DayOfWeek",
     "Date",
@@ -62,10 +31,14 @@
     "Distance",
     "TaxiIn",
     "TaxiOut",
+    "Cancelled",
+    "CancellationCode",
+    "Diverted",
     "CarrierDelay",
     "WeatherDelay",
     "NASDelay",
     "SecurityDelay",
     "LateAircraftDelay"
-  ]
+  ],
+  "status": "success"
 }

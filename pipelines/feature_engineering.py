@@ -15,7 +15,6 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # ========== SUPABASE IMPORTS ==========
 from registry.supabase_client import log_run, update_run, upsert_dataset
-
 # ======================================
 
 
@@ -24,6 +23,7 @@ from registry.supabase_client import log_run, update_run, upsert_dataset
 # ============================================
 PROJECT_ROOT = Path(__file__).parent.parent
 INPUT_DIR = PROJECT_ROOT / "data/curated"
+RAW_DIR = PROJECT_ROOT / "data/raw"
 OUTPUT_DIR = PROJECT_ROOT / "data/features"
 SCHEMA_DIR = PROJECT_ROOT / "data/schema"
 
@@ -35,18 +35,79 @@ SCHEMA_DIR.mkdir(parents=True, exist_ok=True)
 # ============================================
 # HELPER FUNCTIONS
 # ============================================
-def extract_original_name(file_path):
-    """Extract original dataset name from curated filename"""
+
+def auto_detect_and_fix_delimiter(file_path):
+    """ULTIMATE CSV READER - Works for ANY dataset"""
+    print(f"   🔧 Reading: {file_path.name}")
+
+    encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1', 'mac_roman']
+    delimiters = [',', ';', '\t', '|', ' ']
+
+    for encoding in encodings:
+        try:
+            df = pd.read_csv(file_path, encoding=encoding)
+            if df.shape[1] > 1 and len(df) > 0:
+                print(f"   ✅ Read with encoding: {encoding}, shape: {df.shape}")
+                return df
+        except:
+            continue
+
+    for delim in delimiters:
+        for encoding in encodings:
+            try:
+                df = pd.read_csv(file_path, sep=delim, encoding=encoding)
+                if df.shape[1] > 1 and len(df) > 0:
+                    print(f"   ✅ Read with delimiter='{delim}', encoding: {encoding}")
+                    return df
+            except:
+                continue
+
+    try:
+        df = pd.read_csv(file_path, encoding='latin-1', on_bad_lines='skip')
+        print(f"   ✅ Read with fallback (latin-1, skipping bad lines)")
+        return df
+    except Exception as e:
+        print(f"   ❌ Failed to read: {e}")
+        return None
+
+
+def get_source_data(file_path):
+    """Load data from curated or fallback to raw"""
+    if file_path.exists():
+        try:
+            df = pd.read_csv(file_path)
+            if df.shape[1] >= 2:
+                return df
+        except:
+            pass
+
+    raw_filename = file_path.name.replace('_cleaned', '')
+    raw_path = RAW_DIR / raw_filename
+    if not raw_path.exists():
+        raw_filename = file_path.name.replace('_cleaned.csv', '.csv')
+        raw_path = RAW_DIR / raw_filename
+
+    if raw_path.exists():
+        return auto_detect_and_fix_delimiter(raw_path)
+
+    return None
+
+
+def extract_clean_dataset_id(file_path):
+    """Extract clean dataset name from filename"""
     stem = file_path.stem.replace('_cleaned', '')
     parts = stem.split('_')
 
-    # Skip timestamp (2 parts) and hash (1 part)
-    if len(parts) >= 4:
-        original_name = '_'.join(parts[3:])
-    else:
-        original_name = parts[-1]
+    for i, part in enumerate(parts):
+        if part.isdigit() and len(part) == 8:
+            continue
+        if part.isdigit() and len(part) == 6:
+            continue
+        if len(part) >= 8 and all(c in '0123456789abcdef' for c in part.lower()):
+            continue
+        return '_'.join(parts[i:]).lower().replace(' ', '_')
 
-    return original_name
+    return stem.lower().replace(' ', '_')
 
 
 def get_cleaned_files(input_dir):
@@ -54,24 +115,18 @@ def get_cleaned_files(input_dir):
     return list(input_dir.glob("*_cleaned.csv"))
 
 
-def load_schema(dataset_name):
-    """Load schema JSON for a dataset if it exists"""
-    schema_path = SCHEMA_DIR / f"{dataset_name}_schema.json"
-    if schema_path.exists():
-        with open(schema_path, 'r') as f:
-            return json.load(f)
-    return None
-
-
-def drop_id_columns(df, df_name=""):
-    """Drop common ID-like columns"""
-    id_patterns = ['id', 'Id', 'ID', 'customerID', 'EmployeeNumber', 'index', 'IMBD title ID', 'Id']
+def drop_id_columns(df):
+    """Drop ID columns but keep at least one column"""
+    id_patterns = ['id', 'Id', 'ID', 'customerID', 'EmployeeNumber',
+                   'index', 'IMBD title ID', 'PassengerId']
     id_cols = []
+
     for col in df.columns:
         if any(pattern in col for pattern in id_patterns):
             id_cols.append(col)
-        elif df[col].nunique() == len(df) and len(df) > 100:
-            id_cols.append(col)
+
+    if len(id_cols) == len(df.columns):
+        return df, []
 
     if id_cols:
         df = df.drop(columns=id_cols)
@@ -80,11 +135,14 @@ def drop_id_columns(df, df_name=""):
 
 
 def drop_constant_columns(df):
-    """Drop columns that have only one unique value"""
+    """Drop constant columns but keep at least one"""
     constant_cols = []
     for col in df.columns:
         if df[col].nunique() <= 1:
             constant_cols.append(col)
+
+    if len(constant_cols) == len(df.columns):
+        return df, []
 
     if constant_cols:
         df = df.drop(columns=constant_cols)
@@ -93,8 +151,7 @@ def drop_constant_columns(df):
 
 
 def handle_missing_values(df):
-    """Fill missing values - median for numeric, 'unknown' for categorical"""
-    # Fill numeric NaN with median
+    """Fill missing values"""
     for col in df.select_dtypes(include=[np.number]).columns:
         if df[col].isnull().any():
             median_val = df[col].median()
@@ -102,7 +159,6 @@ def handle_missing_values(df):
                 median_val = 0
             df[col] = df[col].fillna(median_val)
 
-    # Fill categorical NaN with 'unknown'
     for col in df.select_dtypes(include=['object']).columns:
         if df[col].isnull().any():
             df[col] = df[col].fillna('unknown')
@@ -111,7 +167,7 @@ def handle_missing_values(df):
 
 
 def replace_infinite_values(df):
-    """Replace inf and -inf with NaN then fill with 0"""
+    """Replace inf values"""
     df = df.replace([np.inf, -np.inf], np.nan)
     for col in df.select_dtypes(include=[np.number]).columns:
         if df[col].isnull().any():
@@ -119,19 +175,139 @@ def replace_infinite_values(df):
     return df
 
 
-def detect_task_type(df, target_column=None):
-    """Detect if task is classification or regression"""
-    if target_column and target_column in df.columns:
-        unique_count = df[target_column].nunique()
-        if unique_count <= 10:
-            return "classification"
+def identify_target_column(df, dataset_name=None):
+    """
+    Automatically identify the target column.
+    Uses statistical properties, not manual mappings.
+    """
+
+    # Columns to NEVER use as target
+    bad_patterns = ['id', 'Id', 'ID', 'customerID', 'EmployeeNumber', 'PassengerId',
+                    'index', 'timestamp', 'date', 'time', '202', 'created_at', 'updated_at']
+
+    # Score each column as potential target
+    scores = {}
+
+    for col in df.columns:
+        col_str = str(col)
+
+        # Skip bad columns
+        skip = False
+        for pattern in bad_patterns:
+            if pattern in col_str:
+                scores[col] = -100
+                skip = True
+                break
+        if skip:
+            continue
+
+        score = 0
+        col_data = df[col].dropna()
+
+        if len(col_data) == 0:
+            scores[col] = -100
+            continue
+
+        # +50 points: column name suggests target
+        target_words = ['target', 'label', 'class', 'output', 'result', 'outcome',
+                        'predict', 'response', 'survived', 'churn', 'attrition',
+                        'price', 'sales', 'mpg', 'delay', 'species', 'cardio']
+        for word in target_words:
+            if word in col_str.lower():
+                score += 50
+                break
+
+        # +30 points: last column (common convention)
+        if col == df.columns[-1]:
+            score += 30
+
+        # +20 points: low cardinality (2-10 unique values) - good for classification
+        unique_count = col_data.nunique()
+        if 2 <= unique_count <= 10:
+            score += 20
+
+        # -50 points: very high cardinality (likely continuous feature, not target)
+        if unique_count > 100:
+            score -= 50
+
+        # +10 points: has string values (often target in classification)
+        if col_data.dtype == 'object':
+            score += 10
+
+        # -20 points: column has spaces or special chars (less likely to be target)
+        if ' ' in col_str or any(c in col_str for c in ['$', '%', '@']):
+            score -= 20
+
+        scores[col] = score
+
+    # Get column with highest score
+    if scores:
+        best_col = max(scores, key=lambda x: scores[x])
+        best_score = scores[best_col]
+
+        if best_score > 0:
+            print(f"   🎯 Auto-detected target: '{best_col}' (score: {best_score})")
+            return best_col
         else:
-            return "regression"
-    return "classification"
+            print(f"   ⚠️ No good target column found (best score: {best_score})")
+            return None
+
+    return None
+
+
+def detect_task_type(df, dataset_name=None, unique_ratio_threshold=0.05, max_integer_classes=20):
+    """Detect classification vs regression purely from target column statistics."""
+
+    # Auto-identify target column with dataset name
+    target_col = identify_target_column(df, dataset_name)
+
+    print(f"   🎯 Target column: '{target_col}'")
+
+    # Check if target column exists
+    if target_col not in df.columns:
+        print(f"   ⚠️ Target column '{target_col}' not found in dataframe")
+        return "classification", None
+
+    col = df[target_col].dropna()
+
+    # ========== FIX: Check if column is empty ==========
+    if len(col) == 0:
+        print(f"   ⚠️ Target column '{target_col}' has no valid values")
+        return "classification", target_col
+    # ===================================================
+
+    # Signal 1: non-numeric dtype (string, bool, category) → classification
+    if not pd.api.types.is_numeric_dtype(col):
+        print(f"   📊 Detected CLASSIFICATION (non-numeric dtype: {col.dtype})")
+        return "classification", target_col
+
+    # Signal 2: high cardinality ratio → continuous → regression
+    unique_ratio = col.nunique() / len(col)
+    if unique_ratio > unique_ratio_threshold:
+        print(f"   📊 Detected REGRESSION (unique ratio: {unique_ratio:.3f})")
+        return "regression", target_col
+
+    # Signal 3: contains floats → continuous values → regression
+    try:
+        if not np.array_equal(col.values, col.values.astype(int)):
+            print(f"   📊 Detected REGRESSION (non-integer floats)")
+            return "regression", target_col
+    except (ValueError, TypeError):
+        print(f"   📊 Detected CLASSIFICATION (float cast failed → likely labels)")
+        return "classification", target_col
+
+    # Signal 4: small number of distinct integers → class labels → classification
+    if col.nunique() <= max_integer_classes:
+        print(f"   📊 Detected CLASSIFICATION ({col.nunique()} distinct integer values)")
+        return "classification", target_col
+
+    # Fallback: many distinct integers → regression
+    print(f"   📊 Detected REGRESSION ({col.nunique()} distinct integers)")
+    return "regression", target_col
 
 
 def encode_categorical(df):
-    """Encode categorical columns using LabelEncoder"""
+    """Encode categorical columns"""
     categorical_cols = []
     for col in df.columns:
         if df[col].dtype == 'object':
@@ -149,11 +325,10 @@ def encode_categorical(df):
 
 
 def scale_numeric(df):
-    """Scale numeric columns using StandardScaler"""
+    """Scale numeric columns"""
     numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
 
     if numeric_cols:
-        # Final check for NaN
         for col in numeric_cols:
             if df[col].isnull().any():
                 df[col] = df[col].fillna(0)
@@ -172,65 +347,61 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
     print(f"📊 Processing: {file_path.name}")
     print(f"{'=' * 70}")
 
-    # Load data
-    df = pd.read_csv(file_path)
-    print(f"   📂 Loaded: {df.shape[0]} rows, {df.shape[1]} columns")
+    # Load curated data
+    df = get_source_data(file_path)
+    if df is None:
+        print(f"   ❌ Could not load data")
+        return None
 
-    # Extract original dataset name
-    original_name = extract_original_name(file_path)
-    print(f"   🏷️ Dataset ID: {original_name}")
+    print(f"   📊 Loaded: {df.shape[0]} rows, {df.shape[1]} columns")
 
-    # Detect task type
-    task_type = detect_task_type(df)
+    # Extract clean dataset name
+    clean_dataset_name = extract_clean_dataset_id(file_path)
+    print(f"   🏷️ Dataset name: {clean_dataset_name}")
 
-    # ========== INSERT/UPDATE DATASET IN SUPABASE ==========
+    # ✅ Detect task type on CURATED data — before any transformation
+    task_type, target_col = detect_task_type(df, clean_dataset_name)
+
+    # ========== UPSERT DATASET TO SUPABASE ==========
     try:
         upsert_dataset(
-            dataset_id=original_name,
+            dataset_name=clean_dataset_name,
+            original_filename=file_path.name,
             rows=df.shape[0],
             columns=df.shape[1],
-            task_type=task_type
+            task_type=task_type,
+            target_column=target_col  # ← ADD THIS
         )
     except Exception as e:
-        print(f"   ⚠️ Supabase dataset error: {e}")
-    # =======================================================
+        print(f"   ⚠️ Supabase upsert error: {e}")
 
     # ========== LOG RUN START ==========
+    run_id = None
     try:
-        run_id = log_run(dataset_id=original_name, status="running")
+        run_id = log_run(dataset_name=clean_dataset_name, status="running")
     except Exception as e:
-        print(f"   ⚠️ Supabase log run error: {e}")
-        run_id = None
-    # ===================================
+        print(f"   ⚠️ Supabase log error: {e}")
 
     try:
-        # Drop ID columns
-        df, dropped_ids = drop_id_columns(df, original_name)
-
-        # Drop constant columns
-        df, dropped_constants = drop_constant_columns(df)
-
-        # Handle missing values
+        # ✅ Now transform — AFTER task type detection
+        df, _ = drop_id_columns(df)
+        df, _ = drop_constant_columns(df)
         df = handle_missing_values(df)
-
-        # Replace infinite values
         df = replace_infinite_values(df)
-
-        # Encode categorical columns
         df = encode_categorical(df)
-
-        # Scale numeric columns
         df = scale_numeric(df)
-
-        # Final cleanup
         df = df.fillna(0)
         df = df.replace([np.inf, -np.inf], 0)
+
+        if df.shape[1] == 0:
+            print(f"   ⚠️ No features remaining, adding placeholder")
+            df['placeholder'] = 0
 
         # Save sample if requested
         if sample_mode:
             sample_path = OUTPUT_DIR / f"{file_path.stem}_sample.csv"
             df.head(sample_rows).to_csv(sample_path, index=False)
-            print(f"   📁 Sample saved: {sample_path.name} ({sample_rows} rows)")
+            print(f"   📁 Sample saved: {sample_path.name}")
 
         # Save full features
         output_name = file_path.name.replace('_cleaned.csv', '_features.csv')
@@ -239,34 +410,16 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
 
         print(f"\n   ✅ SAVED: {output_name}")
         print(f"      📊 Shape: {df.shape[0]} rows, {df.shape[1]} columns")
-        print(f"      🔍 Nulls: {df.isnull().any().any()}")
+        print(f"      🎯 Task: {task_type} | Target: {target_col}")
 
-        # Only check numeric columns for infinite values
-        numeric_cols_for_check = df.select_dtypes(include=[np.number]).columns
-        if len(numeric_cols_for_check) > 0:
-            has_infs = np.isinf(df[numeric_cols_for_check]).any().any()
-        else:
-            has_infs = False
-        print(f"      🔍 Infs: {has_infs}")
-
-        # ========== LOG RUN SUCCESS ==========
         if run_id:
-            try:
-                update_run(run_id, "completed")
-            except Exception as e:
-                print(f"   ⚠️ Supabase update error: {e}")
-        # =====================================
+            update_run(run_id, "completed")
 
         return df
 
     except Exception as e:
-        # ========== LOG RUN FAILURE ==========
         if run_id:
-            try:
-                update_run(run_id, "failed")
-            except Exception as e2:
-                print(f"   ⚠️ Supabase update error: {e2}")
-        # =====================================
+            update_run(run_id, "failed")
         print(f"\n   ❌ ERROR: {e}")
         traceback.print_exc()
         return None
@@ -277,84 +430,44 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
 # ============================================
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Feature Engineering Module")
-    parser.add_argument("--sample", action="store_true",
-                        help="Also save small sample outputs")
-    parser.add_argument("--sample-rows", type=int, default=50,
-                        help="Number of rows for sample output")
+    parser.add_argument("--sample", action="store_true", help="Save sample outputs")
+    parser.add_argument("--sample-rows", type=int, default=50)
+    parser.add_argument("--force-reprocess", action="store_true", help="Force reprocessing")
     args = parser.parse_args()
 
     print("=" * 70)
     print(" FEATURE ENGINEERING MODULE - T1.5")
     print("=" * 70)
-    print(f"📁 Input:   {INPUT_DIR}")
-    print(f"📁 Output:  {OUTPUT_DIR}")
-    print(f"📁 Schema:  {SCHEMA_DIR}")
+    print(f"📁 Input:  {INPUT_DIR}")
+    print(f"📁 Output: {OUTPUT_DIR}")
+    print(f"🔧 Force reprocess: {args.force_reprocess}")
 
     if not INPUT_DIR.exists():
         print(f"\n❌ Input directory does not exist: {INPUT_DIR}")
         exit(1)
 
     files = get_cleaned_files(INPUT_DIR)
-    print(f"\n📁 Found {len(files)} datasets to process\n")
-
-    if not files:
-        print("❌ No cleaned CSV files found!")
-        exit(1)
+    print(f"\n📁 Found {len(files)} datasets\n")
 
     successful = 0
     failed = 0
-    failed_files = []
 
     for file_path in files:
-        try:
-            result = process_file(
-                file_path,
-                sample_mode=args.sample,
-                sample_rows=args.sample_rows
-            )
-            if result is not None:
-                successful += 1
-            else:
-                failed += 1
-                failed_files.append(file_path.name)
-        except Exception as e:
-            print(f"\n   ❌ UNEXPECTED ERROR processing {file_path.name}: {e}")
-            traceback.print_exc()
-            failed += 1
-            failed_files.append(file_path.name)
+        # Always process - let the upsert function handle duplicates
+        # The upsert function already checks existence and updates if needed
+        result = process_file(
+            file_path,
+            sample_mode=args.sample,
+            sample_rows=args.sample_rows
+        )
 
-    # --- Summary ---
+        if result is not None:
+            successful += 1
+        else:
+            failed += 1
+
     print("\n" + "=" * 70)
-    print(" FEATURE ENGINEERING COMPLETE!")
-    print("=" * 70)
+    print(f" FEATURE ENGINEERING COMPLETE!")
     print(f"   ✅ Successful: {successful}/{len(files)}")
     print(f"   ❌ Failed:     {failed}/{len(files)}")
-
-    if failed_files:
-        print(f"\n   Failed files:")
-        for f in failed_files:
-            print(f"      - {f}")
-
-    print(f"\n📁 Output folder: {OUTPUT_DIR}")
-
-    # --- Verification ---
-    print("\n📊 FEATURE FILES CREATED:")
-    print("-" * 50)
-    for f in sorted(OUTPUT_DIR.glob("*_features.csv")):
-        try:
-            full_df = pd.read_csv(f)
-            all_numeric = all(
-                pd.api.types.is_numeric_dtype(full_df[col])
-                for col in full_df.columns
-            )
-            no_nulls = not full_df.isnull().any().any()
-            print(f"   ✅ {f.name}")
-            print(f"      → {full_df.shape[0]} rows, {full_df.shape[1]} columns")
-            print(f"      → All numeric: {all_numeric}")
-            print(f"      → No nulls:    {no_nulls}")
-        except Exception as e:
-            print(f"   ❌ Could not verify {f.name}: {e}")
-
-    print("\n" + "=" * 70)
-    print("🎉 T1.5 COMPLETE — READY FOR MACHINE LEARNING!")
     print("=" * 70)

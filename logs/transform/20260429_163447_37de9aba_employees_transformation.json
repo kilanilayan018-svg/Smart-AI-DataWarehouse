@@ -1,36 +1,19 @@
 {
   "name": "20260429_163447_37de9aba_employees",
-  "version": "unknown",
-  "raw_file_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/raw/20260429_163447_37de9aba_employees.csv",
-  "steps": [
-    "Loaded dataset: 84 rows, 4 cols",
-    "No duplicate rows found",
-    "No constant columns found",
-    "No missing values in categorical columns",
-    "No type casting performed",
-    "No missing values in numeric columns",
-    "Saved to 20260429_163447_37de9aba_employees_cleaned.csv"
-  ],
+  "encoding_used": "utf-8",
   "original_shape": [
     84,
     4
   ],
-  "duplicates_removed": 0,
-  "constant_columns_dropped": [],
-  "columns_type_cast": [],
-  "categorical_imputations": {},
-  "numeric_imputations": {},
-  "curated_path": "/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_37de9aba_employees_cleaned.csv",
   "final_shape": [
     84,
     4
   ],
-  "status": "success",
-  "timestamp": "2026-05-07T16:31:58.745944",
   "columns": [
     "Name ",
     "job_title",
     "years_of_experience",
     "salary"
-  ]
+  ],
+  "status": "success"
 }
