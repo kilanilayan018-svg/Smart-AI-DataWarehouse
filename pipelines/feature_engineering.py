@@ -14,7 +14,7 @@ from datetime import datetime
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # ========== SUPABASE IMPORTS ==========
-from registry.supabase_client import log_run, update_run, upsert_dataset
+from registry.supabase_client import log_run, update_run, upsert_dataset, supabase
 # ======================================
 
 
@@ -347,6 +347,9 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
     print(f"📊 Processing: {file_path.name}")
     print(f"{'=' * 70}")
 
+    # --- Start timing ---
+    start_time = datetime.now()
+
     # Load curated data
     df = get_source_data(file_path)
     if df is None:
@@ -370,7 +373,7 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
             rows=df.shape[0],
             columns=df.shape[1],
             task_type=task_type,
-            target_column=target_col  # ← ADD THIS
+            target_column=target_col
         )
     except Exception as e:
         print(f"   ⚠️ Supabase upsert error: {e}")
@@ -381,6 +384,7 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
         run_id = log_run(dataset_name=clean_dataset_name, status="running")
     except Exception as e:
         print(f"   ⚠️ Supabase log error: {e}")
+        print(f"   🔍 DEBUG: run_id before update = {run_id}")
 
     try:
         # ✅ Now transform — AFTER task type detection
@@ -412,14 +416,34 @@ def process_file(file_path, sample_mode=False, sample_rows=50):
         print(f"      📊 Shape: {df.shape[0]} rows, {df.shape[1]} columns")
         print(f"      🎯 Task: {task_type} | Target: {target_col}")
 
+        # --- Update run with success details ---
         if run_id:
-            update_run(run_id, "completed")
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
+            supabase.table("runs").update({
+                "status": "completed",
+                "completed_at": end_time.isoformat(),
+                "execution_time_seconds": duration,
+                "rows_processed": df.shape[0],
+                "error_message": "No error"  # <-- add this line
+            }).eq("run_id", run_id).execute()
+            print(f"   ✅ Run {run_id} completed in {duration:.2f}s, {df.shape[0]} rows processed")
 
         return df
 
     except Exception as e:
+        # --- Update run with failure details ---
         if run_id:
-            update_run(run_id, "failed")
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
+            supabase.table("runs").update({
+                "status": "failed",
+                "completed_at": end_time.isoformat(),
+                "execution_time_seconds": duration,
+                "rows_processed": df.shape[0] if 'df' in locals() else 0,
+                "error_message": str(e)[:500]
+            }).eq("run_id", run_id).execute()
+            print(f"   ❌ Run {run_id} failed after {duration:.2f}s: {str(e)[:100]}")
         print(f"\n   ❌ ERROR: {e}")
         traceback.print_exc()
         return None
@@ -453,14 +477,11 @@ if __name__ == "__main__":
     failed = 0
 
     for file_path in files:
-        # Always process - let the upsert function handle duplicates
-        # The upsert function already checks existence and updates if needed
         result = process_file(
             file_path,
             sample_mode=args.sample,
             sample_rows=args.sample_rows
         )
-
         if result is not None:
             successful += 1
         else:
