@@ -11,9 +11,19 @@ class DataValidationModule:
         self.target_column = target_column
         self.errors = []
 
+    def _schema_columns(self):
+        """
+        Return only real dataset columns from the schema.
+        _meta is schema metadata, not a real CSV/DataFrame column.
+        """
+        return [
+            col for col in self.schema.keys()
+            if col != "_meta"
+        ]
+
     def check_columns(self):
         dataset_columns = set(self.df.columns)
-        schema_columns = set(self.schema.keys())
+        schema_columns = set(self._schema_columns())
 
         missing = schema_columns - dataset_columns
         extra = dataset_columns - schema_columns
@@ -32,7 +42,7 @@ class DataValidationModule:
             self.errors.append(f"Target column missing: {self.target_column}")
 
     def check_types(self):
-        for col in self.schema:
+        for col in self._schema_columns():
             if col not in self.df.columns:
                 continue
 
@@ -43,12 +53,12 @@ class DataValidationModule:
                 self.errors.append(f"Type mismatch in {col}")
 
     def check_missing(self):
-        for col in self.schema:
+        for col in self._schema_columns():
             if col not in self.df.columns:
                 continue
 
             expected_missing = self.schema[col]["missing_count"]
-            actual_missing = self.df[col].isnull().sum()
+            actual_missing = int(self.df[col].isnull().sum())
 
             if expected_missing != actual_missing:
                 self.errors.append(f"Missing mismatch in {col}")

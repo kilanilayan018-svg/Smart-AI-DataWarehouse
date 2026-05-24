@@ -14,7 +14,27 @@ from datetime import datetime
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # ========== SUPABASE IMPORTS ==========
-from registry.supabase_client import log_run, update_run, upsert_dataset, supabase
+# ========== OPTIONAL SUPABASE IMPORTS ==========
+try:
+    from registry.supabase_client import log_run, update_run, upsert_dataset, supabase
+    SUPABASE_AVAILABLE = True
+except Exception as e:
+    supabase = None
+    SUPABASE_AVAILABLE = False
+    SUPABASE_IMPORT_ERROR = str(e)
+
+    def log_run(*args, **kwargs):
+        print(f"   ⚠️ Supabase not available – skipping run log.")
+        return None
+
+    def update_run(*args, **kwargs):
+        print(f"   ⚠️ Supabase not available – skipping run update.")
+        return False
+
+    def upsert_dataset(*args, **kwargs):
+        print(f"   ⚠️ Supabase not available – skipping dataset upsert.")
+        return False
+# ===============================================
 # ======================================
 
 

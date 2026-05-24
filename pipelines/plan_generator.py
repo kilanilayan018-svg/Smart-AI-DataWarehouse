@@ -11,7 +11,13 @@ from pathlib import Path
 from typing import Dict, Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from registry.supabase_client import supabase
+try:
+    from registry.supabase_client import supabase
+    SUPABASE_AVAILABLE = True
+except Exception as e:
+    supabase = None
+    SUPABASE_AVAILABLE = False
+    SUPABASE_IMPORT_ERROR = str(e)
 from datetime import datetime
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -20,12 +26,16 @@ PLAN_DIR = PROJECT_ROOT / "metadata" / "plans"
 PLAN_DIR.mkdir(parents=True, exist_ok=True)
 
 def get_target_from_datasets_table(dataset_name: str) -> Optional[str]:
+    if supabase is None:
+        return None
+
     try:
         result = supabase.table("datasets").select("target_column").eq("dataset_name", dataset_name).execute()
         if result.data and result.data[0].get("target_column"):
             return result.data[0]["target_column"]
     except Exception as e:
         print(f"   ⚠️ Could not fetch target from datasets: {e}")
+
     return None
 
 def extract_short_name(long_name: str) -> str:
@@ -42,6 +52,9 @@ def extract_short_name(long_name: str) -> str:
 
 
 def save_plan_to_supabase(dataset_name: str, plan_json: str) -> bool:
+    if supabase is None:
+        print("   ⚠️ Supabase not available – skipping database save.")
+        return False
     try:
         # Get dataset_id from datasets table
         ds_result = supabase.table("datasets").select("dataset_id").eq("dataset_name", dataset_name).execute()
