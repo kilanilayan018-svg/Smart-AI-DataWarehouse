@@ -1,64 +1,54 @@
 {
     "all_datasets": [
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "raw_data",
             "version": "092bc7c7",
             "raw_file_path": "data/raw/20260429_163456_092bc7c7_raw_data.csv",
             "schema_path": "data/schema/20260429_163456_092bc7c7_raw_data_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "metadata",
             "version": "b4789528",
             "raw_file_path": "data/raw/20260429_163455_b4789528_metadata.csv",
             "schema_path": "data/schema/20260429_163455_b4789528_metadata_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Admission",
             "version": "599f83f5",
             "raw_file_path": "data/raw/20260429_163446_599f83f5_Admission.csv",
             "schema_path": "data/schema/20260429_163446_599f83f5_Admission_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "MMSAC_Dataset",
             "version": "3a25e952",
             "raw_file_path": "data/raw/20260429_163455_3a25e952_MMSAC_Dataset.csv",
             "schema_path": "data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Flight_delay",
             "version": "2096dca0",
             "raw_file_path": "data/raw/20260429_163447_2096dca0_Flight_delay.csv",
             "schema_path": "data/schema/20260429_163447_2096dca0_Flight_delay_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
             "is_valid": false,
             "errors": [
-                "Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}",
+                "Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}",
                 "Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}"
             ],
             "name": "cardio_train",
@@ -68,26 +58,22 @@
             "validation_status": "invalid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "automobile_dataset",
             "version": "ca1c65ff",
             "raw_file_path": "data/raw/20260429_163446_ca1c65ff_automobile_dataset.csv",
             "schema_path": "data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "insurance (1)",
             "version": "f89ed7d6",
             "raw_file_path": "data/raw/20260429_163455_f89ed7d6_insurance (1).csv",
             "schema_path": "data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
             "is_valid": false,
@@ -101,126 +87,267 @@
             "validation_status": "invalid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Dirty Dataset to practice Data Cleaning",
             "version": "30d74508",
             "raw_file_path": "data/raw/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv",
             "schema_path": "data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "employee attrition",
             "version": "ee471683",
             "raw_file_path": "data/raw/20260429_163447_ee471683_employee attrition.csv",
             "schema_path": "data/schema/20260429_163447_ee471683_employee attrition_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "titanic",
             "version": "e240b20f",
             "raw_file_path": "data/raw/20260429_163456_e240b20f_titanic.csv",
             "schema_path": "data/schema/20260429_163456_e240b20f_titanic_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Advertising",
             "version": "2908fd63",
             "raw_file_path": "data/raw/20260429_163446_2908fd63_Advertising.csv",
             "schema_path": "data/schema/20260429_163446_2908fd63_Advertising_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Iris 1 ",
             "version": "0b888d06",
             "raw_file_path": "data/raw/20260429_163455_0b888d06_Iris 1 .csv",
             "schema_path": "data/schema/20260429_163455_0b888d06_Iris 1 _schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Uncleaned_DS_jobs",
             "version": "4b7872f1",
             "raw_file_path": "data/raw/20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv",
             "schema_path": "data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "Auto",
             "version": "2cf00704",
             "raw_file_path": "data/raw/20260429_163446_2cf00704_Auto.csv",
             "schema_path": "data/schema/20260429_163446_2cf00704_Auto_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "customer churn",
             "version": "ffafe6c3",
             "raw_file_path": "data/raw/20260429_163447_ffafe6c3_customer churn.csv",
             "schema_path": "data/schema/20260429_163447_ffafe6c3_customer churn_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "employees",
             "version": "37de9aba",
             "raw_file_path": "data/raw/20260429_163447_37de9aba_employees.csv",
             "schema_path": "data/schema/20260429_163447_37de9aba_employees_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "raw_data (2)",
             "version": "84f9b5eb",
             "raw_file_path": "data/raw/20260429_163455_84f9b5eb_raw_data (2).csv",
             "schema_path": "data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         },
         {
-            "is_valid": false,
-            "errors": [
-                "Missing columns: {'_meta'}"
-            ],
+            "is_valid": true,
+            "errors": [],
             "name": "dirty_cafe_sales",
             "version": "c4b8ac3c",
             "raw_file_path": "data/raw/20260429_163447_c4b8ac3c_dirty_cafe_sales.csv",
             "schema_path": "data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json",
-            "validation_status": "invalid"
+            "validation_status": "valid"
         }
     ],
-    "valid_datasets": []
+    "valid_datasets": [
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "raw_data",
+            "version": "092bc7c7",
+            "raw_file_path": "data/raw/20260429_163456_092bc7c7_raw_data.csv",
+            "schema_path": "data/schema/20260429_163456_092bc7c7_raw_data_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "metadata",
+            "version": "b4789528",
+            "raw_file_path": "data/raw/20260429_163455_b4789528_metadata.csv",
+            "schema_path": "data/schema/20260429_163455_b4789528_metadata_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Admission",
+            "version": "599f83f5",
+            "raw_file_path": "data/raw/20260429_163446_599f83f5_Admission.csv",
+            "schema_path": "data/schema/20260429_163446_599f83f5_Admission_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "MMSAC_Dataset",
+            "version": "3a25e952",
+            "raw_file_path": "data/raw/20260429_163455_3a25e952_MMSAC_Dataset.csv",
+            "schema_path": "data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Flight_delay",
+            "version": "2096dca0",
+            "raw_file_path": "data/raw/20260429_163447_2096dca0_Flight_delay.csv",
+            "schema_path": "data/schema/20260429_163447_2096dca0_Flight_delay_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "automobile_dataset",
+            "version": "ca1c65ff",
+            "raw_file_path": "data/raw/20260429_163446_ca1c65ff_automobile_dataset.csv",
+            "schema_path": "data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "insurance (1)",
+            "version": "f89ed7d6",
+            "raw_file_path": "data/raw/20260429_163455_f89ed7d6_insurance (1).csv",
+            "schema_path": "data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Dirty Dataset to practice Data Cleaning",
+            "version": "30d74508",
+            "raw_file_path": "data/raw/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv",
+            "schema_path": "data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "employee attrition",
+            "version": "ee471683",
+            "raw_file_path": "data/raw/20260429_163447_ee471683_employee attrition.csv",
+            "schema_path": "data/schema/20260429_163447_ee471683_employee attrition_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "titanic",
+            "version": "e240b20f",
+            "raw_file_path": "data/raw/20260429_163456_e240b20f_titanic.csv",
+            "schema_path": "data/schema/20260429_163456_e240b20f_titanic_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Advertising",
+            "version": "2908fd63",
+            "raw_file_path": "data/raw/20260429_163446_2908fd63_Advertising.csv",
+            "schema_path": "data/schema/20260429_163446_2908fd63_Advertising_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Iris 1 ",
+            "version": "0b888d06",
+            "raw_file_path": "data/raw/20260429_163455_0b888d06_Iris 1 .csv",
+            "schema_path": "data/schema/20260429_163455_0b888d06_Iris 1 _schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Uncleaned_DS_jobs",
+            "version": "4b7872f1",
+            "raw_file_path": "data/raw/20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv",
+            "schema_path": "data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "Auto",
+            "version": "2cf00704",
+            "raw_file_path": "data/raw/20260429_163446_2cf00704_Auto.csv",
+            "schema_path": "data/schema/20260429_163446_2cf00704_Auto_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "customer churn",
+            "version": "ffafe6c3",
+            "raw_file_path": "data/raw/20260429_163447_ffafe6c3_customer churn.csv",
+            "schema_path": "data/schema/20260429_163447_ffafe6c3_customer churn_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "employees",
+            "version": "37de9aba",
+            "raw_file_path": "data/raw/20260429_163447_37de9aba_employees.csv",
+            "schema_path": "data/schema/20260429_163447_37de9aba_employees_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "raw_data (2)",
+            "version": "84f9b5eb",
+            "raw_file_path": "data/raw/20260429_163455_84f9b5eb_raw_data (2).csv",
+            "schema_path": "data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json",
+            "validation_status": "valid"
+        },
+        {
+            "is_valid": true,
+            "errors": [],
+            "name": "dirty_cafe_sales",
+            "version": "c4b8ac3c",
+            "raw_file_path": "data/raw/20260429_163447_c4b8ac3c_dirty_cafe_sales.csv",
+            "schema_path": "data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json",
+            "validation_status": "valid"
+        }
+    ]
 }

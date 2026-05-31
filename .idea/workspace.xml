@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="finallyyyyyyyyyy">
+    <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="BESTT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/validation/validation_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation/validation_summary.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipelines/feature_engineering.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/feature_engineering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/plan_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/plan_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/supabase_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/registry/supabase_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778610349910</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="BESTT">
+      <option name="closed" value="true" />
+      <created>1779173368723</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779173368723</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -238,6 +248,7 @@
     <MESSAGE value="fix: correct delimiter issue in cardio_train cleaned file (; -&gt; ,)&#10;&#10;Adds fallback read logic and targeted post-hoc fix to ensure 13 separate columns." />
     <MESSAGE value="pllaannnns" />
     <MESSAGE value="finallyyyyyyyyyy" />
-    <option name="LAST_COMMIT_MESSAGE" value="finallyyyyyyyyyy" />
+    <MESSAGE value="BESTT" />
+    <option name="LAST_COMMIT_MESSAGE" value="BESTT" />
   </component>
 </project>

@@ -89,11 +89,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -113,23 +111,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""sales"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 0"",
-        ""TV"",
-        ""radio"",
-        ""newspaper""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -155,16 +145,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2908fd63_Advertising_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2908fd63_Advertising_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2908fd63_Advertising_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2908fd63_Advertising_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2908fd63_Advertising_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2908fd63_stats_focused,Advertising,2908fd63,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -250,11 +234,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -274,23 +256,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""sales"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 0"",
-        ""TV"",
-        ""radio"",
-        ""newspaper""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -316,16 +290,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2908fd63_Advertising_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2908fd63_Advertising_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2908fd63_Advertising_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2908fd63_Advertising_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2908fd63_Advertising_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2908fd63_task_focused,Advertising,2908fd63,task_focused,"Generate preprocessing steps for a regression task.
 
@@ -412,11 +380,9 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -436,23 +402,15 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
   ""preprocessing_plan"": {
     ""target_column"": ""sales"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 0"",
-        ""TV"",
-        ""radio"",
-        ""newspaper""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -478,16 +436,10 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2908fd63_Advertising_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2908fd63_Advertising_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2908fd63_Advertising_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2908fd63_Advertising_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2908fd63_Advertising_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2cf00704_full_structured,Auto,2cf00704,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -529,7 +481,7 @@ Column details:
   ""schema"": {
     ""target_column"": ""name"",
     ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
     ""columns"": [
@@ -624,11 +576,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -647,37 +597,26 @@ Column details:
   },
   ""preprocessing_plan"": {
     ""target_column"": ""name"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""mpg"",
-        ""cylinders"",
-        ""displacement"",
-        ""horsepower"",
-        ""weight"",
-        ""acceleration"",
-        ""year"",
-        ""origin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
-        ""label_encoding_columns"": []
+        ""label_encoding_columns"": [
+          ""name""
+        ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""mpg"",
           ""cylinders"",
           ""displacement"",
           ""horsepower"",
@@ -692,20 +631,14 @@ Column details:
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2cf00704_Auto_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2cf00704_Auto_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2cf00704_Auto_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2cf00704_Auto_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2cf00704_Auto_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2cf00704_stats_focused,Auto,2cf00704,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -737,7 +670,7 @@ Columns with missing values: none","{
   ""schema"": {
     ""target_column"": ""name"",
     ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
     ""columns"": [
@@ -832,11 +765,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -855,37 +786,26 @@ Columns with missing values: none","{
   },
   ""preprocessing_plan"": {
     ""target_column"": ""name"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""mpg"",
-        ""cylinders"",
-        ""displacement"",
-        ""horsepower"",
-        ""weight"",
-        ""acceleration"",
-        ""year"",
-        ""origin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
-        ""label_encoding_columns"": []
+        ""label_encoding_columns"": [
+          ""name""
+        ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""mpg"",
           ""cylinders"",
           ""displacement"",
           ""horsepower"",
@@ -900,20 +820,14 @@ Columns with missing values: none","{
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2cf00704_Auto_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2cf00704_Auto_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2cf00704_Auto_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2cf00704_Auto_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2cf00704_Auto_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2cf00704_task_focused,Auto,2cf00704,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -946,7 +860,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
   ""schema"": {
     ""target_column"": ""name"",
     ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
     ""columns"": [
@@ -1041,11 +955,9 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -1064,37 +976,26 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
   },
   ""preprocessing_plan"": {
     ""target_column"": ""name"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""mpg"",
-        ""cylinders"",
-        ""displacement"",
-        ""horsepower"",
-        ""weight"",
-        ""acceleration"",
-        ""year"",
-        ""origin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
-        ""label_encoding_columns"": []
+        ""label_encoding_columns"": [
+          ""name""
+        ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""mpg"",
           ""cylinders"",
           ""displacement"",
           ""horsepower"",
@@ -1109,20 +1010,14 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_2cf00704_Auto_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_2cf00704_Auto_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_2cf00704_Auto_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_2cf00704_Auto_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_2cf00704_Auto_plan.json""
-  }
+  ""export_paths"": {}
 }"
 599f83f5_full_structured,Admission,599f83f5,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -1164,7 +1059,7 @@ Column details:
   ""schema"": {
     ""target_column"": ""Research"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
     ""columns"": [
@@ -1262,11 +1157,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -1285,28 +1178,16 @@ Column details:
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Research"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Serial No."",
-        ""GRE Score"",
-        ""TOEFL Score"",
-        ""University Rating"",
-        ""SOP"",
-        ""LOR "",
-        ""CGPA"",
-        ""Chance of Admit ""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -1322,7 +1203,7 @@ Column details:
           ""SOP"",
           ""LOR "",
           ""CGPA"",
-          ""Chance of Admit ""
+          ""Research""
         ]
       },
       ""log_transform"": []
@@ -1330,20 +1211,14 @@ Column details:
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_599f83f5_Admission_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_599f83f5_Admission_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_599f83f5_Admission_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_599f83f5_Admission_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_599f83f5_Admission_plan.json""
-  }
+  ""export_paths"": {}
 }"
 599f83f5_stats_focused,Admission,599f83f5,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -1375,7 +1250,7 @@ Columns with missing values: none","{
   ""schema"": {
     ""target_column"": ""Research"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
     ""columns"": [
@@ -1473,11 +1348,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -1496,28 +1369,16 @@ Columns with missing values: none","{
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Research"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Serial No."",
-        ""GRE Score"",
-        ""TOEFL Score"",
-        ""University Rating"",
-        ""SOP"",
-        ""LOR "",
-        ""CGPA"",
-        ""Chance of Admit ""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -1533,7 +1394,7 @@ Columns with missing values: none","{
           ""SOP"",
           ""LOR "",
           ""CGPA"",
-          ""Chance of Admit ""
+          ""Research""
         ]
       },
       ""log_transform"": []
@@ -1541,20 +1402,14 @@ Columns with missing values: none","{
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_599f83f5_Admission_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_599f83f5_Admission_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_599f83f5_Admission_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_599f83f5_Admission_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_599f83f5_Admission_plan.json""
-  }
+  ""export_paths"": {}
 }"
 599f83f5_task_focused,Admission,599f83f5,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -1587,7 +1442,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
   ""schema"": {
     ""target_column"": ""Research"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
     ""columns"": [
@@ -1685,11 +1540,9 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -1708,28 +1561,16 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Research"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Serial No."",
-        ""GRE Score"",
-        ""TOEFL Score"",
-        ""University Rating"",
-        ""SOP"",
-        ""LOR "",
-        ""CGPA"",
-        ""Chance of Admit ""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -1745,7 +1586,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
           ""SOP"",
           ""LOR "",
           ""CGPA"",
-          ""Chance of Admit ""
+          ""Research""
         ]
       },
       ""log_transform"": []
@@ -1753,20 +1594,14 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_599f83f5_Admission_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_599f83f5_Admission_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_599f83f5_Admission_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_599f83f5_Admission_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_599f83f5_Admission_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84595896_full_structured,cardio_train,84595896,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -1956,7 +1791,7 @@ Column details:
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -1979,25 +1814,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""cardio"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""gender"",
-        ""height"",
-        ""weight"",
-        ""ap_hi"",
-        ""ap_lo"",
-        ""cholesterol"",
-        ""gluc"",
-        ""smoke"",
-        ""alco"",
-        ""active""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""id""
@@ -2006,7 +1823,8 @@ Column details:
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -2040,16 +1858,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_84595896_cardio_train_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_84595896_cardio_train_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_84595896_cardio_train_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_84595896_cardio_train_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_84595896_cardio_train_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84595896_stats_focused,cardio_train,84595896,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -2225,7 +2037,7 @@ Columns with missing values: none","{
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2248,25 +2060,7 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""cardio"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""gender"",
-        ""height"",
-        ""weight"",
-        ""ap_hi"",
-        ""ap_lo"",
-        ""cholesterol"",
-        ""gluc"",
-        ""smoke"",
-        ""alco"",
-        ""active""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""id""
@@ -2275,7 +2069,8 @@ Columns with missing values: none","{
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -2309,16 +2104,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_84595896_cardio_train_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_84595896_cardio_train_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_84595896_cardio_train_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_84595896_cardio_train_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_84595896_cardio_train_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84595896_task_focused,cardio_train,84595896,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -2495,7 +2284,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'weight', 'cardio', 'height', 'cholesterol', 'ap_lo', '_meta', 'alco', 'id', 'active', 'gluc', 'age', 'smoke', 'ap_hi', 'gender'}"",
+      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2518,25 +2307,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
   ""preprocessing_plan"": {
     ""target_column"": ""cardio"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""gender"",
-        ""height"",
-        ""weight"",
-        ""ap_hi"",
-        ""ap_lo"",
-        ""cholesterol"",
-        ""gluc"",
-        ""smoke"",
-        ""alco"",
-        ""active""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""id""
@@ -2545,7 +2316,8 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -2579,16 +2351,10 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_84595896_cardio_train_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_84595896_cardio_train_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_84595896_cardio_train_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_84595896_cardio_train_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_84595896_cardio_train_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ca1c65ff_full_structured,automobile_dataset,ca1c65ff,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -2908,11 +2674,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -2932,38 +2696,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""price"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""highway-mpg"",
-        ""city-mpg"",
-        ""peak-rpm"",
-        ""horsepower"",
-        ""compression-ratio"",
-        ""stroke"",
-        ""bore"",
-        ""engine-size"",
-        ""num-of-cylinders"",
-        ""curb-weight"",
-        ""height"",
-        ""width"",
-        ""length"",
-        ""wheel-base"",
-        ""num-of-doors"",
-        ""normalized-losses"",
-        ""symboling""
-      ],
-      ""categorical_columns"": [
-        ""fuel-system"",
-        ""engine-type"",
-        ""engine-location"",
-        ""drive-wheels"",
-        ""body-style"",
-        ""aspiration"",
-        ""fuel-type"",
-        ""make""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -2977,7 +2710,8 @@ Column details:
           ""normalized-losses""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -3024,16 +2758,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_ca1c65ff_automobile_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_ca1c65ff_automobile_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_ca1c65ff_automobile_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ca1c65ff_stats_focused,automobile_dataset,ca1c65ff,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -3326,11 +3054,9 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -3350,38 +3076,7 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
   ""preprocessing_plan"": {
     ""target_column"": ""price"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""highway-mpg"",
-        ""city-mpg"",
-        ""peak-rpm"",
-        ""horsepower"",
-        ""compression-ratio"",
-        ""stroke"",
-        ""bore"",
-        ""engine-size"",
-        ""num-of-cylinders"",
-        ""curb-weight"",
-        ""height"",
-        ""width"",
-        ""length"",
-        ""wheel-base"",
-        ""num-of-doors"",
-        ""normalized-losses"",
-        ""symboling""
-      ],
-      ""categorical_columns"": [
-        ""fuel-system"",
-        ""engine-type"",
-        ""engine-location"",
-        ""drive-wheels"",
-        ""body-style"",
-        ""aspiration"",
-        ""fuel-type"",
-        ""make""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -3395,7 +3090,8 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
           ""normalized-losses""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -3442,16 +3138,10 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_ca1c65ff_automobile_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_ca1c65ff_automobile_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_ca1c65ff_automobile_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ca1c65ff_task_focused,automobile_dataset,ca1c65ff,task_focused,"Generate preprocessing steps for a regression task.
 
@@ -3745,11 +3435,9 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -3769,38 +3457,7 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
   ""preprocessing_plan"": {
     ""target_column"": ""price"",
     ""task_type"": ""regression"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""highway-mpg"",
-        ""city-mpg"",
-        ""peak-rpm"",
-        ""horsepower"",
-        ""compression-ratio"",
-        ""stroke"",
-        ""bore"",
-        ""engine-size"",
-        ""num-of-cylinders"",
-        ""curb-weight"",
-        ""height"",
-        ""width"",
-        ""length"",
-        ""wheel-base"",
-        ""num-of-doors"",
-        ""normalized-losses"",
-        ""symboling""
-      ],
-      ""categorical_columns"": [
-        ""fuel-system"",
-        ""engine-type"",
-        ""engine-location"",
-        ""drive-wheels"",
-        ""body-style"",
-        ""aspiration"",
-        ""fuel-type"",
-        ""make""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -3814,7 +3471,8 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
           ""normalized-losses""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -3861,16 +3519,10 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163446_ca1c65ff_automobile_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163446_ca1c65ff_automobile_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163446_ca1c65ff_automobile_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163446_ca1c65ff_automobile_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163446_ca1c65ff_automobile_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2096dca0_full_structured,Flight_delay,2096dca0,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -4223,11 +3875,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -4247,41 +3897,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Diverted"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""DayOfWeek"",
-        ""DepTime"",
-        ""ArrTime"",
-        ""CRSArrTime"",
-        ""FlightNum"",
-        ""ActualElapsedTime"",
-        ""CRSElapsedTime"",
-        ""AirTime"",
-        ""ArrDelay"",
-        ""DepDelay"",
-        ""Distance"",
-        ""TaxiIn"",
-        ""TaxiOut"",
-        ""Cancelled"",
-        ""CarrierDelay"",
-        ""WeatherDelay"",
-        ""NASDelay"",
-        ""SecurityDelay"",
-        ""LateAircraftDelay""
-      ],
-      ""categorical_columns"": [
-        ""Date"",
-        ""UniqueCarrier"",
-        ""Airline"",
-        ""TailNum"",
-        ""Origin"",
-        ""Org_Airport"",
-        ""Dest"",
-        ""Dest_Airport"",
-        ""CancellationCode""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -4291,7 +3907,8 @@ Column details:
         ""categorical_columns"": [
           ""Org_Airport"",
           ""Dest_Airport""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -4355,16 +3972,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_2096dca0_Flight_delay_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_2096dca0_Flight_delay_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_2096dca0_Flight_delay_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_2096dca0_Flight_delay_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_2096dca0_Flight_delay_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2096dca0_stats_focused,Flight_delay,2096dca0,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -4687,11 +4298,9 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -4711,41 +4320,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
   ""preprocessing_plan"": {
     ""target_column"": ""Diverted"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""DayOfWeek"",
-        ""DepTime"",
-        ""ArrTime"",
-        ""CRSArrTime"",
-        ""FlightNum"",
-        ""ActualElapsedTime"",
-        ""CRSElapsedTime"",
-        ""AirTime"",
-        ""ArrDelay"",
-        ""DepDelay"",
-        ""Distance"",
-        ""TaxiIn"",
-        ""TaxiOut"",
-        ""Cancelled"",
-        ""CarrierDelay"",
-        ""WeatherDelay"",
-        ""NASDelay"",
-        ""SecurityDelay"",
-        ""LateAircraftDelay""
-      ],
-      ""categorical_columns"": [
-        ""Date"",
-        ""UniqueCarrier"",
-        ""Airline"",
-        ""TailNum"",
-        ""Origin"",
-        ""Org_Airport"",
-        ""Dest"",
-        ""Dest_Airport"",
-        ""CancellationCode""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -4755,7 +4330,8 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
         ""categorical_columns"": [
           ""Org_Airport"",
           ""Dest_Airport""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -4819,16 +4395,10 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_2096dca0_Flight_delay_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_2096dca0_Flight_delay_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_2096dca0_Flight_delay_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_2096dca0_Flight_delay_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_2096dca0_Flight_delay_plan.json""
-  }
+  ""export_paths"": {}
 }"
 2096dca0_task_focused,Flight_delay,2096dca0,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -5152,11 +4722,9 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -5176,41 +4744,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
   ""preprocessing_plan"": {
     ""target_column"": ""Diverted"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""DayOfWeek"",
-        ""DepTime"",
-        ""ArrTime"",
-        ""CRSArrTime"",
-        ""FlightNum"",
-        ""ActualElapsedTime"",
-        ""CRSElapsedTime"",
-        ""AirTime"",
-        ""ArrDelay"",
-        ""DepDelay"",
-        ""Distance"",
-        ""TaxiIn"",
-        ""TaxiOut"",
-        ""Cancelled"",
-        ""CarrierDelay"",
-        ""WeatherDelay"",
-        ""NASDelay"",
-        ""SecurityDelay"",
-        ""LateAircraftDelay""
-      ],
-      ""categorical_columns"": [
-        ""Date"",
-        ""UniqueCarrier"",
-        ""Airline"",
-        ""TailNum"",
-        ""Origin"",
-        ""Org_Airport"",
-        ""Dest"",
-        ""Dest_Airport"",
-        ""CancellationCode""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -5220,7 +4754,8 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
         ""categorical_columns"": [
           ""Org_Airport"",
           ""Dest_Airport""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -5284,16 +4819,10 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_2096dca0_Flight_delay_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_2096dca0_Flight_delay_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_2096dca0_Flight_delay_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_2096dca0_Flight_delay_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_2096dca0_Flight_delay_plan.json""
-  }
+  ""export_paths"": {}
 }"
 30d74508_full_structured,Dirty Dataset to practice Data Cleaning,30d74508,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -5430,11 +4959,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -5454,23 +4981,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Ref."",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Rank"",
-        ""Shows""
-      ],
-      ""categorical_columns"": [
-        ""Peak"",
-        ""All Time Peak"",
-        ""Actual gross"",
-        ""Adjusted gross (in 2022 dollars)"",
-        ""Artist"",
-        ""Tour title"",
-        ""Year(s)"",
-        ""Average gross""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -5480,7 +4991,8 @@ Column details:
         ""categorical_columns"": [
           ""Peak"",
           ""All Time Peak""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -5512,16 +5024,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_plan.json""
-  }
+  ""export_paths"": {}
 }"
 30d74508_stats_focused,Dirty Dataset to practice Data Cleaning,30d74508,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -5646,11 +5152,9 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -5670,23 +5174,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
   ""preprocessing_plan"": {
     ""target_column"": ""Ref."",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Rank"",
-        ""Shows""
-      ],
-      ""categorical_columns"": [
-        ""Peak"",
-        ""All Time Peak"",
-        ""Actual gross"",
-        ""Adjusted gross (in 2022 dollars)"",
-        ""Artist"",
-        ""Tour title"",
-        ""Year(s)"",
-        ""Average gross""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -5696,7 +5184,8 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
         ""categorical_columns"": [
           ""Peak"",
           ""All Time Peak""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -5728,16 +5217,10 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_plan.json""
-  }
+  ""export_paths"": {}
 }"
 30d74508_task_focused,Dirty Dataset to practice Data Cleaning,30d74508,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -5863,11 +5346,9 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -5887,23 +5368,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
   ""preprocessing_plan"": {
     ""target_column"": ""Ref."",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Rank"",
-        ""Shows""
-      ],
-      ""categorical_columns"": [
-        ""Peak"",
-        ""All Time Peak"",
-        ""Actual gross"",
-        ""Adjusted gross (in 2022 dollars)"",
-        ""Artist"",
-        ""Tour title"",
-        ""Year(s)"",
-        ""Average gross""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
@@ -5913,7 +5378,8 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
         ""categorical_columns"": [
           ""Peak"",
           ""All Time Peak""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -5945,16 +5411,10 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning_plan.json""
-  }
+  ""export_paths"": {}
 }"
 37de9aba_full_structured,employees,37de9aba,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -6028,11 +5488,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6052,23 +5510,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""job_title"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""years_of_experience"",
-        ""salary""
-      ],
-      ""categorical_columns"": [
-        ""Name ""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -6092,16 +5542,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_37de9aba_employees_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_37de9aba_employees_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_37de9aba_employees_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_37de9aba_employees_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_37de9aba_employees_plan.json""
-  }
+  ""export_paths"": {}
 }"
 37de9aba_stats_focused,employees,37de9aba,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -6170,11 +5614,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6194,23 +5636,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""job_title"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""years_of_experience"",
-        ""salary""
-      ],
-      ""categorical_columns"": [
-        ""Name ""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -6234,16 +5668,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_37de9aba_employees_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_37de9aba_employees_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_37de9aba_employees_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_37de9aba_employees_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_37de9aba_employees_plan.json""
-  }
+  ""export_paths"": {}
 }"
 37de9aba_task_focused,employees,37de9aba,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -6313,11 +5741,9 @@ All feature columns: Name , years_of_experience, salary","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6337,23 +5763,15 @@ All feature columns: Name , years_of_experience, salary","{
   ""preprocessing_plan"": {
     ""target_column"": ""job_title"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""years_of_experience"",
-        ""salary""
-      ],
-      ""categorical_columns"": [
-        ""Name ""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -6377,16 +5795,10 @@ All feature columns: Name , years_of_experience, salary","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_37de9aba_employees_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_37de9aba_employees_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_37de9aba_employees_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_37de9aba_employees_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_37de9aba_employees_plan.json""
-  }
+  ""export_paths"": {}
 }"
 c4b8ac3c_full_structured,dirty_cafe_sales,c4b8ac3c,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -6490,11 +5902,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6514,23 +5924,11 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Transaction Date"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [],
-      ""categorical_columns"": [
-        ""Item"",
-        ""Quantity"",
-        ""Price Per Unit"",
-        ""Total Spent"",
-        ""Payment Method"",
-        ""Location""
-      ],
-      ""columns_to_drop"": [
-        ""Transaction ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
-        ""Transaction ID""
+        ""Transaction ID"",
+        ""Transaction Date""
       ],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
@@ -6539,22 +5937,20 @@ Column details:
         ""categorical_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
           ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
+          ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ],
-        ""label_encoding_columns"": [
-          ""Total Spent""
         ]
       },
       ""scaling"": {
@@ -6570,16 +5966,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_c4b8ac3c_dirty_cafe_sales_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_c4b8ac3c_dirty_cafe_sales_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_c4b8ac3c_dirty_cafe_sales_plan.json""
-  }
+  ""export_paths"": {}
 }"
 c4b8ac3c_stats_focused,dirty_cafe_sales,c4b8ac3c,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -6674,11 +6064,9 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6698,23 +6086,11 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
   ""preprocessing_plan"": {
     ""target_column"": ""Transaction Date"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [],
-      ""categorical_columns"": [
-        ""Item"",
-        ""Quantity"",
-        ""Price Per Unit"",
-        ""Total Spent"",
-        ""Payment Method"",
-        ""Location""
-      ],
-      ""columns_to_drop"": [
-        ""Transaction ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
-        ""Transaction ID""
+        ""Transaction ID"",
+        ""Transaction Date""
       ],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
@@ -6723,22 +6099,20 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
         ""categorical_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
           ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
+          ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ],
-        ""label_encoding_columns"": [
-          ""Total Spent""
         ]
       },
       ""scaling"": {
@@ -6754,16 +6128,10 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_c4b8ac3c_dirty_cafe_sales_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_c4b8ac3c_dirty_cafe_sales_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_c4b8ac3c_dirty_cafe_sales_plan.json""
-  }
+  ""export_paths"": {}
 }"
 c4b8ac3c_task_focused,dirty_cafe_sales,c4b8ac3c,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -6859,11 +6227,9 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -6883,23 +6249,11 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
   ""preprocessing_plan"": {
     ""target_column"": ""Transaction Date"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [],
-      ""categorical_columns"": [
-        ""Item"",
-        ""Quantity"",
-        ""Price Per Unit"",
-        ""Total Spent"",
-        ""Payment Method"",
-        ""Location""
-      ],
-      ""columns_to_drop"": [
-        ""Transaction ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
-        ""Transaction ID""
+        ""Transaction ID"",
+        ""Transaction Date""
       ],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
@@ -6908,22 +6262,20 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
         ""categorical_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
           ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""Item"",
           ""Quantity"",
-          ""Price Per Unit"",
+          ""Total Spent"",
           ""Payment Method"",
           ""Location""
-        ],
-        ""label_encoding_columns"": [
-          ""Total Spent""
         ]
       },
       ""scaling"": {
@@ -6939,16 +6291,10 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_c4b8ac3c_dirty_cafe_sales_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_c4b8ac3c_dirty_cafe_sales_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_c4b8ac3c_dirty_cafe_sales_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_c4b8ac3c_dirty_cafe_sales_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_c4b8ac3c_dirty_cafe_sales_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ee471683_full_structured,employee attrition,ee471683,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -7373,11 +6719,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -7397,54 +6741,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Attrition"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Age"",
-        ""DailyRate"",
-        ""DistanceFromHome"",
-        ""Education"",
-        ""EmployeeCount"",
-        ""EmployeeNumber"",
-        ""EnvironmentSatisfaction"",
-        ""HourlyRate"",
-        ""JobInvolvement"",
-        ""JobLevel"",
-        ""JobSatisfaction"",
-        ""MonthlyIncome"",
-        ""MonthlyRate"",
-        ""NumCompaniesWorked"",
-        ""PercentSalaryHike"",
-        ""PerformanceRating"",
-        ""RelationshipSatisfaction"",
-        ""StandardHours"",
-        ""StockOptionLevel"",
-        ""TotalWorkingYears"",
-        ""TrainingTimesLastYear"",
-        ""WorkLifeBalance"",
-        ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
-      ],
-      ""categorical_columns"": [
-        ""BusinessTravel"",
-        ""Department"",
-        ""EducationField"",
-        ""Gender"",
-        ""JobRole"",
-        ""MaritalStatus"",
-        ""Over18"",
-        ""OverTime""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -7509,16 +6814,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ee471683_employee attrition_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ee471683_employee attrition_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ee471683_employee attrition_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ee471683_employee attrition_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ee471683_employee attrition_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ee471683_stats_focused,employee attrition,ee471683,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -7907,11 +7206,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -7931,54 +7228,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""Attrition"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Age"",
-        ""DailyRate"",
-        ""DistanceFromHome"",
-        ""Education"",
-        ""EmployeeCount"",
-        ""EmployeeNumber"",
-        ""EnvironmentSatisfaction"",
-        ""HourlyRate"",
-        ""JobInvolvement"",
-        ""JobLevel"",
-        ""JobSatisfaction"",
-        ""MonthlyIncome"",
-        ""MonthlyRate"",
-        ""NumCompaniesWorked"",
-        ""PercentSalaryHike"",
-        ""PerformanceRating"",
-        ""RelationshipSatisfaction"",
-        ""StandardHours"",
-        ""StockOptionLevel"",
-        ""TotalWorkingYears"",
-        ""TrainingTimesLastYear"",
-        ""WorkLifeBalance"",
-        ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
-      ],
-      ""categorical_columns"": [
-        ""BusinessTravel"",
-        ""Department"",
-        ""EducationField"",
-        ""Gender"",
-        ""JobRole"",
-        ""MaritalStatus"",
-        ""Over18"",
-        ""OverTime""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -8043,16 +7301,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ee471683_employee attrition_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ee471683_employee attrition_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ee471683_employee attrition_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ee471683_employee attrition_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ee471683_employee attrition_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ee471683_task_focused,employee attrition,ee471683,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -8442,11 +7694,9 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -8466,54 +7716,15 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
   ""preprocessing_plan"": {
     ""target_column"": ""Attrition"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Age"",
-        ""DailyRate"",
-        ""DistanceFromHome"",
-        ""Education"",
-        ""EmployeeCount"",
-        ""EmployeeNumber"",
-        ""EnvironmentSatisfaction"",
-        ""HourlyRate"",
-        ""JobInvolvement"",
-        ""JobLevel"",
-        ""JobSatisfaction"",
-        ""MonthlyIncome"",
-        ""MonthlyRate"",
-        ""NumCompaniesWorked"",
-        ""PercentSalaryHike"",
-        ""PerformanceRating"",
-        ""RelationshipSatisfaction"",
-        ""StandardHours"",
-        ""StockOptionLevel"",
-        ""TotalWorkingYears"",
-        ""TrainingTimesLastYear"",
-        ""WorkLifeBalance"",
-        ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
-      ],
-      ""categorical_columns"": [
-        ""BusinessTravel"",
-        ""Department"",
-        ""EducationField"",
-        ""Gender"",
-        ""JobRole"",
-        ""MaritalStatus"",
-        ""Over18"",
-        ""OverTime""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -8578,16 +7789,10 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ee471683_employee attrition_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ee471683_employee attrition_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ee471683_employee attrition_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ee471683_employee attrition_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ee471683_employee attrition_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ffafe6c3_full_structured,customer churn,ffafe6c3,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -8817,11 +8022,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -8841,34 +8044,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Churn"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SeniorCitizen"",
-        ""tenure"",
-        ""MonthlyCharges""
-      ],
-      ""categorical_columns"": [
-        ""gender"",
-        ""Partner"",
-        ""Dependents"",
-        ""PhoneService"",
-        ""MultipleLines"",
-        ""InternetService"",
-        ""OnlineSecurity"",
-        ""OnlineBackup"",
-        ""DeviceProtection"",
-        ""TechSupport"",
-        ""StreamingTV"",
-        ""StreamingMovies"",
-        ""Contract"",
-        ""PaperlessBilling"",
-        ""PaymentMethod"",
-        ""TotalCharges""
-      ],
-      ""columns_to_drop"": [
-        ""customerID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""customerID""
@@ -8877,7 +8053,8 @@ Column details:
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -8920,16 +8097,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ffafe6c3_customer churn_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ffafe6c3_customer churn_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ffafe6c3_customer churn_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ffafe6c3_customer churn_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ffafe6c3_customer churn_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ffafe6c3_stats_focused,customer churn,ffafe6c3,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -9137,11 +8308,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -9161,34 +8330,7 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""Churn"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SeniorCitizen"",
-        ""tenure"",
-        ""MonthlyCharges""
-      ],
-      ""categorical_columns"": [
-        ""gender"",
-        ""Partner"",
-        ""Dependents"",
-        ""PhoneService"",
-        ""MultipleLines"",
-        ""InternetService"",
-        ""OnlineSecurity"",
-        ""OnlineBackup"",
-        ""DeviceProtection"",
-        ""TechSupport"",
-        ""StreamingTV"",
-        ""StreamingMovies"",
-        ""Contract"",
-        ""PaperlessBilling"",
-        ""PaymentMethod"",
-        ""TotalCharges""
-      ],
-      ""columns_to_drop"": [
-        ""customerID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""customerID""
@@ -9197,7 +8339,8 @@ Columns with missing values: none","{
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -9240,16 +8383,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ffafe6c3_customer churn_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ffafe6c3_customer churn_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ffafe6c3_customer churn_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ffafe6c3_customer churn_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ffafe6c3_customer churn_plan.json""
-  }
+  ""export_paths"": {}
 }"
 ffafe6c3_task_focused,customer churn,ffafe6c3,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -9458,11 +8595,9 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -9482,34 +8617,7 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
   ""preprocessing_plan"": {
     ""target_column"": ""Churn"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SeniorCitizen"",
-        ""tenure"",
-        ""MonthlyCharges""
-      ],
-      ""categorical_columns"": [
-        ""gender"",
-        ""Partner"",
-        ""Dependents"",
-        ""PhoneService"",
-        ""MultipleLines"",
-        ""InternetService"",
-        ""OnlineSecurity"",
-        ""OnlineBackup"",
-        ""DeviceProtection"",
-        ""TechSupport"",
-        ""StreamingTV"",
-        ""StreamingMovies"",
-        ""Contract"",
-        ""PaperlessBilling"",
-        ""PaymentMethod"",
-        ""TotalCharges""
-      ],
-      ""columns_to_drop"": [
-        ""customerID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""customerID""
@@ -9518,7 +8626,8 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -9561,16 +8670,10 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163447_ffafe6c3_customer churn_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163447_ffafe6c3_customer churn_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163447_ffafe6c3_customer churn_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163447_ffafe6c3_customer churn_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163447_ffafe6c3_customer churn_plan.json""
-  }
+  ""export_paths"": {}
 }"
 0b888d06_full_structured,Iris 1 ,0b888d06,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -9671,11 +8774,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -9695,18 +8796,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Species"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SepalLengthCm"",
-        ""SepalWidthCm"",
-        ""PetalLengthCm"",
-        ""PetalWidthCm""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""Id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""Id""
@@ -9715,7 +8805,8 @@ Column details:
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -9739,16 +8830,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_0b888d06_Iris 1 _schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_0b888d06_Iris 1 _cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_0b888d06_Iris 1 _features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_0b888d06_Iris 1 _sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_0b888d06_Iris 1 _plan.json""
-  }
+  ""export_paths"": {}
 }"
 0b888d06_stats_focused,Iris 1 ,0b888d06,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -9842,11 +8927,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -9866,18 +8949,7 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""Species"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SepalLengthCm"",
-        ""SepalWidthCm"",
-        ""PetalLengthCm"",
-        ""PetalWidthCm""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""Id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""Id""
@@ -9886,7 +8958,8 @@ Columns with missing values: none","{
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -9910,16 +8983,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_0b888d06_Iris 1 _schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_0b888d06_Iris 1 _cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_0b888d06_Iris 1 _features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_0b888d06_Iris 1 _sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_0b888d06_Iris 1 _plan.json""
-  }
+  ""export_paths"": {}
 }"
 0b888d06_task_focused,Iris 1 ,0b888d06,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -10014,11 +9081,9 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -10038,18 +9103,7 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
   ""preprocessing_plan"": {
     ""target_column"": ""Species"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""SepalLengthCm"",
-        ""SepalWidthCm"",
-        ""PetalLengthCm"",
-        ""PetalWidthCm""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""Id""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""Id""
@@ -10058,7 +9112,8 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -10082,16 +9137,10 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_0b888d06_Iris 1 _schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_0b888d06_Iris 1 _cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_0b888d06_Iris 1 _features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_0b888d06_Iris 1 _sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_0b888d06_Iris 1 _plan.json""
-  }
+  ""export_paths"": {}
 }"
 3a25e952_full_structured,MMSAC_Dataset,3a25e952,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -10615,11 +9664,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -10639,66 +9686,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""2"",
-        ""1"",
-        ""29.7"",
-        ""15.00"",
-        ""124.70"",
-        ""27.30"",
-        ""85.00"",
-        ""140.00"",
-        ""90.00"",
-        ""82.00"",
-        ""3500"",
-        ""6.98"",
-        ""225.01"",
-        ""124.66"",
-        ""60.06"",
-        ""0"",
-        ""1.1"",
-        ""0.1"",
-        ""0.2"",
-        ""1.2"",
-        ""1.3"",
-        ""0.3"",
-        ""38.00"",
-        ""0.4"",
-        ""0.5"",
-        ""93.40"",
-        ""21.20"",
-        ""91.7000"",
-        ""0.3100"",
-        ""0.3700"",
-        ""6.30"",
-        ""6"",
-        ""7"",
-        ""40"",
-        ""10.10"",
-        ""5"",
-        ""4.90"",
-        ""48.51""
-      ],
-      ""categorical_columns"": [
-        ""15.0_m_29"",
-        ""Male"",
-        ""Teacher"",
-        ""REM"",
-        ""Prone"",
-        ""18-30"",
-        ""Normal"",
-        ""H_N_D""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -10772,16 +9768,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_3a25e952_MMSAC_Dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_3a25e952_MMSAC_Dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_3a25e952_MMSAC_Dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 3a25e952_stats_focused,MMSAC_Dataset,3a25e952,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -11257,11 +10247,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -11281,66 +10269,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""2"",
-        ""1"",
-        ""29.7"",
-        ""15.00"",
-        ""124.70"",
-        ""27.30"",
-        ""85.00"",
-        ""140.00"",
-        ""90.00"",
-        ""82.00"",
-        ""3500"",
-        ""6.98"",
-        ""225.01"",
-        ""124.66"",
-        ""60.06"",
-        ""0"",
-        ""1.1"",
-        ""0.1"",
-        ""0.2"",
-        ""1.2"",
-        ""1.3"",
-        ""0.3"",
-        ""38.00"",
-        ""0.4"",
-        ""0.5"",
-        ""93.40"",
-        ""21.20"",
-        ""91.7000"",
-        ""0.3100"",
-        ""0.3700"",
-        ""6.30"",
-        ""6"",
-        ""7"",
-        ""40"",
-        ""10.10"",
-        ""5"",
-        ""4.90"",
-        ""48.51""
-      ],
-      ""categorical_columns"": [
-        ""15.0_m_29"",
-        ""Male"",
-        ""Teacher"",
-        ""REM"",
-        ""Prone"",
-        ""18-30"",
-        ""Normal"",
-        ""H_N_D""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -11414,16 +10351,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_3a25e952_MMSAC_Dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_3a25e952_MMSAC_Dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_3a25e952_MMSAC_Dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 3a25e952_task_focused,MMSAC_Dataset,3a25e952,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -11900,11 +10831,9 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -11924,66 +10853,15 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
   ""preprocessing_plan"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""2"",
-        ""1"",
-        ""29.7"",
-        ""15.00"",
-        ""124.70"",
-        ""27.30"",
-        ""85.00"",
-        ""140.00"",
-        ""90.00"",
-        ""82.00"",
-        ""3500"",
-        ""6.98"",
-        ""225.01"",
-        ""124.66"",
-        ""60.06"",
-        ""0"",
-        ""1.1"",
-        ""0.1"",
-        ""0.2"",
-        ""1.2"",
-        ""1.3"",
-        ""0.3"",
-        ""38.00"",
-        ""0.4"",
-        ""0.5"",
-        ""93.40"",
-        ""21.20"",
-        ""91.7000"",
-        ""0.3100"",
-        ""0.3700"",
-        ""6.30"",
-        ""6"",
-        ""7"",
-        ""40"",
-        ""10.10"",
-        ""5"",
-        ""4.90"",
-        ""48.51""
-      ],
-      ""categorical_columns"": [
-        ""15.0_m_29"",
-        ""Male"",
-        ""Teacher"",
-        ""REM"",
-        ""Prone"",
-        ""18-30"",
-        ""Normal"",
-        ""H_N_D""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -12057,16 +10935,10 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_3a25e952_MMSAC_Dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_3a25e952_MMSAC_Dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_3a25e952_MMSAC_Dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_3a25e952_MMSAC_Dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_3a25e952_MMSAC_Dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4851bfef_full_structured,messy_IMDB_dataset,4851bfef,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -12219,36 +11091,18 @@ Column details:
     ""constant_columns_dropped"": [],
     ""steps_applied"": [],
     ""original_shape"": [
-      13,
+      12,
       1
     ],
     ""final_shape"": [
-      13,
+      12,
       1
     ]
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Score"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 8""
-      ],
-      ""categorical_columns"": [
-        ""Original titlÊ"",
-        ""Release year"",
-        ""Genrë¨"",
-        ""Duration"",
-        ""Country"",
-        ""Content Rating"",
-        ""Director"",
-        ""Income"",
-        "" Votes ""
-      ],
-      ""columns_to_drop"": [
-        ""IMBD title ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""IMBD title ID""
@@ -12269,7 +11123,8 @@ Column details:
           ""Director"",
           ""Income"",
           "" Votes ""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -12301,16 +11156,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_4851bfef_messy_IMDB_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_4851bfef_messy_IMDB_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_4851bfef_messy_IMDB_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_4851bfef_messy_IMDB_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4851bfef_stats_focused,messy_IMDB_dataset,4851bfef,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -12450,36 +11299,18 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
     ""constant_columns_dropped"": [],
     ""steps_applied"": [],
     ""original_shape"": [
-      13,
+      12,
       1
     ],
     ""final_shape"": [
-      13,
+      12,
       1
     ]
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Score"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 8""
-      ],
-      ""categorical_columns"": [
-        ""Original titlÊ"",
-        ""Release year"",
-        ""Genrë¨"",
-        ""Duration"",
-        ""Country"",
-        ""Content Rating"",
-        ""Director"",
-        ""Income"",
-        "" Votes ""
-      ],
-      ""columns_to_drop"": [
-        ""IMBD title ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""IMBD title ID""
@@ -12500,7 +11331,8 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
           ""Director"",
           ""Income"",
           "" Votes ""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -12532,16 +11364,10 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_4851bfef_messy_IMDB_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_4851bfef_messy_IMDB_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_4851bfef_messy_IMDB_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_4851bfef_messy_IMDB_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4851bfef_task_focused,messy_IMDB_dataset,4851bfef,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -12682,36 +11508,18 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
     ""constant_columns_dropped"": [],
     ""steps_applied"": [],
     ""original_shape"": [
-      13,
+      12,
       1
     ],
     ""final_shape"": [
-      13,
+      12,
       1
     ]
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Score"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Unnamed: 8""
-      ],
-      ""categorical_columns"": [
-        ""Original titlÊ"",
-        ""Release year"",
-        ""Genrë¨"",
-        ""Duration"",
-        ""Country"",
-        ""Content Rating"",
-        ""Director"",
-        ""Income"",
-        "" Votes ""
-      ],
-      ""columns_to_drop"": [
-        ""IMBD title ID""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""IMBD title ID""
@@ -12732,7 +11540,8 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
           ""Director"",
           ""Income"",
           "" Votes ""
-        ]
+        ],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -12764,16 +11573,10 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_4851bfef_messy_IMDB_dataset_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_4851bfef_messy_IMDB_dataset_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_4851bfef_messy_IMDB_dataset_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_4851bfef_messy_IMDB_dataset_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_4851bfef_messy_IMDB_dataset_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84f9b5eb_full_structured,raw_data (2),84f9b5eb,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -12958,11 +11761,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -12982,34 +11783,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": "" <=50K"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""39"",
-        "" 77516"",
-        "" 13"",
-        "" 2174"",
-        "" 0"",
-        "" 40""
-      ],
-      ""categorical_columns"": [
-        "" State-gov"",
-        "" Bachelors"",
-        "" Never-married"",
-        "" Adm-clerical"",
-        "" Not-in-family"",
-        "" White"",
-        "" Male"",
-        "" United-States""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -13049,16 +11831,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_84f9b5eb_raw_data (2)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_84f9b5eb_raw_data (2)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_84f9b5eb_raw_data (2)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84f9b5eb_stats_focused,raw_data (2),84f9b5eb,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -13227,11 +12003,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -13251,34 +12025,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": "" <=50K"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""39"",
-        "" 77516"",
-        "" 13"",
-        "" 2174"",
-        "" 0"",
-        "" 40""
-      ],
-      ""categorical_columns"": [
-        "" State-gov"",
-        "" Bachelors"",
-        "" Never-married"",
-        "" Adm-clerical"",
-        "" Not-in-family"",
-        "" White"",
-        "" Male"",
-        "" United-States""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -13318,16 +12073,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_84f9b5eb_raw_data (2)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_84f9b5eb_raw_data (2)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_84f9b5eb_raw_data (2)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 84f9b5eb_task_focused,raw_data (2),84f9b5eb,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -13497,11 +12246,9 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -13521,34 +12268,15 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
   ""preprocessing_plan"": {
     ""target_column"": "" <=50K"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""39"",
-        "" 77516"",
-        "" 13"",
-        "" 2174"",
-        "" 0"",
-        "" 40""
-      ],
-      ""categorical_columns"": [
-        "" State-gov"",
-        "" Bachelors"",
-        "" Never-married"",
-        "" Adm-clerical"",
-        "" Not-in-family"",
-        "" White"",
-        "" Male"",
-        "" United-States""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -13588,16 +12316,10 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_84f9b5eb_raw_data (2)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_84f9b5eb_raw_data (2)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_84f9b5eb_raw_data (2)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_84f9b5eb_raw_data (2)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_84f9b5eb_raw_data (2)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 b4789528_full_structured,metadata,b4789528,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -13689,11 +12411,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -13713,25 +12433,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""target"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""rows"",
-        ""cols""
-      ],
-      ""categorical_columns"": [
-        ""filename"",
-        ""source"",
-        ""task_type""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -13760,16 +12470,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_b4789528_metadata_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_b4789528_metadata_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_b4789528_metadata_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_b4789528_metadata_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_b4789528_metadata_plan.json""
-  }
+  ""export_paths"": {}
 }"
 b4789528_stats_focused,metadata,b4789528,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -13854,11 +12558,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -13878,25 +12580,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""target"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""rows"",
-        ""cols""
-      ],
-      ""categorical_columns"": [
-        ""filename"",
-        ""source"",
-        ""task_type""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -13925,16 +12617,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_b4789528_metadata_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_b4789528_metadata_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_b4789528_metadata_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_b4789528_metadata_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_b4789528_metadata_plan.json""
-  }
+  ""export_paths"": {}
 }"
 b4789528_task_focused,metadata,b4789528,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -14020,11 +12706,9 @@ All feature columns: filename, source, rows, cols, task_type","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -14044,25 +12728,15 @@ All feature columns: filename, source, rows, cols, task_type","{
   ""preprocessing_plan"": {
     ""target_column"": ""target"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""rows"",
-        ""cols""
-      ],
-      ""categorical_columns"": [
-        ""filename"",
-        ""source"",
-        ""task_type""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -14091,16 +12765,10 @@ All feature columns: filename, source, rows, cols, task_type","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_b4789528_metadata_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_b4789528_metadata_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_b4789528_metadata_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_b4789528_metadata_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_b4789528_metadata_plan.json""
-  }
+  ""export_paths"": {}
 }"
 f89ed7d6_full_structured,insurance (1),f89ed7d6,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -14138,7 +12806,7 @@ Column details:
   ""schema"": {
     ""target_column"": ""region"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
     ""columns"": [
@@ -14216,11 +12884,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -14239,26 +12905,16 @@ Column details:
   },
   ""preprocessing_plan"": {
     ""target_column"": ""region"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""sex"",
-        ""bmi"",
-        ""children"",
-        ""smoker"",
-        ""expenses""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -14272,31 +12928,22 @@ Column details:
           ""bmi"",
           ""children"",
           ""smoker"",
-          ""expenses""
+          ""region""
         ]
       },
-      ""log_transform"": [
-        ""children"",
-        ""expenses""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_f89ed7d6_insurance (1)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_f89ed7d6_insurance (1)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_f89ed7d6_insurance (1)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_f89ed7d6_insurance (1)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 f89ed7d6_stats_focused,insurance (1),f89ed7d6,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -14326,7 +12973,7 @@ Columns with missing values: none","{
   ""schema"": {
     ""target_column"": ""region"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
     ""columns"": [
@@ -14404,11 +13051,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -14427,26 +13072,16 @@ Columns with missing values: none","{
   },
   ""preprocessing_plan"": {
     ""target_column"": ""region"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""sex"",
-        ""bmi"",
-        ""children"",
-        ""smoker"",
-        ""expenses""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -14460,31 +13095,22 @@ Columns with missing values: none","{
           ""bmi"",
           ""children"",
           ""smoker"",
-          ""expenses""
+          ""region""
         ]
       },
-      ""log_transform"": [
-        ""children"",
-        ""expenses""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_f89ed7d6_insurance (1)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_f89ed7d6_insurance (1)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_f89ed7d6_insurance (1)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_f89ed7d6_insurance (1)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 f89ed7d6_task_focused,insurance (1),f89ed7d6,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -14515,7 +13141,7 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
   ""schema"": {
     ""target_column"": ""region"",
     ""target_detection_method"": ""low_cardinality"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
     ""columns"": [
@@ -14593,11 +13219,9 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -14616,26 +13240,16 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
   },
   ""preprocessing_plan"": {
     ""target_column"": ""region"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""age"",
-        ""sex"",
-        ""bmi"",
-        ""children"",
-        ""smoker"",
-        ""expenses""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -14649,31 +13263,22 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
           ""bmi"",
           ""children"",
           ""smoker"",
-          ""expenses""
+          ""region""
         ]
       },
-      ""log_transform"": [
-        ""children"",
-        ""expenses""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163455_f89ed7d6_insurance (1)_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163455_f89ed7d6_insurance (1)_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163455_f89ed7d6_insurance (1)_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163455_f89ed7d6_insurance (1)_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163455_f89ed7d6_insurance (1)_plan.json""
-  }
+  ""export_paths"": {}
 }"
 092bc7c7_full_structured,raw_data,092bc7c7,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -14723,7 +13328,7 @@ Column details:
   ""schema"": {
     ""target_column"": ""Y"",
     ""target_detection_method"": ""keyword_match"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
     ""columns"": [
@@ -14855,11 +13460,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -14878,46 +13481,29 @@ Column details:
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Y"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""X"",
-        ""FFMC"",
-        ""DMC"",
-        ""DC"",
-        ""ISI"",
-        ""temp"",
-        ""RH"",
-        ""wind"",
-        ""rain"",
-        ""area""
-      ],
-      ""categorical_columns"": [
-        ""month"",
-        ""day""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
-          ""day""
-        ],
+        ""one_hot_columns"": [],
         ""label_encoding_columns"": [
-          ""month""
+          ""month"",
+          ""day""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""X"",
+          ""Y"",
           ""FFMC"",
           ""DMC"",
           ""DC"",
@@ -14925,33 +13511,22 @@ Column details:
           ""temp"",
           ""RH"",
           ""wind"",
-          ""rain"",
-          ""area""
+          ""rain""
         ]
       },
-      ""log_transform"": [
-        ""ISI"",
-        ""rain"",
-        ""area""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_092bc7c7_raw_data_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_092bc7c7_raw_data_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_092bc7c7_raw_data_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_092bc7c7_raw_data_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_092bc7c7_raw_data_plan.json""
-  }
+  ""export_paths"": {}
 }"
 092bc7c7_stats_focused,raw_data,092bc7c7,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -14987,7 +13562,7 @@ Columns with missing values: none","{
   ""schema"": {
     ""target_column"": ""Y"",
     ""target_detection_method"": ""keyword_match"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
     ""columns"": [
@@ -15119,11 +13694,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -15142,46 +13715,29 @@ Columns with missing values: none","{
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Y"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""X"",
-        ""FFMC"",
-        ""DMC"",
-        ""DC"",
-        ""ISI"",
-        ""temp"",
-        ""RH"",
-        ""wind"",
-        ""rain"",
-        ""area""
-      ],
-      ""categorical_columns"": [
-        ""month"",
-        ""day""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
-          ""day""
-        ],
+        ""one_hot_columns"": [],
         ""label_encoding_columns"": [
-          ""month""
+          ""month"",
+          ""day""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""X"",
+          ""Y"",
           ""FFMC"",
           ""DMC"",
           ""DC"",
@@ -15189,33 +13745,22 @@ Columns with missing values: none","{
           ""temp"",
           ""RH"",
           ""wind"",
-          ""rain"",
-          ""area""
+          ""rain""
         ]
       },
-      ""log_transform"": [
-        ""ISI"",
-        ""rain"",
-        ""area""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_092bc7c7_raw_data_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_092bc7c7_raw_data_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_092bc7c7_raw_data_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_092bc7c7_raw_data_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_092bc7c7_raw_data_plan.json""
-  }
+  ""export_paths"": {}
 }"
 092bc7c7_task_focused,raw_data,092bc7c7,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -15252,7 +13797,7 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
   ""schema"": {
     ""target_column"": ""Y"",
     ""target_detection_method"": ""keyword_match"",
-    ""task_type"": ""classification"",
+    ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
     ""columns"": [
@@ -15384,11 +13929,9 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -15407,46 +13950,29 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
   },
   ""preprocessing_plan"": {
     ""target_column"": ""Y"",
-    ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""X"",
-        ""FFMC"",
-        ""DMC"",
-        ""DC"",
-        ""ISI"",
-        ""temp"",
-        ""RH"",
-        ""wind"",
-        ""rain"",
-        ""area""
-      ],
-      ""categorical_columns"": [
-        ""month"",
-        ""day""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""task_type"": ""regression"",
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
-          ""day""
-        ],
+        ""one_hot_columns"": [],
         ""label_encoding_columns"": [
-          ""month""
+          ""month"",
+          ""day""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""X"",
+          ""Y"",
           ""FFMC"",
           ""DMC"",
           ""DC"",
@@ -15454,33 +13980,22 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
           ""temp"",
           ""RH"",
           ""wind"",
-          ""rain"",
-          ""area""
+          ""rain""
         ]
       },
-      ""log_transform"": [
-        ""ISI"",
-        ""rain"",
-        ""area""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_092bc7c7_raw_data_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_092bc7c7_raw_data_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_092bc7c7_raw_data_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_092bc7c7_raw_data_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_092bc7c7_raw_data_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4b7872f1_full_structured,Uncleaned_DS_jobs,4b7872f1,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -15656,11 +14171,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -15680,34 +14193,15 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Competitors"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""index"",
-        ""Rating"",
-        ""Founded""
-      ],
-      ""categorical_columns"": [
-        ""Job Title"",
-        ""Salary Estimate"",
-        ""Job Description"",
-        ""Company Name"",
-        ""Location"",
-        ""Headquarters"",
-        ""Size"",
-        ""Type of ownership"",
-        ""Industry"",
-        ""Sector"",
-        ""Revenue""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -15743,16 +14237,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_4b7872f1_Uncleaned_DS_jobs_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_4b7872f1_Uncleaned_DS_jobs_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_4b7872f1_Uncleaned_DS_jobs_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4b7872f1_stats_focused,Uncleaned_DS_jobs,4b7872f1,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -15912,11 +14400,9 @@ Columns with missing values: none","{
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -15936,34 +14422,15 @@ Columns with missing values: none","{
   ""preprocessing_plan"": {
     ""target_column"": ""Competitors"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""index"",
-        ""Rating"",
-        ""Founded""
-      ],
-      ""categorical_columns"": [
-        ""Job Title"",
-        ""Salary Estimate"",
-        ""Job Description"",
-        ""Company Name"",
-        ""Location"",
-        ""Headquarters"",
-        ""Size"",
-        ""Type of ownership"",
-        ""Industry"",
-        ""Sector"",
-        ""Revenue""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -15999,16 +14466,10 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_4b7872f1_Uncleaned_DS_jobs_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_4b7872f1_Uncleaned_DS_jobs_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_4b7872f1_Uncleaned_DS_jobs_plan.json""
-  }
+  ""export_paths"": {}
 }"
 4b7872f1_task_focused,Uncleaned_DS_jobs,4b7872f1,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -16169,11 +14630,9 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -16193,34 +14652,15 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
   ""preprocessing_plan"": {
     ""target_column"": ""Competitors"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""index"",
-        ""Rating"",
-        ""Founded""
-      ],
-      ""categorical_columns"": [
-        ""Job Title"",
-        ""Salary Estimate"",
-        ""Job Description"",
-        ""Company Name"",
-        ""Location"",
-        ""Headquarters"",
-        ""Size"",
-        ""Type of ownership"",
-        ""Industry"",
-        ""Sector"",
-        ""Revenue""
-      ],
-      ""columns_to_drop"": []
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [
@@ -16256,16 +14696,10 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_4b7872f1_Uncleaned_DS_jobs_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_4b7872f1_Uncleaned_DS_jobs_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_4b7872f1_Uncleaned_DS_jobs_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_4b7872f1_Uncleaned_DS_jobs_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_4b7872f1_Uncleaned_DS_jobs_plan.json""
-  }
+  ""export_paths"": {}
 }"
 e240b20f_full_structured,titanic,e240b20f,full_structured,"Generate a comprehensive preprocessing plan for the following dataset.
 
@@ -16405,11 +14839,9 @@ Column details:
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -16429,24 +14861,7 @@ Column details:
   ""preprocessing_plan"": {
     ""target_column"": ""Embarked"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Survived"",
-        ""Pclass"",
-        ""Name"",
-        ""Sex"",
-        ""Age"",
-        ""SibSp"",
-        ""Parch"",
-        ""Ticket"",
-        ""Fare"",
-        ""Cabin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""PassengerId""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""PassengerId""
@@ -16454,7 +14869,6 @@ Column details:
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16463,10 +14877,12 @@ Column details:
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -16475,7 +14891,6 @@ Column details:
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16484,7 +14899,8 @@ Column details:
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ]
       },
       ""log_transform"": []
@@ -16496,16 +14912,10 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_e240b20f_titanic_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_e240b20f_titanic_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_e240b20f_titanic_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_e240b20f_titanic_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_e240b20f_titanic_plan.json""
-  }
+  ""export_paths"": {}
 }"
 e240b20f_stats_focused,titanic,e240b20f,stats_focused,"Create a machine learning preprocessing plan.
 
@@ -16632,11 +15042,9 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -16656,24 +15064,7 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
   ""preprocessing_plan"": {
     ""target_column"": ""Embarked"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Survived"",
-        ""Pclass"",
-        ""Name"",
-        ""Sex"",
-        ""Age"",
-        ""SibSp"",
-        ""Parch"",
-        ""Ticket"",
-        ""Fare"",
-        ""Cabin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""PassengerId""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""PassengerId""
@@ -16681,7 +15072,6 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16690,10 +15080,12 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -16702,7 +15094,6 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16711,7 +15102,8 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ]
       },
       ""log_transform"": []
@@ -16723,16 +15115,10 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_e240b20f_titanic_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_e240b20f_titanic_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_e240b20f_titanic_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_e240b20f_titanic_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_e240b20f_titanic_plan.json""
-  }
+  ""export_paths"": {}
 }"
 e240b20f_task_focused,titanic,e240b20f,task_focused,"Generate preprocessing steps for a classification task.
 
@@ -16860,11 +15246,9 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
   },
   ""validation"": {
     ""performed"": true,
-    ""is_valid"": false,
-    ""errors"": [
-      ""Missing columns: {'_meta'}""
-    ],
-    ""validation_status"": ""invalid""
+    ""is_valid"": true,
+    ""errors"": [],
+    ""validation_status"": ""valid""
   },
   ""transformation"": {
     ""performed"": true,
@@ -16884,24 +15268,7 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
   ""preprocessing_plan"": {
     ""target_column"": ""Embarked"",
     ""task_type"": ""classification"",
-    ""input_summary"": {
-      ""numeric_columns"": [
-        ""Survived"",
-        ""Pclass"",
-        ""Name"",
-        ""Sex"",
-        ""Age"",
-        ""SibSp"",
-        ""Parch"",
-        ""Ticket"",
-        ""Fare"",
-        ""Cabin""
-      ],
-      ""categorical_columns"": [],
-      ""columns_to_drop"": [
-        ""PassengerId""
-      ]
-    },
+    ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [
         ""PassengerId""
@@ -16909,7 +15276,6 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
       ""imputation"": {
         ""numeric_strategy"": ""median"",
         ""numeric_columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16918,10 +15284,12 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ],
         ""categorical_strategy"": ""most_frequent"",
-        ""categorical_columns"": []
+        ""categorical_columns"": [],
+        ""constant_value"": ""Unknown""
       },
       ""encoding"": {
         ""one_hot_columns"": [],
@@ -16930,7 +15298,6 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""Survived"",
           ""Pclass"",
           ""Name"",
           ""Sex"",
@@ -16939,7 +15306,8 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
           ""Parch"",
           ""Ticket"",
           ""Fare"",
-          ""Cabin""
+          ""Cabin"",
+          ""Embarked""
         ]
       },
       ""log_transform"": []
@@ -16951,14 +15319,8 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Cannot infer class imbalance from schema only""
+      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
     }
   },
-  ""export_paths"": {
-    ""source_schema"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/schema/20260429_163456_e240b20f_titanic_schema.json"",
-    ""curated_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/curated/20260429_163456_e240b20f_titanic_cleaned.csv"",
-    ""features_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features/20260429_163456_e240b20f_titanic_features.csv"",
-    ""features_sample_data"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/data/features_samples/20260429_163456_e240b20f_titanic_sample_50_features.csv"",
-    ""plan_json"": ""/Users/mahaqaddoumi/PycharmProjects/Smart-AI-DataWarehouse2/metadata/plans/20260429_163456_e240b20f_titanic_plan.json""
-  }
+  ""export_paths"": {}
 }"
