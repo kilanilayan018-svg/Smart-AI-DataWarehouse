@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="woohooo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipelines/schema_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/schema_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/validation/validation_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation/validation_summary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipelines/plan_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/plan_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +73,12 @@
     "Python.fetch_plans.executor": "Run",
     "Python.plan_generator.executor": "Run",
     "Python.run_pipeline.executor": "Run",
+    "Python.run_validation.executor": "Run",
     "Python.schema_cleaner.executor": "Run",
     "Python.schema_extractor.executor": "Run",
     "Python.supabase_client.executor": "Run",
     "Python.transformation_module.executor": "Run",
+    "Python.validation.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -249,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780238002432</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="woohooo">
+      <option name="closed" value="true" />
+      <created>1780243871651</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780243871651</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

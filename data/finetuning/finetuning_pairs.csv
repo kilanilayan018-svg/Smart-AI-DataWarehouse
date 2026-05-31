@@ -30,7 +30,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""sales"",
-    ""target_detection_method"": ""last_column_fallback"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 5,
     ""row_count"": 200,
@@ -134,9 +134,7 @@ Column details:
           ""newspaper""
         ]
       },
-      ""log_transform"": [
-        ""newspaper""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -145,7 +143,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -175,7 +173,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""sales"",
-    ""target_detection_method"": ""last_column_fallback"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 5,
     ""row_count"": 200,
@@ -279,9 +277,7 @@ Columns with missing values: none","{
           ""newspaper""
         ]
       },
-      ""log_transform"": [
-        ""newspaper""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -290,7 +286,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -321,7 +317,7 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
   },
   ""schema"": {
     ""target_column"": ""sales"",
-    ""target_detection_method"": ""last_column_fallback"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 5,
     ""row_count"": 200,
@@ -425,9 +421,7 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
           ""newspaper""
         ]
       },
-      ""log_transform"": [
-        ""newspaper""
-      ]
+      ""log_transform"": []
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -436,7 +430,7 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -445,10 +439,10 @@ All feature columns: Unnamed: 0, TV, radio, newspaper","{
 
 Dataset: Auto.csv
 Rows: 392 | Columns: 9
-Target column: name
+Target column: mpg
 
 Column details:
-  - mpg: float64, min=9.0, max=46.6, mean=23.45, 127 unique
+  - mpg [TARGET]: float64, min=9.0, max=46.6, mean=23.45, 127 unique
   - cylinders: int64, min=3.0, max=8.0, mean=5.47, 5 unique
   - displacement: float64, min=68.0, max=455.0, mean=194.41, 81 unique
   - horsepower: int64, min=46.0, max=230.0, mean=104.47, 93 unique
@@ -456,7 +450,7 @@ Column details:
   - acceleration: float64, min=8.0, max=24.8, mean=15.54, 95 unique
   - year: int64, min=70.0, max=82.0, mean=75.98, 13 unique
   - origin: int64, min=1.0, max=3.0, mean=1.58, 3 unique
-  - name [TARGET]: str, 301 unique","{
+  - name: str, 301 unique","{
   ""ingestion"": {
     ""original_filename"": ""Auto.csv"",
     ""stored_filename"": ""20260429_163446_2cf00704_Auto.csv"",
@@ -479,8 +473,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""name"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""mpg"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
@@ -490,7 +484,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 127,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 9.0,
         ""max"": 46.6,
         ""mean"": 23.445918367346938
@@ -570,7 +564,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 301,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -596,7 +590,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""name"",
+    ""target_column"": ""mpg"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -626,7 +620,9 @@ Column details:
           ""origin""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""horsepower""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -635,16 +631,16 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 2cf00704_stats_focused,Auto,2cf00704,stats_focused,"Create a machine learning preprocessing plan.
 
-File: Auto.csv | Rows: 392 | Target: name
-Numeric columns (8): mpg, cylinders, displacement, horsepower, weight, acceleration, year, origin
-Categorical columns (0): none
+File: Auto.csv | Rows: 392 | Target: mpg
+Numeric columns (7): cylinders, displacement, horsepower, weight, acceleration, year, origin
+Categorical columns (1): name
 Columns with missing values: none","{
   ""ingestion"": {
     ""original_filename"": ""Auto.csv"",
@@ -668,8 +664,8 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""name"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""mpg"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
@@ -679,7 +675,7 @@ Columns with missing values: none","{
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 127,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 9.0,
         ""max"": 46.6,
         ""mean"": 23.445918367346938
@@ -759,7 +755,7 @@ Columns with missing values: none","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 301,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -785,7 +781,7 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""name"",
+    ""target_column"": ""mpg"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -815,7 +811,9 @@ Columns with missing values: none","{
           ""origin""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""horsepower""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -824,18 +822,18 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
-2cf00704_task_focused,Auto,2cf00704,task_focused,"Generate preprocessing steps for a classification task.
+2cf00704_task_focused,Auto,2cf00704,task_focused,"Generate preprocessing steps for a regression task.
 
 Dataset: Auto.csv
 Shape: 392 rows x 9 columns
-Prediction target: 'name' (dtype=str, 301 unique values)
+Prediction target: 'mpg' (dtype=float64, 127 unique values)
 
-All feature columns: mpg, cylinders, displacement, horsepower, weight, acceleration, year, origin","{
+All feature columns: cylinders, displacement, horsepower, weight, acceleration, year, origin, name","{
   ""ingestion"": {
     ""original_filename"": ""Auto.csv"",
     ""stored_filename"": ""20260429_163446_2cf00704_Auto.csv"",
@@ -858,8 +856,8 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
     ]
   },
   ""schema"": {
-    ""target_column"": ""name"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""mpg"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 392,
@@ -869,7 +867,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 127,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 9.0,
         ""max"": 46.6,
         ""mean"": 23.445918367346938
@@ -949,7 +947,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 301,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -975,7 +973,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""name"",
+    ""target_column"": ""mpg"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -1005,7 +1003,9 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
           ""origin""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""horsepower""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -1014,7 +1014,7 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -1023,17 +1023,17 @@ All feature columns: mpg, cylinders, displacement, horsepower, weight, accelerat
 
 Dataset: Admission.csv
 Rows: 400 | Columns: 9
-Target column: Research
+Target column: University Rating
 
 Column details:
   - Serial No.: int64, min=1.0, max=400.0, mean=200.5, 400 unique
   - GRE Score: int64, min=290.0, max=340.0, mean=316.81, 49 unique
   - TOEFL Score: int64, min=92.0, max=120.0, mean=107.41, 29 unique
-  - University Rating: int64, min=1.0, max=5.0, mean=3.09, 5 unique
+  - University Rating [TARGET]: int64, min=1.0, max=5.0, mean=3.09, 5 unique
   - SOP: float64, min=1.0, max=5.0, mean=3.4, 9 unique
   - LOR : float64, min=1.0, max=5.0, mean=3.45, 9 unique
   - CGPA: float64, min=6.8, max=9.92, mean=8.6, 168 unique
-  - Research [TARGET]: int64, min=0.0, max=1.0, mean=0.55, 2 unique
+  - Research: int64, min=0.0, max=1.0, mean=0.55, 2 unique
   - Chance of Admit : float64, min=0.34, max=0.97, mean=0.72, 60 unique","{
   ""ingestion"": {
     ""original_filename"": ""Admission.csv"",
@@ -1057,8 +1057,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Research"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""University Rating"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
@@ -1098,7 +1098,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 5,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 5.0,
         ""mean"": 3.0875
@@ -1138,7 +1138,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 1.0,
         ""mean"": 0.5475
@@ -1177,7 +1177,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Research"",
+    ""target_column"": ""University Rating"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -1222,8 +1222,8 @@ Column details:
 }"
 599f83f5_stats_focused,Admission,599f83f5,stats_focused,"Create a machine learning preprocessing plan.
 
-File: Admission.csv | Rows: 400 | Target: Research
-Numeric columns (8): Serial No., GRE Score, TOEFL Score, University Rating, SOP, LOR , CGPA, Chance of Admit 
+File: Admission.csv | Rows: 400 | Target: University Rating
+Numeric columns (8): Serial No., GRE Score, TOEFL Score, SOP, LOR , CGPA, Research, Chance of Admit 
 Categorical columns (0): none
 Columns with missing values: none","{
   ""ingestion"": {
@@ -1248,8 +1248,8 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""Research"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""University Rating"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
@@ -1289,7 +1289,7 @@ Columns with missing values: none","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 5,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 5.0,
         ""mean"": 3.0875
@@ -1329,7 +1329,7 @@ Columns with missing values: none","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 1.0,
         ""mean"": 0.5475
@@ -1368,7 +1368,7 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Research"",
+    ""target_column"": ""University Rating"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -1415,9 +1415,9 @@ Columns with missing values: none","{
 
 Dataset: Admission.csv
 Shape: 400 rows x 9 columns
-Prediction target: 'Research' (dtype=int64, 2 unique values)
+Prediction target: 'University Rating' (dtype=int64, 5 unique values)
 
-All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP, LOR , CGPA, Chance of Admit ","{
+All feature columns: Serial No., GRE Score, TOEFL Score, SOP, LOR , CGPA, Research, Chance of Admit ","{
   ""ingestion"": {
     ""original_filename"": ""Admission.csv"",
     ""stored_filename"": ""20260429_163446_599f83f5_Admission.csv"",
@@ -1440,8 +1440,8 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
     ]
   },
   ""schema"": {
-    ""target_column"": ""Research"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""University Rating"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 9,
     ""row_count"": 400,
@@ -1481,7 +1481,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 5,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 5.0,
         ""mean"": 3.0875
@@ -1521,7 +1521,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 1.0,
         ""mean"": 0.5475
@@ -1560,7 +1560,7 @@ All feature columns: Serial No., GRE Score, TOEFL Score, University Rating, SOP,
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Research"",
+    ""target_column"": ""University Rating"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -1650,7 +1650,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""cardio"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 13,
     ""row_count"": 70000,
@@ -1791,7 +1791,7 @@ Column details:
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
+      ""Missing columns: {'ap_hi', 'id', 'age', 'smoke', 'active', 'weight', 'gluc', 'alco', 'height', 'ap_lo', 'cardio', 'gender', 'cholesterol'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -1847,8 +1847,12 @@ Column details:
         ]
       },
       ""log_transform"": [
+        ""weight"",
+        ""cholesterol"",
+        ""gluc"",
         ""smoke"",
-        ""alco""
+        ""alco"",
+        ""active""
       ]
     },
     ""split_strategy"": {
@@ -1858,7 +1862,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -1896,7 +1900,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""cardio"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 13,
     ""row_count"": 70000,
@@ -2037,7 +2041,7 @@ Columns with missing values: none","{
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
+      ""Missing columns: {'ap_hi', 'id', 'age', 'smoke', 'active', 'weight', 'gluc', 'alco', 'height', 'ap_lo', 'cardio', 'gender', 'cholesterol'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2093,8 +2097,12 @@ Columns with missing values: none","{
         ]
       },
       ""log_transform"": [
+        ""weight"",
+        ""cholesterol"",
+        ""gluc"",
         ""smoke"",
-        ""alco""
+        ""alco"",
+        ""active""
       ]
     },
     ""split_strategy"": {
@@ -2104,7 +2112,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -2143,7 +2151,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
   },
   ""schema"": {
     ""target_column"": ""cardio"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 13,
     ""row_count"": 70000,
@@ -2284,7 +2292,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     ""performed"": true,
     ""is_valid"": false,
     ""errors"": [
-      ""Missing columns: {'cholesterol', 'cardio', 'gluc', 'gender', 'age', 'weight', 'ap_hi', 'ap_lo', 'smoke', 'id', 'height', 'alco', 'active'}"",
+      ""Missing columns: {'ap_hi', 'id', 'age', 'smoke', 'active', 'weight', 'gluc', 'alco', 'height', 'ap_lo', 'cardio', 'gender', 'cholesterol'}"",
       ""Extra columns: {'id;age;gender;height;weight;ap_hi;ap_lo;cholesterol;gluc;smoke;alco;active;cardio'}""
     ],
     ""validation_status"": ""invalid""
@@ -2340,8 +2348,12 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
         ]
       },
       ""log_transform"": [
+        ""weight"",
+        ""cholesterol"",
+        ""gluc"",
         ""smoke"",
-        ""alco""
+        ""alco"",
+        ""active""
       ]
     },
     ""split_strategy"": {
@@ -2351,7 +2363,7 @@ All feature columns: id, age, gender, height, weight, ap_hi, ap_lo, cholesterol,
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -2360,10 +2372,10 @@ ca1c65ff_full_structured,automobile_dataset,ca1c65ff,full_structured,"Generate a
 
 Dataset: automobile_dataset.csv
 Rows: 205 | Columns: 26
-Target column: price
+Target column: symboling
 
 Column details:
-  - price [TARGET]: float64, min=5118.0, max=45400.0, mean=13207.13, 186 unique, 1.95% missing
+  - price: float64, min=5118.0, max=45400.0, mean=13207.13, 186 unique, 1.95% missing
   - highway-mpg: int64, min=16.0, max=54.0, mean=30.75, 30 unique
   - city-mpg: int64, min=13.0, max=49.0, mean=25.22, 29 unique
   - peak-rpm: float64, min=4150.0, max=6600.0, mean=5125.37, 23 unique, 0.98% missing
@@ -2388,7 +2400,7 @@ Column details:
   - fuel-type: str, 2 unique
   - make: str, 22 unique
   - normalized-losses: float64, min=65.0, max=256.0, mean=122.0, 51 unique, 20.0% missing
-  - symboling: int64, min=-2.0, max=3.0, mean=0.83, 6 unique","{
+  - symboling [TARGET]: int64, min=-2.0, max=3.0, mean=0.83, 6 unique","{
   ""ingestion"": {
     ""original_filename"": ""automobile_dataset.csv"",
     ""stored_filename"": ""20260429_163446_ca1c65ff_automobile_dataset.csv"",
@@ -2428,8 +2440,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""price"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_column"": ""symboling"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 26,
     ""row_count"": 205,
@@ -2439,7 +2451,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 1.95,
         ""unique_count"": 186,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 5118.0,
         ""max"": 45400.0,
         ""mean"": 13207.129353233831
@@ -2665,7 +2677,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -2.0,
         ""max"": 3.0,
         ""mean"": 0.8341463414634146
@@ -2694,7 +2706,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""price"",
+    ""target_column"": ""symboling"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -2714,16 +2726,15 @@ Column details:
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""fuel-system"",
           ""engine-type"",
           ""engine-location"",
           ""drive-wheels"",
           ""body-style"",
           ""aspiration"",
-          ""fuel-type""
-        ],
-        ""label_encoding_columns"": [
+          ""fuel-type"",
           ""make""
         ]
       },
@@ -2765,10 +2776,10 @@ Column details:
 }"
 ca1c65ff_stats_focused,automobile_dataset,ca1c65ff,stats_focused,"Create a machine learning preprocessing plan.
 
-File: automobile_dataset.csv | Rows: 205 | Target: price
-Numeric columns (17): highway-mpg, city-mpg, peak-rpm, horsepower, compression-ratio, stroke, bore, engine-size, num-of-cylinders, curb-weight, height, width, length, wheel-base, num-of-doors, normalized-losses, symboling
+File: automobile_dataset.csv | Rows: 205 | Target: symboling
+Numeric columns (17): price, highway-mpg, city-mpg, peak-rpm, horsepower, compression-ratio, stroke, bore, engine-size, num-of-cylinders, curb-weight, height, width, length, wheel-base, num-of-doors, normalized-losses
 Categorical columns (8): fuel-system, engine-type, engine-location, drive-wheels, body-style, aspiration, fuel-type, make
-Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%), bore (1.95%), num-of-doors (0.98%), normalized-losses (20.0%)","{
+Columns with missing values: price (1.95%), peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%), bore (1.95%), num-of-doors (0.98%), normalized-losses (20.0%)","{
   ""ingestion"": {
     ""original_filename"": ""automobile_dataset.csv"",
     ""stored_filename"": ""20260429_163446_ca1c65ff_automobile_dataset.csv"",
@@ -2808,8 +2819,8 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
     ]
   },
   ""schema"": {
-    ""target_column"": ""price"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_column"": ""symboling"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 26,
     ""row_count"": 205,
@@ -2819,7 +2830,7 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
         ""dtype"": ""float64"",
         ""missing_percentage"": 1.95,
         ""unique_count"": 186,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 5118.0,
         ""max"": 45400.0,
         ""mean"": 13207.129353233831
@@ -3045,7 +3056,7 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -2.0,
         ""max"": 3.0,
         ""mean"": 0.8341463414634146
@@ -3074,7 +3085,7 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""price"",
+    ""target_column"": ""symboling"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -3094,16 +3105,15 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""fuel-system"",
           ""engine-type"",
           ""engine-location"",
           ""drive-wheels"",
           ""body-style"",
           ""aspiration"",
-          ""fuel-type""
-        ],
-        ""label_encoding_columns"": [
+          ""fuel-type"",
           ""make""
         ]
       },
@@ -3143,13 +3153,13 @@ Columns with missing values: peak-rpm (0.98%), horsepower (0.98%), stroke (1.95%
   },
   ""export_paths"": {}
 }"
-ca1c65ff_task_focused,automobile_dataset,ca1c65ff,task_focused,"Generate preprocessing steps for a regression task.
+ca1c65ff_task_focused,automobile_dataset,ca1c65ff,task_focused,"Generate preprocessing steps for a classification task.
 
 Dataset: automobile_dataset.csv
 Shape: 205 rows x 26 columns
-Prediction target: 'price' (dtype=float64, 186 unique values)
+Prediction target: 'symboling' (dtype=int64, 6 unique values)
 
-All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ratio, stroke, bore, fuel-system, engine-size, num-of-cylinders, engine-type, curb-weight, height, width, length, wheel-base, engine-location, drive-wheels, body-style, num-of-doors, aspiration, fuel-type, make, normalized-losses, symboling","{
+All feature columns: price, highway-mpg, city-mpg, peak-rpm, horsepower, compression-ratio, stroke, bore, fuel-system, engine-size, num-of-cylinders, engine-type, curb-weight, height, width, length, wheel-base, engine-location, drive-wheels, body-style, num-of-doors, aspiration, fuel-type, make, normalized-losses","{
   ""ingestion"": {
     ""original_filename"": ""automobile_dataset.csv"",
     ""stored_filename"": ""20260429_163446_ca1c65ff_automobile_dataset.csv"",
@@ -3189,8 +3199,8 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
     ]
   },
   ""schema"": {
-    ""target_column"": ""price"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_column"": ""symboling"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 26,
     ""row_count"": 205,
@@ -3200,7 +3210,7 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
         ""dtype"": ""float64"",
         ""missing_percentage"": 1.95,
         ""unique_count"": 186,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 5118.0,
         ""max"": 45400.0,
         ""mean"": 13207.129353233831
@@ -3426,7 +3436,7 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -2.0,
         ""max"": 3.0,
         ""mean"": 0.8341463414634146
@@ -3455,7 +3465,7 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""price"",
+    ""target_column"": ""symboling"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -3475,16 +3485,15 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [
+        ""one_hot_columns"": [],
+        ""label_encoding_columns"": [
           ""fuel-system"",
           ""engine-type"",
           ""engine-location"",
           ""drive-wheels"",
           ""body-style"",
           ""aspiration"",
-          ""fuel-type""
-        ],
-        ""label_encoding_columns"": [
+          ""fuel-type"",
           ""make""
         ]
       },
@@ -3528,10 +3537,10 @@ All feature columns: highway-mpg, city-mpg, peak-rpm, horsepower, compression-ra
 
 Dataset: Flight_delay.csv
 Rows: 484551 | Columns: 29
-Target column: Diverted
+Target column: DayOfWeek
 
 Column details:
-  - DayOfWeek: int64, min=1.0, max=7.0, mean=3.99, 7 unique
+  - DayOfWeek [TARGET]: int64, min=1.0, max=7.0, mean=3.99, 7 unique
   - Date: str, 181 unique
   - DepTime: int64, min=1.0, max=2400.0, mean=1564.48, 1394 unique
   - ArrTime: int64, min=1.0, max=2400.0, mean=1617.78, 1438 unique
@@ -3554,7 +3563,7 @@ Column details:
   - TaxiOut: int64, min=0.0, max=383.0, mean=19.15, 277 unique
   - Cancelled: int64, min=0.0, max=0.0, mean=0.0, 1 unique
   - CancellationCode: str, 1 unique
-  - Diverted [TARGET]: int64, min=0.0, max=0.0, mean=0.0, 1 unique
+  - Diverted: int64, min=0.0, max=0.0, mean=0.0, 1 unique
   - CarrierDelay: int64, min=0.0, max=1707.0, mean=17.42, 708 unique
   - WeatherDelay: int64, min=0.0, max=1148.0, mean=3.15, 457 unique
   - NASDelay: int64, min=0.0, max=1357.0, mean=13.6, 456 unique
@@ -3602,8 +3611,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Diverted"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""DayOfWeek"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 29,
     ""row_count"": 484551,
@@ -3613,7 +3622,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 7,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 7.0,
         ""mean"": 3.9916045988967106
@@ -3816,7 +3825,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 0.0,
         ""mean"": 0.0
@@ -3895,7 +3904,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Diverted"",
+    ""target_column"": ""DayOfWeek"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -3912,12 +3921,12 @@ Column details:
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""UniqueCarrier"",
+          ""Airline"",
           ""CancellationCode""
         ],
         ""label_encoding_columns"": [
           ""Date"",
-          ""UniqueCarrier"",
-          ""Airline"",
           ""TailNum"",
           ""Origin"",
           ""Org_Airport"",
@@ -3928,7 +3937,6 @@ Column details:
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""DayOfWeek"",
           ""DepTime"",
           ""ArrTime"",
           ""CRSArrTime"",
@@ -3942,6 +3950,7 @@ Column details:
           ""TaxiIn"",
           ""TaxiOut"",
           ""Cancelled"",
+          ""Diverted"",
           ""CarrierDelay"",
           ""WeatherDelay"",
           ""NASDelay"",
@@ -3950,7 +3959,7 @@ Column details:
         ]
       },
       ""log_transform"": [
-        ""FlightNum"",
+        ""ArrTime"",
         ""ActualElapsedTime"",
         ""AirTime"",
         ""ArrDelay"",
@@ -3972,15 +3981,15 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 2096dca0_stats_focused,Flight_delay,2096dca0,stats_focused,"Create a machine learning preprocessing plan.
 
-File: Flight_delay.csv | Rows: 484551 | Target: Diverted
-Numeric columns (19): DayOfWeek, DepTime, ArrTime, CRSArrTime, FlightNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Distance, TaxiIn, TaxiOut, Cancelled, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay
+File: Flight_delay.csv | Rows: 484551 | Target: DayOfWeek
+Numeric columns (19): DepTime, ArrTime, CRSArrTime, FlightNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Distance, TaxiIn, TaxiOut, Cancelled, Diverted, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay
 Categorical columns (9): Date, UniqueCarrier, Airline, TailNum, Origin, Org_Airport, Dest, Dest_Airport, CancellationCode
 Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
   ""ingestion"": {
@@ -4025,8 +4034,8 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""Diverted"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""DayOfWeek"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 29,
     ""row_count"": 484551,
@@ -4036,7 +4045,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 7,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 7.0,
         ""mean"": 3.9916045988967106
@@ -4239,7 +4248,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 0.0,
         ""mean"": 0.0
@@ -4318,7 +4327,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Diverted"",
+    ""target_column"": ""DayOfWeek"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -4335,12 +4344,12 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""UniqueCarrier"",
+          ""Airline"",
           ""CancellationCode""
         ],
         ""label_encoding_columns"": [
           ""Date"",
-          ""UniqueCarrier"",
-          ""Airline"",
           ""TailNum"",
           ""Origin"",
           ""Org_Airport"",
@@ -4351,7 +4360,6 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""DayOfWeek"",
           ""DepTime"",
           ""ArrTime"",
           ""CRSArrTime"",
@@ -4365,6 +4373,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
           ""TaxiIn"",
           ""TaxiOut"",
           ""Cancelled"",
+          ""Diverted"",
           ""CarrierDelay"",
           ""WeatherDelay"",
           ""NASDelay"",
@@ -4373,7 +4382,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
         ]
       },
       ""log_transform"": [
-        ""FlightNum"",
+        ""ArrTime"",
         ""ActualElapsedTime"",
         ""AirTime"",
         ""ArrDelay"",
@@ -4395,7 +4404,7 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -4404,9 +4413,9 @@ Columns with missing values: Org_Airport (0.24%), Dest_Airport (0.31%)","{
 
 Dataset: Flight_delay.csv
 Shape: 484551 rows x 29 columns
-Prediction target: 'Diverted' (dtype=int64, 1 unique values)
+Prediction target: 'DayOfWeek' (dtype=int64, 7 unique values)
 
-All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrier, Airline, FlightNum, TailNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Origin, Org_Airport, Dest, Dest_Airport, Distance, TaxiIn, TaxiOut, Cancelled, CancellationCode, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay","{
+All feature columns: Date, DepTime, ArrTime, CRSArrTime, UniqueCarrier, Airline, FlightNum, TailNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Origin, Org_Airport, Dest, Dest_Airport, Distance, TaxiIn, TaxiOut, Cancelled, CancellationCode, Diverted, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay","{
   ""ingestion"": {
     ""original_filename"": ""Flight_delay.csv"",
     ""stored_filename"": ""20260429_163447_2096dca0_Flight_delay.csv"",
@@ -4449,8 +4458,8 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
     ]
   },
   ""schema"": {
-    ""target_column"": ""Diverted"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""DayOfWeek"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 29,
     ""row_count"": 484551,
@@ -4460,7 +4469,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 7,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1.0,
         ""max"": 7.0,
         ""mean"": 3.9916045988967106
@@ -4663,7 +4672,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 0.0,
         ""mean"": 0.0
@@ -4742,7 +4751,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Diverted"",
+    ""target_column"": ""DayOfWeek"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -4759,12 +4768,12 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""UniqueCarrier"",
+          ""Airline"",
           ""CancellationCode""
         ],
         ""label_encoding_columns"": [
           ""Date"",
-          ""UniqueCarrier"",
-          ""Airline"",
           ""TailNum"",
           ""Origin"",
           ""Org_Airport"",
@@ -4775,7 +4784,6 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""DayOfWeek"",
           ""DepTime"",
           ""ArrTime"",
           ""CRSArrTime"",
@@ -4789,6 +4797,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
           ""TaxiIn"",
           ""TaxiOut"",
           ""Cancelled"",
+          ""Diverted"",
           ""CarrierDelay"",
           ""WeatherDelay"",
           ""NASDelay"",
@@ -4797,7 +4806,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
         ]
       },
       ""log_transform"": [
-        ""FlightNum"",
+        ""ArrTime"",
         ""ActualElapsedTime"",
         ""AirTime"",
         ""ArrDelay"",
@@ -4819,7 +4828,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -4828,7 +4837,7 @@ All feature columns: DayOfWeek, Date, DepTime, ArrTime, CRSArrTime, UniqueCarrie
 
 Dataset: Dirty Dataset to practice Data Cleaning.csv
 Rows: 20 | Columns: 11
-Target column: Ref.
+Target column: Year(s)
 
 Column details:
   - Rank: int64, min=1.0, max=20.0, mean=10.45, 19 unique
@@ -4838,10 +4847,10 @@ Column details:
   - Adjusted gross (in 2022 dollars): str, 20 unique
   - Artist: str, 9 unique
   - Tour title: str, 20 unique
-  - Year(s): str, 16 unique
+  - Year(s) [TARGET]: str, 16 unique
   - Shows: int64, min=41.0, max=325.0, mean=110.0, 18 unique
   - Average gross: str, 20 unique
-  - Ref. [TARGET]: str, 20 unique","{
+  - Ref.: str, 20 unique","{
   ""ingestion"": {
     ""original_filename"": ""Dirty Dataset to practice Data Cleaning.csv"",
     ""stored_filename"": ""20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv"",
@@ -4866,8 +4875,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Ref."",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Year(s)"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 11,
     ""row_count"": 20,
@@ -4929,7 +4938,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 16,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Shows"",
@@ -4953,7 +4962,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 20,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -4979,7 +4988,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Ref."",
+    ""target_column"": ""Year(s)"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -5004,8 +5013,8 @@ Column details:
           ""Actual gross"",
           ""Adjusted gross (in 2022 dollars)"",
           ""Tour title"",
-          ""Year(s)"",
-          ""Average gross""
+          ""Average gross"",
+          ""Ref.""
         ]
       },
       ""scaling"": {
@@ -5015,7 +5024,9 @@ Column details:
           ""Shows""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""Shows""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -5024,16 +5035,16 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 30d74508_stats_focused,Dirty Dataset to practice Data Cleaning,30d74508,stats_focused,"Create a machine learning preprocessing plan.
 
-File: Dirty Dataset to practice Data Cleaning.csv | Rows: 20 | Target: Ref.
+File: Dirty Dataset to practice Data Cleaning.csv | Rows: 20 | Target: Year(s)
 Numeric columns (2): Rank, Shows
-Categorical columns (8): Peak, All Time Peak, Actual gross, Adjusted gross (in 2022 dollars), Artist, Tour title, Year(s), Average gross
+Categorical columns (8): Peak, All Time Peak, Actual gross, Adjusted gross (in 2022 dollars), Artist, Tour title, Average gross, Ref.
 Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
   ""ingestion"": {
     ""original_filename"": ""Dirty Dataset to practice Data Cleaning.csv"",
@@ -5059,8 +5070,8 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""Ref."",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Year(s)"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 11,
     ""row_count"": 20,
@@ -5122,7 +5133,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 16,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Shows"",
@@ -5146,7 +5157,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 20,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -5172,7 +5183,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Ref."",
+    ""target_column"": ""Year(s)"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -5197,8 +5208,8 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
           ""Actual gross"",
           ""Adjusted gross (in 2022 dollars)"",
           ""Tour title"",
-          ""Year(s)"",
-          ""Average gross""
+          ""Average gross"",
+          ""Ref.""
         ]
       },
       ""scaling"": {
@@ -5208,7 +5219,9 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
           ""Shows""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""Shows""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -5217,7 +5230,7 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -5226,9 +5239,9 @@ Columns with missing values: Peak (55.0%), All Time Peak (70.0%)","{
 
 Dataset: Dirty Dataset to practice Data Cleaning.csv
 Shape: 20 rows x 11 columns
-Prediction target: 'Ref.' (dtype=str, 20 unique values)
+Prediction target: 'Year(s)' (dtype=str, 16 unique values)
 
-All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (in 2022 dollars), Artist, Tour title, Year(s), Shows, Average gross","{
+All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (in 2022 dollars), Artist, Tour title, Shows, Average gross, Ref.","{
   ""ingestion"": {
     ""original_filename"": ""Dirty Dataset to practice Data Cleaning.csv"",
     ""stored_filename"": ""20260429_163447_30d74508_Dirty Dataset to practice Data Cleaning.csv"",
@@ -5253,8 +5266,8 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
     ]
   },
   ""schema"": {
-    ""target_column"": ""Ref."",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Year(s)"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 11,
     ""row_count"": 20,
@@ -5316,7 +5329,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 16,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Shows"",
@@ -5340,7 +5353,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 20,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -5366,7 +5379,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Ref."",
+    ""target_column"": ""Year(s)"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -5391,8 +5404,8 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
           ""Actual gross"",
           ""Adjusted gross (in 2022 dollars)"",
           ""Tour title"",
-          ""Year(s)"",
-          ""Average gross""
+          ""Average gross"",
+          ""Ref.""
         ]
       },
       ""scaling"": {
@@ -5402,7 +5415,9 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
           ""Shows""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""Shows""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -5411,7 +5426,7 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -5420,13 +5435,13 @@ All feature columns: Rank, Peak, All Time Peak, Actual gross, Adjusted gross (
 
 Dataset: employees.csv
 Rows: 84 | Columns: 4
-Target column: job_title
+Target column: salary
 
 Column details:
   - Name : str, 82 unique
-  - job_title [TARGET]: str, 4 unique
+  - job_title: str, 4 unique
   - years_of_experience: int64, min=1.0, max=14.0, mean=5.76, 14 unique
-  - salary: int64, min=50.0, max=120000.0, mean=52738.69, 11 unique","{
+  - salary [TARGET]: int64, min=50.0, max=120000.0, mean=52738.69, 11 unique","{
   ""ingestion"": {
     ""original_filename"": ""employees.csv"",
     ""stored_filename"": ""20260429_163447_37de9aba_employees.csv"",
@@ -5444,9 +5459,9 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""job_title"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""target_detection_method"": ""partial_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 4,
     ""row_count"": 84,
     ""columns"": [
@@ -5462,7 +5477,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true
+        ""is_target"": false
       },
       {
         ""name"": ""years_of_experience"",
@@ -5479,7 +5494,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 11,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 50.0,
         ""max"": 120000.0,
         ""mean"": 52738.69047619047
@@ -5508,8 +5523,8 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""job_title"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -5521,7 +5536,9 @@ Column details:
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [],
+        ""one_hot_columns"": [
+          ""job_title""
+        ],
         ""label_encoding_columns"": [
           ""Name ""
         ]
@@ -5529,8 +5546,7 @@ Column details:
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""years_of_experience"",
-          ""salary""
+          ""years_of_experience""
         ]
       },
       ""log_transform"": []
@@ -5538,20 +5554,20 @@ Column details:
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 37de9aba_stats_focused,employees,37de9aba,stats_focused,"Create a machine learning preprocessing plan.
 
-File: employees.csv | Rows: 84 | Target: job_title
-Numeric columns (2): years_of_experience, salary
-Categorical columns (1): Name 
+File: employees.csv | Rows: 84 | Target: salary
+Numeric columns (1): years_of_experience
+Categorical columns (2): Name , job_title
 Columns with missing values: none","{
   ""ingestion"": {
     ""original_filename"": ""employees.csv"",
@@ -5570,9 +5586,9 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""job_title"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""target_detection_method"": ""partial_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 4,
     ""row_count"": 84,
     ""columns"": [
@@ -5588,7 +5604,7 @@ Columns with missing values: none","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true
+        ""is_target"": false
       },
       {
         ""name"": ""years_of_experience"",
@@ -5605,7 +5621,7 @@ Columns with missing values: none","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 11,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 50.0,
         ""max"": 120000.0,
         ""mean"": 52738.69047619047
@@ -5634,8 +5650,8 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""job_title"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -5647,7 +5663,9 @@ Columns with missing values: none","{
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [],
+        ""one_hot_columns"": [
+          ""job_title""
+        ],
         ""label_encoding_columns"": [
           ""Name ""
         ]
@@ -5655,8 +5673,7 @@ Columns with missing values: none","{
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""years_of_experience"",
-          ""salary""
+          ""years_of_experience""
         ]
       },
       ""log_transform"": []
@@ -5664,22 +5681,22 @@ Columns with missing values: none","{
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
-37de9aba_task_focused,employees,37de9aba,task_focused,"Generate preprocessing steps for a classification task.
+37de9aba_task_focused,employees,37de9aba,task_focused,"Generate preprocessing steps for a regression task.
 
 Dataset: employees.csv
 Shape: 84 rows x 4 columns
-Prediction target: 'job_title' (dtype=str, 4 unique values)
+Prediction target: 'salary' (dtype=int64, 11 unique values)
 
-All feature columns: Name , years_of_experience, salary","{
+All feature columns: Name , job_title, years_of_experience","{
   ""ingestion"": {
     ""original_filename"": ""employees.csv"",
     ""stored_filename"": ""20260429_163447_37de9aba_employees.csv"",
@@ -5697,9 +5714,9 @@ All feature columns: Name , years_of_experience, salary","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""job_title"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""target_detection_method"": ""partial_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 4,
     ""row_count"": 84,
     ""columns"": [
@@ -5715,7 +5732,7 @@ All feature columns: Name , years_of_experience, salary","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true
+        ""is_target"": false
       },
       {
         ""name"": ""years_of_experience"",
@@ -5732,7 +5749,7 @@ All feature columns: Name , years_of_experience, salary","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 11,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 50.0,
         ""max"": 120000.0,
         ""mean"": 52738.69047619047
@@ -5761,8 +5778,8 @@ All feature columns: Name , years_of_experience, salary","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""job_title"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""salary"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -5774,7 +5791,9 @@ All feature columns: Name , years_of_experience, salary","{
         ""constant_value"": ""Unknown""
       },
       ""encoding"": {
-        ""one_hot_columns"": [],
+        ""one_hot_columns"": [
+          ""job_title""
+        ],
         ""label_encoding_columns"": [
           ""Name ""
         ]
@@ -5782,8 +5801,7 @@ All feature columns: Name , years_of_experience, salary","{
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
-          ""years_of_experience"",
-          ""salary""
+          ""years_of_experience""
         ]
       },
       ""log_transform"": []
@@ -5791,11 +5809,11 @@ All feature columns: Name , years_of_experience, salary","{
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -5804,17 +5822,17 @@ c4b8ac3c_full_structured,dirty_cafe_sales,c4b8ac3c,full_structured,"Generate a c
 
 Dataset: dirty_cafe_sales.csv
 Rows: 10000 | Columns: 8
-Target column: Transaction Date
+Target column: Quantity
 
 Column details:
   - Transaction ID: str, 10000 unique
   - Item: str, 10 unique, 3.33% missing
-  - Quantity: str, 7 unique, 1.38% missing
+  - Quantity [TARGET]: str, 7 unique, 1.38% missing
   - Price Per Unit: str, 8 unique, 1.79% missing
   - Total Spent: str, 19 unique, 1.73% missing
   - Payment Method: str, 5 unique, 25.79% missing
   - Location: str, 4 unique, 32.65% missing
-  - Transaction Date [TARGET]: str, 367 unique, 1.59% missing","{
+  - Transaction Date: str, 367 unique, 1.59% missing","{
   ""ingestion"": {
     ""original_filename"": ""dirty_cafe_sales.csv"",
     ""stored_filename"": ""20260429_163447_c4b8ac3c_dirty_cafe_sales.csv"",
@@ -5836,8 +5854,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Transaction Date"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Quantity"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 8,
     ""row_count"": 10000,
@@ -5861,7 +5879,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 1.38,
         ""unique_count"": 7,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Price Per Unit"",
@@ -5896,7 +5914,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 1.59,
         ""unique_count"": 367,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -5922,7 +5940,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Transaction Date"",
+    ""target_column"": ""Quantity"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -5973,10 +5991,10 @@ Column details:
 }"
 c4b8ac3c_stats_focused,dirty_cafe_sales,c4b8ac3c,stats_focused,"Create a machine learning preprocessing plan.
 
-File: dirty_cafe_sales.csv | Rows: 10000 | Target: Transaction Date
+File: dirty_cafe_sales.csv | Rows: 10000 | Target: Quantity
 Numeric columns (0): none
-Categorical columns (7): Transaction ID, Item, Quantity, Price Per Unit, Total Spent, Payment Method, Location
-Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.79%), Total Spent (1.73%), Payment Method (25.79%), Location (32.65%)","{
+Categorical columns (7): Transaction ID, Item, Price Per Unit, Total Spent, Payment Method, Location, Transaction Date
+Columns with missing values: Item (3.33%), Price Per Unit (1.79%), Total Spent (1.73%), Payment Method (25.79%), Location (32.65%), Transaction Date (1.59%)","{
   ""ingestion"": {
     ""original_filename"": ""dirty_cafe_sales.csv"",
     ""stored_filename"": ""20260429_163447_c4b8ac3c_dirty_cafe_sales.csv"",
@@ -5998,8 +6016,8 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
     ]
   },
   ""schema"": {
-    ""target_column"": ""Transaction Date"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Quantity"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 8,
     ""row_count"": 10000,
@@ -6023,7 +6041,7 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
         ""dtype"": ""str"",
         ""missing_percentage"": 1.38,
         ""unique_count"": 7,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Price Per Unit"",
@@ -6058,7 +6076,7 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
         ""dtype"": ""str"",
         ""missing_percentage"": 1.59,
         ""unique_count"": 367,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -6084,7 +6102,7 @@ Columns with missing values: Item (3.33%), Quantity (1.38%), Price Per Unit (1.7
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Transaction Date"",
+    ""target_column"": ""Quantity"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -6137,9 +6155,9 @@ c4b8ac3c_task_focused,dirty_cafe_sales,c4b8ac3c,task_focused,"Generate preproces
 
 Dataset: dirty_cafe_sales.csv
 Shape: 10000 rows x 8 columns
-Prediction target: 'Transaction Date' (dtype=str, 367 unique values)
+Prediction target: 'Quantity' (dtype=str, 7 unique values)
 
-All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent, Payment Method, Location","{
+All feature columns: Transaction ID, Item, Price Per Unit, Total Spent, Payment Method, Location, Transaction Date","{
   ""ingestion"": {
     ""original_filename"": ""dirty_cafe_sales.csv"",
     ""stored_filename"": ""20260429_163447_c4b8ac3c_dirty_cafe_sales.csv"",
@@ -6161,8 +6179,8 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
     ]
   },
   ""schema"": {
-    ""target_column"": ""Transaction Date"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": ""Quantity"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 8,
     ""row_count"": 10000,
@@ -6186,7 +6204,7 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
         ""dtype"": ""str"",
         ""missing_percentage"": 1.38,
         ""unique_count"": 7,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Price Per Unit"",
@@ -6221,7 +6239,7 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
         ""dtype"": ""str"",
         ""missing_percentage"": 1.59,
         ""unique_count"": 367,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -6247,7 +6265,7 @@ All feature columns: Transaction ID, Item, Quantity, Price Per Unit, Total Spent
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Transaction Date"",
+    ""target_column"": ""Quantity"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -6387,7 +6405,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""Attrition"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 35,
     ""row_count"": 1470,
@@ -6796,15 +6814,13 @@ Column details:
         ]
       },
       ""log_transform"": [
-        ""DistanceFromHome"",
+        ""JobLevel"",
         ""MonthlyIncome"",
         ""NumCompaniesWorked"",
-        ""StockOptionLevel"",
+        ""PerformanceRating"",
         ""TotalWorkingYears"",
         ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
+        ""YearsSinceLastPromotion""
       ]
     },
     ""split_strategy"": {
@@ -6814,7 +6830,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -6874,7 +6890,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""Attrition"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 35,
     ""row_count"": 1470,
@@ -7283,15 +7299,13 @@ Columns with missing values: none","{
         ]
       },
       ""log_transform"": [
-        ""DistanceFromHome"",
+        ""JobLevel"",
         ""MonthlyIncome"",
         ""NumCompaniesWorked"",
-        ""StockOptionLevel"",
+        ""PerformanceRating"",
         ""TotalWorkingYears"",
         ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
+        ""YearsSinceLastPromotion""
       ]
     },
     ""split_strategy"": {
@@ -7301,7 +7315,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -7362,7 +7376,7 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
   },
   ""schema"": {
     ""target_column"": ""Attrition"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 35,
     ""row_count"": 1470,
@@ -7771,15 +7785,13 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
         ]
       },
       ""log_transform"": [
-        ""DistanceFromHome"",
+        ""JobLevel"",
         ""MonthlyIncome"",
         ""NumCompaniesWorked"",
-        ""StockOptionLevel"",
+        ""PerformanceRating"",
         ""TotalWorkingYears"",
         ""YearsAtCompany"",
-        ""YearsInCurrentRole"",
-        ""YearsSinceLastPromotion"",
-        ""YearsWithCurrManager""
+        ""YearsSinceLastPromotion""
       ]
     },
     ""split_strategy"": {
@@ -7789,7 +7801,7 @@ All feature columns: Age, BusinessTravel, DailyRate, Department, DistanceFromHom
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -7857,7 +7869,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""Churn"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 21,
     ""row_count"": 7043,
@@ -8097,7 +8109,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -8143,7 +8155,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""Churn"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 21,
     ""row_count"": 7043,
@@ -8383,7 +8395,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -8430,7 +8442,7 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
   },
   ""schema"": {
     ""target_column"": ""Churn"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 21,
     ""row_count"": 7043,
@@ -8670,7 +8682,7 @@ All feature columns: customerID, gender, SeniorCitizen, Partner, Dependents, ten
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -8708,7 +8720,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""Species"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 150,
@@ -8830,7 +8842,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -8861,7 +8873,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""Species"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 150,
@@ -8983,7 +8995,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -9015,7 +9027,7 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
   },
   ""schema"": {
     ""target_column"": ""Species"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 150,
@@ -9137,7 +9149,7 @@ All feature columns: Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthC
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -9212,7 +9224,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""last_column"",
     ""task_type"": ""classification"",
     ""total_columns"": 47,
     ""row_count"": 10043,
@@ -9754,11 +9766,16 @@ Column details:
         ]
       },
       ""log_transform"": [
-        ""0.1"",
+        ""82.00"",
         ""0.2"",
         ""0.3"",
         ""0.4"",
-        ""0.5""
+        ""0.5"",
+        ""93.40"",
+        ""21.20"",
+        ""91.7000"",
+        ""0.3100"",
+        ""0.3700""
       ]
     },
     ""split_strategy"": {
@@ -9768,7 +9785,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -9795,7 +9812,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""last_column"",
     ""task_type"": ""classification"",
     ""total_columns"": 47,
     ""row_count"": 10043,
@@ -10337,11 +10354,16 @@ Columns with missing values: none","{
         ]
       },
       ""log_transform"": [
-        ""0.1"",
+        ""82.00"",
         ""0.2"",
         ""0.3"",
         ""0.4"",
-        ""0.5""
+        ""0.5"",
+        ""93.40"",
+        ""21.20"",
+        ""91.7000"",
+        ""0.3100"",
+        ""0.3700""
       ]
     },
     ""split_strategy"": {
@@ -10351,7 +10373,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -10379,7 +10401,7 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
   },
   ""schema"": {
     ""target_column"": ""2026-04-14 19:24:26.5633333"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""last_column"",
     ""task_type"": ""classification"",
     ""total_columns"": 47,
     ""row_count"": 10043,
@@ -10921,11 +10943,16 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
         ]
       },
       ""log_transform"": [
-        ""0.1"",
+        ""82.00"",
         ""0.2"",
         ""0.3"",
         ""0.4"",
-        ""0.5""
+        ""0.5"",
+        ""93.40"",
+        ""21.20"",
+        ""91.7000"",
+        ""0.3100"",
+        ""0.3700""
       ]
     },
     ""split_strategy"": {
@@ -10935,7 +10962,7 @@ All feature columns: 15.0_m_29, 2, 1, 29.7, Male, Teacher, 15.00, 124.70, 27.30,
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -10985,7 +11012,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""Score"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 101,
@@ -11156,7 +11183,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -11193,7 +11220,7 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
   },
   ""schema"": {
     ""target_column"": ""Score"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 101,
@@ -11364,7 +11391,7 @@ Columns with missing values: IMBD title ID (0.99%), Original titlÊ (0.99%), Rel
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -11402,7 +11429,7 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
   },
   ""schema"": {
     ""target_column"": ""Score"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 101,
@@ -11573,7 +11600,7 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -11582,7 +11609,7 @@ All feature columns: IMBD title ID, Original titlÊ, Release year, Genrë¨, Dur
 
 Dataset: raw_data (2).csv
 Rows: 32560 | Columns: 15
-Target column:  <=50K
+Target column:  Not-in-family
 
 Column details:
   - 39: int64, min=17.0, max=90.0, mean=38.58, 73 unique
@@ -11592,14 +11619,14 @@ Column details:
   -  13: int64, min=1.0, max=16.0, mean=10.08, 16 unique
   -  Never-married: str, 7 unique
   -  Adm-clerical: str, 15 unique
-  -  Not-in-family: str, 6 unique
+  -  Not-in-family [TARGET]: str, 6 unique
   -  White: str, 5 unique
   -  Male: str, 2 unique
   -  2174: int64, min=0.0, max=99999.0, mean=1077.62, 119 unique
   -  0: int64, min=0.0, max=4356.0, mean=87.31, 92 unique
   -  40: int64, min=1.0, max=99.0, mean=40.44, 94 unique
   -  United-States: str, 42 unique
-  -  <=50K [TARGET]: str, 2 unique","{
+  -  <=50K: str, 2 unique","{
   ""ingestion"": {
     ""original_filename"": ""raw_data (2).csv"",
     ""stored_filename"": ""20260429_163455_84f9b5eb_raw_data (2).csv"",
@@ -11628,8 +11655,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": "" <=50K"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": "" Not-in-family"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 15,
     ""row_count"": 32560,
@@ -11697,7 +11724,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": "" White"",
@@ -11755,7 +11782,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -11781,7 +11808,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": "" <=50K"",
+    ""target_column"": "" Not-in-family"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -11797,13 +11824,13 @@ Column details:
         ""one_hot_columns"": [
           "" State-gov"",
           "" Never-married"",
-          "" Not-in-family"",
+          "" Adm-clerical"",
           "" White"",
-          "" Male""
+          "" Male"",
+          "" <=50K""
         ],
         ""label_encoding_columns"": [
           "" Bachelors"",
-          "" Adm-clerical"",
           "" United-States""
         ]
       },
@@ -11831,16 +11858,16 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 84f9b5eb_stats_focused,raw_data (2),84f9b5eb,stats_focused,"Create a machine learning preprocessing plan.
 
-File: raw_data (2).csv | Rows: 32560 | Target:  <=50K
+File: raw_data (2).csv | Rows: 32560 | Target:  Not-in-family
 Numeric columns (6): 39,  77516,  13,  2174,  0,  40
-Categorical columns (8):  State-gov,  Bachelors,  Never-married,  Adm-clerical,  Not-in-family,  White,  Male,  United-States
+Categorical columns (8):  State-gov,  Bachelors,  Never-married,  Adm-clerical,  White,  Male,  United-States,  <=50K
 Columns with missing values: none","{
   ""ingestion"": {
     ""original_filename"": ""raw_data (2).csv"",
@@ -11870,8 +11897,8 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": "" <=50K"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": "" Not-in-family"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 15,
     ""row_count"": 32560,
@@ -11939,7 +11966,7 @@ Columns with missing values: none","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": "" White"",
@@ -11997,7 +12024,7 @@ Columns with missing values: none","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -12023,7 +12050,7 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": "" <=50K"",
+    ""target_column"": "" Not-in-family"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -12039,13 +12066,13 @@ Columns with missing values: none","{
         ""one_hot_columns"": [
           "" State-gov"",
           "" Never-married"",
-          "" Not-in-family"",
+          "" Adm-clerical"",
           "" White"",
-          "" Male""
+          "" Male"",
+          "" <=50K""
         ],
         ""label_encoding_columns"": [
           "" Bachelors"",
-          "" Adm-clerical"",
           "" United-States""
         ]
       },
@@ -12073,7 +12100,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -12082,9 +12109,9 @@ Columns with missing values: none","{
 
 Dataset: raw_data (2).csv
 Shape: 32560 rows x 15 columns
-Prediction target: ' <=50K' (dtype=str, 2 unique values)
+Prediction target: ' Not-in-family' (dtype=str, 6 unique values)
 
-All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  Adm-clerical,  Not-in-family,  White,  Male,  2174,  0,  40,  United-States","{
+All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  Adm-clerical,  White,  Male,  2174,  0,  40,  United-States,  <=50K","{
   ""ingestion"": {
     ""original_filename"": ""raw_data (2).csv"",
     ""stored_filename"": ""20260429_163455_84f9b5eb_raw_data (2).csv"",
@@ -12113,8 +12140,8 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
     ]
   },
   ""schema"": {
-    ""target_column"": "" <=50K"",
-    ""target_detection_method"": ""non_numeric_dtype"",
+    ""target_column"": "" Not-in-family"",
+    ""target_detection_method"": ""partial_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 15,
     ""row_count"": 32560,
@@ -12182,7 +12209,7 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 6,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": "" White"",
@@ -12240,7 +12267,7 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 2,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -12266,7 +12293,7 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": "" <=50K"",
+    ""target_column"": "" Not-in-family"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -12282,13 +12309,13 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
         ""one_hot_columns"": [
           "" State-gov"",
           "" Never-married"",
-          "" Not-in-family"",
+          "" Adm-clerical"",
           "" White"",
-          "" Male""
+          "" Male"",
+          "" <=50K""
         ],
         ""label_encoding_columns"": [
           "" Bachelors"",
-          "" Adm-clerical"",
           "" United-States""
         ]
       },
@@ -12316,7 +12343,7 @@ All feature columns: 39,  State-gov,  77516,  Bachelors,  13,  Never-married,  A
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -12354,7 +12381,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""target"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 11,
@@ -12445,12 +12472,11 @@ Column details:
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""filename"",
           ""source"",
           ""task_type""
         ],
-        ""label_encoding_columns"": [
-          ""filename""
-        ]
+        ""label_encoding_columns"": []
       },
       ""scaling"": {
         ""strategy"": ""standard"",
@@ -12460,7 +12486,8 @@ Column details:
         ]
       },
       ""log_transform"": [
-        ""rows""
+        ""rows"",
+        ""cols""
       ]
     },
     ""split_strategy"": {
@@ -12470,7 +12497,7 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -12501,7 +12528,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""target"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 11,
@@ -12592,12 +12619,11 @@ Columns with missing values: none","{
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""filename"",
           ""source"",
           ""task_type""
         ],
-        ""label_encoding_columns"": [
-          ""filename""
-        ]
+        ""label_encoding_columns"": []
       },
       ""scaling"": {
         ""strategy"": ""standard"",
@@ -12607,7 +12633,8 @@ Columns with missing values: none","{
         ]
       },
       ""log_transform"": [
-        ""rows""
+        ""rows"",
+        ""cols""
       ]
     },
     ""split_strategy"": {
@@ -12617,7 +12644,7 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -12649,7 +12676,7 @@ All feature columns: filename, source, rows, cols, task_type","{
   },
   ""schema"": {
     ""target_column"": ""target"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 6,
     ""row_count"": 11,
@@ -12740,12 +12767,11 @@ All feature columns: filename, source, rows, cols, task_type","{
       },
       ""encoding"": {
         ""one_hot_columns"": [
+          ""filename"",
           ""source"",
           ""task_type""
         ],
-        ""label_encoding_columns"": [
-          ""filename""
-        ]
+        ""label_encoding_columns"": []
       },
       ""scaling"": {
         ""strategy"": ""standard"",
@@ -12755,7 +12781,8 @@ All feature columns: filename, source, rows, cols, task_type","{
         ]
       },
       ""log_transform"": [
-        ""rows""
+        ""rows"",
+        ""cols""
       ]
     },
     ""split_strategy"": {
@@ -12765,7 +12792,7 @@ All feature columns: filename, source, rows, cols, task_type","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -12774,7 +12801,7 @@ f89ed7d6_full_structured,insurance (1),f89ed7d6,full_structured,"Generate a comp
 
 Dataset: insurance (1).csv
 Rows: 1338 | Columns: 7
-Target column: region
+Target column: expenses
 
 Column details:
   - age: int64, min=18.0, max=64.0, mean=39.21, 47 unique
@@ -12782,8 +12809,8 @@ Column details:
   - bmi: float64, min=16.0, max=53.1, mean=30.67, 275 unique
   - children: int64, min=0.0, max=5.0, mean=1.09, 6 unique
   - smoker: int64, min=0.0, max=1.0, mean=0.8, 2 unique
-  - region [TARGET]: int64, min=0.0, max=3.0, mean=1.48, 4 unique
-  - expenses: float64, min=1121.87, max=63770.43, mean=13270.42, 1337 unique","{
+  - region: int64, min=0.0, max=3.0, mean=1.48, 4 unique
+  - expenses [TARGET]: float64, min=1121.87, max=63770.43, mean=13270.42, 1337 unique","{
   ""ingestion"": {
     ""original_filename"": ""insurance (1).csv"",
     ""stored_filename"": ""20260429_163455_f89ed7d6_insurance (1).csv"",
@@ -12804,8 +12831,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""region"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""expenses"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
@@ -12865,7 +12892,7 @@ Column details:
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 3.0,
         ""mean"": 1.484304932735426
@@ -12875,7 +12902,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1337,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1121.87,
         ""max"": 63770.43,
         ""mean"": 13270.422414050823
@@ -12904,7 +12931,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""region"",
+    ""target_column"": ""expenses"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -12931,7 +12958,9 @@ Column details:
           ""region""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""smoker""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -12940,15 +12969,15 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 f89ed7d6_stats_focused,insurance (1),f89ed7d6,stats_focused,"Create a machine learning preprocessing plan.
 
-File: insurance (1).csv | Rows: 1338 | Target: region
-Numeric columns (6): age, sex, bmi, children, smoker, expenses
+File: insurance (1).csv | Rows: 1338 | Target: expenses
+Numeric columns (6): age, sex, bmi, children, smoker, region
 Categorical columns (0): none
 Columns with missing values: none","{
   ""ingestion"": {
@@ -12971,8 +13000,8 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""region"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""expenses"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
@@ -13032,7 +13061,7 @@ Columns with missing values: none","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 3.0,
         ""mean"": 1.484304932735426
@@ -13042,7 +13071,7 @@ Columns with missing values: none","{
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1337,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1121.87,
         ""max"": 63770.43,
         ""mean"": 13270.422414050823
@@ -13071,7 +13100,7 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""region"",
+    ""target_column"": ""expenses"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -13098,7 +13127,9 @@ Columns with missing values: none","{
           ""region""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""smoker""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -13107,18 +13138,18 @@ Columns with missing values: none","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
-f89ed7d6_task_focused,insurance (1),f89ed7d6,task_focused,"Generate preprocessing steps for a classification task.
+f89ed7d6_task_focused,insurance (1),f89ed7d6,task_focused,"Generate preprocessing steps for a regression task.
 
 Dataset: insurance (1).csv
 Shape: 1338 rows x 7 columns
-Prediction target: 'region' (dtype=int64, 4 unique values)
+Prediction target: 'expenses' (dtype=float64, 1337 unique values)
 
-All feature columns: age, sex, bmi, children, smoker, expenses","{
+All feature columns: age, sex, bmi, children, smoker, region","{
   ""ingestion"": {
     ""original_filename"": ""insurance (1).csv"",
     ""stored_filename"": ""20260429_163455_f89ed7d6_insurance (1).csv"",
@@ -13139,8 +13170,8 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""region"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""expenses"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 7,
     ""row_count"": 1338,
@@ -13200,7 +13231,7 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
         ""dtype"": ""int64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 4,
-        ""is_target"": true,
+        ""is_target"": false,
         ""min"": 0.0,
         ""max"": 3.0,
         ""mean"": 1.484304932735426
@@ -13210,7 +13241,7 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 1337,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": 1121.87,
         ""max"": 63770.43,
         ""mean"": 13270.422414050823
@@ -13239,7 +13270,7 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""region"",
+    ""target_column"": ""expenses"",
     ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -13266,7 +13297,9 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
           ""region""
         ]
       },
-      ""log_transform"": []
+      ""log_transform"": [
+        ""smoker""
+      ]
     },
     ""split_strategy"": {
       ""test_size"": 0.2,
@@ -13275,7 +13308,7 @@ All feature columns: age, sex, bmi, children, smoker, expenses","{
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -13327,7 +13360,7 @@ Column details:
   },
   ""schema"": {
     ""target_column"": ""Y"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
@@ -13561,7 +13594,7 @@ Columns with missing values: none","{
   },
   ""schema"": {
     ""target_column"": ""Y"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
@@ -13796,7 +13829,7 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
   },
   ""schema"": {
     ""target_column"": ""Y"",
-    ""target_detection_method"": ""keyword_match"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""regression"",
     ""total_columns"": 13,
     ""row_count"": 517,
@@ -14001,14 +14034,14 @@ All feature columns: X, month, day, FFMC, DMC, DC, ISI, temp, RH, wind, rain, ar
 
 Dataset: Uncleaned_DS_jobs.csv
 Rows: 672 | Columns: 15
-Target column: Competitors
+Target column: Rating
 
 Column details:
   - index: int64, min=0.0, max=671.0, mean=335.5, 672 unique
   - Job Title: str, 172 unique
   - Salary Estimate: str, 30 unique
   - Job Description: str, 489 unique
-  - Rating: float64, min=-1.0, max=5.0, mean=3.52, 32 unique
+  - Rating [TARGET]: float64, min=-1.0, max=5.0, mean=3.52, 32 unique
   - Company Name: str, 432 unique
   - Location: str, 207 unique
   - Headquarters: str, 229 unique
@@ -14018,7 +14051,7 @@ Column details:
   - Industry: str, 58 unique
   - Sector: str, 23 unique
   - Revenue: str, 14 unique
-  - Competitors [TARGET]: str, 108 unique","{
+  - Competitors: str, 108 unique","{
   ""ingestion"": {
     ""original_filename"": ""Uncleaned_DS_jobs.csv"",
     ""stored_filename"": ""20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv"",
@@ -14047,9 +14080,9 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Competitors"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""target_detection_method"": ""exact_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 15,
     ""row_count"": 672,
     ""columns"": [
@@ -14089,7 +14122,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 32,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -1.0,
         ""max"": 5.0,
         ""mean"": 3.5186011904761907
@@ -14165,7 +14198,7 @@ Column details:
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 108,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -14191,8 +14224,8 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Competitors"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -14205,7 +14238,9 @@ Column details:
       },
       ""encoding"": {
         ""one_hot_columns"": [
-          ""Size""
+          ""Size"",
+          ""Type of ownership"",
+          ""Revenue""
         ],
         ""label_encoding_columns"": [
           ""Job Title"",
@@ -14214,17 +14249,15 @@ Column details:
           ""Company Name"",
           ""Location"",
           ""Headquarters"",
-          ""Type of ownership"",
           ""Industry"",
           ""Sector"",
-          ""Revenue""
+          ""Competitors""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""index"",
-          ""Rating"",
           ""Founded""
         ]
       },
@@ -14233,20 +14266,20 @@ Column details:
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 4b7872f1_stats_focused,Uncleaned_DS_jobs,4b7872f1,stats_focused,"Create a machine learning preprocessing plan.
 
-File: Uncleaned_DS_jobs.csv | Rows: 672 | Target: Competitors
-Numeric columns (3): index, Rating, Founded
-Categorical columns (11): Job Title, Salary Estimate, Job Description, Company Name, Location, Headquarters, Size, Type of ownership, Industry, Sector, Revenue
+File: Uncleaned_DS_jobs.csv | Rows: 672 | Target: Rating
+Numeric columns (2): index, Founded
+Categorical columns (12): Job Title, Salary Estimate, Job Description, Company Name, Location, Headquarters, Size, Type of ownership, Industry, Sector, Revenue, Competitors
 Columns with missing values: none","{
   ""ingestion"": {
     ""original_filename"": ""Uncleaned_DS_jobs.csv"",
@@ -14276,9 +14309,9 @@ Columns with missing values: none","{
     ]
   },
   ""schema"": {
-    ""target_column"": ""Competitors"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""target_detection_method"": ""exact_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 15,
     ""row_count"": 672,
     ""columns"": [
@@ -14318,7 +14351,7 @@ Columns with missing values: none","{
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 32,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -1.0,
         ""max"": 5.0,
         ""mean"": 3.5186011904761907
@@ -14394,7 +14427,7 @@ Columns with missing values: none","{
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 108,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -14420,8 +14453,8 @@ Columns with missing values: none","{
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Competitors"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -14434,7 +14467,9 @@ Columns with missing values: none","{
       },
       ""encoding"": {
         ""one_hot_columns"": [
-          ""Size""
+          ""Size"",
+          ""Type of ownership"",
+          ""Revenue""
         ],
         ""label_encoding_columns"": [
           ""Job Title"",
@@ -14443,17 +14478,15 @@ Columns with missing values: none","{
           ""Company Name"",
           ""Location"",
           ""Headquarters"",
-          ""Type of ownership"",
           ""Industry"",
           ""Sector"",
-          ""Revenue""
+          ""Competitors""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""index"",
-          ""Rating"",
           ""Founded""
         ]
       },
@@ -14462,22 +14495,22 @@ Columns with missing values: none","{
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
-4b7872f1_task_focused,Uncleaned_DS_jobs,4b7872f1,task_focused,"Generate preprocessing steps for a classification task.
+4b7872f1_task_focused,Uncleaned_DS_jobs,4b7872f1,task_focused,"Generate preprocessing steps for a regression task.
 
 Dataset: Uncleaned_DS_jobs.csv
 Shape: 672 rows x 15 columns
-Prediction target: 'Competitors' (dtype=str, 108 unique values)
+Prediction target: 'Rating' (dtype=float64, 32 unique values)
 
-All feature columns: index, Job Title, Salary Estimate, Job Description, Rating, Company Name, Location, Headquarters, Size, Founded, Type of ownership, Industry, Sector, Revenue","{
+All feature columns: index, Job Title, Salary Estimate, Job Description, Company Name, Location, Headquarters, Size, Founded, Type of ownership, Industry, Sector, Revenue, Competitors","{
   ""ingestion"": {
     ""original_filename"": ""Uncleaned_DS_jobs.csv"",
     ""stored_filename"": ""20260429_163456_4b7872f1_Uncleaned_DS_jobs.csv"",
@@ -14506,9 +14539,9 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
     ]
   },
   ""schema"": {
-    ""target_column"": ""Competitors"",
-    ""target_detection_method"": ""non_numeric_dtype"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""target_detection_method"": ""exact_keyword"",
+    ""task_type"": ""regression"",
     ""total_columns"": 15,
     ""row_count"": 672,
     ""columns"": [
@@ -14548,7 +14581,7 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
         ""dtype"": ""float64"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 32,
-        ""is_target"": false,
+        ""is_target"": true,
         ""min"": -1.0,
         ""max"": 5.0,
         ""mean"": 3.5186011904761907
@@ -14624,7 +14657,7 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
         ""dtype"": ""str"",
         ""missing_percentage"": 0.0,
         ""unique_count"": 108,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -14650,8 +14683,8 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Competitors"",
-    ""task_type"": ""classification"",
+    ""target_column"": ""Rating"",
+    ""task_type"": ""regression"",
     ""input_summary"": {},
     ""preprocessing"": {
       ""drop_columns"": [],
@@ -14664,7 +14697,9 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
       },
       ""encoding"": {
         ""one_hot_columns"": [
-          ""Size""
+          ""Size"",
+          ""Type of ownership"",
+          ""Revenue""
         ],
         ""label_encoding_columns"": [
           ""Job Title"",
@@ -14673,17 +14708,15 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
           ""Company Name"",
           ""Location"",
           ""Headquarters"",
-          ""Type of ownership"",
           ""Industry"",
           ""Sector"",
-          ""Revenue""
+          ""Competitors""
         ]
       },
       ""scaling"": {
         ""strategy"": ""standard"",
         ""columns"": [
           ""index"",
-          ""Rating"",
           ""Founded""
         ]
       },
@@ -14692,11 +14725,11 @@ All feature columns: index, Job Title, Salary Estimate, Job Description, Rating,
     ""split_strategy"": {
       ""test_size"": 0.2,
       ""random_state"": 42,
-      ""stratify"": true
+      ""stratify"": false
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -14705,11 +14738,11 @@ e240b20f_full_structured,titanic,e240b20f,full_structured,"Generate a comprehens
 
 Dataset: titanic.csv
 Rows: 891 | Columns: 12
-Target column: Embarked
+Target column: Survived
 
 Column details:
   - PassengerId: str, 891 unique
-  - Survived: float64, 0 unique, 100.0% missing
+  - Survived [TARGET]: float64, 0 unique, 100.0% missing
   - Pclass: float64, 0 unique, 100.0% missing
   - Name: float64, 0 unique, 100.0% missing
   - Sex: float64, 0 unique, 100.0% missing
@@ -14719,7 +14752,7 @@ Column details:
   - Ticket: float64, 0 unique, 100.0% missing
   - Fare: float64, 0 unique, 100.0% missing
   - Cabin: float64, 0 unique, 100.0% missing
-  - Embarked [TARGET]: float64, 0 unique, 100.0% missing","{
+  - Embarked: float64, 0 unique, 100.0% missing","{
   ""ingestion"": {
     ""original_filename"": ""titanic.csv"",
     ""stored_filename"": ""20260429_163456_e240b20f_titanic.csv"",
@@ -14745,8 +14778,8 @@ Column details:
     ]
   },
   ""schema"": {
-    ""target_column"": ""Embarked"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""Survived"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 891,
@@ -14763,7 +14796,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Pclass"",
@@ -14833,7 +14866,7 @@ Column details:
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -14859,7 +14892,7 @@ Column details:
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Embarked"",
+    ""target_column"": ""Survived"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -14912,17 +14945,17 @@ Column details:
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
 }"
 e240b20f_stats_focused,titanic,e240b20f,stats_focused,"Create a machine learning preprocessing plan.
 
-File: titanic.csv | Rows: 891 | Target: Embarked
-Numeric columns (10): Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin
+File: titanic.csv | Rows: 891 | Target: Survived
+Numeric columns (10): Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked
 Categorical columns (1): PassengerId
-Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), Sex (100.0%), Age (100.0%), SibSp (100.0%), Parch (100.0%), Ticket (100.0%), Fare (100.0%), Cabin (100.0%)","{
+Columns with missing values: Pclass (100.0%), Name (100.0%), Sex (100.0%), Age (100.0%), SibSp (100.0%), Parch (100.0%), Ticket (100.0%), Fare (100.0%), Cabin (100.0%), Embarked (100.0%)","{
   ""ingestion"": {
     ""original_filename"": ""titanic.csv"",
     ""stored_filename"": ""20260429_163456_e240b20f_titanic.csv"",
@@ -14948,8 +14981,8 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
     ]
   },
   ""schema"": {
-    ""target_column"": ""Embarked"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""Survived"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 891,
@@ -14966,7 +14999,7 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Pclass"",
@@ -15036,7 +15069,7 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -15062,7 +15095,7 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Embarked"",
+    ""target_column"": ""Survived"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -15115,7 +15148,7 @@ Columns with missing values: Survived (100.0%), Pclass (100.0%), Name (100.0%), 
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
@@ -15124,9 +15157,9 @@ e240b20f_task_focused,titanic,e240b20f,task_focused,"Generate preprocessing step
 
 Dataset: titanic.csv
 Shape: 891 rows x 12 columns
-Prediction target: 'Embarked' (dtype=float64, 0 unique values)
+Prediction target: 'Survived' (dtype=float64, 0 unique values)
 
-All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin","{
+All feature columns: PassengerId, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked","{
   ""ingestion"": {
     ""original_filename"": ""titanic.csv"",
     ""stored_filename"": ""20260429_163456_e240b20f_titanic.csv"",
@@ -15152,8 +15185,8 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
     ]
   },
   ""schema"": {
-    ""target_column"": ""Embarked"",
-    ""target_detection_method"": ""low_cardinality"",
+    ""target_column"": ""Survived"",
+    ""target_detection_method"": ""exact_keyword"",
     ""task_type"": ""classification"",
     ""total_columns"": 12,
     ""row_count"": 891,
@@ -15170,7 +15203,7 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": false
+        ""is_target"": true
       },
       {
         ""name"": ""Pclass"",
@@ -15240,7 +15273,7 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
         ""dtype"": ""float64"",
         ""missing_percentage"": 100.0,
         ""unique_count"": 0,
-        ""is_target"": true
+        ""is_target"": false
       }
     ]
   },
@@ -15266,7 +15299,7 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
     ]
   },
   ""preprocessing_plan"": {
-    ""target_column"": ""Embarked"",
+    ""target_column"": ""Survived"",
     ""task_type"": ""classification"",
     ""input_summary"": {},
     ""preprocessing"": {
@@ -15319,7 +15352,7 @@ All feature columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch
     },
     ""smote"": {
       ""enabled"": false,
-      ""reason"": ""Safe default: disabled unless class imbalance is explicitly confirmed""
+      ""reason"": """"
     }
   },
   ""export_paths"": {}
