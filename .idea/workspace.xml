@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5819f68c-ba93-48f9-9c7f-82e2ac3ad381" name="Changes" comment="woohooo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_pairs.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/finetuning/finetuning_summary.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/validation/validation_summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/validation/validation_summary.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipelines/plan_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/plan_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,35 +57,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Pair_generator.executor": "Run",
-    "Python.clean_curated.executor": "Run",
-    "Python.clean_logs.executor": "Run",
-    "Python.diagnostic.executor": "Run",
-    "Python.feature_engineering.executor": "Run",
-    "Python.feature_engineering_module.executor": "Run",
-    "Python.fetch_plans.executor": "Run",
-    "Python.plan_generator.executor": "Run",
-    "Python.run_pipeline.executor": "Run",
-    "Python.run_validation.executor": "Run",
-    "Python.schema_cleaner.executor": "Run",
-    "Python.schema_extractor.executor": "Run",
-    "Python.supabase_client.executor": "Run",
-    "Python.transformation_module.executor": "Run",
-    "Python.validation.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "laith",
-    "junie.onboarding.icon.badge.shown": "true",
-    "settings.editor.selected.configurable": "database.data.views.appearance",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Pair_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clean_curated.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clean_logs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.diagnostic.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature_engineering.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature_engineering_module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fetch_plans.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plan_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_validation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schema_cleaner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schema_extractor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.supabase_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.transformation_module.executor&quot;: &quot;Run&quot;,
+    &quot;Python.validation.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;laith&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.views.appearance&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="transformation_module" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Grad100" />
@@ -263,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780243871651</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="woohooo">
+      <option name="closed" value="true" />
+      <created>1780248333476</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780248333476</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
