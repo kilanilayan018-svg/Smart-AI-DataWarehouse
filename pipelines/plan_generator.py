@@ -1,17 +1,4 @@
-"""
-Plan Generator - T1.6 (COMPLETE - ALL FIXES)
-Author: Laith Habash / Maha Qaddoumi
 
-Generates preprocessing plans with:
-- Target detection (priority: _meta > keywords > last column > database)
-- Task type detection (classification/regression)
-- Skewness-based log transform (using skewness from schema, not max/mean ratio)
-- Outlier capping rule (IQR method, enabled by default)
-- Low-correlation feature drop (|corr with target| < 0.05)
-- Near-duplicate column detection (pairwise correlation > 0.9)
-- SMOTE auto-enable for imbalanced classification (class ratio > 3:1)
-- Quality metrics tracking
-"""
 
 import json
 import sys
