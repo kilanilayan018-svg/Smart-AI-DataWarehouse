@@ -1,11 +1,9 @@
 import os
 import glob
 import json
-import time
 import pandas as pd
 
 from pipelines.validation import DataValidationModule
-from utils.pipeline_logger import PipelineLogger
 
 
 RAW_DIR = "data/raw"
@@ -68,17 +66,10 @@ def read_csv_safely(raw_path):
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    logger = PipelineLogger()
-    run_id = logger.new_run_id()
-
-    print(f"\n🆔 Pipeline Run ID: {run_id}")
-
     all_reports = []
     raw_files = glob.glob(os.path.join(RAW_DIR, "*.csv"))
 
     for raw_path in raw_files:
-        step_start_time = time.perf_counter()
-
         version, dataset_name, base_name = parse_versioned_filename(raw_path)
 
         if version is None:
@@ -88,31 +79,13 @@ def main():
         schema_path = os.path.join(SCHEMA_DIR, f"{base_name}_schema.json")
 
         if not os.path.exists(schema_path):
-            error_message = "Schema file not found"
-
             report, report_path = save_invalid_report(
                 dataset_name=dataset_name,
                 version=version,
                 raw_path=raw_path,
                 schema_path="",
-                error_message=error_message
+                error_message="Schema file not found"
             )
-
-            logger.log_event(
-                run_id=run_id,
-                step="validation",
-                status="failed",
-                start_time=step_start_time,
-                dataset_name=dataset_name,
-                version=version,
-                error_detail=error_message,
-                details={
-                    "raw_file_path": raw_path.replace("\\", "/"),
-                    "schema_path": None,
-                    "report_path": report_path.replace("\\", "/")
-                }
-            )
-
             all_reports.append(report)
             print(f"❌ No schema found, saved invalid report: {report_path}")
             continue
@@ -138,60 +111,22 @@ def main():
             with open(report_path) as f:
                 report = json.load(f)
 
-            logger.log_event(
-                run_id=run_id,
-                step="validation",
-                status="completed",
-                start_time=step_start_time,
-                dataset_name=dataset_name,
-                version=version,
-                error_detail=None,
-                details={
-                    "raw_file_path": raw_path.replace("\\", "/"),
-                    "schema_path": schema_path.replace("\\", "/"),
-                    "report_path": report_path.replace("\\", "/"),
-                    "validation_status": report["validation_status"],
-                    "errors_count": len(report.get("errors", []))
-                }
-            )
-
             all_reports.append(report)
             print(f"✅ Saved report: {report_path}")
 
         except Exception as e:
-            error_message = f"Failed to read or validate dataset: {str(e)}"
-
             report, report_path = save_invalid_report(
                 dataset_name=dataset_name,
                 version=version,
                 raw_path=raw_path,
                 schema_path=schema_path,
-                error_message=error_message
+                error_message=f"Failed to read or validate dataset: {str(e)}"
             )
-
-            logger.log_event(
-                run_id=run_id,
-                step="validation",
-                status="failed",
-                start_time=step_start_time,
-                dataset_name=dataset_name,
-                version=version,
-                error_detail=error_message,
-                details={
-                    "raw_file_path": raw_path.replace("\\", "/"),
-                    "schema_path": schema_path.replace("\\", "/"),
-                    "report_path": report_path.replace("\\", "/")
-                }
-            )
-
             all_reports.append(report)
             print(f"❌ Validation failed, saved invalid report: {report_path}")
             continue
 
-    valid_datasets = [
-        r for r in all_reports
-        if r["validation_status"] == "valid"
-    ]
+    valid_datasets = [r for r in all_reports if r["validation_status"] == "valid"]
 
     summary = {
         "all_datasets": all_reports,
@@ -205,25 +140,6 @@ def main():
     print(f"\n📦 Validation summary saved to: {summary_path}")
     print(f"✅ Valid datasets count: {len(valid_datasets)}")
     print(f"📊 Total validated datasets: {len(all_reports)}")
-
-    summary_start_time = time.perf_counter()
-
-    logger.log_event(
-        run_id=run_id,
-        step="validation_summary",
-        status="completed",
-        start_time=summary_start_time,
-        dataset_name="all_datasets",
-        version=None,
-        details={
-            "summary_path": summary_path.replace("\\", "/"),
-            "total_datasets": len(all_reports),
-            "valid_datasets": len(valid_datasets),
-            "invalid_datasets": len(all_reports) - len(valid_datasets)
-        }
-    )
-
-    print("📝 Pipeline events logged to: logs/pipeline_events.jsonl")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+    "original_filename": "tmpng6xb6i4.csv",
+    "stored_filename": "20260524_200032_6d2c04ac_tmpng6xb6i4.csv",
+    "stored_path": "C:\\Users\\TO_Shared_2\\Downloads\\smart_ai_dw_fixed\\smart_ai_dw_rebuilt_ngrok\\data\\raw\\20260524_200032_6d2c04ac_tmpng6xb6i4.csv",
+    "version_id": "6d2c04ac",
+    "timestamp": "20260524_200032",
+    "file_type": ".csv",
+    "rows": 1462,
+    "columns_count": 5,
+    "columns": [
+        "date",
+        "meantemp",
+        "humidity",
+        "wind_speed",
+        "meanpressure"
+    ]
+}

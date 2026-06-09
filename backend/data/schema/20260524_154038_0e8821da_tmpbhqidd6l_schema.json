@@ -1,0 +1,65 @@
+{
+  "date": {
+    "name": "date",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 1462,
+    "is_target": true,
+    "sample_values": [
+      "2013-01-01",
+      "2013-01-02",
+      "2013-01-03"
+    ]
+  },
+  "meantemp": {
+    "name": "meantemp",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 617,
+    "is_target": false,
+    "min": 6.0,
+    "max": 38.71428571428572,
+    "mean": 25.495520655761762
+  },
+  "humidity": {
+    "name": "humidity",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 897,
+    "is_target": false,
+    "min": 13.428571428571429,
+    "max": 100.0,
+    "mean": 60.77170158004638
+  },
+  "wind_speed": {
+    "name": "wind_speed",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 730,
+    "is_target": false,
+    "min": 0.0,
+    "max": 42.22,
+    "mean": 6.802208747447473
+  },
+  "meanpressure": {
+    "name": "meanpressure",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 626,
+    "is_target": false,
+    "min": -3.0416666666666665,
+    "max": 7679.333333333333,
+    "mean": 1011.1045475940377
+  },
+  "_meta": {
+    "target_column": "date",
+    "target_detection_method": "non_numeric_dtype",
+    "row_count": 1462,
+    "column_count": 5
+  }
+}

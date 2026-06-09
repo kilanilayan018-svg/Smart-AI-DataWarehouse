@@ -1,0 +1,24 @@
+{
+    "original_filename": "tmpd8tjjw94.csv",
+    "stored_filename": "20260531_010331_b302f8c0_tmpd8tjjw94.csv",
+    "stored_path": "C:\\Users\\Laith\\Downloads\\smart_ai_dw_rebuilt_ngrok\\data\\raw\\20260531_010331_b302f8c0_tmpd8tjjw94.csv",
+    "version_id": "b302f8c0",
+    "timestamp": "20260531_010331",
+    "file_type": ".csv",
+    "rows": 891,
+    "columns_count": 12,
+    "columns": [
+        "PassengerId",
+        "Survived",
+        "Pclass",
+        "Name",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Ticket",
+        "Fare",
+        "Cabin",
+        "Embarked"
+    ]
+}

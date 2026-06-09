@@ -199,3 +199,24 @@ def fetch_recent_runs(limit: int = 10):
 
     conn.close()
     return [dict(row) for row in rows]
+
+def fetch_recent_datasets(limit: int = 50):
+    conn = get_connection()
+    rows = conn.execute("""
+        SELECT
+            id,
+            original_filename,
+            stored_filename,
+            stored_path,
+            version_id,
+            file_type,
+            rows_count,
+            columns_count,
+            created_at,
+            'local' AS status
+        FROM datasets
+        ORDER BY id DESC
+        LIMIT ?
+    """, (limit,)).fetchall()
+    conn.close()
+    return [dict(row) for row in rows]

@@ -1,0 +1,138 @@
+{
+  "PassengerId": {
+    "name": "PassengerId",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 418,
+    "is_target": false,
+    "min": 892.0,
+    "max": 1309.0,
+    "mean": 1100.5
+  },
+  "Pclass": {
+    "name": "Pclass",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 3,
+    "is_target": false,
+    "min": 1.0,
+    "max": 3.0,
+    "mean": 2.2655502392344498
+  },
+  "Name": {
+    "name": "Name",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 418,
+    "is_target": false,
+    "sample_values": [
+      "Kelly, Mr. James",
+      "Wilkes, Mrs. James (Ellen Needs)",
+      "Myles, Mr. Thomas Francis"
+    ]
+  },
+  "Sex": {
+    "name": "Sex",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2,
+    "is_target": false,
+    "sample_values": [
+      "male",
+      "female"
+    ]
+  },
+  "Age": {
+    "name": "Age",
+    "dtype": "float64",
+    "missing_count": 86,
+    "missing_percentage": 20.57,
+    "unique_count": 79,
+    "is_target": false,
+    "min": 0.17,
+    "max": 76.0,
+    "mean": 30.272590361445783
+  },
+  "SibSp": {
+    "name": "SibSp",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 7,
+    "is_target": false,
+    "min": 0.0,
+    "max": 8.0,
+    "mean": 0.4473684210526316
+  },
+  "Parch": {
+    "name": "Parch",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 8,
+    "is_target": false,
+    "min": 0.0,
+    "max": 9.0,
+    "mean": 0.3923444976076555
+  },
+  "Ticket": {
+    "name": "Ticket",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 363,
+    "is_target": false,
+    "sample_values": [
+      "330911",
+      "363272",
+      "240276"
+    ]
+  },
+  "Fare": {
+    "name": "Fare",
+    "dtype": "float64",
+    "missing_count": 1,
+    "missing_percentage": 0.24,
+    "unique_count": 169,
+    "is_target": false,
+    "min": 0.0,
+    "max": 512.3292,
+    "mean": 35.627188489208635
+  },
+  "Cabin": {
+    "name": "Cabin",
+    "dtype": "object",
+    "missing_count": 327,
+    "missing_percentage": 78.23,
+    "unique_count": 76,
+    "is_target": false,
+    "sample_values": [
+      "B45",
+      "E31",
+      "B57 B59 B63 B66"
+    ]
+  },
+  "Embarked": {
+    "name": "Embarked",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 3,
+    "is_target": true,
+    "sample_values": [
+      "Q",
+      "S",
+      "C"
+    ]
+  },
+  "_meta": {
+    "target_column": "Embarked",
+    "target_detection_method": "non_numeric_dtype",
+    "row_count": 418,
+    "column_count": 11
+  }
+}

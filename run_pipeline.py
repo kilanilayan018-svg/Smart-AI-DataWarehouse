@@ -39,20 +39,17 @@ def safe_delete_contents(path: Path):
 
         if item.is_file():
             item.unlink()
-
         elif item.is_dir():
-            # Delete directory contents recursively
+            # delete directory contents recursively
             for sub in item.rglob("*"):
                 if sub.is_file():
                     sub.unlink()
-
             for sub in sorted(item.rglob("*"), reverse=True):
                 if sub.is_dir():
                     try:
                         sub.rmdir()
                     except OSError:
                         pass
-
             try:
                 item.rmdir()
             except OSError:
@@ -114,16 +111,15 @@ def main():
 
     clean_previous_outputs()
 
+    # ---------------------------------------------------
+    # Adjust these filenames only if your actual names differ
+    # ---------------------------------------------------
     steps = [
-        ("Schema Extraction",          PROJECT_ROOT / "pipelines" / "schema_extractor.py"),
-        ("Plan Dispatching",           PROJECT_ROOT / "pipelines" / "plan_dispatcher.py"),
-        ("Validation",                 PROJECT_ROOT / "pipelines" / "run_validation.py"),
-        ("Transformation",             PROJECT_ROOT / "pipelines" / "transformation_module.py"),
-        ("Feature Engineering",        PROJECT_ROOT / "pipelines" / "feature_engineering.py"),
-
-        # Legacy/training artifact generation.
-        # The live decision plan is now created by plan_dispatcher.py above.
-        ("Plan Generation",            PROJECT_ROOT / "pipelines" / "plan_generator.py"),
+        ("Schema Extraction",        PROJECT_ROOT / "pipelines" / "schema_extractor.py"),
+        ("Validation",               PROJECT_ROOT / "pipelines" / "run_validation.py"),
+        ("Transformation",           PROJECT_ROOT / "pipelines" / "transformation_module.py"),
+        ("Feature Engineering",      PROJECT_ROOT / "pipelines" / "feature_engineering.py"),
+        ("Plan Generation",          PROJECT_ROOT / "pipelines" / "plan_generator.py"),
         ("Finetuning Pair Generation", PROJECT_ROOT / "pipelines" / "Pair_generator.py"),
     ]
 

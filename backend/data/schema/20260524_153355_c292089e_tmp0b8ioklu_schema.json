@@ -1,0 +1,107 @@
+{
+  "C1": {
+    "name": "C1",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 17,
+    "is_target": false,
+    "min": 0.0,
+    "max": 17.0,
+    "mean": 3.8450520833333335
+  },
+  "C2": {
+    "name": "C2",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 136,
+    "is_target": false,
+    "min": 0.0,
+    "max": 199.0,
+    "mean": 120.89453125
+  },
+  "C3": {
+    "name": "C3",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 47,
+    "is_target": false,
+    "min": 0.0,
+    "max": 122.0,
+    "mean": 69.10546875
+  },
+  "C4": {
+    "name": "C4",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 51,
+    "is_target": false,
+    "min": 0.0,
+    "max": 99.0,
+    "mean": 20.536458333333332
+  },
+  "C5": {
+    "name": "C5",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 186,
+    "is_target": false,
+    "min": 0.0,
+    "max": 846.0,
+    "mean": 79.79947916666667
+  },
+  "C6": {
+    "name": "C6",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 248,
+    "is_target": false,
+    "min": 0.0,
+    "max": 67.1,
+    "mean": 31.992578124999998
+  },
+  "C7": {
+    "name": "C7",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 517,
+    "is_target": false,
+    "min": 0.078,
+    "max": 2.42,
+    "mean": 0.47187630208333325
+  },
+  "C8": {
+    "name": "C8",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 52,
+    "is_target": false,
+    "min": 21.0,
+    "max": 81.0,
+    "mean": 33.240885416666664
+  },
+  "Class": {
+    "name": "Class",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 2,
+    "is_target": true,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3489583333333333
+  },
+  "_meta": {
+    "target_column": "Class",
+    "target_detection_method": "keyword_match",
+    "row_count": 768,
+    "column_count": 9
+  }
+}

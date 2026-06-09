@@ -1,0 +1,21 @@
+{
+    "original_filename": "tmpkrywzcwg.csv",
+    "stored_filename": "20260524_204313_042c25c5_tmpkrywzcwg.csv",
+    "stored_path": "C:\\Users\\TO_Shared_2\\Downloads\\smart_ai_dw_fixed\\smart_ai_dw_rebuilt_ngrok\\data\\raw\\20260524_204313_042c25c5_tmpkrywzcwg.csv",
+    "version_id": "042c25c5",
+    "timestamp": "20260524_204313",
+    "file_type": ".csv",
+    "rows": 768,
+    "columns_count": 9,
+    "columns": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "Class"
+    ]
+}

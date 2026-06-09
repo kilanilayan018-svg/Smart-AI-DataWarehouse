@@ -1,0 +1,26 @@
+{
+    "original_filename": "tmpnlb7mvms.csv",
+    "stored_filename": "20260524_212314_b5ea43c6_tmpnlb7mvms.csv",
+    "stored_path": "C:\\Users\\TO_Shared_2\\Downloads\\smart_ai_dw_fixed\\smart_ai_dw_rebuilt_ngrok\\data\\raw\\20260524_212314_b5ea43c6_tmpnlb7mvms.csv",
+    "version_id": "b5ea43c6",
+    "timestamp": "20260524_212314",
+    "file_type": ".csv",
+    "rows": 500,
+    "columns_count": 14,
+    "columns": [
+        "customer_id",
+        "age",
+        "gender",
+        "income",
+        "education",
+        "tenure_months",
+        "monthly_charges",
+        "total_charges",
+        "num_products",
+        "has_internet",
+        "has_phone",
+        "payment_method",
+        "contract_type",
+        "churn"
+    ]
+}

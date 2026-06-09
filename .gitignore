@@ -1,36 +1,26 @@
-# Python
 __pycache__/
-*.pyc
-
-# Node
+*.py[cod]
+.venv/
+.env
+backend/.env
 node_modules/
-
-# Database
-*.db
-
-# Logs
-logs/transformation_log.json
-
-# Validation logs
-logs/validation/*
-!logs/validation/.gitkeep
-
-# Generated data
-data/schema/*
-!data/schema/.gitkeep
-
+.next/
+out/
+dist/
+build/
+frontend/.env.local
+.idea/
+.vscode/
+data/raw_input/*
+data/raw/*
 data/curated/*
-!data/curated/.gitkeep
-
 data/features/*
-!data/features/.gitkeep
-
 data/features_samples/*
-!data/features_samples/.gitkeep
-
-# Plans
+data/schema/*
+data/finetuning/*
 metadata/plans/*
-!metadata/plans/.gitkeep
-
-node_modules/
-frontend/node_modules/
+logs/*
+registry/*.db
+backend/registry/*.db
+*.db
+!.gitkeep

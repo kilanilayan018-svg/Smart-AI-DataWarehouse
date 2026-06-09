@@ -1,0 +1,20 @@
+{
+    "original_filename": "tmpu_bqmyds.csv",
+    "stored_filename": "20260524_210907_62f2dee7_tmpu_bqmyds.csv",
+    "stored_path": "C:\\Users\\TO_Shared_2\\Downloads\\smart_ai_dw_fixed\\smart_ai_dw_rebuilt_ngrok\\data\\raw\\20260524_210907_62f2dee7_tmpu_bqmyds.csv",
+    "version_id": "62f2dee7",
+    "timestamp": "20260524_210907",
+    "file_type": ".csv",
+    "rows": 440,
+    "columns_count": 8,
+    "columns": [
+        "Channel",
+        "Region",
+        "Fresh",
+        "Milk",
+        "Grocery",
+        "Frozen",
+        "Detergents_Paper",
+        "Delicassen"
+    ]
+}

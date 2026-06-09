@@ -1,47 +1,6 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000'
+'use client'
+import { useEffect,useState } from 'react'
+import { apiGet } from '../../lib/api'
 
-async function getRuns() {
-  const res = await fetch(`${API_BASE}/runs`, { cache: 'no-store' })
-  if (!res.ok) return { runs: [] }
-  return res.json()
-}
-
-export default async function RunsPage() {
-  const data = await getRuns()
-  const runs = data.runs || []
-
-  return (
-    <div className="card stack">
-      <h2 style={{margin:0}}>Saved runs</h2>
-      <div className="muted">This page reads from SQLite so your users can revisit uploaded datasets and JSON plans later.</div>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Dataset</th>
-            <th>Target</th>
-            <th>Task</th>
-            <th>Status</th>
-            <th>Output</th>
-            <th>Created</th>
-          </tr>
-        </thead>
-        <tbody>
-          {runs.length === 0 ? (
-            <tr><td colSpan={7} className="muted">No runs yet.</td></tr>
-          ) : runs.map((run: any) => (
-            <tr key={run.id}>
-              <td>{run.id}</td>
-              <td>{run.dataset_name}</td>
-              <td>{run.target_column || '—'}</td>
-              <td>{run.task_type || '—'}</td>
-              <td>{run.status}</td>
-              <td>{run.output_file || '—'}</td>
-              <td>{run.created_at}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  )
-}
+type Run={id:string,status:string,step?:string,message?:string,created_at?:string,dataset_id?:string,plan_id?:string,duration_ms?:number}
+export default function RunsPage(){const [runs,setRuns]=useState<Run[]>([]);const [error,setError]=useState('');useEffect(()=>{apiGet('/runs?limit=50').then(d=>setRuns(d.runs||[])).catch(e=>setError(e.message))},[]);return <main className="card stack"><h1>Pipeline run history</h1><p className="muted">Every upload, automatic plan, and manual plan save appears here.</p>{error&&<p className="error">{error}</p>}<table><thead><tr><th>Status</th><th>Step</th><th>Message</th><th>Duration</th><th>Created</th></tr></thead><tbody>{runs.map(r=><tr key={r.id}><td><span className="badge">{r.status}</span></td><td>{r.step}</td><td>{r.message}</td><td>{r.duration_ms?`${r.duration_ms} ms`:'-'}</td><td>{r.created_at}</td></tr>)}</tbody></table>{!runs.length&&!error&&<p className="muted">No runs yet.</p>}</main>}

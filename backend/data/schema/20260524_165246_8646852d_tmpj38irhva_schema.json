@@ -1,0 +1,232 @@
+{
+  "Country": {
+    "name": "Country",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 227,
+    "is_target": false,
+    "sample_values": [
+      "Afghanistan",
+      "Albania",
+      "Algeria"
+    ]
+  },
+  "Region": {
+    "name": "Region",
+    "dtype": "object",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 11,
+    "is_target": false,
+    "sample_values": [
+      "ASIA (EX. NEAR EAST)         ",
+      "EASTERN EUROPE                     ",
+      "NORTHERN AFRICA                    "
+    ]
+  },
+  "Population": {
+    "name": "Population",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 227,
+    "is_target": false,
+    "min": 7026.0,
+    "max": 1313973713.0,
+    "mean": 28740284.365638766
+  },
+  "Area (sq. mi.)": {
+    "name": "Area (sq. mi.)",
+    "dtype": "int64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 226,
+    "is_target": false,
+    "min": 2.0,
+    "max": 17075200.0,
+    "mean": 598226.9559471365
+  },
+  "Pop. Density (per sq. mi.)": {
+    "name": "Pop. Density (per sq. mi.)",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 219,
+    "is_target": false,
+    "min": 0.0,
+    "max": 16271.5,
+    "mean": 379.0471365638766
+  },
+  "Coastline (coast/area ratio)": {
+    "name": "Coastline (coast/area ratio)",
+    "dtype": "float64",
+    "missing_count": 0,
+    "missing_percentage": 0.0,
+    "unique_count": 151,
+    "is_target": false,
+    "min": 0.0,
+    "max": 870.66,
+    "mean": 21.16533039647577
+  },
+  "Net migration": {
+    "name": "Net migration",
+    "dtype": "float64",
+    "missing_count": 3,
+    "missing_percentage": 1.32,
+    "unique_count": 157,
+    "is_target": false,
+    "min": -20.99,
+    "max": 23.06,
+    "mean": 0.03812499999999993
+  },
+  "Infant mortality (per 1000 births)": {
+    "name": "Infant mortality (per 1000 births)",
+    "dtype": "float64",
+    "missing_count": 3,
+    "missing_percentage": 1.32,
+    "unique_count": 220,
+    "is_target": false,
+    "min": 2.29,
+    "max": 191.19,
+    "mean": 35.50696428571428
+  },
+  "GDP ($ per capita)": {
+    "name": "GDP ($ per capita)",
+    "dtype": "float64",
+    "missing_count": 1,
+    "missing_percentage": 0.44,
+    "unique_count": 130,
+    "is_target": false,
+    "min": 500.0,
+    "max": 55100.0,
+    "mean": 9689.823008849558
+  },
+  "Literacy (%)": {
+    "name": "Literacy (%)",
+    "dtype": "float64",
+    "missing_count": 18,
+    "missing_percentage": 7.93,
+    "unique_count": 140,
+    "is_target": false,
+    "min": 17.6,
+    "max": 100.0,
+    "mean": 82.83827751196172
+  },
+  "Phones (per 1000)": {
+    "name": "Phones (per 1000)",
+    "dtype": "float64",
+    "missing_count": 4,
+    "missing_percentage": 1.76,
+    "unique_count": 214,
+    "is_target": false,
+    "min": 0.2,
+    "max": 1035.6,
+    "mean": 236.06143497757847
+  },
+  "Arable (%)": {
+    "name": "Arable (%)",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.88,
+    "unique_count": 203,
+    "is_target": false,
+    "min": 0.0,
+    "max": 62.11,
+    "mean": 13.797111111111109
+  },
+  "Crops (%)": {
+    "name": "Crops (%)",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.88,
+    "unique_count": 162,
+    "is_target": false,
+    "min": 0.0,
+    "max": 50.68,
+    "mean": 4.564222222222223
+  },
+  "Other (%)": {
+    "name": "Other (%)",
+    "dtype": "float64",
+    "missing_count": 2,
+    "missing_percentage": 0.88,
+    "unique_count": 209,
+    "is_target": false,
+    "min": 33.33,
+    "max": 100.0,
+    "mean": 81.63831111111111
+  },
+  "Climate": {
+    "name": "Climate",
+    "dtype": "float64",
+    "missing_count": 22,
+    "missing_percentage": 9.69,
+    "unique_count": 6,
+    "is_target": true,
+    "min": 1.0,
+    "max": 4.0,
+    "mean": 2.1390243902439026
+  },
+  "Birthrate": {
+    "name": "Birthrate",
+    "dtype": "float64",
+    "missing_count": 3,
+    "missing_percentage": 1.32,
+    "unique_count": 220,
+    "is_target": false,
+    "min": 7.29,
+    "max": 50.73,
+    "mean": 22.114732142857147
+  },
+  "Deathrate": {
+    "name": "Deathrate",
+    "dtype": "float64",
+    "missing_count": 4,
+    "missing_percentage": 1.76,
+    "unique_count": 201,
+    "is_target": false,
+    "min": 2.29,
+    "max": 29.74,
+    "mean": 9.24134529147982
+  },
+  "Agriculture": {
+    "name": "Agriculture",
+    "dtype": "float64",
+    "missing_count": 15,
+    "missing_percentage": 6.61,
+    "unique_count": 150,
+    "is_target": false,
+    "min": 0.0,
+    "max": 0.769,
+    "mean": 0.15084433962264152
+  },
+  "Industry": {
+    "name": "Industry",
+    "dtype": "float64",
+    "missing_count": 16,
+    "missing_percentage": 7.05,
+    "unique_count": 155,
+    "is_target": false,
+    "min": 0.02,
+    "max": 0.906,
+    "mean": 0.28271090047393366
+  },
+  "Service": {
+    "name": "Service",
+    "dtype": "float64",
+    "missing_count": 15,
+    "missing_percentage": 6.61,
+    "unique_count": 167,
+    "is_target": false,
+    "min": 0.062,
+    "max": 0.954,
+    "mean": 0.5652830188679245
+  },
+  "_meta": {
+    "target_column": "Climate",
+    "target_detection_method": "low_cardinality",
+    "row_count": 227,
+    "column_count": 20
+  }
+}
