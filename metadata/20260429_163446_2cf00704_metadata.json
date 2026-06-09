@@ -1,0 +1,21 @@
+{
+    "original_filename": "Auto.csv",
+    "stored_filename": "20260429_163446_2cf00704_Auto.csv",
+    "stored_path": "data\\raw\\20260429_163446_2cf00704_Auto.csv",
+    "version_id": "2cf00704",
+    "timestamp": "20260429_163446",
+    "file_type": ".csv",
+    "rows": 392,
+    "columns_count": 9,
+    "columns": [
+        "mpg",
+        "cylinders",
+        "displacement",
+        "horsepower",
+        "weight",
+        "acceleration",
+        "year",
+        "origin",
+        "name"
+    ]
+}

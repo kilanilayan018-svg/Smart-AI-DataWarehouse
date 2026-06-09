@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-05-31T20:18:06.808895",
+  "total_pairs": 60,
+  "datasets_processed": 20,
+  "datasets_with_pairs": 20,
+  "pairs_per_variation": {
+    "full_structured": 20,
+    "stats_focused": 20,
+    "task_focused": 20
+  },
+  "coverage_report": [
+    {
+      "dataset": "Advertising",
+      "version_id": "2908fd63",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Auto",
+      "version_id": "2cf00704",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Admission",
+      "version_id": "599f83f5",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "cardio_train",
+      "version_id": "84595896",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "automobile_dataset",
+      "version_id": "ca1c65ff",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Flight_delay",
+      "version_id": "2096dca0",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Dirty Dataset to practice Data Cleaning",
+      "version_id": "30d74508",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "employees",
+      "version_id": "37de9aba",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "dirty_cafe_sales",
+      "version_id": "c4b8ac3c",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "employee attrition",
+      "version_id": "ee471683",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "customer churn",
+      "version_id": "ffafe6c3",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Iris 1 ",
+      "version_id": "0b888d06",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "MMSAC_Dataset",
+      "version_id": "3a25e952",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "messy_IMDB_dataset",
+      "version_id": "4851bfef",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "raw_data (2)",
+      "version_id": "84f9b5eb",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "metadata",
+      "version_id": "b4789528",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "insurance (1)",
+      "version_id": "f89ed7d6",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "raw_data",
+      "version_id": "092bc7c7",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "Uncleaned_DS_jobs",
+      "version_id": "4b7872f1",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    },
+    {
+      "dataset": "titanic",
+      "version_id": "e240b20f",
+      "schema_found": true,
+      "validation_found": true,
+      "transformation_found": true,
+      "plan_found": true
+    }
+  ]
+}

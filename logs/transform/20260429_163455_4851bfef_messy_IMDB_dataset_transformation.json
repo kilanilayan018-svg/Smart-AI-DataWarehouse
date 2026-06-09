@@ -1,0 +1,16 @@
+{
+  "name": "20260429_163455_4851bfef_messy_IMDB_dataset",
+  "encoding_used": "latin-1 (with errors skipped)",
+  "original_shape": [
+    12,
+    1
+  ],
+  "final_shape": [
+    12,
+    1
+  ],
+  "columns": [
+    "tt0111161;The Shawshank Redemption;1995-02-10;Drama;142;USA;R;Frank Darabont;;$ 28815245;2.278.845;9.3"
+  ],
+  "status": "success"
+}

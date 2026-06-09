@@ -1,0 +1,27 @@
+{
+  "name": "20260429_163456_e240b20f_titanic",
+  "encoding_used": "utf-8",
+  "original_shape": [
+    891,
+    12
+  ],
+  "final_shape": [
+    891,
+    12
+  ],
+  "columns": [
+    "PassengerId",
+    "Survived",
+    "Pclass",
+    "Name",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Ticket",
+    "Fare",
+    "Cabin",
+    "Embarked"
+  ],
+  "status": "success"
+}

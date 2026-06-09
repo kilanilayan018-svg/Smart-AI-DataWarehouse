@@ -1,0 +1,21 @@
+{
+  "name": "20260429_163455_0b888d06_Iris 1 ",
+  "encoding_used": "utf-8",
+  "original_shape": [
+    150,
+    6
+  ],
+  "final_shape": [
+    150,
+    6
+  ],
+  "columns": [
+    "Id",
+    "SepalLengthCm",
+    "SepalWidthCm",
+    "PetalLengthCm",
+    "PetalWidthCm",
+    "Species"
+  ],
+  "status": "success"
+}

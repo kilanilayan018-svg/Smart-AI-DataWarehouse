@@ -1,0 +1,47 @@
+{
+  "name": "20260416_173528_499384da_raw_data (2)",
+  "version": "unknown",
+  "raw_file_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\raw\\20260416_173528_499384da_raw_data (2).csv",
+  "steps": [
+    "Loaded dataset: 32560 rows, 15 cols",
+    "Removed 24 duplicate rows",
+    "No constant columns found",
+    "No missing values in categorical columns",
+    "No type casting performed",
+    "No missing values in numeric columns",
+    "Saved to 20260416_173528_499384da_raw_data (2)_cleaned.csv"
+  ],
+  "original_shape": [
+    32560,
+    15
+  ],
+  "duplicates_removed": 24,
+  "constant_columns_dropped": [],
+  "columns_type_cast": [],
+  "categorical_imputations": {},
+  "numeric_imputations": {},
+  "curated_path": "C:\\Users\\LENOVO\\Documents\\GitHub\\Smart-AI-DataWarehouse\\data\\curated\\20260416_173528_499384da_raw_data (2)_cleaned.csv",
+  "final_shape": [
+    32536,
+    15
+  ],
+  "status": "success",
+  "timestamp": "2026-04-29T16:02:48.883781",
+  "columns": [
+    "39",
+    " State-gov",
+    " 77516",
+    " Bachelors",
+    " 13",
+    " Never-married",
+    " Adm-clerical",
+    " Not-in-family",
+    " White",
+    " Male",
+    " 2174",
+    " 0",
+    " 40",
+    " United-States",
+    " <=50K"
+  ]
+}

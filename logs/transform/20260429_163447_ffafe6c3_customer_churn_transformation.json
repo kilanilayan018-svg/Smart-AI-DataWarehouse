@@ -1,0 +1,36 @@
+{
+  "name": "20260429_163447_ffafe6c3_customer churn",
+  "encoding_used": "utf-8",
+  "original_shape": [
+    7043,
+    21
+  ],
+  "final_shape": [
+    7043,
+    21
+  ],
+  "columns": [
+    "customerID",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges",
+    "Churn"
+  ],
+  "status": "success"
+}

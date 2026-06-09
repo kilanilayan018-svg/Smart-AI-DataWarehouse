@@ -1,0 +1,19 @@
+{
+  "name": "20260429_163447_37de9aba_employees",
+  "encoding_used": "utf-8",
+  "original_shape": [
+    84,
+    4
+  ],
+  "final_shape": [
+    84,
+    4
+  ],
+  "columns": [
+    "Name ",
+    "job_title",
+    "years_of_experience",
+    "salary"
+  ],
+  "status": "success"
+}

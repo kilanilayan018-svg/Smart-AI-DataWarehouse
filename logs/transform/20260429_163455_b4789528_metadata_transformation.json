@@ -1,0 +1,21 @@
+{
+  "name": "20260429_163455_b4789528_metadata",
+  "encoding_used": "utf-8",
+  "original_shape": [
+    11,
+    6
+  ],
+  "final_shape": [
+    11,
+    6
+  ],
+  "columns": [
+    "filename",
+    "source",
+    "rows",
+    "cols",
+    "target",
+    "task_type"
+  ],
+  "status": "success"
+}
